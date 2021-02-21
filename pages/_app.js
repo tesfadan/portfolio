@@ -1,9 +1,12 @@
+import DefaultHeadTags from "../headTags"
 import GlobalStyle from "../styles/GlobalStyle"
 
 function MyApp({ Component, pageProps }) {
   return <>
     <GlobalStyle />
-    <Component {...pageProps} /> </>
+    <DefaultHeadTags />
+    <Component {...pageProps} />
+  </>
 }
 
 export default MyApp
