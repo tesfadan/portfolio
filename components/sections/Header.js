@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import Image from "next/image"
 import Link from "next/link"
 
 export default function Header() {
@@ -13,9 +12,7 @@ export default function Header() {
     return (
         <Container>
             <Link href="/">
-                <a>
-                    <Image src="/assets/logo.svg" alt="Home" height="32" width="50" />
-                </a>
+                <a><img src="/assets/logo.svg" width="50" height="32" /></a>
             </Link>
             <nav>
                 <ul>
@@ -28,8 +25,8 @@ export default function Header() {
                     <NavLink href="/#portfolio" title="Portfolio" />
                     <NavLink href="/#about" title="About" />
                 </ul>
-            </nav>
-        </Container>
+            </nav >
+        </Container >
     );
 }
 
