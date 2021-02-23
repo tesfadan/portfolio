@@ -4,9 +4,9 @@ import Link from "next/link"
 import colors from '../../styles/Colors';
 
 export default function Header() {
-    const NavLink = ({ href, title }) => <li className={`navLink${title}`}>
+    const NavLink = ({ href, title }) => <li className={`navLink`}>
         <Link href={href}>
-            <a>{title}</a>
+            <a className="underline">{title}</a>
         </Link>
     </li>
 
@@ -52,5 +52,11 @@ const Container = styled.header`
     li{
         margin-left: 22px;
         font-size: 14px;
+    }
+    .navLink{
+        transition: 0.1s ease-in;
+        &:hover{
+            color: ${colors.primary}
+        }
     }
 `

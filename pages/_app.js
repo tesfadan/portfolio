@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import Footer from '../components/sections/Footer';
 import Header from '../components/sections/Header';
 import DefaultHeadTags from "../head";
 import GlobalStyle from "../styles/GlobalStyle";
@@ -15,6 +16,7 @@ function MyApp({ Component, pageProps }) {
     <GlobalStyle />
     <DefaultHeadTags />
     <Header />
+    <Footer />
     <Component {...pageProps} />
   </>
 }
