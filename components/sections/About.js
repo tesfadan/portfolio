@@ -3,7 +3,7 @@ import colors from '../../styles/Colors';
 
 export default function About() {
     return (
-        <Container>
+        <Container id="about">
             <div className="grid">
                 <div className="graphics" />
                 <div className="content">

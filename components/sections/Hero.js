@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import colors from '../../styles/Colors';
 export default function Hero() {
     return (
-        <Container>
+        <Container id="home">
             <div className="grid">
                 <div className="content">
                     <h1>
