@@ -1,9 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import Link from "next/link"
+import colors from '../../styles/Colors';
 
 export default function Header() {
-    const NavLink = ({ href, title, ...props }) => <li className={`navLink${title}`}>
+    const NavLink = ({ href, title }) => <li className={`navLink${title}`}>
         <Link href={href}>
             <a>{title}</a>
         </Link>
@@ -18,7 +19,7 @@ export default function Header() {
                 <ul>
                     <li>
                         <Link href="/">
-                            <a className="button">Resume</a>
+                            <a className="button small">Resume</a>
                         </Link>
                     </li>
                     <NavLink href="/#contact" title="Contact" />
@@ -33,10 +34,12 @@ export default function Header() {
 
 const Container = styled.header`
     display: flex;
-    /* background-color: red; */
     justify-content: space-between;
     align-items: center;
     padding:46px 60px;
+    position:fixed;
+    top: 0px;
+    width: 100%;
     nav, ul, a{
         display: flex;
         align-items:center;
@@ -49,17 +52,5 @@ const Container = styled.header`
     li{
         margin-left: 22px;
         font-size: 14px;
-        font-family: 'Airbnb Cereal App Medium'
     }
-
-    .button{
-        height: 40px;
-        display:flex;
-        justify-content:center;
-        border: 2px solid black;
-        padding: 0px 12px;
-        border-radius: 4px; 
-    }
-
-
 `
