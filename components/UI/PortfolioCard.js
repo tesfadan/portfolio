@@ -1,5 +1,4 @@
-import styled from 'styled-components'
-import Image from "next/image"
+import styled from 'styled-components';
 import colors from '../../styles/Colors';
 
 export default function PortfolioCard({ ...props }) {
@@ -8,7 +7,7 @@ export default function PortfolioCard({ ...props }) {
     return (
         <Container flip={flip} className={flip ? `flip` : ''}>
             <div className="image">
-                <Image src={image} height="200" width="500" />
+                <img src={image} height="200" width="500" />
             </div>
 
             <div className="content">
@@ -22,13 +21,13 @@ export default function PortfolioCard({ ...props }) {
                 <ul className="links">
                     <li>
                         <a href={link} target="_blank">
-                            <Image src="/assets/icons/open.svg" height="18" width="18" />
+                            <img src="/assets/icons/open.svg" height="18" width="18" />
                         </a>
                     </li>
                     {sourceCode != null ?
                         <li>
                             <a href={sourceCode} target="_blank">
-                                <Image src="/assets/icons/github.svg" height="18" width="18" />
+                                <img src="/assets/icons/github.svg" height="18" width="18" />
                             </a>
                         </li> : null
                     }
@@ -60,6 +59,7 @@ export const Container = styled.div`
         border-radius:2px;
         display:flex;
         justify-content: center;
+        align-items: center;
         position: relative;
         &::before, &::after{
             display: block;
@@ -76,18 +76,17 @@ export const Container = styled.div`
             z-index: 2
         }
         &::after{
-            /* background: ${colors.primary}; */
             background:#3092EC;
             mix-blend-mode: hard-light;
             z-index: 3;
         }
 
         img{
-            width: 100%;
+            max-height: 430px;
+            height: 100%;
             object-fit: contain;
             transition: 0.5s ease-in;
         }
-
     }
 
 
@@ -140,7 +139,6 @@ export const Container = styled.div`
             &:hover,
             &:focus {
                 transform: translateY(-3px);
-                /* background-color: ${colors.till}; */
                 border: 1px solid ${colors.tillDark}
             }
             transition: 0.125s ease-in;

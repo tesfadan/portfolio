@@ -21,7 +21,6 @@ const Container = styled.div`
     justify-content:center;
     padding: 80px 0px;
     background: ${colors.till};
-    /* padding-bottom: 300px; */
     .grid{
         column-gap: 20px;
         row-gap: 100px;
