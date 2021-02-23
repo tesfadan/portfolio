@@ -60,6 +60,14 @@ const GlobalStyle = createGlobalStyle`
             }
         }
     }
+
+    .label{
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 24px;
+        text-transform: uppercase;
+    }
 `
 
 export default GlobalStyle

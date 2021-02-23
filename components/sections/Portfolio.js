@@ -8,9 +8,9 @@ export default function Portfolio() {
             <div className="grid">
                 <h2>Portfolio</h2>
                 <PortfolioCard
-                    name=""
-                    description=""
-                    tags=""
+                    name="linkup.page"
+                    description="Multi-platform transit app built using React and Ionic for fetching Winnipeg Transit data such as bus stops and routes with real-time schedule updates."
+                    tags="React, Sass, Firebase"
                     image="/"
                     link=""
                     github=""
@@ -25,7 +25,7 @@ const Container = styled.div`
     justify-content:center;
     padding: 80px 0px;
     background: ${colors.till};
-    min-height: 100vh;
+    padding-bottom: 300px;
     .grid{
         grid-gap: 80px;
     }

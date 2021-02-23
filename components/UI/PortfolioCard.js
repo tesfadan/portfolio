@@ -1,9 +1,10 @@
 import styled from 'styled-components'
 import Image from "next/image"
+import colors from '../../styles/Colors';
 
 export default function PortfolioCard({ ...props }) {
     const { name, description, image, tags, link, github, } = props;
-    const Tag = ({ value }) => <li>{value}</li>;
+    const Tag = ({ value }) => <li className="label">{value}</li>;
     return (
         <Container>
             <div className="image">
@@ -11,7 +12,7 @@ export default function PortfolioCard({ ...props }) {
             </div>
 
             <div className="content">
-                <ul className="header">
+                <ul className="tags">
                     {tags.split(",").map(tag => <Tag value={tag} />)}
                 </ul>
                 <div className="main">
@@ -40,9 +41,58 @@ export default function PortfolioCard({ ...props }) {
 export const Container = styled.div`
     grid-column: 1/end;
     height: 200px;
-    background-color:red;
+    display: inherit;
+    grid-template-columns: inherit;
+    gap: inherit;
+
+    .image{
+        grid-column: 1/10;
+        grid-row: 1;
+        background: ${colors.primary};
+        border-radius:2px;
+    }
+    .content{
+        border-radius:2px;
+        grid-column: 8/end;
+        grid-row: 1;
+        margin: 40px 0px;
+        padding: 40px;
+        background: ${colors.white};
+    }
+
+    .tags{
+        li{
+            margin-right: 16px;
+            margin-bottom: 40px;
+        }
+        display:flex;
+    }
+    .main{
+        margin-bottom: 60px;
+        padding-right: 40px;
+    }
 
     .links{
         display: flex;
+        position:relative;
+        left: -10px;
+        bottom: -10px;
+        li{
+            display:flex;
+        }
+        a{
+            border: 1px solid transparent;
+            padding: 4px 10px;
+            margin-right: 10px;
+            border-radius: 4px;
+
+            &:hover,
+            &:focus {
+                transform: translateY(-3px);
+                /* background-color: ${colors.till}; */
+                border: 1px solid ${colors.tillDark}
+            }
+            transition: 0.125s ease-in;
+        }
     }
 `;
