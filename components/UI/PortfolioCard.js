@@ -8,7 +8,7 @@ export default function PortfolioCard({ ...props }) {
     return (
         <Container flip={flip} className={flip ? `flip` : ''}>
             <div className="image">
-                {/* <Image src={image} height="200" width="500" /> */}
+                <Image src={image} height="200" width="500" />
             </div>
 
             <div className="content">
@@ -43,13 +43,54 @@ export const Container = styled.div`
     display: inherit;
     grid-template-columns: inherit;
     gap: inherit;
+    &:hover{
+       .image ::before, .image ::after{
+            opacity: 0;
+        }
+
+        .image img{
+            transform:scale(1.01)
+        }
+    }
 
     .image{
-        grid-column: 1/10;
+        grid-column: 1/9;
         grid-row: 1;
         background: ${colors.primary};
         border-radius:2px;
+        display:flex;
+        justify-content: center;
+        position: relative;
+        &::before, &::after{
+            display: block;
+            content:" ";
+            width: 100%;
+            height: 100%;
+            position:absolute;
+            opacity: 1;
+            transition: 0.5s ease-in;
+        }
+        &::before{
+            background:black;
+            mix-blend-mode: saturation;
+            z-index: 2
+        }
+        &::after{
+            /* background: ${colors.primary}; */
+            background:#3092EC;
+            mix-blend-mode: hard-light;
+            z-index: 3;
+        }
+
+        img{
+            width: 100%;
+            object-fit: contain;
+            transition: 0.5s ease-in;
+        }
+
     }
+
+
     .content{
         border-radius:2px;
         grid-column: 8/end;
@@ -57,6 +98,7 @@ export const Container = styled.div`
         margin: 40px 0px;
         padding: 40px;
         background: ${colors.white};
+        z-index: 3;
     }
 
     &.flip{

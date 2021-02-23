@@ -67,6 +67,11 @@ const GlobalStyle = createGlobalStyle`
         font-size: 12px;
         line-height: 24px;
         text-transform: uppercase;
+        user-select: none;
+    }
+
+    svg, a, img{
+        user-select: none;
     }
 `
 
