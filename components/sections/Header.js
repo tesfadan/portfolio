@@ -13,7 +13,7 @@ export default function Header() {
     return (
         <Container>
             <Link href="/">
-                <a><img src="/assets/logo.svg" width="50" height="32" /></a>
+                <a><img src="/assets/logo.svg" width="50" height="32" alt="Home" /></a>
             </Link>
             <nav>
                 <ul>
