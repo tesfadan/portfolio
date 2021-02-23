@@ -3,7 +3,7 @@ import Head from "next/head";
 export default function DefaultHeadTags() {
     return (
         <Head>
-            <meta charset="utf-8" />
+            <meta charSet="utf-8" />
             <title>Tesfa Demissie | Front End Developer, based in Winnipeg, MB.</title>
             <meta name="description" content="I am a Designer and Front End Developer with experience building websites and web applications with JavaScript, HTML, SASS, and React." />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
