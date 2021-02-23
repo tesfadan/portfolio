@@ -18,16 +18,16 @@ export default function PortfolioCard({ ...props }) {
                     <h3>{name}</h3>
                     <p>{description}</p>
                 </div>
-                <ul>
+                <ul className="links">
                     <li>
                         <a href={link} target="_blank">
-                            <Image src="/assets/icons/open.svg" layout="fill" />
+                            <Image src="/assets/icons/open.svg" height="18" width="18" />
                         </a>
                     </li>
                     {github != null ?
                         <li>
                             <a href={github} target="_blank">
-                                <Image src="/assets/icons/github.svg" layout="fill" />
+                                <Image src="/assets/icons/github.svg" height="18" width="18" />
                             </a>
                         </li> : null
                     }
@@ -37,8 +37,12 @@ export default function PortfolioCard({ ...props }) {
     );
 }
 
-
-
 export const Container = styled.div`
     grid-column: 1/end;
+    height: 200px;
+    background-color:red;
+
+    .links{
+        display: flex;
+    }
 `;
