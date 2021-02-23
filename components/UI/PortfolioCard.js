@@ -3,12 +3,12 @@ import Image from "next/image"
 import colors from '../../styles/Colors';
 
 export default function PortfolioCard({ ...props }) {
-    const { name, description, image, tags, link, github, } = props;
+    const { name, description, image, tags, link, sourceCode, flip } = props;
     const Tag = ({ value }) => <li className="label">{value}</li>;
     return (
-        <Container>
+        <Container flip={flip} className={flip ? `flip` : ''}>
             <div className="image">
-                <Image src={image} layout="fill" />
+                {/* <Image src={image} height="200" width="500" /> */}
             </div>
 
             <div className="content">
@@ -25,9 +25,9 @@ export default function PortfolioCard({ ...props }) {
                             <Image src="/assets/icons/open.svg" height="18" width="18" />
                         </a>
                     </li>
-                    {github != null ?
+                    {sourceCode != null ?
                         <li>
-                            <a href={github} target="_blank">
+                            <a href={sourceCode} target="_blank">
                                 <Image src="/assets/icons/github.svg" height="18" width="18" />
                             </a>
                         </li> : null
@@ -40,7 +40,6 @@ export default function PortfolioCard({ ...props }) {
 
 export const Container = styled.div`
     grid-column: 1/end;
-    height: 200px;
     display: inherit;
     grid-template-columns: inherit;
     gap: inherit;
@@ -59,6 +58,16 @@ export const Container = styled.div`
         padding: 40px;
         background: ${colors.white};
     }
+
+    &.flip{
+        .image{
+            grid-column: 5/end;
+        }
+        .content{
+            grid-column: 1/6;
+        }
+    }
+
 
     .tags{
         li{

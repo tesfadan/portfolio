@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Projects from '../../content/projects';
 import colors from '../../styles/Colors';
 import PortfolioCard from '../UI/PortfolioCard';
 
@@ -7,14 +8,9 @@ export default function Portfolio() {
         <Container id="portfolio">
             <div className="grid">
                 <h2>Portfolio</h2>
-                <PortfolioCard
-                    name="linkup.page"
-                    description="Multi-platform transit app built using React and Ionic for fetching Winnipeg Transit data such as bus stops and routes with real-time schedule updates."
-                    tags="React, Sass, Firebase"
-                    image="/"
-                    link=""
-                    github=""
-                />
+                {Projects.map((project, index) =>
+                    <PortfolioCard {...project} flip={index % 2 != 0} />
+                )}
             </div>
         </Container>
     );
@@ -27,7 +23,8 @@ const Container = styled.div`
     background: ${colors.till};
     padding-bottom: 300px;
     .grid{
-        grid-gap: 80px;
+        column-gap: 20px;
+        row-gap: 100px;
     }
     h2{grid-column-start: 4}
 `
