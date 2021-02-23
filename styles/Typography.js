@@ -13,7 +13,7 @@ const TypographyStyle = createGlobalStyle`
         color: ${colors.black};
     }
 
-    p, li{
+    p{
         font-size: 16px;
         line-height: 30px;
     }

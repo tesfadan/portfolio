@@ -82,6 +82,7 @@ const Container = styled.div`
         right: -4px;
         color: ${colors.black};
         margin-bottom: 10px;
+        line-height: 30px;
         &:before{
             display: block;
             content: "￫";
