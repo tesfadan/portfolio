@@ -9,10 +9,23 @@ const TypographyStyle = createGlobalStyle`
         font-size: 16px;
         color: ${colors.text}
     }
+    h1, h2, h3{
+        color: ${colors.black};
+    }
 
-    p{
+    p, li{
         font-size: 16px;
         line-height: 30px;
+    }
+    p{
+        margin-bottom:10px;
+    }
+    
+    h2{
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 30px;
+        margin-bottom: 24px;
     }
 `
 

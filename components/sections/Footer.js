@@ -3,30 +3,31 @@ import styled from 'styled-components';
 import colors from '../../styles/Colors';
 
 const Footer = () => {
+    const FooterLink = ({ href, service }) => <li>
+        <Link href={href}>
+            <a target="_blank">
+                <img
+                    src={`/assets/icons/${service}.svg`}
+                    alt="Connect with Tesfa Demissie on Twitter."
+                    width="20" height="20" />
+            </a>
+        </Link>
+    </li>
+
     return <Container>
         <ul className="socials">
-            <li><Link href="https://twitter.com/tesfadan">
-                <a>
-                    <img src="/assets/icons/twitter.svg" alt="Connect with Tesfa Demissie on Twitter." width="20" height="20" />
-                </a>
-            </Link></li>
-            <li><Link href="https://github.com/tesfadan">
-                <a>
-                    <img src="/assets/icons/github.svg" alt="Connect with Tesfa Demissie on Github." width="20" height="20" />
-                </a>
-            </Link></li>
-            <li><Link href="https://linkedin.com/tesfadan">
-                <a>
-                    <img src="/assets/icons/linkedin.svg" alt="Connect with Tesfa Demissie on Linkedin." width="20" height="20" />
-                </a>
-            </Link></li>
+            <FooterLink href="https://twitter.com/tesfadan" service="twitter" />
+            <FooterLink href="https://github.com/tesfadan" service="github" />
+            <FooterLink href="https://linkedin.com/in/tesfadan/" service="linkedin" />
         </ul>
 
         <ul className="email">
             <li>
                 <Link href="mailto:tesfadaniel1@gmail.com" >
-                    <a>
-                        <img src="/assets/icons/telegram.svg" alt="Email Tesfa Demissie." width="20" height="20" />
+                    <a target="_blank">
+                        <img src="/assets/icons/telegram.svg"
+                            alt="Email Tesfa Demissie."
+                            width="20" height="20" />
                     </a>
                 </Link>
             </li>
