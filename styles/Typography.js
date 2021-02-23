@@ -32,6 +32,11 @@ const TypographyStyle = createGlobalStyle`
         font-size:18px;
         margin-bottom: 12px;
     }
+    h4{
+        font-size: 16px;
+        line-height: 30px;
+        margin-bottom: 6px;
+    }
 `
 
 export default TypographyStyle

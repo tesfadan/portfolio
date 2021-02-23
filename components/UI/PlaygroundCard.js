@@ -1,0 +1,88 @@
+import styled from 'styled-components';
+import colors from '../../styles/Colors';
+
+export default function PlaygroundCard({ ...props }) {
+    const { name, description, tags, link, sourceCode } = props;
+    const Tag = ({ value }) => <li className="label">{value}</li>;
+    return (
+        <Container>
+            <div className="cardHeader">
+                <ul className="tags">
+                    {tags.split(",").map(tag => <Tag value={tag} />)}
+                </ul>
+                <ul className="links">
+                    <li>
+                        <a href={link} target="_blank">
+                            <img src="/assets/icons/open.svg" height="18" width="18" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href={sourceCode} target="_blank">
+                            <img src="/assets/icons/github.svg" height="18" width="18" />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div className="main">
+                <h4>{name}</h4>
+                <p>{description}</p>
+            </div>
+        </Container>
+    );
+}
+
+export const Container = styled.div`
+    border-radius:4px;
+    padding: 20px 26px;
+    z-index: 3;
+    border: 1px solid #44464d80;
+    display: flex;
+    flex-wrap: wrap;
+    .cardHeader{
+        display: flex;
+        margin-bottom: 100px;
+        width: 100%;
+        justify-content: space-between;
+
+    }
+    .tags{
+        li{
+            margin-right: 16px;
+        }
+        display:flex;
+    }
+    .main{
+        padding-right: 40px;
+        align-self: flex-end;
+    }
+
+    p{
+        margin-bottom: 0px;
+    }
+
+
+    .links{
+        display: flex;
+        position:relative;
+        left: 12px;
+        top: -4px;
+        li{
+            display:flex;
+            margin-left: 10px;
+        }
+        a{
+            border: 1px solid transparent;
+            padding: 4px 10px;
+            border-radius: 4px;
+
+            &:hover,
+            &:focus {
+                transform: translateY(-3px);
+                border: 1px solid ${colors.tillDark}
+            }
+            transition: 0.125s ease-in;
+        }
+    }
+
+
+`;

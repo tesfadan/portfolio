@@ -89,7 +89,6 @@ export const Container = styled.div`
         }
     }
 
-
     .content{
         border-radius:2px;
         grid-column: 8/end;
