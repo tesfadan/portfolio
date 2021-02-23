@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import Projects from '../../content/projects';
+import Projects from '../../content/Projects';
 import colors from '../../styles/Colors';
 import PortfolioCard from '../UI/PortfolioCard';
 
