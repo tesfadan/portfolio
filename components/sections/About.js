@@ -53,10 +53,12 @@ const Container = styled.div`
     display:flex;
     justify-content:center;
     margin-bottom: 40px;
+    margin-top: -200px;
+    padding-top: 100px;
     .graphics{
         grid-column: 1/end;
         position: relative;
-        top: -100px;
+        /* top: -100px; */
         background: #326BFF;
         border-radius: 3px;
         height: 542px;

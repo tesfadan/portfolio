@@ -2,13 +2,13 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import Link from "next/link"
 import colors from '../../styles/Colors';
+import ReactDOM from 'react-dom'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 export default function Header({ show }) {
 
     const NavLink = ({ href, title }) => <li className={`navLink`}>
-        <Link href={href}>
-            <a className="underline">{title}</a>
-        </Link>
+        <AnchorLink className="underline" className="scroll" href={href}>{title}</AnchorLink>
     </li>
 
     return (
@@ -23,9 +23,9 @@ export default function Header({ show }) {
                             <a className="button small">Resume</a>
                         </Link>
                     </li>
-                    <NavLink href="/#contact" title="Contact" />
-                    <NavLink href="/#portfolio" title="Portfolio" />
-                    <NavLink href="/#about" title="About" />
+                    <NavLink href="#contact" title="Contact" />
+                    <NavLink href="#portfolio" title="Portfolio" />
+                    <NavLink href="#about" title="About" />
                 </ul>
             </nav >
         </Container >

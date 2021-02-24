@@ -4,7 +4,7 @@ import colors from '../../styles/Colors';
 
 export default function Contact() {
     return (
-        <Container id="about">
+        <Container id="contact">
             <div className="grid">
                 <div className="content">
                     <h2>Get in Touch</h2>
