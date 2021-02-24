@@ -36,7 +36,7 @@ const Container = styled.div`
     background: ${colors.black};
     padding: 120px 0px;
     color: ${colors.till};
-    position:sticky;
+    /* position:sticky; */
     bottom: 0px;
     z-index:0;
     .content{
