@@ -3,6 +3,7 @@ const colors = {
     primary: '#326BFF',
     primaryLight: '#6890f5',
     primaryDark: '#3864d4',
+    primaryContarst: '#1c5bff',
     black: '#202124',
     white: '#ffffff',
     // 

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import styled from 'styled-components';
 import colors from '../../styles/Colors';
 
-const Footer = () => {
+const Footer = ({ show }) => {
     const FooterLink = ({ href, service }) => <li>
         <Link href={href}>
             <a target="_blank">
@@ -14,7 +14,7 @@ const Footer = () => {
         </Link>
     </li>
 
-    return <Container>
+    return <Container style={show ? { bottom: 0, opacity: 1 } : { bottom: -20, opacity: 0 }}>
         <ul className="socials">
             <FooterLink href="https://twitter.com/tesfadan" service="twitter" />
             <FooterLink href="https://github.com/tesfadan" service="github" />
@@ -38,7 +38,6 @@ const Footer = () => {
 export default Footer
 
 const Container = styled.footer`
-    width: 100%;
     padding:40px;
     display: flex;
     flex-wrap: wrap;
@@ -46,6 +45,9 @@ const Container = styled.footer`
     align-items: flex-end;
     position: fixed;
     bottom: 0px;
+    z-index: 100;
+    transition: 0.2s ease-in;
+
     ul, li, a{
         height: max-content;
     }
@@ -68,6 +70,14 @@ const Container = styled.footer`
             border: 1px solid ${colors.tillDark}
         }
         transition: 0.125s ease-in;
+    }
+
+    .socials, .email{
+        position: fixed;
+    }
+
+    .email{
+        right: 40px;
     }
 
 `

@@ -10,9 +10,9 @@ export default function PortfolioCard({ ...props }) {
                 <img src={image} height="200" width="500" />
             </div>
 
-            <div className="content">
+            <div className="content reveal">
                 <ul className="tags">
-                    {tags.split(",").map(tag => <Tag value={tag} />)}
+                    {tags.split(",").map((tag, index) => <Tag value={tag} key={`${name}-tag-${tag}`} />)}
                 </ul>
                 <div className="main">
                     <h3>{name}</h3>

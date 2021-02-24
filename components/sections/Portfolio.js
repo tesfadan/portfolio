@@ -9,7 +9,7 @@ export default function Portfolio() {
             <div className="grid">
                 <h2>Portfolio</h2>
                 {Projects.map((project, index) =>
-                    <PortfolioCard {...project} flip={index % 2 != 0} />
+                    <PortfolioCard {...project} flip={index % 2 != 0} key={`portfolio-${index}`} />
                 )}
             </div>
         </Container>

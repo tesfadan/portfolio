@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import Link from "next/link"
 import colors from '../../styles/Colors';
 
-export default function Header() {
+export default function Header({ show }) {
+
     const NavLink = ({ href, title }) => <li className={`navLink`}>
         <Link href={href}>
             <a className="underline">{title}</a>
@@ -11,7 +12,7 @@ export default function Header() {
     </li>
 
     return (
-        <Container>
+        <Container style={show ? { top: 0, opacity: 1 } : { top: -20, opacity: 0 }}>
             <Link href="/#home">
                 <a><img src="/assets/logo.svg" width="50" height="32" alt="Home" /></a>
             </Link>
@@ -40,6 +41,8 @@ const Container = styled.header`
     position:fixed;
     top: 0px;
     width: 100%;
+    z-index: 100;
+    transition: 0.2s ease-in;
     nav, ul, a{
         display: flex;
         align-items:center;

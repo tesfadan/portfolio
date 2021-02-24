@@ -3,7 +3,6 @@ import colors from './Colors';
 
 const GlobalStyle = createGlobalStyle`
     /* Global Styles will go here */
-
     .grid{
         display: grid;
         grid-template-columns: repeat(12, 1fr);
@@ -30,9 +29,9 @@ const GlobalStyle = createGlobalStyle`
         }
 
         &.primary{
-            background: ${colors.primary};
+            background: ${colors.primaryContarst};
             color: ${colors.white};
-            border-color: ${colors.primary};
+            border-color: ${colors.primaryContarst};
 
             &:hover{
                 background: ${colors.primaryDark};
@@ -54,7 +53,7 @@ const GlobalStyle = createGlobalStyle`
             bottom: -4px;
             border-radius:2px;
         }
-        &:hover{
+        &:hover, &:focus{
             &::after{
                 width: 100%;
             }
@@ -72,6 +71,9 @@ const GlobalStyle = createGlobalStyle`
 
     svg, a, img{
         user-select: none;
+    }
+    a{
+        cursor: pointer;
     }
 `
 

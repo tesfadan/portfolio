@@ -8,7 +8,7 @@ export default function PlaygroundCard({ ...props }) {
         <Container>
             <div className="cardHeader">
                 <ul className="tags">
-                    {tags.split(",").map(tag => <Tag value={tag} />)}
+                    {tags.split(",").map((tag, index) => <Tag value={tag} key={`${name}-tag-${tag}`} />)}
                 </ul>
                 <ul className="links">
                     <li>

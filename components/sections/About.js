@@ -65,7 +65,7 @@ const Container = styled.div`
         grid-column: 4/11;
     }
     a{
-        color: ${colors.primary};
+        color: ${colors.primaryDark};
         transition: 0.1s ease-in;
         &:hover{
             color: ${colors.primaryLight}

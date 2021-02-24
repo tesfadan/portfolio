@@ -31,6 +31,7 @@ const Container = styled.div`
     justify-content:center;
     min-height: 100vh;
     align-items: center;
+    background: ${colors.white};
     .content{
         grid-column: 3/10;
         position: relative;
