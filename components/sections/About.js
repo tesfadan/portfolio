@@ -26,10 +26,10 @@ export default function About() {
                         gone above and beyond to polish my projects. I am quite excited to
                         kick start my career in the industry as I will be graduating shortly.
                     </p>
-                    <p>
+                    {/* <p>
                         I am currently looking to join a small to medium-sized company,
                         ideally working as a front-end developer.
-                    </p>
+                    </p> */}
                     <p>
                         Here are a few technologies I've been working with recently:
                     </p>
@@ -64,7 +64,7 @@ const Container = styled.div`
     position:relative;
 
     .graphics{
-        grid-column: 1/end;
+        grid-column: 1/13;
         position: relative;
         background: #326BFF;
         border-radius: 3px;
@@ -106,4 +106,42 @@ const Container = styled.div`
         }
     }
 
+
+    /* responsive code goes here  */
+    @media(max-width: 1230px){
+        padding: 40px 60px;
+        padding-top: 80px;
+        margin-top: -180px;
+        .content{
+            grid-column: 4/12;
+        }
+    }
+
+    @media(max-width: 1010px){
+        /* Font sizes should change here */
+        .content{
+            grid-column: 3/12;
+        }
+        .graphics{
+            height: 380px;
+        }
+    }
+
+    @media(max-width: 780px){
+        padding: 40px;
+        padding-top: 60px;
+        margin-top: -160px;
+        .graphics{
+            height: 280px;
+        }
+        .content{
+            grid-column: 2/12;
+        }
+    }
+
+    @media(max-width: 640px){
+        padding: 20px;
+        padding-top: 40px;
+        margin-top: -80px;
+    }
 `

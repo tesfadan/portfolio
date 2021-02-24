@@ -39,7 +39,8 @@ export default function PlaygroundCard({ ...props }) {
 
 export const Container = styled.div`
     border-radius:4px;
-    padding: 20px 26px;
+    padding: 20px;
+    padding-top: 18px;
     z-index: 3;
     border: 1px solid ${colors.border};
     display: flex;
@@ -104,5 +105,22 @@ export const Container = styled.div`
         }
     }
 
+
+    @media(max-width: 780px){
+        .tags{
+            display: none;
+        }
+        .links{
+            left: -10px;
+            li{
+                margin-left: 0px;
+                margin-right:10px;
+            }
+
+        }
+        .main{
+            padding-right: 0px;
+        }
+    }
 
 `;

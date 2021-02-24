@@ -88,4 +88,13 @@ const Container = styled.footer`
         right: 40px;
     }
 
+    @media(max-width: 640px){
+        padding: 20px;
+        
+        .socials, .email{
+            /* right: 20px; */
+            display: none;
+        }
+    }
+
 `

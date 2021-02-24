@@ -42,14 +42,9 @@ const Container = styled.div`
         top: -80px;
     }
     h1{
-        font-size: 72px;
-        line-height: 76px;
-        letter-spacing: -3px;
-        font-weight: 700;
         .themed{
             color: ${colors.primary}
         }
-        margin-bottom: 40px;
     }
     p{
         margin-bottom: 40px;
@@ -57,5 +52,36 @@ const Container = styled.div`
     }
     .button{
         padding: 0px 32px;
+    }
+
+
+    @media(max-width: 1140px){
+        .content{
+            grid-column: 3/11;
+        }
+    }
+
+    @media(max-width: 1010px){
+        /* Font sizes should change here */
+    }
+
+    @media(max-width: 760px){
+        .content{
+            grid-column:3/12;
+        }
+    }
+
+    @media(max-width: 640px){
+        .content{
+            grid-column:3/13;
+        }
+    }
+    @media(max-width: 480px){
+        .content{
+            grid-column:2/13;
+        }
+        p{
+            margin-right: 20px;
+        }
     }
 `

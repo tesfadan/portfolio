@@ -13,12 +13,17 @@ const TypographyStyle = createGlobalStyle`
     }
     p{
         font-size: 16px;
-        line-height: 30px;
+        line-height: 32px;
     }
     p{
         margin-bottom:10px;
     }
     h1{
+        font-size: 72px;
+        line-height: 76px;
+        letter-spacing: -3px;
+        font-weight: 700;
+        margin-bottom: 40px;
     }
     
     h2{
@@ -36,6 +41,56 @@ const TypographyStyle = createGlobalStyle`
         font-size: 16px;
         line-height: 30px;
         margin-bottom: 6px;
+    }
+
+    @media(max-width: 1010px){
+        /* Font sizes should change here */
+        h1{
+            font-size: 54px;
+            line-height: 60px;
+            margin-bottom: 20px;
+
+        }
+        h2{
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+        h3{
+            font-size:16px;
+            margin-bottom: 8px;
+        }
+        h4{
+            font-size: 16px;
+            line-height: 18px;
+        }
+        p{
+        }
+    }
+
+    @media(max-width: 640px){
+        h1{
+            font-size: 38px;
+            line-height: 44px;
+            margin-bottom: 20px;
+            letter-spacing: -2px;
+        }
+        h2{
+            font-size: 20px;
+            line-height: 32px;
+        }
+        h3{
+            margin-bottom: 10px;
+        }
+        p{
+            font-size: 14px;
+            line-height: 24px;
+        }
+    } 
+    @media(max-width: 480px){
+        h1{
+            font-size: 32px;
+            line-height: 40px;
+        }
     }
 `
 

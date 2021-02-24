@@ -40,7 +40,7 @@ const Container = styled.div`
     bottom: 0px;
     z-index:0;
     .content{
-        grid-column: 4/9;
+        grid-column: 4/8;
     }
 
     h2{
@@ -87,6 +87,30 @@ const Container = styled.div`
                 opacity: 1;
             }
         }
+    }
+
+        /* responsive code goes here  */
+    @media(max-width: 1230px){
+        padding: 80px 60px;
+        .content{
+            grid-column: 4/10;
+        }
+    }
+
+    @media(max-width: 1010px){
+        .content{
+            grid-column: 3/9;
+        }
+    }
+
+    @media(max-width: 780px){
+        .content{
+            grid-column: 2/12;
+        }
+    }
+
+    @media(max-width: 640px){
+        padding: 60px 20px;
     }
 
 `

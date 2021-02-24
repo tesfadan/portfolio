@@ -25,4 +25,9 @@ const Container = styled.div`
         opacity:0.2;
         mix-blend-mode: overlay;
     }
+
+    img{
+        height: 100%;
+        object-fit: cover;
+    }
 `

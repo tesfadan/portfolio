@@ -8,7 +8,7 @@ import { useState } from 'react';
 export default function Playground() {
     const [showMore, setShowMore] = useState(false);
     return (
-        <Container id="portfolio">
+        <Container id="playground">
             <div className="grid">
                 <h2>Playground</h2>
                 <div className="content">
@@ -35,7 +35,7 @@ const Container = styled.div`
         row-gap: 60px;
     }
     h2{
-        grid-column-start: 4;
+        grid-column: 4/10;
     }
     button{
         grid-column: 1/6
@@ -55,5 +55,37 @@ const Container = styled.div`
 
     .button{
         padding: 0px 30px;
+    }
+
+        /* responsive code goes here  */
+    @media(max-width: 1230px){
+        padding: 80px 60px;
+        .content{
+            grid-column:1/13;
+        }
+    }
+    @media(max-width: 1010px){
+        /* Font sizes should change here */
+        h2{
+            grid-column: 3/12;
+        }
+    }
+    @media(max-width: 780px){
+        h2{
+            grid-column: 2/12;
+        }
+    }
+    @media(max-width: 640px){
+        padding: 20px;
+        padding-top: 40px;
+        .grid{
+            row-gap: 20px;
+        }
+    }
+
+    @media(max-width: 540px){
+        .content{
+            grid-template-columns: 1fr;
+        }
     }
 `

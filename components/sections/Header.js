@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import Link from "next/link"
 import colors from '../../styles/Colors';
 import AnchorLink from 'react-anchor-link-smooth-scroll'
+import Menu from './Menu';
 
 export default function Header({ show }) {
 
@@ -10,24 +11,29 @@ export default function Header({ show }) {
         <AnchorLink className="underline" href={href}>{title}</AnchorLink>
     </li>
 
+    // const [showMenu, setShowMenu] = useState(true);
+
     return (
-        <Container style={show ? { top: 0, opacity: 1 } : { top: -20, opacity: 0 }}>
-            <AnchorLink href="#home">
-                <img src="/assets/logo.svg" width="50" height="32" alt="Home" />
-            </AnchorLink>
-            <nav>
-                <ul>
-                    <li>
-                        <Link href="/">
-                            <a className="button small">Resume</a>
-                        </Link>
-                    </li>
-                    <NavLink href="#contact" title="Contact" />
-                    <NavLink href="#portfolio" title="Portfolio" />
-                    <NavLink href="#about" title="About" />
-                </ul>
-            </nav >
-        </Container >
+        <>
+            {/* <Menu /> */}
+            <Container style={show ? { top: 0, opacity: 1 } : { top: -20, opacity: 0 }}>
+                <AnchorLink href="#home">
+                    <img src="/assets/logo.svg" width="50" height="32" alt="Home" />
+                </AnchorLink>
+                <nav>
+                    <ul>
+                        <li>
+                            <Link href="/">
+                                <a className="button small">Resume</a>
+                            </Link>
+                        </li>
+                        <NavLink href="#contact" title="Contact" />
+                        <NavLink href="#portfolio" title="Portfolio" />
+                        <NavLink href="#about" title="About" />
+                    </ul>
+                </nav >
+            </Container >
+        </>
     );
 }
 
@@ -61,5 +67,9 @@ const Container = styled.header`
         &:hover{
             color: ${colors.primary}
         }
+    }
+
+    @media(max-width: 640px){
+        padding: 20px;
     }
 `

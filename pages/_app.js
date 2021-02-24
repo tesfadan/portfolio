@@ -26,8 +26,8 @@ function MyApp({ Component, pageProps }) {
     <GlobalStyle />
     <DefaultHeadTags />
     <Header show={hideOnScroll} />
-    <Footer show={hideOnScroll} />
     <Component {...pageProps} />
+    <Footer show={hideOnScroll} />
   </>
 }
 

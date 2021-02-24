@@ -69,6 +69,13 @@ const GlobalStyle = createGlobalStyle`
         user-select: none;
     }
 
+    @media(max-width: 880px){
+        .label{
+        font-size: 10px;
+        line-height: 18px;
+        }
+    }
+
     svg, a, img{
         user-select: none;
     }
@@ -84,6 +91,10 @@ const GlobalStyle = createGlobalStyle`
     height: 1px;
     overflow: hidden;
 }
+
+    #__next{
+        position:relative;
+    }
 `
 
 export default GlobalStyle

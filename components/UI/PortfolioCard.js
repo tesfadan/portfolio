@@ -44,7 +44,7 @@ export default function PortfolioCard({ ...props }) {
 }
 
 export const Container = styled.div`
-    grid-column: 1/end;
+    grid-column: 1/13;
     display: inherit;
     grid-template-columns: inherit;
     gap: inherit;
@@ -64,6 +64,7 @@ export const Container = styled.div`
             width: auto;
             object-fit: contain;
             transition: 0.1s ease-in;
+            max-width: 100%;
             &:hover{
             transition: 0.2s;
             transform:scale(1.1)
@@ -73,7 +74,7 @@ export const Container = styled.div`
 
     .content{
         border-radius:2px;
-        grid-column: 8/end;
+        grid-column: 8/13;
         grid-row: 1;
         margin: 40px 0px;
         padding: 40px;
@@ -83,7 +84,7 @@ export const Container = styled.div`
 
     &.flip{
         .image{
-            grid-column: 5/end;
+            grid-column: 5/13;
         }
         .content{
             grid-column: 1/6;
@@ -123,6 +124,80 @@ export const Container = styled.div`
                 border: 1px solid ${colors.tillDark}
             }
             transition: 0.125s ease-in;
+        }
+    }
+
+
+    /* responsive code goes here  */
+    @media(max-width: 1230px){
+        .image{
+            grid-column: 1/8;
+
+            img{
+                height: 320px;
+            }
+        }
+        .content{
+            grid-column: 7/13;
+        }
+
+        &.flip{
+            .image{
+                grid-column: 6/13;
+            }
+            .content{
+                grid-column: 1/7;
+            }
+        }
+        .main{
+            padding-right: 0px;
+        }
+    }
+
+
+    @media(max-width: 1010px){
+        /* Font sizes should change here */
+        .image img{
+            height: 280px;
+        }
+    }
+    @media(max-width: 780px){
+        row-gap: 0px;
+        grid-column: 2/12;
+        .image{
+            grid-column: 1/13;
+            padding: 60px;
+
+        }
+        .content{
+            grid-column: 1/13;
+            grid-row: 2;
+            margin: 0px;
+        }
+
+        &.flip{
+            .image{
+                grid-column: 1/13;
+                padding: 60px;
+        }
+        .content{
+            grid-column: 1/13;
+            grid-row: 2;
+            margin: 0px;
+        }
+        }
+    }
+
+    @media(max-width: 640px){
+        grid-column: 1/end;
+        .image{
+            padding: 20px;
+        }
+        .content{
+            padding: 20px;
+        }
+        .main{
+            padding-right: 60px;
         }
     }
 `;

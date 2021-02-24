@@ -28,7 +28,33 @@ const Container = styled.div`
         row-gap: 100px;
     }
     h2{
-        grid-column-start: 4;
+        grid-column: 4/10;
         margin-bottom: -60px;
+    }
+
+    /* responsive code goes here  */
+    @media(max-width: 1230px){
+        padding: 80px 60px;
+    }
+
+    @media(max-width: 1010px){
+        /* Font sizes should change here */
+        h2{
+            grid-column: 3/12;
+        }
+    }
+    @media(max-width: 780px){
+        h2{
+            grid-column: 2/12;
+        }
+
+        .grid{
+            row-gap: 60px;
+        }
+    }
+
+    @media(max-width: 640px){
+        padding: 20px;
+        padding-top: 40px;
     }
 `
