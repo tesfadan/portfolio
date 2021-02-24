@@ -62,7 +62,6 @@ const Container = styled.div`
     .graphics{
         grid-column: 1/end;
         position: relative;
-        /* top: -100px; */
         background: #326BFF;
         border-radius: 3px;
         height: 542px;

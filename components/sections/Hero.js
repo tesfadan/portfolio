@@ -1,13 +1,17 @@
-import Link from 'next/link';
 import styled from 'styled-components'
 import colors from '../../styles/Colors';
+import AnchorLink from 'react-anchor-link-smooth-scroll'
+
 export default function Hero() {
     return (
         <Container id="home">
             <div className="grid">
                 <div className="content">
                     <h1>
-                        Hello, my name is <span>Tesfa Demissie</span>. I’m a Frontend Developer.
+                        <span>Hello, my name is</span>
+                        <br />
+                        <span><span className="themed">Tesfa Demissie</span></span>. I’m a <br />
+                        <span>Frontend Developer.</span>
                     </h1>
                     <p>
                         I am a Front End Developer based in Winnipeg with experience
@@ -15,11 +19,9 @@ export default function Hero() {
                         SASS, and React. I also have experience working with React Native,
                         PHP and MySQL.
                     </p>
-                    <Link href="/#contact" >
-                        <a className="button primary">
-                            Get in Touch
-                        </a>
-                    </Link>
+                    <AnchorLink className="button primary" href="#contact">
+                        Get in Touch
+                    </AnchorLink>
                 </div>
             </div>
         </Container>
@@ -42,7 +44,7 @@ const Container = styled.div`
         line-height: 76px;
         letter-spacing: -3px;
         font-weight: 700;
-        span{
+        .themed{
             color: ${colors.primary}
         }
         margin-bottom: 40px;

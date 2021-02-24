@@ -6,7 +6,6 @@ import GlobalStyle from "../styles/GlobalStyle";
 import ResetStyle from '../styles/Reset';
 import TypographyStyle from '../styles/Typography';
 import { useScrollPosition } from '@n8tb1t/use-scroll-position';
-import "../functions";
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {

@@ -11,13 +11,14 @@ const TypographyStyle = createGlobalStyle`
     h1, h2, h3{
         color: ${colors.black};
     }
-
     p{
         font-size: 16px;
         line-height: 30px;
     }
     p{
         margin-bottom:10px;
+    }
+    h1{
     }
     
     h2{

@@ -48,7 +48,7 @@ const Container = styled.div`
         margin-bottom: 40px;
     }
     ul{
-        margin-top: 40px;
+        margin-top: 30px;
         display: flex;
     }
     li{
@@ -57,6 +57,10 @@ const Container = styled.div`
     }
 
     .underline{
+        &:hover{
+            opacity:1;
+            color: ${colors.white};
+        }
         &:after{
             position: absolute;
             left: 0px;
@@ -64,7 +68,7 @@ const Container = styled.div`
     }
 
     .credit{
-        margin-top: 60px;
+        margin-top: 40px;
         font-size: 14px;
         p{
             margin-bottom:10px

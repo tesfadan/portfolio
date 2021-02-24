@@ -12,9 +12,9 @@ export default function Header({ show }) {
 
     return (
         <Container style={show ? { top: 0, opacity: 1 } : { top: -20, opacity: 0 }}>
-            <Link href="/#home">
-                <a><img src="/assets/logo.svg" width="50" height="32" alt="Home" /></a>
-            </Link>
+            <AnchorLink href="#home">
+                <img src="/assets/logo.svg" width="50" height="32" alt="Home" />
+            </AnchorLink>
             <nav>
                 <ul>
                     <li>

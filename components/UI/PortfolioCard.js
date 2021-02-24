@@ -42,6 +42,8 @@ export const Container = styled.div`
     display: inherit;
     grid-template-columns: inherit;
     gap: inherit;
+
+
     &:hover{
        .image ::before, .image ::after{
             opacity: 0;
@@ -61,6 +63,9 @@ export const Container = styled.div`
         justify-content: center;
         align-items: center;
         position: relative;
+
+        background: #289fc420;
+        /* background:#759DA6; */
         &::before, &::after{
             display: block;
             content:" ";
@@ -71,13 +76,13 @@ export const Container = styled.div`
             transition: 0.5s ease-in;
         }
         &::before{
-            background:black;
-            mix-blend-mode: saturation;
+            /* background:black; */
+            /* mix-blend-mode: saturation; */
             z-index: 2
         }
         &::after{
-            background:#3092EC;
-            mix-blend-mode: hard-light;
+            /* background:#3092EC; */
+            /* mix-blend-mode: hard-light; */
             z-index: 3;
         }
 

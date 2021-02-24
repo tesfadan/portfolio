@@ -3,7 +3,6 @@ import PlaygroundProjects from '../../content/PlaygroundProjects';
 import colors from '../../styles/Colors';
 import PlaygroundCard from '../UI/PlaygroundCard';
 import { useState } from 'react';
-import { useSpring, animated } from 'react-spring'
 
 
 export default function Playground() {
