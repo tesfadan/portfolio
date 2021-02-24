@@ -14,13 +14,13 @@ const GlobalStyle = createGlobalStyle`
         height: 50px;
         display:flex;
         justify-content:center;
-        border: 2px solid currentColor;
+        border: 2px solid ${colors.border};
         padding: 0px 16px;
         border-radius: 3px; 
         width:max-content;
         align-items:center;
         transition: 0.1s ease-in;
-        
+        border-width:1px;
         &.small{
             height: 40px;
         }
@@ -75,6 +75,15 @@ const GlobalStyle = createGlobalStyle`
     a{
         cursor: pointer;
     }
+
+    .screenReaderOnly {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
 `
 
 export default GlobalStyle

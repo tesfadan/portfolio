@@ -5,11 +5,14 @@ import colors from '../../styles/Colors';
 const Footer = ({ show }) => {
     const FooterLink = ({ href, service }) => <li>
         <Link href={href}>
-            <a target="_blank">
+            <a rel="noreferrer" target="_blank">
                 <img
                     src={`/assets/icons/${service}.svg`}
-                    alt="Connect with Tesfa Demissie on Twitter."
+                    alt={`Connect with Tesfa Demissie on ${service}.`}
                     width="20" height="20" />
+                <span className="screenReaderOnly">
+                    {`Connect with Tesfa Demissie on ${service}.`}
+                </span>
             </a>
         </Link>
     </li>
@@ -24,10 +27,13 @@ const Footer = ({ show }) => {
         <ul className="email">
             <li>
                 <Link href="mailto:tesfadaniel1@gmail.com" >
-                    <a target="_blank">
+                    <a rel="noreferrer" target="_blank">
                         <img src="/assets/icons/telegram.svg"
                             alt="Email Tesfa Demissie."
                             width="20" height="20" />
+                        <span className="screenReaderOnly">
+                            Email Tesfa Demissie.
+                        </span>
                     </a>
                 </Link>
             </li>
@@ -47,12 +53,14 @@ const Container = styled.footer`
     bottom: 0px;
     z-index: 100;
     transition: 0.2s ease-in;
+    
 
     ul, li, a{
         height: max-content;
     }
     img{
         height:20px;
+        opacity:0.8;
     }
     li{
         margin-top: 10px;

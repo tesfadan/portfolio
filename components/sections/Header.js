@@ -54,6 +54,7 @@ const Container = styled.header`
     li{
         margin-left: 22px;
         font-size: 14px;
+        font-weight: 500;
     }
     .navLink{
         transition: 0.1s ease-in;

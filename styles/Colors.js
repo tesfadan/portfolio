@@ -8,7 +8,8 @@ const colors = {
     white: '#ffffff',
     // 
     till: '#E6F1EF',
-    tillDark: '#cad2d8'
+    tillDark: '#cad2d8',
+    border: '#868996'
 }
 
 export default colors

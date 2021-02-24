@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export default function Graphics() {
     return <Container>
-        <img src="/assets/images/tesfa.jpg" alt="Tesfa Demissie" />
+        <img src="/assets/images/tesfa.jpg" alt="Tesfa Demissie" width="1200" height="584" />
     </Container>
 }
 
@@ -22,10 +22,7 @@ const Container = styled.div`
         height: 100%;
         background: #289fc4;
         z-index: 2;
-        mix-blend-mode: hard-light;
-
-        /* background:#759DA6; */
-        opacity:0.3;
+        opacity:0.2;
         mix-blend-mode: overlay;
     }
 `

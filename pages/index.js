@@ -12,6 +12,7 @@ export default function Home() {
     <About />
     <Portfolio />
     <Playground />
+    <div id="contact" />
     <Contact />
   </>
   )

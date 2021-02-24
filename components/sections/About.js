@@ -17,8 +17,8 @@ export default function About() {
                     </p>
                     <p>
                         I knew I wanted to be a developer working on JavaScript assignments
-                        in my first year at <a target="_blank" href="https://www.rrc.ca/"> Red River College</a>,
-                        taking the Digital Media Design program. I majored in <a target="_blank"
+                        in my first year at <a rel="noreferrer" target="_blank" href="https://www.rrc.ca/"> Red River College</a>,
+                        taking the Digital Media Design program. I majored in <a rel="noreferrer" target="_blank"
                             href="https://www.rrc.ca/creativearts/dmd/interaction-design-and-development/">
                             Web Design and Development </a>
                         and had tremendous opportunities to study under distinguished instructors.
@@ -56,9 +56,13 @@ export default function About() {
 const Container = styled.div`
     display:flex;
     justify-content:center;
-    margin-bottom: 40px;
+    padding-bottom: 40px;
     margin-top: -200px;
     padding-top: 100px;
+    background: ${colors.white};
+    z-index: 10;
+    position:relative;
+
     .graphics{
         grid-column: 1/end;
         position: relative;

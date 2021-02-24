@@ -18,7 +18,8 @@ const Projects = [
         landing page as free alternative to Linktree.`,
         image: "/assets/images/projects/linkup.png",
         tags: "React,SASS,Firebase",
-        link: "https://linkup.page"
+        link: "https://linkup.page",
+        sourceCode: "https://linkup.page"
     },
     {
         name: "Stoic Widgets",
@@ -27,7 +28,8 @@ const Projects = [
         React Native & Swift working on this project.`,
         image: "/assets/images/projects/stoic.png",
         tags: "React Native,SASS,Swift",
-        link: "https://apps.apple.com/ca/app/stoic-widgets/id1541534447"
+        link: "https://apps.apple.com/ca/app/stoic-widgets/id1541534447",
+        sourceCode: "https://apps.apple.com/ca/app/stoic-widgets/id1541534447"
     },
     {
         name: "Transit Live",
@@ -36,7 +38,8 @@ const Projects = [
         data such as bus stops and routes with real-time schedule updates.`,
         image: "/assets/images/projects/transit.png",
         tags: "React,SASS,Firebase",
-        link: "https://apps.apple.com/ca/app/winnipeg-transit-live/id1531948380"
+        link: "https://apps.apple.com/ca/app/winnipeg-transit-live/id1531948380",
+        sourceCode: "https://apps.apple.com/ca/app/winnipeg-transit-live/id1531948380"
     }
 ]
 

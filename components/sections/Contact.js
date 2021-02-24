@@ -4,7 +4,7 @@ import colors from '../../styles/Colors';
 
 export default function Contact() {
     return (
-        <Container id="contact">
+        <Container>
             <div className="grid">
                 <div className="content">
                     <h2>Get in Touch</h2>
@@ -12,17 +12,17 @@ export default function Contact() {
                         Feel free to email me or connect with me on social media if you would like to chat.
                     </p>
                     <Link href="mailto:tesfadaniel1@gmail.com">
-                        <a className="underline">tesfadaniel1@gmail.com</a>
+                        <a rel="noreferrer" className="underline">tesfadaniel1@gmail.com</a>
                     </Link>
                     <ul>
-                        <li><a href="https://linkedin.com/in/tesfadan/" className="underline">Linkedin</a></li>
-                        <li><a href="https://github.com/tesfadan" className="underline">Github</a></li>
-                        <li><a href="https://twitter.com/tesfadan" className="underline">Twitter</a></li>
+                        <li><a rel="noreferrer" href="https://linkedin.com/in/tesfadan/" className="underline">Linkedin</a></li>
+                        <li><a rel="noreferrer" href="https://github.com/tesfadan" className="underline">Github</a></li>
+                        <li><a rel="noreferrer" href="https://twitter.com/tesfadan" className="underline">Twitter</a></li>
                     </ul>
 
                     <div className="credit">
                         <p>Designed & Developed by Tesfa Demissie</p>
-                        <a href="https://github.com/tesfadan/portfolio" className="underline">View Source Code</a>
+                        <a rel="noreferrer" href="https://github.com/tesfadan/portfolio" className="underline">View Source Code</a>
                     </div>
                 </div>
             </div>
@@ -36,6 +36,9 @@ const Container = styled.div`
     background: ${colors.black};
     padding: 120px 0px;
     color: ${colors.till};
+    position:sticky;
+    bottom: 0px;
+    z-index:0;
     .content{
         grid-column: 4/9;
     }

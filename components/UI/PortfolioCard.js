@@ -7,7 +7,7 @@ export default function PortfolioCard({ ...props }) {
     return (
         <Container flip={flip} className={flip ? `flip` : ''}>
             <div className="image">
-                <img src={image} height="200" width="500" />
+                <img src={image} height="200" width="500" alt={name} />
             </div>
 
             <div className="content reveal">
@@ -20,14 +20,20 @@ export default function PortfolioCard({ ...props }) {
                 </div>
                 <ul className="links">
                     <li>
-                        <a href={link} target="_blank">
-                            <img src="/assets/icons/open.svg" height="18" width="18" />
+                        <a rel="noreferrer" href={link} target="_blank">
+                            <img src="/assets/icons/open.svg" height="18" width="18" alt="Open Project" />
+                            <span className="screenReaderOnly">
+                                Open Project
+                            </span>
                         </a>
                     </li>
                     {sourceCode != null ?
                         <li>
-                            <a href={sourceCode} target="_blank">
-                                <img src="/assets/icons/github.svg" height="18" width="18" />
+                            <a rel="noreferrer" href={sourceCode} target="_blank">
+                                <img src="/assets/icons/github.svg" height="18" width="18" alt='View Source Code' />
+                                <span className="screenReaderOnly">
+                                    View Source Code
+                            </span>
                             </a>
                         </li> : null
                     }
@@ -43,17 +49,6 @@ export const Container = styled.div`
     grid-template-columns: inherit;
     gap: inherit;
 
-
-    &:hover{
-       .image ::before, .image ::after{
-            opacity: 0;
-        }
-
-        .image img{
-            transform:scale(1.01)
-        }
-    }
-
     .image{
         grid-column: 1/9;
         grid-row: 1;
@@ -63,34 +58,16 @@ export const Container = styled.div`
         justify-content: center;
         align-items: center;
         position: relative;
-
-        background: #289fc420;
-        /* background:#759DA6; */
-        &::before, &::after{
-            display: block;
-            content:" ";
-            width: 100%;
-            height: 100%;
-            position:absolute;
-            opacity: 1;
-            transition: 0.5s ease-in;
-        }
-        &::before{
-            /* background:black; */
-            /* mix-blend-mode: saturation; */
-            z-index: 2
-        }
-        &::after{
-            /* background:#3092EC; */
-            /* mix-blend-mode: hard-light; */
-            z-index: 3;
-        }
-
+        background: #cbe5e6;
         img{
-            max-height: 430px;
-            height: 100%;
+            height: 400px;
+            width: auto;
             object-fit: contain;
-            transition: 0.5s ease-in;
+            transition: 0.1s ease-in;
+            &:hover{
+            transition: 0.2s;
+            transform:scale(1.1)
+        }
         }
     }
 
@@ -113,7 +90,6 @@ export const Container = styled.div`
         }
     }
 
-
     .tags{
         li{
             margin-right: 16px;
@@ -121,6 +97,7 @@ export const Container = styled.div`
         }
         display:flex;
     }
+    
     .main{
         margin-bottom: 60px;
         padding-right: 40px;

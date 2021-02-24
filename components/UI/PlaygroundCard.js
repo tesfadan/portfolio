@@ -12,13 +12,19 @@ export default function PlaygroundCard({ ...props }) {
                 </ul>
                 <ul className="links">
                     <li>
-                        <a href={link} target="_blank">
-                            <img src="/assets/icons/open.svg" height="18" width="18" />
+                        <a rel="noreferrer" href={link} target="_blank">
+                            <img src="/assets/icons/open.svg" height="18" width="18" alt="Open Project" />
+                            <span className="screenReaderOnly">
+                                Open Project
+                            </span>
                         </a>
                     </li>
                     <li>
-                        <a href={sourceCode} target="_blank">
-                            <img src="/assets/icons/github.svg" height="18" width="18" />
+                        <a rel="noreferrer" href={sourceCode} target="_blank">
+                            <img src="/assets/icons/github.svg" height="18" width="18" alt="View Source Code" />
+                            <span className="screenReaderOnly">
+                                View Source Code
+                            </span>
                         </a>
                     </li>
                 </ul>
@@ -35,10 +41,11 @@ export const Container = styled.div`
     border-radius:4px;
     padding: 20px 26px;
     z-index: 3;
-    border: 1px solid #44464d80;
+    border: 1px solid ${colors.border};
     display: flex;
     flex-wrap: wrap;
     animation: reveal 0.5s ease-in;
+
 
     @keyframes reveal{
         from{

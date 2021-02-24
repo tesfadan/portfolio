@@ -15,7 +15,7 @@ export default function Playground() {
                     {PlaygroundProjects.map((project, index) => showMore ? <PlaygroundCard {...project} key={`playground-${index}`} /> : index < 2 ? <PlaygroundCard {...project} key={`playground-${index}`} index={index} /> : null)}
                 </div>
                 <div className="more">
-                    <button className="button" onClick={e => setShowMore(!showMore)}>{!showMore ? 'Show More' : 'Show Less'}</button>
+                    <button className="button " onClick={e => setShowMore(!showMore)}>{!showMore ? 'Show More' : 'Show Less'}</button>
                 </div>
             </div>
         </Container >
@@ -27,6 +27,8 @@ const Container = styled.div`
     justify-content:center;
     padding: 80px 0px;
     background: ${colors.till};
+    position:relative;
+    z-index:10;
     transition: 2s;
     .grid{
         column-gap: 20px;
@@ -34,7 +36,6 @@ const Container = styled.div`
     }
     h2{
         grid-column-start: 4;
-        /* margin-bottom: 60px; */
     }
     button{
         grid-column: 1/6
@@ -50,5 +51,9 @@ const Container = styled.div`
         display: flex;
         justify-content:center;
         transition: 2s;
+    }
+
+    .button{
+        padding: 0px 30px;
     }
 `
