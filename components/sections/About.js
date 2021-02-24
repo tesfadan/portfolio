@@ -1,11 +1,15 @@
 import styled from 'styled-components'
 import colors from '../../styles/Colors';
+import Graphics from '../UI/Graphics';
 
 export default function About() {
     return (
         <Container id="about">
             <div className="grid">
-                <div className="graphics" />
+                <div className="graphics">
+                    <Graphics />
+
+                </div>
                 <div className="content">
                     <h2>About</h2>
                     <p>
@@ -62,6 +66,9 @@ const Container = styled.div`
         background: #326BFF;
         border-radius: 3px;
         height: 542px;
+        margin-bottom: 60px;
+        overflow: hidden;
+
     }
     .content{
         grid-column: 4/11;

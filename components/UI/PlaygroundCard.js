@@ -2,10 +2,10 @@ import styled from 'styled-components';
 import colors from '../../styles/Colors';
 
 export default function PlaygroundCard({ ...props }) {
-    const { name, description, tags, link, sourceCode } = props;
+    const { name, description, tags, link, sourceCode, unMount, onTransitionEnd, index } = props;
     const Tag = ({ value }) => <li className="label">{value}</li>;
     return (
-        <Container>
+        <Container onTransitionEnd={onTransitionEnd}>
             <div className="cardHeader">
                 <ul className="tags">
                     {tags.split(",").map((tag, index) => <Tag value={tag} key={`${name}-tag-${tag}`} />)}
@@ -38,6 +38,19 @@ export const Container = styled.div`
     border: 1px solid #44464d80;
     display: flex;
     flex-wrap: wrap;
+    animation: reveal 0.5s ease-in;
+
+    @keyframes reveal{
+        from{
+            opacity: 0;
+            top: 40px;
+        }
+        to{
+            opacity: 1;
+            top: 0px;
+        }
+    }
+
     .cardHeader{
         display: flex;
         margin-bottom: 100px;

@@ -1,14 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import Link from "next/link"
 import colors from '../../styles/Colors';
-import ReactDOM from 'react-dom'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 export default function Header({ show }) {
 
     const NavLink = ({ href, title }) => <li className={`navLink`}>
-        <AnchorLink className="underline" className="scroll" href={href}>{title}</AnchorLink>
+        <AnchorLink className="underline" href={href}>{title}</AnchorLink>
     </li>
 
     return (

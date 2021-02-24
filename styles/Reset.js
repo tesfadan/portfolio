@@ -102,6 +102,10 @@ a,
     cursor: pointer;
 }
 
+button{
+    background: unset;
+}
+
 // // // // // RESET NEW 
 
 /*
