@@ -8,7 +8,7 @@ export default function DefaultHeadTags() {
             <meta name="description" content="I am a Designer and Front End Developer with experience building websites and web applications with JavaScript, HTML, SASS, and React." />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             {/* Theme and Icons  */}
-            <meta name="theme-color" content="#ddeaeb" />
+            <meta name="theme-color" content="#021B22" />
             <link rel="icon" href="/assets/logo.svg" />
 
             {/* Twitter metadata  */}
