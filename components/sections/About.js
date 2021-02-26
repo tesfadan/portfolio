@@ -33,7 +33,10 @@ export default function About() {
                         <li>Firebase</li>
                     </ul>
                 </div>
-                <img src="/assets/images/tesfaCrop.jpg" alt="Tesfa Demissie" />
+                <img src="/assets/images/tesfaCrop.jpg" alt="Tesfa Demissie"
+                    height="467"
+                    width="400"
+                />
             </div>
         </Container>
     );
