@@ -5,8 +5,8 @@
     "background_color": "#021B22",
     "display": "standalone",
     "orientation": "portrait",
-    "scope": "/",
-    "start_url": "/",
+    "scope": "./",
+    "start_url": "./",
     "icons": [{
             "src": "assets/icons/icon-72x72.png",
             "sizes": "72x72",
@@ -46,6 +46,12 @@
             "src": "assets/icons/icon-512x512.png",
             "sizes": "512x512",
             "type": "image/png"
+        },
+        {
+            "src": "assets/icons/maskable_icon.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
         }
     ],
     "splash_pages": null
