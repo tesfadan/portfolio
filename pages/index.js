@@ -11,8 +11,7 @@ export default function Home() {
     <Hero />
     <About />
     <Portfolio />
-    <Playground />
-    <div id="contact" />
+    {/* <Playground /> */}
     <Contact />
   </>
   )

@@ -1,3 +1,4 @@
+import React from "react";
 import styled from 'styled-components';
 import colors from '../../styles/Colors';
 
@@ -49,6 +50,19 @@ export const Container = styled.div`
     grid-template-columns: inherit;
     gap: inherit;
 
+    margin-bottom: 80px;
+    padding-bottom: 20px;
+    h3{
+        color: #E2E5E9;
+    }
+
+    p{
+        color:#E2E5E9;
+        font-size: 16px;
+        line-height: 28px;
+        color: #aeb9c7;
+    }
+
     .image{
         grid-column: 1/9;
         grid-row: 1;
@@ -58,28 +72,38 @@ export const Container = styled.div`
         justify-content: center;
         align-items: center;
         position: relative;
-        background: #cbe5e6;
+        background: #24263560;
+        border:  1px solid #242635;
+
         img{
-            height: 400px;
+            /* height: 320px; */
+            height: 360px;
             width: auto;
             object-fit: contain;
             transition: 0.1s ease-in;
             max-width: 100%;
-            &:hover{
-            transition: 0.2s;
-            transform:scale(1.1)
-        }
+            opacity: 0.7;
+
         }
     }
+
+    &:hover {
+            img{
+                opacity: 0.9;
+                transition: 0.2s;
+                transform:scale(1.005);
+            }
+        }
 
     .content{
         border-radius:2px;
         grid-column: 8/13;
         grid-row: 1;
         margin: 40px 0px;
-        padding: 40px;
-        background: ${colors.white};
+        padding: 32px 40px;
         z-index: 3;
+        background: #171b25;
+        border:  1px solid #24263590;
     }
 
     &.flip{
@@ -95,6 +119,7 @@ export const Container = styled.div`
         li{
             margin-right: 16px;
             margin-bottom: 40px;
+            color: #aeb9c7; 
         }
         display:flex;
     }
@@ -103,6 +128,7 @@ export const Container = styled.div`
         margin-bottom: 60px;
         padding-right: 40px;
     }
+
 
     .links{
         display: flex;
@@ -164,21 +190,27 @@ export const Container = styled.div`
     @media(max-width: 780px){
         row-gap: 0px;
         grid-column: 2/12;
+        margin-bottom: 60px;
+
         .image{
             grid-column: 1/13;
             padding: 60px;
-
+            border-bottom: 0px;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
         }
         .content{
             grid-column: 1/13;
             grid-row: 2;
             margin: 0px;
+            border-top-left-radius: 0px;
+            border-top-right-radius: 0px;
         }
 
         &.flip{
             .image{
                 grid-column: 1/13;
-                padding: 60px;
+                /* padding: 60px; */
         }
         .content{
             grid-column: 1/13;
@@ -190,6 +222,7 @@ export const Container = styled.div`
 
     @media(max-width: 640px){
         grid-column: 1/end;
+        margin-bottom: 40px;
         .image{
             padding: 20px;
         }
@@ -197,7 +230,10 @@ export const Container = styled.div`
             padding: 20px;
         }
         .main{
-            padding-right: 60px;
+            padding-right: 0px;
         }
+    }
+    @media(max-width:480px){
+        margin-bottom: 24px;
     }
 `;

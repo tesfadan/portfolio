@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import colors from '../../styles/Colors';
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 export default function Hero() {
@@ -7,20 +6,12 @@ export default function Hero() {
         <Container id="home">
             <div className="grid">
                 <div className="content">
-                    <h1>
-                        <span>Hello, my name is</span>
-                        <br />
-                        <span><span className="themed">Tesfa Demissie</span></span>. I’m a <br />
-                        <span>Frontend Developer.</span>
-                    </h1>
+                    <h1><span className="name">Tesfa Demissie</span><br /> <span className="jobTitle">Frontend Developer.</span></h1>
                     <p>
-                        I am a Front End Developer based in Winnipeg with experience
-                        building websites and web applications with JavaScript, HTML,
-                        SASS, and React. I also have experience working with React Native,
-                        PHP and MySQL.
+                        I am a front-end developer based in Winnipeg with experience building websites and web applications with JavaScript, HTML, SCSS, and React. I also have experience working with React Native, PHP and MySQL.
                     </p>
-                    <AnchorLink className="button primary" href="#contact">
-                        Get in Touch
+                    <AnchorLink href="#portfolio">
+                        Explore Portfolio
                     </AnchorLink>
                 </div>
             </div>
@@ -29,59 +20,99 @@ export default function Hero() {
 }
 
 const Container = styled.div`
+    height: 100vh;
+    background:#021B22;
     display:flex;
     justify-content:center;
-    min-height: 100vh;
-    align-items: center;
-    background: ${colors.white};
-    z-index: 10;
-    position:relative;
+    align-items:center;
+    z-index:10;
+
+    background-image: linear-gradient(180deg, #1f4cc916, #34EBF705);
+
     .content{
-        grid-column: 3/10;
-        position: relative;
-        top: -80px;
+        position:relative;
+        top: -64px;
+        grid-column: 3/9;
+        z-index:2;
     }
     h1{
-        .themed{
-            color: ${colors.primary}
+        color: inherit;
+        font-size: 48px;
+        line-height: 54px;
+        margin-bottom: 16px;
+        font-weight: 800;
+    }
+    .name{
+        color:#E2E5E9;
+    }
+    .jobTitle{
+        opacity: 0.8;
+        color: #aeb9c7;
+    }
+    p, a{
+        color: inherit;
+        font-size:18px;
+        line-height: 32px;
+        color:#aeb9c7;
+        margin-bottom: 18px;
+    }
+    a{
+        display: block;
+        width:max-content;
+        border-radius:4px;
+        padding: 12px 16px;
+        color:#ffffff;
+        border: 1px solid #3e98ff;
+        margin-top: 32px;
+        transition: 0.15s ease;
+        position: relative;
+        top: 0px;
+        box-shadow: 0px 0px 32px #00000000;
+        &:hover, &:focus{
+            background: #3e98ff10;
+            border: 1px solid #A1CDFF40;
         }
     }
-    p{
-        margin-bottom: 40px;
-        margin-right: 80px;
-    }
-    .button{
-        padding: 0px 32px;
-    }
 
-
-    @media(max-width: 1140px){
+    @media(max-width: 1260px){
         .content{
-            grid-column: 3/11;
+            grid-column: 3/10;
         }
     }
 
-    @media(max-width: 1010px){
-        /* Font sizes should change here */
+    @media(max-width: 860px){
+        .content{
+            grid-column:3/11;
+        }
+        img{
+            display: none;
+        }
     }
-
     @media(max-width: 760px){
+        h1{
+            font-size: 32px;
+            line-height: 36px;
+            font-weight: 700;
+        }
+        p,a{
+            font-size: 16px;
+            margin-bottom: 8px;
+            line-height:26px;
+        }
         .content{
-            grid-column:3/12;
+            grid-column:3/11;
         }
     }
 
-    @media(max-width: 640px){
-        .content{
-            grid-column:3/13;
-        }
-    }
     @media(max-width: 480px){
-        .content{
-            grid-column:2/13;
+        h1{
+            font-size: 28px;
+            line-height: 32px;
+            font-weight: 600;
         }
-        p{
-            margin-right: 20px;
+        .content{
+            padding-left: 16px;
+            grid-column:1/13;
         }
     }
-`
+`;

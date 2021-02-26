@@ -16,45 +16,42 @@ export default function Portfolio() {
     );
 }
 
-const Container = styled.div`
+export const Container = styled.div`
+    min-height: 100vh;
+    background: #021B22;
+    color:#E2E5E9;
     display:flex;
-    justify-content:center;
+    align-items: center;
     padding: 80px 0px;
-    background: ${colors.till};
-    z-index: 10;
-    position:relative;
-    .grid{
-        column-gap: 20px;
-        row-gap: 100px;
+    font-size: 16px;
+    z-index:10;
+    background-image: linear-gradient(180deg, #A500F316, #021BFF03);
+    .pageContainer{
     }
     h2{
-        grid-column: 4/10;
-        margin-bottom: -60px;
+        color: inherit;
+        margin-bottom:32px;
+        grid-column:2/8;
+        margin-bottom: 64px;
     }
-
-    /* responsive code goes here  */
-    @media(max-width: 1230px){
-        padding: 80px 60px;
+    @media(max-width: 1260px){
+        padding: 0px 52px;
     }
-
-    @media(max-width: 1010px){
-        /* Font sizes should change here */
+    @media(max-width: 760px){
+        .content{
+            grid-column:1/13;
+        }
+        ul{
+            width: 100%;
+        }
         h2{
-            grid-column: 3/12;
-        }
-    }
-    @media(max-width: 780px){
-        h2{
-            grid-column: 2/12;
+            font-size: 24px;
+            margin-bottom: 32px;
+            grid-column:1/13;
         }
 
-        .grid{
-            row-gap: 60px;
-        }
     }
-
-    @media(max-width: 640px){
-        padding: 20px;
-        padding-top: 40px;
+    @media(max-width:480px){
+        padding:0px;
     }
 `

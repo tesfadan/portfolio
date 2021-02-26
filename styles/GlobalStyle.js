@@ -1,5 +1,4 @@
 import { createGlobalStyle } from 'styled-components';
-import colors from './Colors';
 
 const GlobalStyle = createGlobalStyle`
     /* Global Styles will go here */
@@ -7,58 +6,9 @@ const GlobalStyle = createGlobalStyle`
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         column-gap: 20px;
-        width:1180px;
+        width:1200px;
+        margin: 0 auto;
     };
-
-    .button{
-        height: 50px;
-        display:flex;
-        justify-content:center;
-        border: 2px solid ${colors.border};
-        padding: 0px 16px;
-        border-radius: 3px; 
-        width:max-content;
-        align-items:center;
-        transition: 0.1s ease-in;
-        border-width:1px;
-        &.small{
-            height: 40px;
-        }
-        &:hover{
-            background: ${colors.till};
-        }
-
-        &.primary{
-            background: ${colors.primaryContarst};
-            color: ${colors.white};
-            border-color: ${colors.primaryContarst};
-
-            &:hover{
-                background: ${colors.primaryDark};
-            }
-        }
-    }
-
-    .underline{
-        position: relative;
-        &:after{
-            transition: 0.15s ease-in;
-            display: inline-block;
-            position: relative;
-            content: " ";
-            width: 0%;
-            height: 2px;
-            background: currentColor;
-            position:absolute;
-            bottom: -4px;
-            border-radius:2px;
-        }
-        &:hover, &:focus{
-            &::after{
-                width: 100%;
-            }
-        }
-    }
 
     .label{
         font-style: normal;
@@ -68,32 +18,17 @@ const GlobalStyle = createGlobalStyle`
         text-transform: uppercase;
         user-select: none;
     }
-
-    @media(max-width: 880px){
-        .label{
-        font-size: 10px;
-        line-height: 18px;
-        }
-    }
-
-    svg, a, img{
-        user-select: none;
-    }
-    a{
-        cursor: pointer;
-    }
-
     .screenReaderOnly {
-    position: absolute;
-    left: -10000px;
-    top: auto;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-}
+        position: absolute;
+        left: -10000px;
+        top: auto;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+    }
 
     #__next{
-        position:relative;
+        /* position:relative; */
     }
 `
 
