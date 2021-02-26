@@ -15,8 +15,7 @@ function MyApp({ Component, pageProps }) {
 
   const [isTop, setTop] = useState(true)
   const [hideOnScroll, setHideOnScroll] = useState(true)
-  const [menu, setMenu] = useState(true)
-
+  const [menu, setMenu] = useState(false)
 
   useScrollPosition(({ prevPos, currPos }) => {
     const isShow = currPos.y > prevPos.y
