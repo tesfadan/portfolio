@@ -1,20 +1,18 @@
-import React, { useState } from 'react'
-import styled from 'styled-components'
-import Link from "next/link"
+import Link from "next/link";
+import React, { useState } from 'react';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
+import styled from 'styled-components';
 import colors from '../../styles/Colors';
-import AnchorLink from 'react-anchor-link-smooth-scroll'
+import { LinkButton } from "../UI/Button";
 import Menu from './Menu';
-import MenuIcon from '../icons';
 
 export default function Header({ show }) {
     const NavLink = ({ href, title }) => <li className={`navLink`}>
         <AnchorLink className="underline" href={href}>{title}</AnchorLink>
     </li>
     const [showMenu, setShowMenu] = useState(false);
-
     return (
         <>
-            <Menu showMenu={showMenu} switch={() => setShowMenu(!showMenu)} show={show} />
             <Container style={show ? { top: 0, opacity: 1 } : { top: -20, opacity: 0 }}>
                 <AnchorLink href="#home">
                     <img src="/assets/logo.svg" width="50" height="32" alt="Home" />
@@ -22,8 +20,8 @@ export default function Header({ show }) {
                 <nav>
                     <ul>
                         <li>
-                            <Link href="/">
-                                <a className="button small">Resume</a>
+                            <Link href="/documents/Tesfa_Demissie_Resume.pdf">
+                                <LinkButton className="button small">Resume</LinkButton>
                             </Link>
                         </li>
 
@@ -49,7 +47,6 @@ const Container = styled.header`
     width: 100%;
     z-index: 100;
     transition: 0.2s ease-in;
-    background: ${colors.white};
     nav, ul, a{
         display: flex;
         align-items:center;
@@ -60,15 +57,12 @@ const Container = styled.header`
         flex-flow: row-reverse;
     }
     li{
-        margin-left: 22px;
-        font-size: 14px;
+        margin-left: 32px;
         font-weight: 500;
+        color:#E2E5E9;
     }
     .navLink{
         transition: 0.1s ease-in;
-        &:hover{
-            color: ${colors.primary}
-        }
     }
 
     .customMenuIcon{
