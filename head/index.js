@@ -10,6 +10,9 @@ export default function DefaultHeadTags() {
             {/* Theme and Icons  */}
             <meta name="theme-color" content="#021B22" />
             <link rel="icon" href="/assets/logo.svg" />
+            <link rel="manifest" href="/manifest.json" />
+            <link rel="apple-touch-icon" href="/assets/icons/apple-icon.png"></link>
+            <meta name="theme-color" content="#317EFB" />
 
             {/* Twitter metadata  */}
             <meta name="twitter:title" content="Tesfa Demissie | Front End Developer, based in Winnipeg, MB." />
