@@ -2,11 +2,11 @@ import React from 'react';
 import styled, { css } from 'styled-components'
 import colors from '../../styles/Colors';
 
-export default function MenuIcon({ showMenu, onClick, show }) {
-    return <CustomMenuWrapper className="customMenuIcon" state={showMenu} onClick={onClick} style={show ? { top: 26, opacity: 1 } : { top: -20, opacity: 0 }}>
+export default function MenuIcon({ ...props }) {
+    return <CustomMenuWrapper className="customMenuIcon" state={props.menu} onClick={() => props.switch()} style={props.show ? { top: 26, opacity: 1 } : { top: -20, opacity: 0 }}>
         <span className="menuTop" />
         <span className="menuBottom" />
-    </CustomMenuWrapper>
+    </CustomMenuWrapper >
 }
 
 const CustomMenuWrapper = styled.span`
@@ -24,7 +24,7 @@ const CustomMenuWrapper = styled.span`
         span{
             height: 3px;
             width: 32px;
-            background: ${colors.black};
+            background: #E2E5E9;
             transition:0.125s ease-in;
         }
 

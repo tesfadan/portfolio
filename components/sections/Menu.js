@@ -1,106 +1,140 @@
-import React from 'react';
-import styled from 'styled-components'
-import colors from '../../styles/Colors';
-import MenuIcon from '../icons';
-import AnchorLink from 'react-anchor-link-smooth-scroll'
-import Link from "next/link"
+import React, { useContext, useState } from 'react';
+import styled from 'styled-components';
+import AnchorLink from "react-anchor-link-smooth-scroll";
+import { LinkButton } from '../UI/Button';
 
 
-export default function Menu({ showMenu, show, ...props }) {
-    const NavLink = ({ href, title }) => <li className={`navLink`}>
-        <AnchorLink className=" button small" href={href} onClick={props.switch}>{title}</AnchorLink>
-    </li>
 
-    return (
-        <Container style={{ right: showMenu ? 0 : '-180%' }} >
-            <MenuIcon showMenu={showMenu} onClick={props.switch} show={showMenu || show} />
-            <div className="mobileMenu" style={{ right: showMenu ? 0 : '-100%' }} >
-                <nav>
-                    <ul>
-                        <li>
-                            <Link href="/">
-                                <a className="button small primary" onClick={props.switch}>Resume</a>
-                            </Link>
-                        </li>
-                        <NavLink href="#about" title="About" />
-                        <NavLink href="#portfolio" title="Portfolio" />
-                        <NavLink href="#contact" title="Contact" />
-                    </ul>
-                </nav >
-            </div>
-        </Container>
-    );
+
+export const Menu = ({ ...props }) => {
+    const { menu } = props;
+    const { fade, setFade, } = useState(false);
+    return <Container state={menu}>
+        <div className="grid" >
+            <nav>
+                <ul>
+                    <li><AnchorLink href="#about" rel="noreferrer" onClick={() => props.switch()}>About</AnchorLink></li>
+                    <li><AnchorLink href="#portfolio" rel="noreferrer" onClick={() => props.switch()}>Portfolio</AnchorLink></li>
+                    <li><AnchorLink href="#contact" rel="noreferrer" onClick={() => props.switch()}>Contact</AnchorLink></li>
+                </ul>
+                <div className="resumeBtn">
+                    <LinkButton className="button small" href="/documents/Tesfa_Demissie_Resume.pdf">Resume</LinkButton>
+                </div>
+            </nav>
+        </div>
+    </Container>
 }
 
-
 const Container = styled.div`
-    display:flex;
-    position: fixed;
-    height: 100vh;
-    width:100%;
-    right:0px;
-    top: 0px;
-    z-index: 102;
-    background:#00000060;
-    transition: 0.25s ease-in-out;
-    .mobileMenu{
-        transition: 0.25s ease;
-        border-left: 1px solid ${colors.tillDark};
-        background:${colors.white};
-        width:320px;
-        right:0px;
+        /* background-color: ${Color.black}; */
+        background:#010e11;
+        background-image: linear-gradient(-180deg, #1f4cc916, #34EBF705);
+        /* color: ${Color.white}; */
+        min-height: 100vh;
         position: fixed;
-        height:100vh;
-
-    }
-    .mobileMenu &:after{
-        display:block;
-        content: " ";
         width: 100%;
-        height: 100%;
-        background:red;
-        position:absolute;
-        left:0px;
-    }
+        z-index: 20;
+        top:  ${props => props.state ? 0 : '-100vh'};
+        transition: 0.3s ease-in-out;
+        /*  */
+        li{
+            font-size: 48px;
+            line-height: 66px;
+            font-weight: 800;
+            margin-left: -2px;
+            margin-bottom: 48px;
+            cursor: pointer;
+            transform:translateY(0px);
+            transition: 0.15s ease-in-out;
+            color: #aeb9c7;
+            a{
+                font-size: inherit;
+                line-height: inherit;
+                font-weight: inherit;
+            }
 
-    .customMenuIcon{
-        right: 20px;
-        position: fixed;
-        top: 20px;
-    }
-
-    nav, ul, a{
-        display: flex;
-        align-items:center;
-    }
-    ul{
-        display: flex;
-        justify-self: flex-end;
-        flex-flow: column;
-    }
-    li{
-        margin-left: 22px;
-        font-size: 14px;
-        font-weight: 500;
-        width: 100%;
-    }
-    .navLink{
-        transition: 0.1s ease-in;
-        &:hover{
-            color: ${colors.primary}
+            &:hover{
+                /* color: ${Color.goldLight}; */
+                transform:translateY(-4px);
+            }
         }
-    }
+        nav{
+            height: 100vh;
+            grid-column: 7/11;
+            display:flex;
+            z-index: 2;
+        }
+        ul{
+            top: -120px;
+            position: relative;
+            align-self: center;
+        }
 
-    nav{
-        justify-content: flex-end;
-        padding-top: 80px;
-        padding-right: 20px;
-    }
-    li{
-        margin-bottom: 20px;
-    }
-    .button{
-        width: auto;
-    }
+        .resumeBtn{
+            grid-column: 7/9;
+            position: absolute;
+            bottom: 50px;
+            transition: 0.15s ease-in-out;
+            a{
+                display: block;
+                width:max-content;
+                min-width: 160px;
+                text-align:center;
+                border-radius:4px;
+                padding: 12px 16px;
+                color:#ffffff;
+                border: 1px solid #3e98ff;
+                margin-top: 32px;
+                transition: 0.15s ease;
+                position: relative;
+                top: 0px;
+                box-shadow: 0px 0px 32px #00000000;
+                &:hover, &:focus{
+                    background: #3e98ff10;
+                    border: 1px solid #A1CDFF40;
+                }
+            }
+        }
 
+
+        @media(max-width: 1260px){
+            nav{
+                grid-column: 6/11;
+            }
+        }
+
+        @media(max-width: 940px){
+            nav{
+                grid-column: 5/11;
+            }
+        }
+        @media(max-width: 600px){
+            nav{
+                grid-column: 3/11;
+            }
+            .resume{
+                margin: auto;
+                right: 0px;
+                left: 0px;
+            }
+        }
+
+        @media(max-width:480px){
+              nav{
+                li{
+                    font-size: 36px;
+                    line-height: 52px;
+                    margin-bottom: 48px;
+                    /* text-align: center; */
+                }
+                a{
+                    /* text-align:center; */
+                }
+                margin: auto;
+              }
+        }
+
+        @media(min-width: 641px){
+            display: none;
+        }
 `

@@ -8,16 +8,16 @@ export default function Contact() {
                 <div className="content">
                     <h2>Get in Touch</h2>
                     <p>Feel free to email me or connect with me on social media if you would like to chat.</p>
-                    <a className="email" href="mailto:tesfadaniel1@gmail.com" >tesfadaniel1@gmail.com</a>
+                    <a className="email underline" href="mailto:tesfadaniel1@gmail.com" >tesfadaniel1@gmail.com</a>
                     <ul>
-                        <li><a href="https://twitter.com/tesfadan">Twitter</a></li>
-                        <li><a href="https://www.linkedin.com/in/tesfadan/">Linkedin</a></li>
+                        <li><a href="https://twitter.com/tesfadan" className="underline">Twitter</a></li>
+                        <li><a href="https://www.linkedin.com/in/tesfadan/" className="underline">Linkedin</a></li>
                     </ul>
 
-                    <div className="credit">
+                    {/* <div className="credit">
                         <p>Designed & Developed by Tesfa Demissie</p>
                         <a rel="noreferrer" href="https://github.com/tesfadan/portfolio" className="underline">View Source Code</a>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </Container>
@@ -35,50 +35,19 @@ const Container = styled.div`
         /* bottom: 0px; */
         z-index: 1;
         background:#010e11;
-        background-image: linear-gradient(45deg, #1f4cc916, #34EBF705);
+        /* background-image: linear-gradient(45deg, #1f4cc916, #34EBF705); */
+        /* background: #021B22; */
+        background-image: linear-gradient(180deg, #021BFF03, #1f4cc916);
+
 
         .content{
             grid-column: 3/8;
             color:#aeb9c7;
         }
-        a{
-            transition: 0.1s ease-in-out;
-            font-weight: 600;
-            position:relative;
-            &:after, &:before{
-                display: block;
-                content: " ";
-                width: 0%;
-                height: 2px;
-                border-radius: 2px;
-                position:absolute;
-                bottom:0px;
-            }
-
-            &:before{
-                background:#3e98ff;
-                z-index:2;
-                transition: 0.3s ease-in-out;
-            }
-
-            &:after{
-                background:#E2E5E9;
-                transition: 0.15s ease-out;
-            }
-
-            &:hover{
-                color: #E2E5E9;
-                ::before{
-                    width: 100%;
-                }
-                ::after{
-                    width: 100%;
-                }
-            }
-        }
 
         .email{
             color:#E2E5E9;
+            font-weight: 600;
         }
         ul{
             display:flex;

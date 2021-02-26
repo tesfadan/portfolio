@@ -74,8 +74,7 @@ const Container = styled.footer`
         &:hover,
         &:focus {
             transform: translateY(-3px);
-            background-color: ${colors.till};
-            border: 1px solid ${colors.tillDark}
+            border: 1px solid #727c88;
         }
         transition: 0.125s ease-in;
     }

@@ -5,9 +5,17 @@ const GlobalStyle = createGlobalStyle`
     .grid{
         display: grid;
         grid-template-columns: repeat(12, 1fr);
-        column-gap: 20px;
+        /* column-gap: 20px; */
         width:1200px;
         margin: 0 auto;
+
+        @media(max-width: 1260px){
+            width: 100%;
+        }
+
+        @media(max-width:480px){
+                padding: 0px 20px;
+        }
     };
 
     .label{
@@ -27,13 +35,8 @@ const GlobalStyle = createGlobalStyle`
         overflow: hidden;
     }
 
-    #__next{
-        /* position:relative; */
-    }
-
     .underline{
             transition: 0.1s ease-in-out;
-            font-weight: 600;
             position:relative;
             &:after, &:before{
                 display: block;

@@ -1,38 +1,34 @@
 import Link from "next/link";
-import React, { useState } from 'react';
+import React from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import styled from 'styled-components';
-import colors from '../../styles/Colors';
+import MenuIcon from "../icons";
 import { LinkButton } from "../UI/Button";
-import Menu from './Menu';
 
-export default function Header({ show }) {
+export default function Header({ show, ...props }) {
+    const { setMenu, menu } = props;
+
     const NavLink = ({ href, title }) => <li className={`navLink`}>
         <AnchorLink className="underline" href={href}>{title}</AnchorLink>
     </li>
-    const [showMenu, setShowMenu] = useState(false);
     return (
-        <>
-            <Container style={show ? { top: 0, opacity: 1 } : { top: -20, opacity: 0 }}>
-                <AnchorLink href="#home">
-                    <img src="/assets/logo.svg" width="50" height="32" alt="Home" />
-                </AnchorLink>
-                <nav>
-                    <ul>
-                        <li>
-                            <Link href="/documents/Tesfa_Demissie_Resume.pdf">
-                                <LinkButton className="button small">Resume</LinkButton>
-                            </Link>
-                        </li>
+        <Container style={show ? { top: 0, opacity: 1 } : { top: -20, opacity: 0 }}>
+            <AnchorLink href="#home">
+                <img src="/assets/logo.svg" width="50" height="32" alt="Home" />
+            </AnchorLink>
+            <nav>
+                <ul>
+                    <li>
+                        <LinkButton className="button small" href="/documents/Tesfa_Demissie_Resume.pdf">Resume</LinkButton>
+                    </li>
 
-                        <NavLink href="#contact" title="Contact" />
-                        <NavLink href="#portfolio" title="Portfolio" />
-                        <NavLink href="#about" title="About" />
-                    </ul>
-
-                </nav >
-            </Container >
-        </>
+                    <NavLink href="#contact" title="Contact" />
+                    <NavLink href="#portfolio" title="Portfolio" />
+                    <NavLink href="#about" title="About" />
+                </ul>
+            </nav >
+            <MenuIcon {...props} show={show} />
+        </Container >
     );
 }
 
@@ -80,6 +76,13 @@ const Container = styled.header`
         }
         .customMenuIcon{
             display: flex;
+        }
+    }
+
+
+    @media(min-width: 641px){
+        .hamburger{
+            display: none;
         }
     }
 `

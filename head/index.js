@@ -9,6 +9,7 @@ export default function DefaultHeadTags() {
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             {/* Theme and Icons  */}
             <meta name="theme-color" content="#ddeaeb" />
+            <link rel="icon" href="/assets/logo.svg" />
 
             {/* Twitter metadata  */}
             <meta name="twitter:title" content="Tesfa Demissie | Front End Developer, based in Winnipeg, MB." />
