@@ -26,8 +26,6 @@ export const Container = styled.div`
     font-size: 16px;
     z-index:10;
     background-image: linear-gradient(180deg, #A500F316, #021BFF03);
-    .pageContainer{
-    }
     h2{
         color: inherit;
         margin-bottom:32px;
@@ -47,11 +45,10 @@ export const Container = styled.div`
         h2{
             font-size: 24px;
             margin-bottom: 32px;
-            grid-column:1/13;
+            grid-column:2/13;
         }
-
     }
     @media(max-width:480px){
-        padding:0px;
+        padding:32px 0px;
     }
 `

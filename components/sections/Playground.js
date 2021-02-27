@@ -3,6 +3,7 @@ import PlaygroundProjects from '../../content/PlaygroundProjects';
 import colors from '../../styles/Colors';
 import PlaygroundCard from '../UI/PlaygroundCard';
 import { useState } from 'react';
+import { Button } from '../UI/Button';
 
 
 export default function Playground() {
@@ -15,7 +16,7 @@ export default function Playground() {
                     {PlaygroundProjects.map((project, index) => showMore ? <PlaygroundCard {...project} key={`playground-${index}`} /> : index < 2 ? <PlaygroundCard {...project} key={`playground-${index}`} index={index} /> : null)}
                 </div>
                 <div className="more">
-                    <button className="button " onClick={e => setShowMore(!showMore)}>{!showMore ? 'Show More' : 'Show Less'}</button>
+                    <Button className="button" onClick={e => setShowMore(!showMore)}>{!showMore ? 'Show More' : 'Show Less'}</Button>
                 </div>
             </div>
         </Container >
@@ -23,69 +24,72 @@ export default function Playground() {
 }
 
 const Container = styled.div`
+    background: #02141a;
+    color:#E2E5E9;
     display:flex;
-    justify-content:center;
+    align-items: center;
     padding: 80px 0px;
-    background: ${colors.till};
-    position:relative;
+    font-size: 16px;
     z-index:10;
-    transition: 2s;
-    .grid{
-        column-gap: 20px;
-        row-gap: 60px;
+    background-image: linear-gradient(180deg, #021BFF03, #021BFF03);
+    button{
+        padding: 12px 18px;
     }
     h2{
-        grid-column: 4/10;
-    }
-    button{
-        grid-column: 1/6
+        color: inherit;
+        margin-bottom:32px;
+        grid-column:3/8;
+        margin-bottom: 64px;
+        grid-row: 1;
     }
     .content{
-        grid-column:2/12;
+        grid-row: 2;
+        grid-column: 2/12;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
         gap: 20px;
+        margin-bottom: 80px;
     }
     .more{
-        grid-column: 2/12;
-        display: flex;
+        grid-column: 1/13;
+        grid-row: 3;
+        display:flex;
         justify-content:center;
-        transition: 2s;
+        height:max-content;
+
+        /* margin-bottom:60px; */
+
     }
 
-    .button{
-        padding: 0px 30px;
-    }
-
-        /* responsive code goes here  */
-    @media(max-width: 1230px){
-        padding: 80px 60px;
+    @media(max-width: 1260px){
+        padding: 32px 52px;
+        padding-bottom: 64px;
         .content{
-            grid-column:1/13;
+            grid-column: 1/13;
         }
     }
-    @media(max-width: 1010px){
-        /* Font sizes should change here */
+    @media(max-width: 760px){
         h2{
-            grid-column: 3/12;
+            font-size: 24px;
+            margin-bottom: 32px;
+            grid-column:2/13;
         }
     }
-    @media(max-width: 780px){
-        h2{
+    @media(max-width: 710px){
+        padding-bottom: 52px;
+        .content{
             grid-column: 2/12;
+            grid-template-columns: 1fr;
+            margin-bottom: 52px;
         }
     }
     @media(max-width: 640px){
-        padding: 20px;
-        padding-top: 40px;
-        .grid{
-            row-gap: 20px;
+        .content{
+            grid-column: 1/13;
         }
     }
-
-    @media(max-width: 540px){
-        .content{
-            grid-template-columns: 1fr;
-        }
+    @media(max-width:480px){
+        padding:32px 0px;
+        padding-bottom: 48px;
     }
 `

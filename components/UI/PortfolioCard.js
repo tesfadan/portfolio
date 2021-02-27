@@ -10,7 +10,7 @@ export default function PortfolioCard({ ...props }) {
         <Container flip={flip} className={flip ? `flip` : ''}>
             <picture className="image">
                 <source type="image/webp" srcset={`/assets/images/projects/${image}.webp`} />
-                <source type="image/jpeg" srcset={`/assets/images/projects/${image}.png`} />
+                <source type="image/png" srcset={`/assets/images/projects/${image}.png`} />
                 <img src={image} height="200" width="500" alt={name} />
             </picture>
 

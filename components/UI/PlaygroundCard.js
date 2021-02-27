@@ -11,22 +11,23 @@ export default function PlaygroundCard({ ...props }) {
                     {tags.split(",").map((tag, index) => <Tag value={tag} key={`${name}-tag-${tag}`} />)}
                 </ul>
                 <ul className="links">
-                    <li>
+                    {link != null ? <li>
                         <a rel="noreferrer" href={link} target="_blank">
                             <img src="/assets/icons/open.svg" height="18" width="18" alt="Open Project" />
                             <span className="screenReaderOnly">
                                 Open Project
                             </span>
                         </a>
-                    </li>
-                    <li>
-                        <a rel="noreferrer" href={sourceCode} target="_blank">
-                            <img src="/assets/icons/github.svg" height="18" width="18" alt="View Source Code" />
-                            <span className="screenReaderOnly">
-                                View Source Code
+                    </li> : null}
+                    {sourceCode != null ?
+                        <li>
+                            <a rel="noreferrer" href={sourceCode} target="_blank">
+                                <img src="/assets/icons/github.svg" height="18" width="18" alt="View Source Code" />
+                                <span className="screenReaderOnly">
+                                    View Source Code
                             </span>
-                        </a>
-                    </li>
+                            </a>
+                        </li> : null}
                 </ul>
             </div>
             <div className="main">
@@ -46,7 +47,21 @@ export const Container = styled.div`
     display: flex;
     flex-wrap: wrap;
     animation: reveal 0.5s ease-in;
+    background: #24263560;
+        border:  1px solid #242635;
+    h4{
+        color: #E2E5E9;
+        font-size: 18px;
+        line-height: 18px;
+        margin-bottom: 8px;
+    }
 
+    p{
+        color:#E2E5E9;
+        font-size: 16px;
+        line-height: 28px;
+        color: #aeb9c7;
+    }
 
     @keyframes reveal{
         from{
@@ -87,9 +102,11 @@ export const Container = styled.div`
         position:relative;
         left: 12px;
         top: -4px;
+        height: max-content;
         li{
             display:flex;
             margin-left: 10px;
+            opacity: 0.9;
         }
         a{
             border: 1px solid transparent;
