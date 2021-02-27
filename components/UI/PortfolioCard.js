@@ -5,11 +5,14 @@ import colors from '../../styles/Colors';
 export default function PortfolioCard({ ...props }) {
     const { name, description, image, tags, link, sourceCode, flip } = props;
     const Tag = ({ value }) => <li className="label">{value}</li>;
+
     return (
         <Container flip={flip} className={flip ? `flip` : ''}>
-            <div className="image">
+            <picture className="image">
+                <source type="image/webp" srcset={`/assets/images/projects/${image}.webp`} />
+                <source type="image/jpeg" srcset={`/assets/images/projects/${image}.png`} />
                 <img src={image} height="200" width="500" alt={name} />
-            </div>
+            </picture>
 
             <div className="content reveal">
                 <ul className="tags">
@@ -83,7 +86,6 @@ export const Container = styled.div`
             transition: 0.1s ease-in;
             max-width: 100%;
             opacity: 0.7;
-
         }
     }
 

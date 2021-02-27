@@ -33,10 +33,14 @@ export default function About() {
                         <li>Firebase</li>
                     </ul>
                 </div>
-                <img src="/assets/images/tesfaCrop.jpg" alt="Tesfa Demissie"
-                    height="467"
-                    width="400"
-                />
+                <picture className="image">
+                    <source type="image/webp" srcset="/assets/images/tesfa.webp" />
+                    <source type="image/jpeg" srcset="/assets/images/tesfa.jpg" />
+                    <img src="/assets/images/tesfa.jpg" alt="Tesfa Demissie"
+                        height="467"
+                        width="400"
+                    />
+                </picture>
             </div>
         </Container>
     );
@@ -72,25 +76,27 @@ export const Container = styled.div`
     .content{
         grid-column:2/8;
     }
-    img{
+    .image{
         grid-column: 9/13;
-        border-radius:16px;
         position:relative;
-        height:100%;
-        width:100%;
-        object-fit: cover;
-        max-height: 520px;
-        &:after{
-            content:"";
-            display: block;
-            width:100%;
+        img{
             height:100%;
-            background:black;
-            position:fixed;
-            top: 0px;
-            z-index:20;
+            width:100%;
+            object-fit: cover;
+            max-height: 520px;
+            border-radius:16px;
+            &:after{
+                    content:"";
+                    display: block;
+                    width:100%;
+                    height:100%;
+                    background:black;
+                    position:fixed;
+                    top: 0px;
+                    z-index:20;
+                }
+            }
         }
-    }
     li{
         color: inherit;
         border: 1px solid #3e98ff;
@@ -126,7 +132,7 @@ export const Container = styled.div`
         .content{
             grid-column:2/12;
         }
-        img{
+        .image{
             display: none;
         }
     }
@@ -148,7 +154,7 @@ export const Container = styled.div`
     }
 
 
-    img{
+    .image{
         opacity: 0.9;
         animation: reveal 1s ease-in;
     }
