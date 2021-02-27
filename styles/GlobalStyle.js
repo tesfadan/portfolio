@@ -12,13 +12,12 @@ const GlobalStyle = createGlobalStyle`
         /* IE 11 */
         scrollbar-width: none !important;
         /* Firefox 64 */
-        background-color: #0000000f;
         scroll-behavior: smooth;
         ::selection {
             background-color: #0070f3;
             color: white;
         }
-        background:#02141a;
+        background-color:#02141a;
     }
 
     .grid{
@@ -62,9 +61,16 @@ const GlobalStyle = createGlobalStyle`
                 content: " ";
                 width: 0%;
                 height: 2px;
-                border-radius: 2px;
+                border-radius: 12px;
                 position:absolute;
                 bottom:0px;
+            }
+
+            &.big{
+                &:after, &:before{
+                    height: 4px;
+                    bottom: -2px;
+                }
             }
 
             &:before{
