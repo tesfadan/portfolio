@@ -13,11 +13,15 @@
 const Projects = [
     {
         name: "Linkup",
-        description: `Linkup is a web application created to help content creators share more than one link through their social media bio. Creators use linkup to provide their audience with multiple links to their content all over the internet. Users easily sign in using Google or Facebook and setup their page in under 5 minutes. The app allows users to customize the look and feel of their page so it fits their brand.`,
+        description: `
+        A web application that lets users create a page where they 
+        can feature multiple links to their content and social profiles 
+        so their audience can find them easily. The app allows 
+        for customization, so users can design their page in 
+        keeping up with their brand.`,
         image: "/assets/images/projects/linkup.png",
         tags: "React,SCSS,Firebase",
         link: "https://linkup.page",
-        // sourceCode: "https://linkup.page"
     },
     {
         name: "Stoic Widgets",
@@ -25,7 +29,6 @@ const Projects = [
         image: "/assets/images/projects/stoic.png",
         tags: "React Native,SCSS,Swift",
         link: "https://apps.apple.com/ca/app/stoic-widgets/id1541534447",
-        // sourceCode: "https://apps.apple.com/ca/app/stoic-widgets/id1541534447"
     },
     {
         name: "Transit Live",
@@ -33,7 +36,6 @@ const Projects = [
         image: "/assets/images/projects/transit.png",
         tags: "React,SCSS,IONIC",
         link: "https://apps.apple.com/ca/app/winnipeg-transit-live/id1531948380",
-        // sourceCode: "https://apps.apple.com/ca/app/winnipeg-transit-live/id1531948380"
     },
     {
         name: "Modern Color",
@@ -47,9 +49,36 @@ const Projects = [
         `,
         image: "/assets/images/projects/color.png",
         tags: "React,SCSS,IONIC",
-        link: "moderncolor.cc",
+        link: "https://moderncolor.cc",
         sourceCode: "https://github.com/tesfadan/color"
-    }
+    },
+    {
+        name: "Tap Tempo",
+        description: `
+        TapTempo is a music production utility tool for finding BPM 
+        (beats per minute). With only two keystrokes or mouse clicks, 
+        the javascript code calculates the time difference between 
+        the input events and displays the current approximate 
+        count, improving accuracy upon additional interaction.
+        `,
+        image: "/assets/images/projects/tempo.png",
+        tags: "HTML,CSS,JS",
+        link: "https://https://taptempo.netlify.app/",
+        sourceCode: "https://github.com/tesfadan/Tempo"
+    },
+    {
+        name: "WHATUPRG",
+        description: `
+        This was one of the many WordPress projects I worked on 
+        in my second-year Web Development class in college. 
+        The WordPress theme was selected and provided by 
+        the instructor, and my job was to design and 
+        build a child theme.
+        `,
+        image: "/assets/images/projects/whatuprg.png",
+        tags: "WordPress,PHP,CSS",
+        link: "https://www.behance.net/gallery/100604327/WHATUPRG-Website-Design",
+    },
 ]
 
 export default Projects

@@ -30,7 +30,7 @@ const Container = styled.div`
     background-image: linear-gradient(180deg, #A500F304, #34EBF705);
     .content{
         position:relative;
-        top: -64px;
+        top: -16px;
         grid-column: 3/11;
         z-index:2;
     }
