@@ -36,7 +36,7 @@ const Container = styled.div`
     }
 
     h1{
-        font-weight: 500;
+        font-weight: 600;
         font-size: 64px;
         line-height: 64px;
         margin-bottom:24px;
