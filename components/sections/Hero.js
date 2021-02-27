@@ -6,12 +6,13 @@ export default function Hero() {
         <Container id="home">
             <div className="grid">
                 <div className="content">
-                    <h1><span className="name">Tesfa Demissie</span><br /> <span className="jobTitle">Frontend Developer.</span></h1>
+                    <h1>Tesfa Demissie</h1>
+                    <h2 className="jobTitle">Front End Developer</h2>
                     <p>
-                        I am a front-end developer based in Winnipeg with experience building websites and web applications with JavaScript, HTML, SCSS, and React. I also have experience working with React Native, PHP and MySQL.
+                        I am a front-end developer with experience building websites and web applications with JavaScript, HTML, SCSS, and React. I also have experience working with React Native & PHP.
                     </p>
                     <AnchorLink href="#portfolio">
-                        Explore Portfolio
+                        View Portfolio
                     </AnchorLink>
                 </div>
             </div>
@@ -21,46 +22,51 @@ export default function Hero() {
 
 const Container = styled.div`
     height: 100vh;
-    background:#021B22;
+    background:#02141a;
     display:flex;
     justify-content:center;
     align-items:center;
     z-index:10;
-
-    background-image: linear-gradient(180deg, #1f4cc916, #34EBF705);
-
+    background-image: linear-gradient(180deg, #A500F304, #34EBF705);
     .content{
         position:relative;
         top: -64px;
-        grid-column: 3/9;
+        grid-column: 3/11;
         z-index:2;
     }
+
     h1{
-        color: inherit;
-        font-size: 48px;
-        line-height: 54px;
-        margin-bottom: 16px;
-        font-weight: 800;
+        font-weight: 500;
+        font-size: 64px;
+        line-height: 64px;
+        margin-bottom:24px;
+        color: #e2e7ec;
+        letter-spacing: -1px;
+        position:relative;
+        left:-12px;
     }
-    .name{
-        color:#E2E5E9;
-    }
-    .jobTitle{
-        opacity: 0.8;
-        color: #aeb9c7;
-    }
-    p, a{
-        color: inherit;
-        font-size:18px;
+    h2{
+        font-size: 32px;
         line-height: 32px;
-        color:#aeb9c7;
-        margin-bottom: 18px;
+        margin-bottom: 40px;
+        color: #c7ced8;
+        letter-spacing: 0px;
+        font-weight: 300;
     }
+    p{
+        margin-bottom: 56px;
+        font-weight: 400;
+        color: #c7ced8;
+        font-size: 16px;
+        line-height: 28px;
+        max-width:487px;
+    }
+
     a{
         display: block;
         width:max-content;
         border-radius:4px;
-        padding: 12px 16px;
+        padding: 10px 18px;
         color:#ffffff;
         border: 1px solid #3e98ff;
         margin-top: 32px;
@@ -68,51 +74,57 @@ const Container = styled.div`
         position: relative;
         top: 0px;
         box-shadow: 0px 0px 32px #00000000;
+
+        /*  */
+        font-weight: 400;
+        color: #e2e7ec;
+        font-size: 16px;
         &:hover, &:focus{
             background: #3e98ff10;
             border: 1px solid #A1CDFF40;
         }
     }
-
-    @media(max-width: 1260px){
-        .content{
-            grid-column: 3/10;
-        }
-    }
-
+    
     @media(max-width: 860px){
-        .content{
-            grid-column:3/11;
+        h1{
+            font-size:48px;
+            margin-bottom: 16px;
+            line-height: 48px;
+            left: -1px;
         }
-        img{
-            display: none;
+        h2{
+            font-size: 24px;
+            margin-bottom: 24px;
+        }
+        p{
+            margin-bottom: 48px;
+        }
+
+    }
+
+    @media(max-width:660px){
+        .content{
+            grid-column:2/12;
         }
     }
-    @media(max-width: 760px){
+
+    @media(max-width:480px){
+        .content{
+            grid-column:2/13;
+        }
         h1{
             font-size: 32px;
-            line-height: 36px;
-            font-weight: 700;
-        }
-        p,a{
-            font-size: 16px;
-            margin-bottom: 8px;
-            line-height:26px;
-        }
-        .content{
-            grid-column:3/11;
-        }
-    }
-
-    @media(max-width: 480px){
-        h1{
-            font-size: 28px;
             line-height: 32px;
-            font-weight: 600;
+            margin-bottom:16px;
+            left: -4px;
         }
-        .content{
-            padding-left: 16px;
-            grid-column:1/13;
+        h2{
+            font-size: 18px;
+            line-height: 18px;
+            font-weight: 400;
+        }
+        p{
+            color: #c5cdd8;
         }
     }
 `;

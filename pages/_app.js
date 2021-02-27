@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps }) {
 
   useScrollPosition(({ prevPos, currPos }) => {
     const isShow = currPos.y > prevPos.y
-    const atTop = currPos.y > -400;
+    const atTop = currPos.y > -160;
     if (isShow !== hideOnScroll && atTop !== isTop) { setHideOnScroll(isShow) }
   }, [hideOnScroll])
 
@@ -29,7 +29,7 @@ function MyApp({ Component, pageProps }) {
     <TypographyStyle />
     <GlobalStyle />
     <DefaultHeadTags />
-    <Header show={hideOnScroll || menu} switch={() => setMenu(!menu)} />
+    <Header show={hideOnScroll || menu} switch={() => setMenu(!menu)} setMenu={setMenu} />
     <Menu menu={menu} switch={() => setMenu(!menu)} />
     <Component {...pageProps} />
     <Footer show={hideOnScroll} />

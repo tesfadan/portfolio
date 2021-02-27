@@ -2,6 +2,33 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
     /* Global Styles will go here */
+        html {
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        overflow: -moz-scrollbars-none;
+        overflow: auto;
+        -ms-overflow-style: none !important;
+        /* IE 11 */
+        scrollbar-width: none !important;
+        /* Firefox 64 */
+        background-color: #0000000f;
+        scroll-behavior: smooth;
+        ::selection {
+            background-color: #0070f3;
+            color: white;
+        }
+        background-color: #1E1E1F;
+        color: #1E1E1F;
+        background:#021B22;
+    }
+
+
+    body{
+        background: #02141a;
+        background-image: linear-gradient(180deg, #34EBF705, #A500F316);
+    }
+
     .grid{
         display: grid;
         grid-template-columns: repeat(12, 1fr);

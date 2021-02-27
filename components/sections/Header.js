@@ -13,7 +13,7 @@ export default function Header({ show, ...props }) {
     </li>
     return (
         <Container style={show ? { top: 0, opacity: 1 } : { top: -20, opacity: 0 }}>
-            <AnchorLink href="#home">
+            <AnchorLink href="#home" rel="noreferrer" onClick={() => setMenu(false)}>
                 <img src="/assets/logo.svg" width="50" height="32" alt="Home" />
             </AnchorLink>
             <nav>
@@ -55,7 +55,15 @@ const Container = styled.header`
     li{
         margin-left: 32px;
         font-weight: 500;
-        color:#E2E5E9;
+        color:#dadfe6;
+    }
+    a{
+        color:#dadfe6;
+        font-size:16px;
+        font-weight:400;
+    }
+    img{
+        opacity:0.8;
     }
     .navLink{
         transition: 0.1s ease-in;

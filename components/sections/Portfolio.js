@@ -18,7 +18,7 @@ export default function Portfolio() {
 
 export const Container = styled.div`
     min-height: 100vh;
-    background: #021B22;
+    background: #02141a;
     color:#E2E5E9;
     display:flex;
     align-items: center;

@@ -44,4 +44,7 @@ const CustomMenuWrapper = styled.span`
                 transform: translateX(16px)
             }
         }
+        .customMenuIcon{
+            opacity: 0.9;
+        }
 `

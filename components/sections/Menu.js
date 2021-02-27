@@ -8,7 +8,6 @@ import { LinkButton } from '../UI/Button';
 
 export const Menu = ({ ...props }) => {
     const { menu } = props;
-    const { fade, setFade, } = useState(false);
     return <Container state={menu}>
         <div className="grid" >
             <nav>
