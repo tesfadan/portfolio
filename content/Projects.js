@@ -63,7 +63,7 @@ const Projects = [
         `,
         image: "tempo",
         tags: "HTML,CSS,JS",
-        link: "https://https://taptempo.netlify.app/",
+        link: "https://taptempo.netlify.app",
         sourceCode: "https://github.com/tesfadan/Tempo"
     },
     {
