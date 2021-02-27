@@ -21,7 +21,6 @@ export default function Header({ show, ...props }) {
                     <li>
                         <LinkButton className="button small" href="/documents/Tesfa_Demissie_Resume.pdf">Resume</LinkButton>
                     </li>
-
                     <NavLink href="#contact" title="Contact" />
                     <NavLink href="#portfolio" title="Portfolio" />
                     <NavLink href="#about" title="About" />
@@ -31,7 +30,6 @@ export default function Header({ show, ...props }) {
         </Container >
     );
 }
-
 
 const Container = styled.header`
     display: flex;
@@ -43,6 +41,8 @@ const Container = styled.header`
     width: 100%;
     z-index: 100;
     transition: 0.2s ease-in;
+    backdrop-filter: blur(24px);
+    border-bottom: 1px solid #02141a50;
     nav, ul, a{
         display: flex;
         align-items:center;
