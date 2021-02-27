@@ -18,15 +18,7 @@ const GlobalStyle = createGlobalStyle`
             background-color: #0070f3;
             color: white;
         }
-        background-color: #1E1E1F;
-        color: #1E1E1F;
-        background:#021B22;
-    }
-
-
-    body{
-        background: #02141a;
-        background-image: linear-gradient(180deg, #34EBF705, #A500F316);
+        background:#02141a;
     }
 
     .grid{
