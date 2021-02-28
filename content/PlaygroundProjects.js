@@ -40,11 +40,7 @@ const PlaygroundProjects = [
         and GitHub for hosting and continuous delivery.
         `,
         image: "color",
-<<<<<<< HEAD
         tags: "Next.js, Netlify",
-=======
-        tags: "Next.js, Netlify, Git",
->>>>>>> 667ebe70b5cf922729316db91e61a6e9209d2df1
         link: "https://tesfadan.com",
         sourceCode: "https://github.com/tesfadan/portfolio"
     },
