@@ -4,18 +4,33 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 import styled from 'styled-components';
 import MenuIcon from "../icons";
 import { LinkButton } from "../UI/Button";
+import { useRouter } from 'next/router'
 
 export default function Header({ show, ...props }) {
-    const { setMenu, menu } = props;
+    const { setMenu } = props;
+    const router = useRouter();
 
     const NavLink = ({ href, title }) => <li className={`navLink`}>
-        <AnchorLink className="underline" href={href}>{title}</AnchorLink>
+        {router.pathname == "/" ?
+            <AnchorLink className="underline" href={href}>{title}</AnchorLink> :
+            <Link href={`/${href}`} className="underline">
+                {title}
+            </Link>
+        }
     </li>
     return (
         <Container style={show ? { top: 0, opacity: 1 } : { top: -20, opacity: 0 }}>
-            <AnchorLink href="#home" rel="noreferrer" onClick={() => setMenu(false)}>
-                <img src="/assets/logo.svg" width="50" height="32" alt="Home" />
-            </AnchorLink>
+            {router.pathname == "/" ?
+                <AnchorLink href="#home" rel="noreferrer" onClick={() => setMenu(false)}>
+                    <img src="/assets/logo.svg" width="50" height="32" alt="Home" />
+                </AnchorLink> :
+                <Link href={`/#home`} rel="noreferrer" onClick={() => setMenu(false)}>
+                    <a>
+                        <img src="/assets/logo.svg" width="50" height="32" alt="Home" />
+                    </a>
+                </Link>
+            }
+
             <nav>
                 <ul>
                     <li>
