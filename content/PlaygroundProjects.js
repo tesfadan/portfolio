@@ -31,21 +31,19 @@ const PlaygroundProjects = [
         link: "https://taptempo.netlify.app",
         sourceCode: "https://github.com/tesfadan/Tempo"
     },
-    // {
-    //     name: "Tesfadan.com",
-    //     description: `
-    //     Modern Color is a web application I built to create and 
-    //     store color schemes for my design work. It uses Vibrant.js 
-    //     to extract prominent colors from an image. It also uses 
-    //     Brain.js to check for contrast values for a better user 
-    //     experience. The color schemes are saved for anyone to access 
-    //     from anywhere.
-    //     `,
-    //     image: "color",
-    //     tags: "Next.js,React, Netlify",
-    //     link: "https://tesfadan.com",
-    //     sourceCode: "https://github.com/tesfadan/portfolio"
-    // },
+    {
+        name: "Portfolio Website",
+        description: `
+        I designed and developed my portfolio website with a great 
+        user and developer experience in mind, so I used Next.js 
+        to deliver high-speed performance with Netlify 
+        and GitHub for hosting and continuous delivery.
+        `,
+        image: "color",
+        tags: "Next.js, Netlify",
+        link: "https://tesfadan.com",
+        sourceCode: "https://github.com/tesfadan/portfolio"
+    },
     {
         name: "WP Child Theme",
         description: `

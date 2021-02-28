@@ -1,6 +1,4 @@
 import styled from 'styled-components'
-import colors from '../../styles/Colors';
-import Graphics from '../UI/Graphics';
 
 export default function About() {
     return (
@@ -34,8 +32,8 @@ export default function About() {
                     </ul>
                 </div>
                 <picture className="image">
-                    <source type="image/webp" srcset="/assets/images/tesfa.webp" />
-                    <source type="image/jpeg" srcset="/assets/images/tesfa.jpg" />
+                    <source type="image/webp" srcSet="/assets/images/tesfa.webp" />
+                    <source type="image/jpeg" srcSet="/assets/images/tesfa.jpg" />
                     <img src="/assets/images/tesfa.jpg" alt="Tesfa Demissie"
                         height="467"
                         width="400"
