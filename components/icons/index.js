@@ -29,12 +29,7 @@ const CustomMenuWrapper = styled.span`
         }
 
         ${props => props.state && css`
-            /* background-color:red; */
-            .menuTop{
-                /* transform: rotate(45deg) translate(8px); */
-            }
             .menuBottom{
-                transition:0.25s ease-in;
                 transform: translateX(16px)
             }
         `}

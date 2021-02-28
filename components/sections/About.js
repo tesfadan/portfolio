@@ -119,7 +119,6 @@ export const Container = styled.div`
 
 
     @media(max-width: 1260px){
-        min-height:unset;
         padding: 60px 60px;
 
         .content{
@@ -128,6 +127,7 @@ export const Container = styled.div`
     }
 
     @media(max-width: 1020px){
+        min-height:unset;
         padding: 80px;
         .content{
             grid-column:2/12;
