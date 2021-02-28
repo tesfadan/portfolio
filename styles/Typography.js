@@ -2,9 +2,9 @@ import { createGlobalStyle } from 'styled-components';
 
 const TypographyStyle = createGlobalStyle`
    * {
-    font-family: 'Manrope', -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
-    text-rendering: optimizeSpeed;
-}
+        font-family: 'Manrope', -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+        text-rendering: optimizeSpeed;
+    }
 
 .sectionLabel {
     display: block;

@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import PlaygroundProjects from '../../content/PlaygroundProjects';
-import colors from '../../styles/Colors';
 import PlaygroundCard from '../UI/PlaygroundCard';
 import { useState } from 'react';
 import { Button } from '../UI/Button';
@@ -32,9 +31,6 @@ const Container = styled.div`
     font-size: 16px;
     z-index:10;
     background-image: linear-gradient(180deg, #021BFF03, #021BFF03);
-    button{
-        padding: 12px 18px;
-    }
     h2{
         color: inherit;
         margin-bottom:32px;
@@ -56,9 +52,6 @@ const Container = styled.div`
         display:flex;
         justify-content:center;
         height:max-content;
-
-        /* margin-bottom:60px; */
-
     }
 
     @media(max-width: 1260px){

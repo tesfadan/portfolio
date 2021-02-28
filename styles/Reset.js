@@ -187,11 +187,13 @@ video {
     outline: 0;
     font-size: 100%;
     vertical-align: baseline;
-    background: transparent
+    background: transparent;
 }
 
 body {
-    line-height: 1
+    line-height: 1;
+    background-color:#02141a;
+    background-image: linear-gradient(180deg, #34EBF705, #021BFF03);
 }
 
 article,

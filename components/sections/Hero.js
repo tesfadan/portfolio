@@ -28,6 +28,7 @@ const Container = styled.div`
     align-items:center;
     z-index:10;
     background-image: linear-gradient(180deg, #A500F304, #34EBF705);
+    background-image: linear-gradient(180deg, #1a236510, #34EBF705);
     .content{
         position:relative;
         top: -16px;
@@ -66,7 +67,7 @@ const Container = styled.div`
         display: block;
         width:max-content;
         border-radius:4px;
-        padding: 10px 18px;
+        padding: 16px 18px;
         color:#ffffff;
         border: 1px solid #3e98ff;
         margin-top: 32px;

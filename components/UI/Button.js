@@ -5,7 +5,7 @@ export const LinkButton = styled.a`
         width:max-content;
         border-radius:4px;
         padding: 10px 18px;
-        color:#ffffff;
+        color: #e2e7ec;
         border: 1px solid #3e98ff;
         transition: 0.15s ease;
         position: relative;
@@ -22,8 +22,8 @@ export const Button = styled.button`
         display: block;
         width:max-content;
         border-radius:4px;
-        padding: 10px 18px;
-        color:#ffffff;
+        padding: 16px 18px;
+        color: #e2e7ec;
         border: 1px solid #3e98ff;
         transition: 0.15s ease;
         position: relative;
