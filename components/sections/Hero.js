@@ -75,7 +75,6 @@ const Container = styled.div`
         position: relative;
         top: 0px;
         box-shadow: 0px 0px 32px #00000000;
-
         /*  */
         font-weight: 400;
         color: #e2e7ec;
