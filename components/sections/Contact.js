@@ -26,17 +26,15 @@ export default function Contact() {
 
 const Container = styled.div`
         padding: 180px 0px;
-        /* position: sticky; */
         background: #021B22;
         color:#E2E5E9;
         display:flex;
         align-items: center;
         font-size: 16px;
-        /* bottom: 0px; */
-        z-index: 1;
+        position: sticky;
+        bottom: 0px;
+        z-index: -10;
         background:#010e11;
-        /* background-image: linear-gradient(45deg, #1f4cc916, #34EBF705); */
-        /* background: #021B22; */
         background-image: linear-gradient(180deg, #021BFF03, #1f4cc916);
 
 
