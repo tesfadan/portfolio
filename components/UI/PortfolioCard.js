@@ -60,7 +60,6 @@ export const Container = styled.div`
     }
 
     p{
-        color:#E2E5E9;
         font-size: 16px;
         line-height: 28px;
         color: #aeb9c7;
@@ -79,7 +78,6 @@ export const Container = styled.div`
         border:  1px solid #242635;
 
         img{
-            /* height: 320px; */
             height: 360px;
             width: auto;
             object-fit: contain;

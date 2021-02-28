@@ -31,7 +31,7 @@ export default function PlaygroundCard({ ...props }) {
                 </ul>
             </div>
             <div className="main">
-                <h4>{name}</h4>
+                <h3>{name}</h3>
                 <p>{description}</p>
             </div>
         </Container>
@@ -43,21 +43,20 @@ export const Container = styled.div`
     padding: 20px;
     padding-top: 18px;
     z-index: 3;
-    border: 1px solid ${colors.border};
     display: flex;
     flex-wrap: wrap;
     animation: reveal 0.5s ease-in;
-    background: #24263560;
-        border:  1px solid #242635;
-    h4{
+    background: #171b25;
+    border:  1px solid #24263590;
+    color: #aeb9c7; 
+    h3{
         color: #E2E5E9;
         font-size: 18px;
         line-height: 18px;
-        margin-bottom: 8px;
+        margin-bottom: 12px;
     }
 
     p{
-        color:#E2E5E9;
         font-size: 16px;
         line-height: 28px;
         color: #aeb9c7;
