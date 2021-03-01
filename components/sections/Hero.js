@@ -27,7 +27,6 @@ const Container = styled.div`
     justify-content:center;
     align-items:center;
     z-index:10;
-    background-image: linear-gradient(180deg, #A500F304, #34EBF705);
     background-image: linear-gradient(180deg, #1a236510, #34EBF705);
     .content{
         position:relative;
@@ -75,7 +74,6 @@ const Container = styled.div`
         position: relative;
         top: 0px;
         box-shadow: 0px 0px 32px #00000000;
-        /*  */
         font-weight: 400;
         color: #e2e7ec;
         font-size: 16px;
