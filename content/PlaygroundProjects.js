@@ -32,6 +32,18 @@ const PlaygroundProjects = [
         sourceCode: "https://github.com/tesfadan/Tempo"
     },
     {
+        name: "Doge Puzzle",
+        description: `
+        Doge Puzzle is a puzzle game built with vanilla JavaScript. 
+        One of the challenges I had to solve for this game was 
+        writing an array shuffling algorithm to randomize 
+        the puzzle pieces at the start of the game.
+        `,
+        tags: "JS,CSS,HTML",
+        link: "https://tesfadan.github.io/DogePuzzle/",
+        sourceCode: "https://github.com/tesfadan/DogePuzzle"
+    },
+    {
         name: "Portfolio Website",
         description: `
         I designed and developed my portfolio website with a great 
