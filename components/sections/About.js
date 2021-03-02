@@ -22,13 +22,16 @@ export default function About() {
                         Here are a few technologies I've been working with recently:
                     </p>
                     <ul>
-                        <li>HTML</li>
-                        <li>SCSS</li>
-                        <li>JavaScript</li>
                         <li>React</li>
                         <li>React Native</li>
+                        <li>JSX</li>
+                        <li>HTML</li>
+                        <li>JS(ES6)</li>
+                        <li>SCSS</li>
+                        <li>Styled Components</li>
                         <li>Ionic</li>
                         <li>Firebase</li>
+                        <li>Git</li>
                     </ul>
                 </div>
                 <picture className="image">
