@@ -21,7 +21,7 @@ const Projects = [
         keeping up with their brand.`,
         image: "linkup",
         tags: "React,SCSS,Firebase",
-        link: "https://linkup.page",
+        link: "https://linkup.page/demo",
     },
     {
         name: "Stoic Widgets",
