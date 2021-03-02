@@ -57,6 +57,19 @@ const PlaygroundProjects = [
         sourceCode: "https://github.com/tesfadan/portfolio"
     },
     {
+        name: "Libby",
+        description: `
+        As a way of learning the design software Figma, 
+        I took the initiative to re-design and prototype Libby, 
+        a library app I use for renting audiobooks. Borrowing 
+        design inspirations from streaming apps such as 
+        Spotify and Netflix I was able to design a 
+        clean and modern user interface.
+        `,
+        tags: "Figma",
+        link: "https://www.figma.com/proto/KmqM8tfRAmQAtKCfoxNwHX/Library-App",
+    },
+    {
         name: "WP Child Theme",
         description: `
         This was one of the many WordPress projects I worked on 
