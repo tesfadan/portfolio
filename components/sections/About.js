@@ -10,28 +10,25 @@ export default function About() {
                         Hello, I'm Tesfa, a front-end developer based in Winnipeg, Manitoba.
                     </p>
                     <p>
-                        I knew I wanted to be a developer working on JavaScript assignments in my first year at
+                        I knew I wanted to be a developer working on JavaScript projects in my first year at
                         <a rel="noreferrer" target="_blank" href="https://www.rrc.ca/"> Red River College</a>, taking the Digital Media Design program.
                         I majored in <a rel="noreferrer" target="_blank" href="https://www.rrc.ca/creativearts/dmd/interaction-design-and-development/"> Web Design and Development </a> and had tremendous
                         opportunities to study under distinguished instructors.
-                        As a student who enjoyed solving technical problems, I have
-                        always gone above and beyond to polish my projects.
-                        I am quite excited to kick start my career in the industry as I will be graduating shortly.
+                        As a developer, I aspire to build performant and robust 
+                        applications using modern tools and practices.
                     </p>
                     <p>
                         Here are a few technologies I've been working with recently:
                     </p>
                     <ul>
                         <li>React</li>
-                        <li>React Native</li>
-                        <li>JSX</li>
+                        <li>JavaScript</li>
                         <li>HTML</li>
-                        <li>JS(ES6)</li>
                         <li>SCSS</li>
-                        <li>Styled Components</li>
+                        <li>Git</li>
+                        <li>React Native</li>
                         <li>Ionic</li>
                         <li>Firebase</li>
-                        <li>Git</li>
                     </ul>
                 </div>
                 <picture className="image">
