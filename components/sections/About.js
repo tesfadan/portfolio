@@ -7,7 +7,7 @@ export default function About() {
                 <div className="content">
                     <h2>About</h2>
                     <p>
-                        Hello, I'm Tesfa, a front-end developer based in Winnipeg, Manitoba.
+                        Hello! I'm Tesfa, a front-end developer based in Winnipeg, MB.
                     </p>
                     <p>
                         I knew I wanted to be a developer working on JavaScript projects in my first year at
