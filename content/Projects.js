@@ -22,6 +22,7 @@ const Projects = [
         image: "linkup",
         tags: "React,SCSS,Firebase",
         link: "https://linkup.page/demo",
+        label: "Link Sharing Simplified!"
     },
     {
         name: "Stoic Widgets",
@@ -29,13 +30,15 @@ const Projects = [
         image: "stoic",
         tags: "React Native,SCSS,Swift",
         link: "https://apps.apple.com/ca/app/stoic-widgets/id1541534447",
+        label: "iOS Widget"
     },
     {
         name: "Winnipeg Transit Live",
         description: `Winnipeg Transit Live helps you find buses passing by stops around you. Find out if your bus is arriving on-time, early or late easily. Get a live update on upcoming bus schedules at nearby stops.`,
         image: "transit",
-        tags: "React,SCSS,IONIC",
+        tags: "React,SCSS,IONIC,Styled Components,Figma",
         link: "https://apps.apple.com/ca/app/winnipeg-transit-live/id1531948380",
+        label: "Realtime Bus Times!"
     }
 ]
 
