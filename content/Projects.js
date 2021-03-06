@@ -31,7 +31,7 @@ const Projects = [
         link: "https://apps.apple.com/ca/app/stoic-widgets/id1541534447",
     },
     {
-        name: "Transit Live",
+        name: "Winnipeg Transit Live",
         description: `Winnipeg Transit Live helps you find buses passing by stops around you. Find out if your bus is arriving on-time, early or late easily. Get a live update on upcoming bus schedules at nearby stops.`,
         image: "transit",
         tags: "React,SCSS,IONIC",

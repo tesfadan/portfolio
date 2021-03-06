@@ -1,18 +1,30 @@
+import { useState, useEffect } from "react";
 import styled from 'styled-components'
 import { useRouter } from "next/router";
 import Projects from '../../content/Projects';
+import Cover from "../../components/Cover";
 
 export default function Project() {
     const router = useRouter();
+    const [project, setProject] = useState({
+        name: String,
+        description: String,
+        image: String,
+        tags: String,
+        link: String,
+        sourceCode: String,
+        coverImage: URL,
+    })
     // console.log(router.query.id);
-    // Projects.filter(project => project.id === router.query.id)
+
+    useEffect(() => {
+        setProject(Projects[2])
+    }, [true])
+
 
     return <Container id="about">
         <div className="grid">
-            <div>
-                <h1>Project Page</h1>
-                <p>Project id: {router.query.id}</p>
-            </div>
+            <Cover {...project} />
         </div>
     </Container>
 }
@@ -22,13 +34,7 @@ export const Container = styled.div`
     background: #02141a;
     color:#E2E5E9;
     display:flex;
-    align-items: center;
-    padding: 80px 0px;
     font-size: 16px;
     z-index:10;
     background-image: linear-gradient(180deg, #34EBF705, #A500F316);
-
-    div{
-        grid-column: 1/end;
-    }
 `
