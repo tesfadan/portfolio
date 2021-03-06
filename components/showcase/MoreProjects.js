@@ -4,7 +4,7 @@ import styled from 'styled-components'
 export default function MoreProjects({ Projects }) {
     return (
         <Container className="sectionItem more">
-            <h4>More Projects</h4>
+            <h3>More Projects</h3>
             <ul>
                 {Projects.map(project =>
                     <li>
@@ -22,6 +22,11 @@ export default function MoreProjects({ Projects }) {
 
 export const Container = styled.div`
     margin-top: 88px;
+    h3{
+        font-size: 16px;
+        margin-bottom: 26px;
+    }
+
     li{
         padding: 8px;
         background: #C4C4C408;

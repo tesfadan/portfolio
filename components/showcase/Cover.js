@@ -6,7 +6,7 @@ export default function Cover({ name }) {
     return (
         <Container className="cover">
             <div className="title">
-                <h2>{name}</h2>
+                <h1 className="name">{name}</h1>
                 <label>Mobile App design & Development</label>
             </div>
             <img src="/assets/images/showcase/winnipeg.png" />
@@ -23,19 +23,22 @@ export const Container = styled.div`
     border-radius:0px 0px 32px 32px;
     overflow:hidden;
     margin-bottom: 72px;
+    min-height:336px;
+    background: linear-gradient(315deg, #14263420 0%, #1F436420 100%), #02141a;
     .cover img{
         top: 0px;
         position:relative;
     }
-
     .title{
         position: absolute;
         z-index: 2;
         align-self:center;
         text-align:center;
-        h2{
+        .name{
             margin-bottom: 18px;
             color: white;
+            font-size: 32px;
+            line-height: 32px;
         }
         label{
             color: #A1CDFF;

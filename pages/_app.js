@@ -7,6 +7,8 @@ import ResetStyle from '../styles/Reset';
 import TypographyStyle from '../styles/Typography';
 import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 import { Menu } from '../components/sections/Menu';
+import Contact from '../components/sections/Contact';
+
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {

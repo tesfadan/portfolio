@@ -13,8 +13,10 @@ export default function Header({ transparent, show, ...props }) {
     const NavLink = ({ href, title }) => <li className={`navLink`}>
         {router.pathname == "/" ?
             <AnchorLink className="underline" href={href}>{title}</AnchorLink> :
-            <Link href={`/${href}`} className="underline">
-                {title}
+            <Link href={`/${href}`}>
+                <a className="underline">
+                    {title}
+                </a>
             </Link>
         }
     </li>
@@ -57,6 +59,7 @@ const Container = styled.header`
     z-index: 100;
     transition: 0.2s ease-in;
     backdrop-filter: blur(24px);
+    background:#02141a98;
     border-bottom: 1px solid #02141a50;
     nav, ul, a{
         display: flex;
@@ -92,7 +95,10 @@ const Container = styled.header`
     }
 
     ${props => props.transparent && css`
+        transition: 0.25s ease-in;
         backdrop-filter: blur(0px);
+        backdrop-filter: unset;
+        background: unset;
         border-color: transparent;
     `} 
 
