@@ -39,8 +39,7 @@ export default function PortfolioCard({ ...props }) {
                                     View Source Code
                             </span>
                             </a>
-                        </li> : null
-                    }
+                        </li> : null}
                 </ul>
             </div>
         </Container>

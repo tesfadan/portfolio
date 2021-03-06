@@ -22,7 +22,7 @@ export const Container = styled.div`
     height: max-content;
     border-radius:0px 0px 32px 32px;
     overflow:hidden;
-
+    margin-bottom: 72px;
     .cover img{
         top: 0px;
         position:relative;

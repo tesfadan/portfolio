@@ -29,7 +29,7 @@ function MyApp({ Component, pageProps }) {
     <TypographyStyle />
     <GlobalStyle />
     <DefaultHeadTags />
-    {/* <Header show={hideOnScroll || menu} switch={() => setMenu(!menu)} setMenu={setMenu} /> */}
+    <Header show={hideOnScroll || menu} switch={() => setMenu(!menu)} setMenu={setMenu} />
     <Menu menu={menu} switch={() => setMenu(!menu)} />
     <Component {...pageProps} />
     <Footer show={hideOnScroll} />
