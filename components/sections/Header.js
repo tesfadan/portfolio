@@ -1,12 +1,12 @@
 import Link from "next/link";
 import React from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import MenuIcon from "../icons";
 import { LinkButton } from "../UI/Button";
 import { useRouter } from 'next/router'
 
-export default function Header({ show, ...props }) {
+export default function Header({ transparent, show, ...props }) {
     const { setMenu } = props;
     const router = useRouter();
 
@@ -19,7 +19,7 @@ export default function Header({ show, ...props }) {
         }
     </li>
     return (
-        <Container style={show ? { top: 0, opacity: 1 } : { top: -20, opacity: 0 }}>
+        <Container transparent={transparent} style={show ? { top: 0, opacity: 1 } : { top: -20, opacity: 0 }} >
             {router.pathname == "/" ?
                 <AnchorLink href="#home" rel="noreferrer" onClick={() => setMenu(false)}>
                     <img src="/assets/logo.svg" width="50" height="32" alt="Home" />
@@ -90,6 +90,11 @@ const Container = styled.header`
         display:none;
         z-index: 200;
     }
+
+    ${props => props.transparent && css`
+        backdrop-filter: blur(0px);
+        border-color: transparent;
+    `} 
 
     @media(max-width: 640px){
         padding: 20px;
