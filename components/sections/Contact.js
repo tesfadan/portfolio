@@ -10,8 +10,8 @@ export default function Contact() {
                     <p>Feel free to email me or connect with me on social media if you would like to chat.</p>
                     <a className="email underline" href="mailto:tesfadaniel1@gmail.com" >tesfadaniel1@gmail.com</a>
                     <ul>
-                        <li><a href="https://twitter.com/tesfadan" className="underline">Twitter</a></li>
-                        <li><a href="https://www.linkedin.com/in/tesfadan/" className="underline">Linkedin</a></li>
+                        <li><a href="https://twitter.com/tesfadan" className="underline" target="_blank">Twitter</a></li>
+                        <li><a href="https://www.linkedin.com/in/tesfadan/" className="underline" target="_blank">Linkedin</a></li>
                     </ul>
 
                     {/* <div className="credit">
