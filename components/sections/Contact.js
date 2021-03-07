@@ -16,7 +16,7 @@ export default function Contact() {
 
                     {<div className="credit">
                         <p>Designed & Developed by Tesfa Demissie</p>
-                        <a rel="noreferrer" href="https://github.com/tesfadan/portfolio" className="underline">View Source Code</a>
+                        <a rel="noreferrer" href="https://github.com/tesfadan/portfolio" className="underline" target="_blank">View Source Code</a>
                     </div>}
                 </div>
             </div>
