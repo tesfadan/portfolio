@@ -14,10 +14,10 @@ export default function Contact() {
                         <li><a href="https://www.linkedin.com/in/tesfadan/" className="underline" target="_blank">Linkedin</a></li>
                     </ul>
 
-                    {/* <div className="credit">
+                    {<div className="credit">
                         <p>Designed & Developed by Tesfa Demissie</p>
                         <a rel="noreferrer" href="https://github.com/tesfadan/portfolio" className="underline">View Source Code</a>
-                    </div> */}
+                    </div>}
                 </div>
             </div>
         </Container>
@@ -53,7 +53,7 @@ const Container = styled.div`
             margin-right: 32px;
         }
         .credit{
-            margin-top:32px;
+           margin-top:44px;
         }
 
         @media(max-width: 760px){
