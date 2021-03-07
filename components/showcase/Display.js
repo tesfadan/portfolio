@@ -4,28 +4,17 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 import SwiperCore, { Navigation, A11y } from 'swiper';
 SwiperCore.use([Navigation, A11y]);
-export default function Display() {
+export default function Display({ media }) {
     return (
         <Container className="display">
             <Swiper
                 spaceBetween={50}
                 slidesPerView={1}
                 navigation
-                onSlideChange={() => console.log('slide change')}
-                onSwiper={(swiper) => console.log(swiper)}
             >
-                <SwiperSlide>
-                    <video muted width="272" autoPlay loop controls controlsList="play">
-                        <source src="/assets/media/transit.MP4" type="video/mp4" />
-                    Sorry, your browser doesn't support embedded videos.
-                </video>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src="/assets/images/projects/transit/stops.png" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src="/assets/images/projects/transit/stop.png" />
-                </SwiperSlide>
+                {media.map(media => <SwiperSlide
+                    dangerouslySetInnerHTML={{ __html: media }}
+                />)}
             </Swiper>
         </Container>
     );

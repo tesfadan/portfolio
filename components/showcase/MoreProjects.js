@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
+import Link from "next/link"
 
 export default function MoreProjects({ Projects }) {
     return (
@@ -7,13 +8,15 @@ export default function MoreProjects({ Projects }) {
             <h3>More Projects</h3>
             <ul>
                 {Projects.map(project =>
-                    <li>
-                        <img src={`/assets/images/projects/${project.image}Icon.png`} />
-                        <div>
-                            <span>{project.name}</span>
-                            <label>{project.label}</label>
-                        </div>
-                    </li>
+                    <Link href={`/projects/${project.url}`}>
+                        <li>
+                            <img src={`/assets/images/projects/${project.image}Icon.png`} height="54" width="54" />
+                            <div>
+                                <span>{project.name}</span>
+                                <label>{project.label}</label>
+                            </div>
+                        </li>
+                    </Link>
                 )}
             </ul>
         </Container>
@@ -32,19 +35,33 @@ export const Container = styled.div`
         background: #C4C4C408;
         border:  1px solid #24263550;
         border-radius:12px;
-        display:flex;
         margin-bottom: 16px;
+        display:flex;
+        align-items:center;
+        transition: 0.055s ease;
+        cursor: pointer;
+        label{
+            cursor: pointer;
+        }
+        &:hover{
+            background: #3e98ff10;
+            border: 1px solid #A1CDFF20;
+            img{opacity: 1;}
+        }
+
         img{
+            transition: inherit;
             opacity: 0.85;
         }
         div{
             display:flex;
             flex-flow:column;
             margin-left: 18px;
-            justify-content:center;
+            height: max-content;
         }
         span{
             margin-bottom: -6px;
+            margin-top: 4px;
             font-weight: 500;
         }
         label{

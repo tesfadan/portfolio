@@ -2,14 +2,14 @@ import React from 'react';
 import styled from 'styled-components'
 
 
-export default function Cover({ name }) {
+export default function Cover({ heading, subHeading, coverImage }) {
     return (
         <Container className="cover">
             <div className="title">
-                <h1 className="name">{name}</h1>
-                <label>Mobile App design & Development</label>
+                <h1 className="name">{heading}</h1>
+                <label>{subHeading}</label>
             </div>
-            <img src="/assets/images/showcase/winnipeg.png" />
+            <img src={coverImage} alt={`${heading} | ${subHeading}`} />
         </Container>
     );
 }
