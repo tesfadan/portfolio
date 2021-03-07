@@ -1,25 +1,27 @@
 import Link from "next/link";
 import React from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import MenuIcon from "../icons";
 import { LinkButton } from "../UI/Button";
 import { useRouter } from 'next/router'
 
-export default function Header({ show, ...props }) {
+export default function Header({ transparent, show, ...props }) {
     const { setMenu } = props;
     const router = useRouter();
 
     const NavLink = ({ href, title }) => <li className={`navLink`}>
         {router.pathname == "/" ?
             <AnchorLink className="underline" href={href}>{title}</AnchorLink> :
-            <Link href={`/${href}`} className="underline">
-                {title}
+            <Link href={`/${href}`}>
+                <a className="underline">
+                    {title}
+                </a>
             </Link>
         }
     </li>
     return (
-        <Container style={show ? { top: 0, opacity: 1 } : { top: -20, opacity: 0 }}>
+        <Container transparent={transparent} style={show ? { top: 0, opacity: 1 } : { top: -20, opacity: 0 }} >
             {router.pathname == "/" ?
                 <AnchorLink href="#home" rel="noreferrer" onClick={() => setMenu(false)}>
                     <img src="/assets/logo.svg" width="50" height="32" alt="Home" />
@@ -57,6 +59,7 @@ const Container = styled.header`
     z-index: 100;
     transition: 0.2s ease-in;
     backdrop-filter: blur(24px);
+    background:#02141a98;
     border-bottom: 1px solid #02141a50;
     nav, ul, a{
         display: flex;
@@ -90,6 +93,14 @@ const Container = styled.header`
         display:none;
         z-index: 200;
     }
+
+    ${props => props.transparent && css`
+        transition: 0.25s ease-in;
+        backdrop-filter: blur(0px);
+        backdrop-filter: unset;
+        background: unset;
+        border-color: transparent;
+    `} 
 
     @media(max-width: 640px){
         padding: 20px;

@@ -84,7 +84,7 @@ const GlobalStyle = createGlobalStyle`
                 transition: 0.15s ease-out;
             }
 
-            &:hover{
+            &:hover, &:focus{
                 color: #E2E5E9;
                 ::before{
                     width: 100%;

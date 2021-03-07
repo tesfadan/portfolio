@@ -14,7 +14,7 @@ export default function About() {
                         <a rel="noreferrer" target="_blank" href="https://www.rrc.ca/"> Red River College</a>, taking the Digital Media Design program.
                         I majored in <a rel="noreferrer" target="_blank" href="https://www.rrc.ca/creativearts/dmd/interaction-design-and-development/"> Web Design and Development </a> and had tremendous
                         opportunities to study under distinguished instructors.
-                        As a developer, I aspire to build performant and robust 
+                        As a developer, I aspire to build performant and robust
                         applications using modern tools and practices.
                     </p>
                     <p>

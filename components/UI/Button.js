@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const LinkButton = styled.a`
         display: block;
@@ -15,6 +15,10 @@ export const LinkButton = styled.a`
             background: #3e98ff10;
             border: 1px solid #A1CDFF40;
         }
+
+        ${props => props.small && css`
+            padding: 8px 14px;
+        `}
 `;
 
 
