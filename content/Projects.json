@@ -13,13 +13,42 @@
             "heading": "Linkup",
             "subHeading": "Link in Bio, Simplified!",
             "coverImage": "/assets/projects/linkup/linkupcover.png",
-            "about": "Linkup is a web application created to help content creators share more than one link through their social media bio. Creators use linkup to provide their audience with multiple links to their content all over the internet. Users easily sign in using Google or Facebook and setup their page in under 5 minutes. The app allows users to customize the look and feel of their page so it fits their brand.",
-            "process": "<p>I started sketching a wireframe for the app and refined it using Figma. Once I was satisfied with my design, I moved to prototype to better understand the functionality and technical requirements to come. I made sure to get familiar with Winnipeg Transit’s API before developing the user interface. I decided to build the UI with React, Ionic and Sass. Once the app was ready, I implemented Google AdMob for iOS and Android and deployed it in app stores and a dedicated domain as a <a href='https://winnipegtransit.live/stop/10615&49.89232&-97.14152&EB%20Graham@Smith' traget='_blank'>Progressive Web App.</a></p>",
+            "about": "Linkup is a web application for creating a social media landing page. The web app helps creators provide their audience with multiple links to their content all over the internet.",
+            "process": "<p>I began working on the project by designing and prototyping a fully responsive UI in Adobe XD. The UI & UX development was done with React and additional modules such as Styled Components and React Router. I used Firebase for the backend processes such as authorization, database and storage.</p>",
             "media": [
                 "<img height='530' width='24' src='/assets/projects/linkup/preview.png' alt='linkup.page preview'/>",
                 "<img height='530' width='24' src='/assets/projects/linkup/menu.png' alt='linkup.page menu'/>",
                 "<img height='530' width='24' src='/assets/projects/linkup/home.png' alt='linkup.page home'/>",
                 "<img height='530' width='24' src='/assets/projects/linkup/golden.png' alt='linkup.page golden theme'/>"
+            ]
+        }
+    },
+    {
+        "name": "Winnipeg Transit Live",
+        "description": "Winnipeg Transit Live helps you find buses passing by stops around you. Find out if your bus is arriving on-time, early or late easily. Get a live update on upcoming bus schedules at nearby stops.",
+        "image": "transit",
+        "url": "transit",
+        "tags": "React,SCSS,Ionic,Styled Components,Figma",
+        "links": [{
+                "link": "https://winnipegtransit.live/stop/10615&49.89232&-97.14152&EB%20Graham@Smith",
+                "label": "View Demo"
+            },
+            {
+                "link": "https://apps.apple.com/ca/app/winnipeg-transit-live/id1531948380",
+                "label": "Download"
+            }
+        ],
+        "label": "Realtime Bus Times!",
+        "study": {
+            "heading": "Winnipeg Transit Live",
+            "subHeading": "Mobile App Design & Development",
+            "coverImage": "/assets/projects/transit/transitcover.png",
+            "about": "Winnipeg Transit Live is a real-time transit app I first built as a studio-project in college to help with my daily commutes. The design is simple none intrusive delivering accurate information on time.",
+            "process": "<p>I started sketching a wireframe for the app and refined it using Figma. Once I was satisfied with my design, I moved to prototype to better understand the functionality and technical requirements to come. I made sure to get familiar with Winnipeg Transit’s API before developing the user interface. I decided to build the UI with React, Ionic and Sass. Once the app was ready, I implemented Google AdMob for iOS and Android and deployed it in app stores and a dedicated domain as a <a target='_blank' href='https://winnipegtransit.live/stop/10615&49.89232&-97.14152&EB%20Graham@Smith' traget='_blank'>Progressive Web App.</a></p>",
+            "media": [
+                "<img height='530' width='24' src='/assets/projects/transit/routes.png' alt='Winnipeg Transit app bus stops nearby'/>",
+                "<img height='530' width='24' src='/assets/projects/transit/stops.png' alt='Winnipeg Transit app bus stops nearby'/>",
+                "<img height='530' width='24' src='/assets/projects/transit/stop.png' alt='Winnipeg Transit app bus stop view'/>"
             ]
         }
     },
@@ -38,37 +67,13 @@
             "heading": "Stoic Widgets",
             "subHeading": "React Native App Design & Development",
             "coverImage": "/assets/projects/stoic/stoiccover.png",
-            "about": "iOS 14 widget app built using React Native and Swift. Stoic Widget provides a daily dose of insightful quotes to help users practice and embody stoic virtues throughout their day.",
-            "process": "<p>I started sketching a wireframe for the app and refined it using Figma. Once I was satisfied with my design, I moved to prototype to better understand the functionality and technical requirements to come. I made sure to get familiar with Winnipeg Transit’s API before developing the user interface. I decided to build the UI with React, Ionic and Sass. Once the app was ready, I implemented Google AdMob for iOS and Android and deployed it in app stores and a dedicated domain as a <a href='https://winnipegtransit.live/stop/10615&49.89232&-97.14152&EB%20Graham@Smith' traget='_blank'>Progressive Web App.</a></p>",
+            "about": "Stoic Widgets is an iOS 14 widget app that provides a daily dose of insightful quotes to help users practice and embody stoic virtues. With 900+ installs, Stoic Widgets is my biggest app yet.",
+            "process": "<p>I designed the user interface of Stoic Widgets with Figma, then moved to develop the host app with React Native, Styled Components and React Navigation. Once the host app was ready, I started creating the iOS widgets using Swift and Widget Kit. I integrated with the app Firebase and Microsoft AppCenter for updating the home feed content and the app itself.</p>",
             "media": [
                 "<img height='530' width='24' src='/assets/projects/stoic/homeScreen.png' alt='Stoic Widget on iOS homescreen' />",
                 "<img height='530' width='24' src='/assets/projects/stoic/home.png' alt='Stoic Widgets app homescreen'/>",
                 "<img height='530' width='24' src='/assets/projects/stoic/quote.png' alt='Stoic Widgets app quote view'/>",
                 "<img height='530' width='24' src='/assets/projects/stoic/darkMode.png' alt='Stoic Widgets app dark mode'/>"
-            ]
-        }
-    },
-    {
-        "name": "Winnipeg Transit Live",
-        "description": "Winnipeg Transit Live helps you find buses passing by stops around you. Find out if your bus is arriving on-time, early or late easily. Get a live update on upcoming bus schedules at nearby stops.",
-        "image": "transit",
-        "url": "transit",
-        "tags": "React,SCSS,IONIC,Styled Components,Figma",
-        "links": [{
-            "link": "https://apps.apple.com/ca/app/winnipeg-transit-live/id1531948380",
-            "label": "Download"
-        }],
-        "label": "Realtime Bus Times!",
-        "study": {
-            "heading": "Winnipeg Transit Live",
-            "subHeading": "Mobile App Design & Development",
-            "coverImage": "/assets/projects/transit/transitcover.png",
-            "about": "Winnipeg Transit Live is a real-time transit app I first built as a studio-project in college to help with my daily commutes. The design is simple none intrusive delivering accurate information on time.",
-            "process": "<p>I started sketching a wireframe for the app and refined it using Figma. Once I was satisfied with my design, I moved to prototype to better understand the functionality and technical requirements to come. I made sure to get familiar with Winnipeg Transit’s API before developing the user interface. I decided to build the UI with React, Ionic and Sass. Once the app was ready, I implemented Google AdMob for iOS and Android and deployed it in app stores and a dedicated domain as a <a href='https://winnipegtransit.live/stop/10615&49.89232&-97.14152&EB%20Graham@Smith' traget='_blank'>Progressive Web App.</a></p>",
-            "media": [
-                "<img height='530' width='24' src='/assets/projects/transit/routes.png' alt='Winnipeg Transit app bus stops nearby'/>",
-                "<img height='530' width='24' src='/assets/projects/transit/stops.png' alt='Winnipeg Transit app bus stops nearby'/>",
-                "<img height='530' width='24' src='/assets/projects/transit/stop.png' alt='Winnipeg Transit app bus stop view'/>"
             ]
         }
     }
