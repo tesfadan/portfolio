@@ -1,16 +1,21 @@
+import Link from "next/link";
 import React from "react";
 import styled from 'styled-components';
 import colors from '../../styles/Colors';
 
+
+
+
+
 export default function PortfolioCard({ ...props }) {
-    const { name, description, image, tags, link, sourceCode, flip } = props;
+    const { name, description, image, tags, link, sourceCode, flip, url } = props;
     const Tag = ({ value }) => <li className="label">{value}</li>;
 
     return (
         <Container flip={flip} className={flip ? `flip` : ''}>
             <picture className="image">
-                <source type="image/webp" srcset={`/assets/images/projects/${image}.webp`} />
-                <source type="image/png" srcset={`/assets/images/projects/${image}.png`} />
+                <source type="image/webp" srcSet={`../assets/images/projects/${image}.webp`} />
+                <source type="image/png" srcSet={`../assets/images/projects/${image}.png`} />
                 <img src={image} height="200" width="500" alt={name} />
             </picture>
 
@@ -23,23 +28,12 @@ export default function PortfolioCard({ ...props }) {
                     <p>{description}</p>
                 </div>
                 <ul className="links">
-                    <li>
-                        <a rel="noreferrer" href={link} target="_blank">
-                            <img src="/assets/icons/open.svg" height="18" width="18" alt="Open Project" />
-                            <span className="screenReaderOnly">
-                                Open Project
-                            </span>
+                    <Link href={`/projects/${url}`}>
+                        <a rel="noreferrer" >
+                            View Project
+                            {/* <img src="/assets/icons/arrow.svg" height="18" width="18" alt="Open Project" /> */}
                         </a>
-                    </li>
-                    {sourceCode != null ?
-                        <li>
-                            <a rel="noreferrer" href={sourceCode} target="_blank">
-                                <img src="/assets/icons/github.svg" height="18" width="18" alt='View Source Code' />
-                                <span className="screenReaderOnly">
-                                    View Source Code
-                            </span>
-                            </a>
-                        </li> : null}
+                    </Link>
                 </ul>
             </div>
         </Container>
@@ -134,17 +128,23 @@ export const Container = styled.div`
         position:relative;
         left: -10px;
         bottom: -10px;
-        li{
-            display:flex;
-        }
+
         a{
             border: 1px solid transparent;
             padding: 4px 10px;
             margin-right: 10px;
             border-radius: 4px;
+            display:flex;
+            flex-flow: row;
+            align-items: center;
 
+            img{
+                margin:0px 12px;
+            }
+            color: #aeb9c7; 
             &:hover,
             &:focus {
+                color: #e8eaec; 
                 transform: translateY(-3px);
                 border: 1px solid ${colors.tillDark}
             }
