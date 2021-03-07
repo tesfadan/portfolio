@@ -2,23 +2,35 @@ import React from 'react';
 import styled from 'styled-components';
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { LinkButton } from '../UI/Button';
+import { useRouter } from 'next/router'
+import Link from 'next/link';
 
 
 
 
 export const Menu = ({ ...props }) => {
     const { menu } = props;
+    const router = useRouter();
+
+    const NavLink = ({ href, title }) => <li className={`navLink ${title === "Resume" ? 'resumeBtn' : ''}`}>
+        {title === "Resume" ? <a className="underline big" href="/documents/Tesfa_Demissie_Resume.pdf">Resume</a> :
+            router.pathname == "/" ?
+                <AnchorLink className={`underline big`} onClick={() => props.switch()} href={href}>{title}</AnchorLink> :
+                <Link href={`/${href}`}>
+                    <a className="underline big" onClick={() => props.switch()}>
+                        {title}
+                    </a>
+                </Link>}
+    </li>
+
     return <Container state={menu}>
         <div className="grid" >
             <nav>
                 <ul>
-                    <li><AnchorLink href="#about" rel="noreferrer" onClick={() => props.switch()} className="underline big">About</AnchorLink></li>
-                    <li><AnchorLink href="#portfolio" rel="noreferrer" onClick={() => props.switch()} className="underline big">Portfolio</AnchorLink></li>
-                    <li><AnchorLink href="#contact" rel="noreferrer" onClick={() => props.switch()} className="underline big">Contact</AnchorLink></li>
-
-                    <li className="resumeBtn">
-                        <a className="underline big" href="/documents/Tesfa_Demissie_Resume.pdf">Resume</a>
-                    </li>
+                    <NavLink href="#about" title="About" />
+                    <NavLink href="#portfolio" title="Portfolio" />
+                    <NavLink href="#contact" title="Contact" />
+                    <NavLink href="/documents/Tesfa_Demissie_Resume.pdf" title="Resume" />
                 </ul>
             </nav>
 
