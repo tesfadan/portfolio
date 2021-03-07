@@ -10,7 +10,7 @@ export default function MoreProjects({ Projects, thisProject }) {
                 {Projects.map(project => project.url === thisProject ? null :
                     <Link href={`/projects/${project.url}`}>
                         <li>
-                            <img src={`../assets/images/projects/${project.image}Icon.png`} height="54" width="54" />
+                            <img src={`/assets/projects/${project.url}/icon.png`} height="54" width="54" alt={project.name} />
                             <div>
                                 <span>{project.name}</span>
                                 <label>{project.label}</label>

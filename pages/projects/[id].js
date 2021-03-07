@@ -61,7 +61,6 @@ export default function Project({ project }) {
                 </div>
 
                 <Display media={project.study.media} />
-
                 <aside>
                     <ProjectStack project={project} />
                     <Links project={project} />
@@ -172,12 +171,13 @@ export const Container = styled.div`
         .cover{
             img{
                 height: 100%;
+                object-fit:cover;
             }
         }
         .display{
             margin: 20px;
             padding: 20px 0px;
-            height: 720px;
+            /* height: 720px; */
             margin-bottom: 62px;
             .swiper-button-next,  .swiper-button-prev {
                 display: none;

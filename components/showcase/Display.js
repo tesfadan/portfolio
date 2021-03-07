@@ -31,14 +31,16 @@ export const Container = styled.div`
     margin-right:50px;
     position:relative;
     border:  1px solid #24263570;
+    height: max-content;
 
     video, img{
         border-radius: 18px;
-        height: 100%;
+        max-height: 530px;
         width: auto;
     }
     .swiper-container{
-        height:100%;
+        /* height:100%; */
+
     }
 
     .swiper-button-next,  .swiper-button-prev {

@@ -9,7 +9,7 @@ export default function Cover({ heading, subHeading, coverImage }) {
                 <h1 className="name">{heading}</h1>
                 <label>{subHeading}</label>
             </div>
-            <img src={coverImage} alt={`${heading} | ${subHeading}`} />
+            <img width="1200" height="336" src={coverImage} alt={`${heading} | ${subHeading}`} />
         </Container>
     );
 }

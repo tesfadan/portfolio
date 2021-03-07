@@ -10,14 +10,15 @@ export default function PortfolioCard({ ...props }) {
     return (
         <Container flip={flip} className={flip ? `flip` : ''}>
             <picture className="image">
-                <source type="image/webp" srcSet={`../assets/images/projects/${image}.webp`} />
-                <source type="image/png" srcSet={`../assets/images/projects/${image}.png`} />
+                <source type="image/webp" srcSet={`../assets/projects/${url}/${image}.webp`} />
+                <source type="image/png" srcSet={`../assets/projects/${url}/${image}.png`} />
                 <img src={image} height="200" width="500" alt={name} />
             </picture>
 
             <div className="content reveal">
                 <ul className="tags">
-                    {tags.split(",").map((tag, index) => <Tag value={tag} key={`${name}-tag-${tag}`} />)}
+                    {/* Only render the first three tags */}
+                    {tags.split(",").map((tag, index) => index > 2 ? null : <Tag value={tag} key={`${name}-tag-${tag}`} />)}
                 </ul>
                 <div className="main">
                     <h3>{name}</h3>
