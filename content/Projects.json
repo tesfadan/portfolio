@@ -4,18 +4,22 @@
         "image": "linkup",
         "url": "linkup",
         "tags": "React,SCSS,Firebase",
-        "link": "https://linkup.page/demo",
+        "links": [{
+            "link": "https://linkup.page/demo",
+            "label": "View Demo"
+        }],
         "label": "Link Sharing Simplified!",
         "study": {
             "heading": "linkup.page",
             "subHeading": "Link Sharing Simplified!",
-            "coverImage": "/assets/images/showcase/winnipeg.png",
-            "about": "Winnipeg Transit Live is a real-time transit app I first built as a studio-project in college to help with my daily commutes. The design is simple none intrusive delivering accurate information on time.",
+            "coverImage": "../assets/images/projects/linkup/linkupcover.png",
+            "about": "Linkup is a web application created to help content creators share more than one link through their social media bio. Creators use linkup to provide their audience with multiple links to their content all over the internet. Users easily sign in using Google or Facebook and setup their page in under 5 minutes. The app allows users to customize the look and feel of their page so it fits their brand.",
             "process": "<p>I started sketching a wireframe for the app and refined it using Figma. Once I was satisfied with my design, I moved to prototype to better understand the functionality and technical requirements to come. I made sure to get familiar with Winnipeg Transit’s API before developing the user interface. I decided to build the UI with React, Ionic and Sass. Once the app was ready, I implemented Google AdMob for iOS and Android and deployed it in app stores and a dedicated domain as a <a href='https://winnipegtransit.live/stop/10615&49.89232&-97.14152&EB%20Graham@Smith' traget='_blank'>Progressive Web App.</a></p>",
             "media": [
-                "<video muted width='272' autoPlay loop controls controlsList='play'><source src='/assets/media/transit.MP4' type='video/mp4' />Sorry, your browser doesn't support embedded videos.</video>",
-                "<img src='/assets/images/projects/transit/stops.png' />",
-                "<img src='/assets/images/projects/transit/stop.png' />"
+                "<img src='../assets/images/projects/linkup/preview.png' alt='linkup.page preview'/>",
+                "<img src='../assets/images/projects/linkup/menu.png' alt='linkup.page menu'/>",
+                "<img src='../assets/images/projects/linkup/home.png' alt='linkup.page home'/>",
+                "<img src='../assets/images/projects/linkup/golden.png' alt='linkup.page golden theme'/>"
             ]
         }
     },
@@ -25,18 +29,22 @@
         "image": "stoic",
         "url": "stoic",
         "tags": "React Native,SCSS,Swift",
-        "link": "https://apps.apple.com/ca/app/stoic-widgets/id1541534447",
+        "links": [{
+            "link": "https://apps.apple.com/ca/app/stoic-widgets/id1541534447",
+            "label": "Download"
+        }],
         "label": "iOS Widget",
         "study": {
             "heading": "Stoic Widgets",
             "subHeading": "Philosophy Widget",
-            "coverImage": "/assets/images/showcase/winnipeg.png",
-            "about": "Winnipeg Transit Live is a real-time transit app I first built as a studio-project in college to help with my daily commutes. The design is simple none intrusive delivering accurate information on time.",
+            "coverImage": "../assets/images/projects/stoic/mountain.png",
+            "about": "iOS 14 widget app built using React Native and Swift. Stoic Widget provides a daily dose of insightful quotes to help users practice and embody stoic virtues throughout their day.",
             "process": "<p>I started sketching a wireframe for the app and refined it using Figma. Once I was satisfied with my design, I moved to prototype to better understand the functionality and technical requirements to come. I made sure to get familiar with Winnipeg Transit’s API before developing the user interface. I decided to build the UI with React, Ionic and Sass. Once the app was ready, I implemented Google AdMob for iOS and Android and deployed it in app stores and a dedicated domain as a <a href='https://winnipegtransit.live/stop/10615&49.89232&-97.14152&EB%20Graham@Smith' traget='_blank'>Progressive Web App.</a></p>",
             "media": [
-                "<video muted width='272' autoPlay loop controls controlsList='play'><source src='/assets/media/transit.MP4' type='video/mp4' />Sorry, your browser doesn't support embedded videos.</video>",
-                "<img src='/assets/images/projects/transit/stops.png' />",
-                "<img src='/assets/images/projects/transit/stop.png' />"
+                "<img src='../assets/images/projects/stoic/homeScreen.png' alt='Stoic Widget on iOS homescreen'/>",
+                "<img src='../assets/images/projects/stoic/home.png' alt='Stoic Widgets app homescreen'/>",
+                "<img src='../assets/images/projects/stoic/quote.png' alt='Stoic Widgets app quote view'/>",
+                "<img src='../assets/images/projects/stoic/darkMode.png' alt='Stoic Widgets app dark mode'/>"
             ]
         }
     },
@@ -46,18 +54,21 @@
         "image": "transit",
         "url": "transit",
         "tags": "React,SCSS,IONIC,Styled Components,Figma",
-        "link": "https://apps.apple.com/ca/app/winnipeg-transit-live/id1531948380",
+        "links": [{
+            "link": "https://apps.apple.com/ca/app/winnipeg-transit-live/id1531948380",
+            "label": "Download"
+        }],
         "label": "Realtime Bus Times!",
         "study": {
             "heading": "Winnipeg Transit Live",
             "subHeading": "Mobile App design & Development",
-            "coverImage": "/assets/images/showcase/winnipeg.png",
+            "coverImage": "../assets/images/showcase/winnipeg.png",
             "about": "Winnipeg Transit Live is a real-time transit app I first built as a studio-project in college to help with my daily commutes. The design is simple none intrusive delivering accurate information on time.",
             "process": "<p>I started sketching a wireframe for the app and refined it using Figma. Once I was satisfied with my design, I moved to prototype to better understand the functionality and technical requirements to come. I made sure to get familiar with Winnipeg Transit’s API before developing the user interface. I decided to build the UI with React, Ionic and Sass. Once the app was ready, I implemented Google AdMob for iOS and Android and deployed it in app stores and a dedicated domain as a <a href='https://winnipegtransit.live/stop/10615&49.89232&-97.14152&EB%20Graham@Smith' traget='_blank'>Progressive Web App.</a></p>",
             "media": [
-                "<video muted width='272' autoPlay loop controls controlsList='play'><source src='/assets/media/transit.MP4' type='video/mp4' />Sorry, your browser doesn't support embedded videos.</video>",
-                "<img src='/assets/images/projects/transit/stops.png' />",
-                "<img src='/assets/images/projects/transit/stop.png' />"
+                "<video muted width='272' autoPlay loop controls controlsList='play'><source src='../assets/media/transit.MP4' type='video/mp4' />Sorry, your browser doesn't support embedded videos.</video>",
+                "<img src='../assets/images/projects/transit/stops.png' alt='Winnipeg Transit app bus stops nearby'/>",
+                "<img src='../assets/images/projects/transit/stop.png' alt='Winnipeg Transit app bus stop view'/>"
             ]
         }
     }
