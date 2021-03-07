@@ -23,11 +23,14 @@ export const Container = styled.div`
     border-radius:0px 0px 32px 32px;
     overflow:hidden;
     margin-bottom: 72px;
-    min-height:336px;
+    min-height: 200px;
+    /* min-height:336px; */
     background: linear-gradient(315deg, #14263420 0%, #1F436420 100%), #02141a;
-    .cover img{
+    img{
         top: 0px;
         position:relative;
+        height: 100%;
+        object-fit:cover;
     }
     .title{
         position: absolute;
@@ -42,6 +45,13 @@ export const Container = styled.div`
         }
         label{
             color: #A1CDFF;
+        }
+    }
+
+    @media(max-width: 1260px){
+        border-radius: 0px;
+        img{
+            border-radius: unset;
         }
     }
 `

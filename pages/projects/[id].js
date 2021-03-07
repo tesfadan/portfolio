@@ -7,12 +7,10 @@ import ProjectStack from "../../components/showcase/ProjectStack";
 import Links from "../../components/showcase/Links";
 import MoreProjects from "../../components/showcase/MoreProjects";
 import Display from "../../components/showcase/Display";
-
+import Head from 'next/head';
 
 export const getStaticProps = async ({ params }) => {
     const studies = Projects.filter(project => project.url.toString() === params.id)
-
-    console.log(studies)
 
     return {
         props: {
@@ -47,6 +45,9 @@ export default function Project({ project }) {
     // }
 
     return <>
+        <Head>
+            <title> Tesfa Demissie | {project.name}</title>
+        </Head>
         <Container id="showcase">
             <div className="grid">
                 <Cover {...project.study} />
@@ -64,7 +65,7 @@ export default function Project({ project }) {
                 <aside>
                     <ProjectStack project={project} />
                     <Links project={project} />
-                    <MoreProjects Projects={Projects} />
+                    <MoreProjects Projects={Projects} thisProject={project.url} />
                 </aside>
             </div>
         </Container>
@@ -110,6 +111,82 @@ export const Container = styled.div`
         h4{
             margin-bottom:26px;
             font-weight: 500;
+        }
+    }
+
+    @media(max-width: 1260px){
+        .writeup{
+            grid-column: 2/8;
+        }
+        aside{
+            grid-column: 9/end;
+            padding-right: 40px;
+        }
+    }
+    @media(max-width: 1080px){
+        .writeup{
+            grid-column: 2/7;
+        }
+        aside{
+            grid-column: 8/end;
+            padding-right: 60px;
+        }
+        .display{
+            grid-column: 1/9;
+        }
+    }
+
+    @media(max-width: 900px){
+        .cover{
+            .name{
+                font-size: 24px;
+                line-height: 24px;
+                margin-bottom: 12px;
+
+            }
+        }
+        .writeup{
+            grid-column: 2/12;
+        }
+        aside{
+            grid-column: 3/11;
+            grid-row: unset;
+            padding-right: 0px;
+        }
+        .display{
+            grid-column: 1/end;
+        }
+    }
+    @media(max-width: 640px){
+        aside{
+            grid-column: 2/12;
+        }
+    }
+
+    @media(max-width:480px){
+        .grid{padding: 0px;}
+        .writeup{
+            padding: 0px 20px;
+            grid-column: 1/end;
+        }
+        .cover{
+            img{
+                height: 100%;
+            }
+        }
+        .display{
+            margin: 20px;
+            padding: 20px 0px;
+            height: 720px;
+            margin-bottom: 62px;
+            .swiper-button-next,  .swiper-button-prev {
+                display: none;
+            }
+            .swiper-slide{
+                margin: 0px;
+                display: flex;
+                justify-content: center;
+            }
         }
     }
 `

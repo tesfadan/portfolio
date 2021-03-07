@@ -3,10 +3,6 @@ import React from "react";
 import styled from 'styled-components';
 import colors from '../../styles/Colors';
 
-
-
-
-
 export default function PortfolioCard({ ...props }) {
     const { name, description, image, tags, link, sourceCode, flip, url } = props;
     const Tag = ({ value }) => <li className="label">{value}</li>;

@@ -7,18 +7,14 @@ export default function Links({ project }) {
         <Container className="sectionItem links">
             <h3>Final Product</h3>
             <ul>
-                <li>
-                    <LinkButton rel="noreferrer" href={project.link} target="_blank" small>
-                        <img src="/assets/icons/open.svg" height="18" width="18" alt="Open Project" />
-                    Download
-                </LinkButton>
-                </li>
-                {<li>
-                    <LinkButton rel="noreferrer" href={project.sourceCode} target="_blank" small>
-                        <img src="/assets/icons/github.svg" height="18" width="18" alt='View Source Code' />
-                        Source Code
-                </LinkButton>
-                </li>}
+                {project.links.map(
+                    link => <li>
+                        <LinkButton rel="noreferrer" href={link.link} target="_blank" small>
+                            <img src={`/assets/icons/${link.label.includes('ode') ? 'github' : 'open'}.svg`} height="18" width="18" alt="Open Project" />
+                            {link.label}
+                        </LinkButton>
+                    </li>
+                )}
             </ul>
         </Container>
     );

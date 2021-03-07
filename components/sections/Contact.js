@@ -10,14 +10,14 @@ export default function Contact() {
                     <p>Feel free to email me or connect with me on social media if you would like to chat.</p>
                     <a className="email underline" href="mailto:tesfadaniel1@gmail.com" >tesfadaniel1@gmail.com</a>
                     <ul>
-                        <li><a href="https://twitter.com/tesfadan" className="underline">Twitter</a></li>
-                        <li><a href="https://www.linkedin.com/in/tesfadan/" className="underline">Linkedin</a></li>
+                        <li><a href="https://twitter.com/tesfadan" className="underline" target="_blank">Twitter</a></li>
+                        <li><a href="https://www.linkedin.com/in/tesfadan/" className="underline" target="_blank">Linkedin</a></li>
                     </ul>
 
-                    {/* <div className="credit">
+                    <div className="credit">
                         <p>Designed & Developed by Tesfa Demissie</p>
-                        <a rel="noreferrer" href="https://github.com/tesfadan/portfolio" className="underline">View Source Code</a>
-                    </div> */}
+                        <a rel="noreferrer" href="https://github.com/tesfadan/portfolio" className="underline" target="_blank">View Source Code</a>
+                    </div>
                 </div>
             </div>
         </Container>
@@ -53,7 +53,7 @@ const Container = styled.div`
             margin-right: 32px;
         }
         .credit{
-            margin-top:32px;
+            margin-top:44px;
         }
 
         @media(max-width: 760px){

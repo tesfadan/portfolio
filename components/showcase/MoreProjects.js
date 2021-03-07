@@ -2,15 +2,15 @@ import React from 'react';
 import styled from 'styled-components'
 import Link from "next/link"
 
-export default function MoreProjects({ Projects }) {
+export default function MoreProjects({ Projects, thisProject }) {
     return (
         <Container className="sectionItem more">
             <h3>More Projects</h3>
             <ul>
-                {Projects.map(project =>
+                {Projects.map(project => project.url === thisProject ? null :
                     <Link href={`/projects/${project.url}`}>
                         <li>
-                            <img src={`/assets/images/projects/${project.image}Icon.png`} height="54" width="54" />
+                            <img src={`../assets/images/projects/${project.image}Icon.png`} height="54" width="54" />
                             <div>
                                 <span>{project.name}</span>
                                 <label>{project.label}</label>

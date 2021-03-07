@@ -10,8 +10,8 @@
         }],
         "label": "Link Sharing Simplified!",
         "study": {
-            "heading": "linkup.page",
-            "subHeading": "Link Sharing Simplified!",
+            "heading": "Linkup",
+            "subHeading": "Link in Bio, Simplified!",
             "coverImage": "../assets/images/projects/linkup/linkupcover.png",
             "about": "Linkup is a web application created to help content creators share more than one link through their social media bio. Creators use linkup to provide their audience with multiple links to their content all over the internet. Users easily sign in using Google or Facebook and setup their page in under 5 minutes. The app allows users to customize the look and feel of their page so it fits their brand.",
             "process": "<p>I started sketching a wireframe for the app and refined it using Figma. Once I was satisfied with my design, I moved to prototype to better understand the functionality and technical requirements to come. I made sure to get familiar with Winnipeg Transit’s API before developing the user interface. I decided to build the UI with React, Ionic and Sass. Once the app was ready, I implemented Google AdMob for iOS and Android and deployed it in app stores and a dedicated domain as a <a href='https://winnipegtransit.live/stop/10615&49.89232&-97.14152&EB%20Graham@Smith' traget='_blank'>Progressive Web App.</a></p>",
@@ -36,7 +36,7 @@
         "label": "iOS Widget",
         "study": {
             "heading": "Stoic Widgets",
-            "subHeading": "Philosophy Widget",
+            "subHeading": "React Native App Design & Development",
             "coverImage": "../assets/images/projects/stoic/mountain.png",
             "about": "iOS 14 widget app built using React Native and Swift. Stoic Widget provides a daily dose of insightful quotes to help users practice and embody stoic virtues throughout their day.",
             "process": "<p>I started sketching a wireframe for the app and refined it using Figma. Once I was satisfied with my design, I moved to prototype to better understand the functionality and technical requirements to come. I made sure to get familiar with Winnipeg Transit’s API before developing the user interface. I decided to build the UI with React, Ionic and Sass. Once the app was ready, I implemented Google AdMob for iOS and Android and deployed it in app stores and a dedicated domain as a <a href='https://winnipegtransit.live/stop/10615&49.89232&-97.14152&EB%20Graham@Smith' traget='_blank'>Progressive Web App.</a></p>",
@@ -61,7 +61,7 @@
         "label": "Realtime Bus Times!",
         "study": {
             "heading": "Winnipeg Transit Live",
-            "subHeading": "Mobile App design & Development",
+            "subHeading": "Mobile App Design & Development",
             "coverImage": "../assets/images/showcase/winnipeg.png",
             "about": "Winnipeg Transit Live is a real-time transit app I first built as a studio-project in college to help with my daily commutes. The design is simple none intrusive delivering accurate information on time.",
             "process": "<p>I started sketching a wireframe for the app and refined it using Figma. Once I was satisfied with my design, I moved to prototype to better understand the functionality and technical requirements to come. I made sure to get familiar with Winnipeg Transit’s API before developing the user interface. I decided to build the UI with React, Ionic and Sass. Once the app was ready, I implemented Google AdMob for iOS and Android and deployed it in app stores and a dedicated domain as a <a href='https://winnipegtransit.live/stop/10615&49.89232&-97.14152&EB%20Graham@Smith' traget='_blank'>Progressive Web App.</a></p>",
