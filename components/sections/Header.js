@@ -32,15 +32,12 @@ export default function Header({ transparent, show, ...props }) {
                     </a>
                 </Link>
             }
-
             <nav>
                 <ul>
-                    <li>
-                        <LinkButton className="button small" href="/documents/Tesfa_Demissie_Resume.pdf">Resume</LinkButton>
-                    </li>
+                    <li><LinkButton className="button small" href="/documents/Tesfa_Demissie_Resume.pdf">Resume</LinkButton></li>
                     <NavLink href="#contact" title="Contact" />
-                    <NavLink href="#portfolio" title="Portfolio" />
-                    <NavLink href="#about" title="About" />
+                    <li><Link href="/about"><a className="underline">About</a></Link></li>
+                    <NavLink href="#portfolio" title="Work" />
                 </ul>
             </nav >
             <MenuIcon {...props} show={show} />

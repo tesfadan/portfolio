@@ -27,8 +27,8 @@ export const Menu = ({ ...props }) => {
         <div className="grid" >
             <nav>
                 <ul>
-                    <NavLink href="#about" title="About" />
-                    <NavLink href="#portfolio" title="Portfolio" />
+                    <NavLink href="#portfolio" title="Work" />
+                    <li><Link href="/about" ><a className="underline" onClick={() => props.switch()}>About</a></Link></li>
                     <NavLink href="#contact" title="Contact" />
                     <NavLink href="/documents/Tesfa_Demissie_Resume.pdf" title="Resume" />
                 </ul>

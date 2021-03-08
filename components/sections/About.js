@@ -125,7 +125,7 @@ export const Container = styled.div`
     }
 
     @media(max-width: 1020px){
-        min-height:unset;
+        /* min-height:unset; */
         padding: 80px;
         .content{
             grid-column:2/12;
