@@ -7,7 +7,7 @@ export default function Portfolio() {
     return (
         <Container id="portfolio">
             <div className="grid">
-                <h2>Portfolio</h2>
+                <h2>Work</h2>
                 {Projects.map((project, index) =>
                     <PortfolioCard {...project} flip={index % 2 != 0} key={`portfolio-${index}`} />
                 )}
@@ -25,7 +25,7 @@ export const Container = styled.div`
     padding: 80px 0px;
     font-size: 16px;
     z-index:10;
-    background-image: linear-gradient(180deg, #A500F316, #021BFF03);
+    background-image: linear-gradient(180deg, #4100f312, #021BFF03);
     h2{
         color: inherit;
         margin-bottom:32px;
