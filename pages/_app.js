@@ -8,6 +8,7 @@ import TypographyStyle from '../styles/Typography';
 import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 import { Menu } from '../components/sections/Menu';
 import Contact from '../components/sections/Contact';
+import Credit from '../components/sections/Credit';
 
 
 function MyApp({ Component, pageProps }) {
@@ -35,6 +36,7 @@ function MyApp({ Component, pageProps }) {
     <Menu menu={menu} switch={() => setMenu(!menu)} />
     <Component {...pageProps} />
     <Footer show={hideOnScroll} />
+    <Credit />
   </>
 }
 

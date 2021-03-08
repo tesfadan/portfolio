@@ -16,6 +16,7 @@
             "about": "Linkup is a web application that allows users to create an online hub for multiple links to their content and social profiles, so their audience can easily find all of their content. The app allows for customization, giving users the ability to personalize their space so it matches their brand.",
             "process": "<p>I began the project by designing and prototyping a fully responsive user interface in Adobe XD. I used React and additional modules such as Styled Components and React Router to develop the UI & UX. Firebase was used for the backend processes, including authorization, database, and storage.</p>",
             "media": [
+                "<img loading='lazy' height='530' width='24' src='/assets/projects/linkup/linkup.gif' alt='Linkup working as a progressive web app'/>",
                 "<img loading='lazy' height='530' width='24' src='/assets/projects/linkup/preview.png' alt='linkup.page preview'/>",
                 "<img loading='lazy' height='530' width='24' src='/assets/projects/linkup/menu.png' alt='linkup.page menu'/>",
                 "<img loading='lazy' height='530' width='24' src='/assets/projects/linkup/home.png' alt='linkup.page home'/>",
@@ -46,7 +47,7 @@
             "about": "Winnipeg Transit Live is built using React and Ionic to consume Winnipeg Transits real-time data. The app is a centralized location where users can find a list of bus stops in their current surrounding area. The user can tap on the bus stop they wish to see the next scheduled arrivals for to be navigated to a page which contains all the routes that pass by this location.",
             "process": "<p>I started a wireframe for the app, revised it using Figma. I got familiar with Winnipeg Transit's API and then proceeded to build the UI with React, Ionic, and Sass. I implemented Google AdMob for iOS and Android, deployed it in app stores, and served it as a progressive web app on a <a href='https://winnipegtransit.live/stop/10615&49.89232&-97.14152&EB%20Graham@Smith' rel='non-opener'/> dedicated domain. </a></p>",
             "media": [
-                "<img loading='lazy' height='530' width='24' src='/assets/projects/transit/routes.png' alt='Winnipeg Transit app bus stops nearby'/>",
+                "<img loading='lazy' height='530' width='24' src='/assets/projects/transit/transit.gif' alt='Winnipeg Transit app bus stops nearby'/>",
                 "<img loading='lazy' height='530' width='24' src='/assets/projects/transit/stops.png' alt='Winnipeg Transit app bus stops nearby'/>",
                 "<img loading='lazy' height='530' width='24' src='/assets/projects/transit/stop.png' alt='Winnipeg Transit app bus stop view'/>"
             ]
