@@ -9,10 +9,10 @@ export default function Hero() {
                     <h1>Tesfa Demissie</h1>
                     <h2 className="jobTitle">Front End Developer</h2>
                     <p>
-                        I am a front-end developer with experience building websites and web applications with JavaScript, HTML, SCSS, and React. I also have experience working with React Native & PHP.
+                        Front end developer with experience building web and mobile applications with JavaScript, HTML, SCSS, and React.
                     </p>
                     <AnchorLink href="#portfolio">
-                        View Portfolio
+                        View Work
                     </AnchorLink>
                 </div>
             </div>
@@ -27,7 +27,7 @@ const Container = styled.div`
     justify-content:center;
     align-items:center;
     z-index:10;
-    background-image: linear-gradient(180deg, #1a236510, #34EBF705);
+    background-image: linear-gradient(180deg, #1e476d10, #4100f312);
     .content{
         position:relative;
         top: -16px;
@@ -66,7 +66,8 @@ const Container = styled.div`
         display: block;
         width:max-content;
         border-radius:4px;
-        padding: 16px 18px;
+        /* padding: 16px 18px; */
+        padding: 12px 24px;
         color:#ffffff;
         border: 1px solid #3e98ff;
         margin-top: 32px;

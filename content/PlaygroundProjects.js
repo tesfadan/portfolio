@@ -13,36 +13,36 @@ const PlaygroundProjects = [
         from anywhere.
         `,
         image: "color",
-        tags: "React,SCSS,IONIC",
+        tags: "React,SCSS, Firebase",
         link: "https://moderncolor.cc",
         sourceCode: "https://github.com/tesfadan/color"
     },
-//     {
-//         name: "TapTempo",
-//         description: `
-//         TapTempo is a music production utility tool for finding BPM 
-//         (beats per minute). With only two keystrokes or mouse clicks, 
-//         the javascript code calculates the time difference between 
-//         the input events and displays the current approximate 
-//         count, improving accuracy upon additional interaction.
-//         `,
-//         image: "tempo",
-//         tags: "HTML,CSS,JS",
-//         link: "https://taptempo.netlify.app",
-//         sourceCode: "https://github.com/tesfadan/Tempo"
-//     },
-//     {
-//         name: "Doge Puzzle",
-//         description: `
-//         Doge Puzzle is a puzzle game built with vanilla JavaScript. 
-//         One of the challenges I had to solve for this game was 
-//         writing an array shuffling algorithm to randomize 
-//         the puzzle pieces at the start of the game.
-//         `,
-//         tags: "JS,CSS,HTML",
-//         link: "https://tesfadan.github.io/DogePuzzle/",
-//         sourceCode: "https://github.com/tesfadan/DogePuzzle"
-//     },
+    //     {
+    //         name: "TapTempo",
+    //         description: `
+    //         TapTempo is a music production utility tool for finding BPM 
+    //         (beats per minute). With only two keystrokes or mouse clicks, 
+    //         the javascript code calculates the time difference between 
+    //         the input events and displays the current approximate 
+    //         count, improving accuracy upon additional interaction.
+    //         `,
+    //         image: "tempo",
+    //         tags: "HTML,CSS,JS",
+    //         link: "https://taptempo.netlify.app",
+    //         sourceCode: "https://github.com/tesfadan/Tempo"
+    //     },
+    //     {
+    //         name: "Doge Puzzle",
+    //         description: `
+    //         Doge Puzzle is a puzzle game built with vanilla JavaScript. 
+    //         One of the challenges I had to solve for this game was 
+    //         writing an array shuffling algorithm to randomize 
+    //         the puzzle pieces at the start of the game.
+    //         `,
+    //         tags: "JS,CSS,HTML",
+    //         link: "https://tesfadan.github.io/DogePuzzle/",
+    //         sourceCode: "https://github.com/tesfadan/DogePuzzle"
+    //     },
     {
         name: "Portfolio Website",
         description: `
