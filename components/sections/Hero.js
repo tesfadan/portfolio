@@ -9,7 +9,7 @@ export default function Hero() {
                     <h1>Tesfa Demissie</h1>
                     <h2 className="jobTitle">Front End Developer</h2>
                     <p>
-                        Front end developer with experience building web and mobile applications with JavaScript, HTML, SCSS, and React.
+                        I’m a front-end developer with experience building responsive web and mobile applications. As a developer, I strive to create innovative, fast, and easy-to-use applications using the latest web development practices and tools.
                     </p>
                     <AnchorLink href="#portfolio">
                         View Work
