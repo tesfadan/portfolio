@@ -1,47 +1,39 @@
 import styled from 'styled-components'
 
 export default function About() {
-    return (
-        <Container id="about">
-            <div className="grid">
-                <div className="content">
-                    <h2>About</h2>
-                    <p>
-                        Hello! I'm Tesfa, a front-end developer based in Winnipeg, MB.
+    return <Container id="about">
+        <div className="grid">
+            <div className="content">
+                <h2>About</h2>
+                <p>
+                    Hello! I'm Tesfa, a front-end developer based in Winnipeg, MB.
                     </p>
-                    <p>
-                        I knew I wanted to be a developer working on JavaScript projects
-                        in my first year of college, so I majored in Web Design
-                        and Development. I had tremendous opportunities to study
-                        under distinguished instructors, all of whom were experts
-                        in their fields and helped me hone my skills.
+                <p>
+                    I knew I wanted to be a developer working on JavaScript projects
+                    in my first year of college, so I majored in Web Design
+                    and Development. I had tremendous opportunities to study
+                    under distinguished instructors, all of whom were experts
+                    in their fields and helped me hone my skills.
                     </p>
-                    <p>
-                        Here are a few technologies I've used lately:
+                <p>
+                    Here are a few technologies I've used lately:
                     </p>
-                    <ul>
-                        <li>React</li>
-                        <li>JavaScript</li>
-                        <li>HTML</li>
-                        <li>SCSS</li>
-                        <li>Git</li>
-                        <li>React Native</li>
-                        <li>Ionic</li>
-                        <li>Firebase</li>
-                    </ul>
-                </div>
-                <picture className="image">
-                    <source type="image/webp" srcSet="/assets/images/tesfa.webp" />
-                    <source type="image/jpeg" srcSet="/assets/images/tesfa.jpg" />
-                    <img src="/assets/images/tesfa.jpg" alt="Tesfa Demissie"
-                        height="467"
-                        width="400"
-                    />
-                </picture>
+                <ul>
+                    <li>React</li>
+                    <li>JavaScript</li>
+                    <li>HTML</li>
+                    <li>SCSS</li>
+                    <li>Git</li>
+                    <li>React Native</li>
+                    <li>Next</li>
+                    <li>Ionic</li>
+                    <li>Firebase</li>
+                </ul>
             </div>
-        </Container>
-    );
+        </div>
+    </Container>
 }
+
 
 export const Container = styled.div`
     min-height: 100vh;
@@ -71,30 +63,10 @@ export const Container = styled.div`
         }
     }
     .content{
-        grid-column:2/8;
+        grid-column:3/9;
         padding-right: 60px;
     }
-    .image{
-        grid-column: 9/13;
-        position:relative;
-        img{
-            height:100%;
-            width:100%;
-            object-fit: cover;
-            max-height: 520px;
-            border-radius:16px;
-            &:after{
-                    content:"";
-                    display: block;
-                    width:100%;
-                    height:100%;
-                    background:black;
-                    position:fixed;
-                    top: 0px;
-                    z-index:20;
-                }
-            }
-        }
+    
     li{
         color: inherit;
         border: 1px solid #3e98ff;
@@ -109,7 +81,6 @@ export const Container = styled.div`
         line-height:24px;
     }
     ul{
-        width: 70%;
         display:flex;
         flex: 1 1 35%;
         flex-wrap: wrap;
@@ -120,7 +91,7 @@ export const Container = styled.div`
         padding: 60px 60px;
 
         .content{
-            grid-column:1/8;
+            grid-column:3/10;
         }
     }
 
@@ -130,9 +101,6 @@ export const Container = styled.div`
         .content{
             grid-column:3/11;
             padding-right: 0px;
-        }
-        .image{
-            display: none;
         }
     }
 
@@ -162,21 +130,5 @@ export const Container = styled.div`
     }
     @media(max-width: 480px){
         padding: 40px 0px;
-    }
-
-
-    .image{
-        opacity: 0.9;
-        animation: reveal 1s ease-in;
-    }
-    @keyframes reveal{
-        from{
-            opacity: 0;
-            top: 20px;
-        }
-        to{
-            opacity: 0.9;
-            top: 0;
-        }
     }
 `;
