@@ -40,3 +40,4 @@ yarn-error.log*
 /public/worker-*.js
 /public/workbox-*.js
 /public/worker-*.js.map
+/public/workbox-*.js.map
