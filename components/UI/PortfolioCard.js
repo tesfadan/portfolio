@@ -8,32 +8,34 @@ export default function PortfolioCard({ ...props }) {
     const Tag = ({ value }) => <li className="label">{value}</li>;
 
     return (
-        <Container flip={flip} className={flip ? `flip` : ''}>
-            <picture className="image">
-                <source type="image/webp" srcSet={`../assets/projects/${url}/${image}.webp`} />
-                <source type="image/png" srcSet={`../assets/projects/${url}/${image}.png`} />
-                <img src={image} height="200" width="500" alt={name} />
-            </picture>
+        <Link href={`/projects/${url}`}>
+            <Container flip={flip} className={flip ? `flip` : ''} >
+                <picture className="image">
+                    <source type="image/webp" srcSet={`../assets/projects/${url}/${image}.webp`} />
+                    <source type="image/png" srcSet={`../assets/projects/${url}/${image}.png`} />
+                    <img src={image} height="200" width="500" alt={name} />
+                </picture>
 
-            <div className="content reveal">
-                <ul className="tags">
-                    {/* Only render the first three tags */}
-                    {tags.split(",").map((tag, index) => index > 2 ? null : <Tag value={tag} key={`${name}-tag-${tag}`} />)}
-                </ul>
-                <div className="main">
-                    <h3>{name}</h3>
-                    <p>{description}</p>
-                </div>
-                <ul className="links">
-                    <Link href={`/projects/${url}`}>
-                        <a rel="noreferrer" >
-                            View Project
-                            {/* <img src="/assets/icons/arrow.svg" height="18" width="18" alt="Open Project" /> */}
+                <div className="content reveal">
+                    <ul className="tags">
+                        {/* Only render the first three tags */}
+                        {tags.split(",").map((tag, index) => index > 2 ? null : <Tag value={tag} key={`${name}-tag-${tag}`} />)}
+                    </ul>
+                    <div className="main">
+                        <h3>{name}</h3>
+                        <p>{description}</p>
+                    </div>
+                    <ul className="links">
+                        <Link href={`/projects/${url}`}>
+                            <a rel="noreferrer" >
+                                View Project
                         </a>
-                    </Link>
-                </ul>
-            </div>
-        </Container>
+                        </Link>
+                        <img src="/assets/icons/arrow.svg" height="18" width="24" alt="Open Project" />
+                    </ul>
+                </div>
+            </Container>
+        </Link>
     );
 }
 
@@ -42,7 +44,7 @@ export const Container = styled.div`
     display: inherit;
     grid-template-columns: inherit;
     gap: inherit;
-
+    cursor: pointer;
     margin-bottom: 80px;
     padding-bottom: 20px;
     h3{
@@ -73,16 +75,12 @@ export const Container = styled.div`
             object-fit: contain;
             transition: 0.1s ease-in;
             max-width: 100%;
-            opacity: 0.7;
+            opacity: 0.6;
         }
     }
 
     &:hover {
-            img{
-                opacity: 0.9;
-                transition: 0.2s;
-                transform:scale(1.005);
-            }
+
         }
 
     .content{
@@ -124,8 +122,9 @@ export const Container = styled.div`
         display: flex;
         position:relative;
         left: -10px;
-        bottom: -10px;
-
+        bottom:-6px;
+        justify-content: space-between;
+        align-items: center;
         a{
             border: 1px solid transparent;
             padding: 4px 10px;
@@ -134,10 +133,6 @@ export const Container = styled.div`
             display:flex;
             flex-flow: row;
             align-items: center;
-
-            img{
-                margin:0px 12px;
-            }
             color: #aeb9c7; 
             &:hover,
             &:focus {
@@ -147,8 +142,33 @@ export const Container = styled.div`
             }
             transition: 0.125s ease-in;
         }
+        img{
+            opacity: 0.8;
+            transition: 0.125s ease-in;
+        }
     }
 
+
+    &:hover{
+        .image{
+            img{
+                opacity: 0.8;
+                transition: 0.2s;
+            }
+        }
+
+        .links{
+            img{
+                transition: 0.125s ease-in;
+                transform: rotate(-45deg);
+                opacity: 1;
+            }
+            a{
+                color: #e8eaec; 
+                transform: translateY(-3px);
+            }
+        }
+    }
 
     /* responsive code goes here  */
     @media(max-width: 1230px){
