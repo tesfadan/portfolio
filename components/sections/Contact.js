@@ -13,7 +13,6 @@ export default function Contact() {
                         <li><a href="https://twitter.com/tesfadan" className="underline" target="_blank">Twitter</a></li>
                         <li><a href="https://www.linkedin.com/in/tesfadan/" className="underline" target="_blank">Linkedin</a></li>
                     </ul>
-
                     <div className="credit">
                         <p>Designed & Developed by Tesfa Demissie</p>
                         <a rel="noreferrer" href="https://github.com/tesfadan/portfolio" className="underline" target="_blank">View Source Code</a>
