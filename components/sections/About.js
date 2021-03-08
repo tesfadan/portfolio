@@ -81,7 +81,6 @@ export const Container = styled.div`
         line-height:24px;
     }
     ul{
-        width: 70%;
         display:flex;
         flex: 1 1 35%;
         flex-wrap: wrap;
