@@ -10,15 +10,14 @@ export default function About() {
                         Hello! I'm Tesfa, a front-end developer based in Winnipeg, MB.
                     </p>
                     <p>
-                        I knew I wanted to be a developer working on JavaScript projects in my first year at
-                        <a rel="noreferrer" target="_blank" href="https://www.rrc.ca/"> Red River College</a>, taking the Digital Media Design program.
-                        I majored in <a rel="noreferrer" target="_blank" href="https://www.rrc.ca/creativearts/dmd/interaction-design-and-development/"> Web Design and Development </a> and had tremendous
-                        opportunities to study under distinguished instructors.
-                        As a developer, I aspire to build performant and robust
-                        applications using modern tools and practices.
+                        I knew I wanted to be a developer working on JavaScript projects
+                        in my first year of college, so I majored in Web Design
+                        and Development. I had tremendous opportunities to study
+                        under distinguished instructors, all of whom were experts
+                        in their fields and helped me hone my skills.
                     </p>
                     <p>
-                        Here are a few technologies I've been working with recently:
+                        Here are a few technologies I've used lately:
                     </p>
                     <ul>
                         <li>React</li>
@@ -73,6 +72,7 @@ export const Container = styled.div`
     }
     .content{
         grid-column:2/8;
+        padding-right: 60px;
     }
     .image{
         grid-column: 9/13;
@@ -128,16 +128,23 @@ export const Container = styled.div`
         /* min-height:unset; */
         padding: 80px;
         .content{
-            grid-column:2/12;
+            grid-column:3/11;
+            padding-right: 0px;
         }
         .image{
             display: none;
         }
     }
+
+    @media(max-width: 860px){
+        .content{
+            grid-column:2/12;
+        }
+    }
     @media(max-width: 760px){
         padding: 80px 40px;
         .content{
-            grid-column:1/13;
+            grid-column:2/12;
         }
         ul{
             width: 100%;
@@ -145,6 +152,12 @@ export const Container = styled.div`
         h2{
             font-size: 24px;
             margin-bottom: 24px;
+        }
+    }
+
+    @media(max-width: 640px){
+        .content{
+            grid-column:1/13;
         }
     }
     @media(max-width: 480px){
