@@ -8,7 +8,7 @@ export default function Contact() {
                 <div className="content">
                     <h2>Get in Touch</h2>
                     <p>Feel free to email me or connect with me on social media if you would like to chat.</p>
-                    <a className="email underline" href="mailto:tesfadaniel1@gmail.com" >tesfadaniel1@gmail.com</a>
+                    <a className="email underline" href="mailto:tesfa@tesfadan.com" >tesfa@tesfadan.com</a>
                     <ul>
                         <li><a href="https://twitter.com/tesfadan" className="underline" target="_blank">Twitter</a></li>
                         <li><a href="https://www.linkedin.com/in/tesfadan/" className="underline" target="_blank">Linkedin</a></li>
