@@ -26,7 +26,7 @@ const Footer = ({ show }) => {
 
         <ul className="email">
             <li>
-                <Link href="mailto:tesfadaniel1@gmail.com" >
+                <Link href="mailto:tesfa@tesfadan.com" >
                     <a rel="noreferrer" target="_blank">
                         <img src="/assets/icons/telegram.svg"
                             alt="Email Tesfa Demissie."
