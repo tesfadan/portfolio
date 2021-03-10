@@ -28,7 +28,7 @@ export const Menu = ({ ...props }) => {
             <nav>
                 <ul>
                     <NavLink href="#portfolio" title="Work" />
-                    <li><Link href="/about" ><a className="underline" onClick={() => props.switch()}>About</a></Link></li>
+                    <li><Link href="/about" ><a className="underline big" onClick={() => props.switch()}>About</a></Link></li>
                     <NavLink href="#contact" title="Contact" />
                     <NavLink href="/documents/Tesfa_Demissie_Resume.pdf" title="Resume" />
                 </ul>
