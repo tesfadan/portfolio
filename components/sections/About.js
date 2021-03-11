@@ -24,7 +24,6 @@ export default function About() {
                     <li>HTML</li>
                     <li>SCSS</li>
                     <li>Git</li>
-                    <li>React Native</li>
                     <li>Next</li>
                     <li>Ionic</li>
                     <li>Firebase</li>
