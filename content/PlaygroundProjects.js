@@ -33,7 +33,7 @@ const PlaygroundProjects = [
         sourceCode: "https://github.com/tesfadan/portfolio"
     },
     {
-        name: "TapTempo",
+        name: "Tap Tempo",
         description: `
         Tap Tempo creates a seamless experience calculating 
         the time between beats and displaying the current 
@@ -70,7 +70,7 @@ const PlaygroundProjects = [
         link: "https://www.figma.com/proto/KmqM8tfRAmQAtKCfoxNwHX/Library-App",
     },
     {
-        name: "WP Child Theme",
+        name: "WordPress Child Theme",
         description: `
         I designed and built a WordPress child theme as 
         one of my web development projects in college. 
