@@ -1,8 +1,28 @@
 import Head from "next/head";
+import { GA_TRACKING_ID } from "./gtag";
 
 export default function DefaultHeadTags() {
+
     return (
         <Head>
+            {/* Global Site Tag (gtag.js) - Google Analytics */}
+            <script
+                async
+                src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+            />
+            <script
+                dangerouslySetInnerHTML={{
+                    __html: `
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', '${GA_TRACKING_ID}', {
+                        page_path: window.location.pathname,
+                    });
+                        `
+                }}
+            />
+
             <meta charSet="utf-8" />
             <title>Tesfa Demissie | Front End Developer, based in Winnipeg, MB.</title>
             <meta name="description" content="I am a Designer and Front End Developer with experience building websites and web applications with JavaScript, HTML, SCSS, and React." />
@@ -36,6 +56,8 @@ export default function DefaultHeadTags() {
             <meta property="og:image:alt" content="Tesfa Demissie | Front End Developer, based in Winnipeg, MB." />
             <link rel="preconnect" href="https://fonts.gstatic.com" />
             <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+
         </Head>
     )
 }

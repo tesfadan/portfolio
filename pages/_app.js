@@ -7,9 +7,9 @@ import ResetStyle from '../styles/Reset';
 import TypographyStyle from '../styles/Typography';
 import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 import { Menu } from '../components/sections/Menu';
-import Contact from '../components/sections/Contact';
 import Credit from '../components/sections/Credit';
-
+import { useRouter } from 'next/router';
+import * as gtag from "../head/gtag";
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
@@ -25,6 +25,18 @@ function MyApp({ Component, pageProps }) {
     setAtTop(atTop)
     if (isShow !== hideOnScroll && atTop !== isTop) { setHideOnScroll(isShow) }
   }, [hideOnScroll])
+
+  const router = useRouter();
+
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      gtag.pageview(url);
+    };
+    router.events.on("routeChangeComplete", handleRouteChange);
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    }
+  }, [router.events]);
 
 
   return <>
