@@ -13,7 +13,7 @@ export const Menu = ({ ...props }) => {
     const router = useRouter();
 
     const NavLink = ({ href, title }) => <li className={`navLink ${title === "Resume" ? 'resumeBtn' : ''}`}>
-        {title === "Resume" ? <a className="underline big" href="/documents/Tesfa_Demissie_Resume.pdf">Resume</a> :
+        {title === "Resume" ? <a className="underline big" target="_blank" href="/documents/Tesfa_Demissie_Resume.pdf">Resume</a> :
             router.pathname == "/" ?
                 <AnchorLink className={`underline big`} onClick={() => props.switch()} href={href}>{title}</AnchorLink> :
                 <Link href={`/${href}`}>
