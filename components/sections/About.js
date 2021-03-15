@@ -5,15 +5,13 @@ export default function About() {
         <div className="grid">
             <div className="content">
                 <h2>About</h2>
-                <p>
-                    Hello! I'm Tesfa, a front-end developer based in Winnipeg, MB.
-                    </p>
-                <p>
-                    I knew I wanted to be a developer working on JavaScript projects
-                    in my first year of college, so I majored in Web Design
-                    and Development. I had tremendous opportunities to study
-                    under distinguished instructors, all of whom were experts
-                    in their fields and helped me hone my skills.
+                    <p>
+                        I am an experienced frontend developer with a keen 
+                        interest in clean and modern UI & UX. I have 
+                        worked on several projects, including web 
+                        and mobile app development. My passion is 
+                        for building beautiful interfaces that 
+                        provide an optimal user experience.
                     </p>
                 <p>
                     Here are a few technologies I've used lately:
