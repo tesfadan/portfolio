@@ -1,6 +1,7 @@
 import React from 'react';
 import { LinkButton } from '../UI/Button';
 import styled from 'styled-components'
+import { event } from '../../head/gtag';
 
 export default function Links({ project }) {
     return (
@@ -8,8 +9,8 @@ export default function Links({ project }) {
             <h3>Final Product</h3>
             <ul>
                 {project.links.map(
-                    link => <li>
-                        <LinkButton rel="noreferrer" href={link.link} target="_blank" small>
+                    (link, index) => <li key={`link-${index}`}>
+                        <LinkButton rel="noreferrer" href={link.link} target="_blank" small onClick={() => event({ action: "Link Clicked", category: "Showcase Links", label: "Showcase Link Clicked", value: link.link })}>
                             <img src={`/assets/icons/${link.label.includes('ode') ? 'github' : 'open'}.svg`} height="18" width="18" alt="Open Project" />
                             {link.label}
                         </LinkButton>

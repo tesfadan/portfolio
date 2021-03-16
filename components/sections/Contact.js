@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { event } from '../../head/gtag'
 
 export default function Contact() {
     return <>
@@ -8,10 +9,18 @@ export default function Contact() {
                 <div className="content">
                     <h2>Get in Touch</h2>
                     <p>Feel free to email me or connect with me on social media if you would like to chat.</p>
-                    <a className="email underline" href="mailto:tesfa@tesfadan.com" >tesfa@tesfadan.com</a>
+                    <a className="email underline" href="mailto:tesfa@tesfadan.com"
+                        onClick={() => event({ action: "Link Clicked", category: "Contact", label: "Contact Link Clicked", value: 'Email' })}
+                    >tesfa@tesfadan.com</a>
                     <ul>
-                        <li><a href="https://twitter.com/tesfadan" className="underline" target="_blank">Twitter</a></li>
-                        <li><a href="https://www.linkedin.com/in/tesfadan/" className="underline" target="_blank">Linkedin</a></li>
+                        <li><a
+                            href="https://twitter.com/tesfadan" className="underline" target="_blank"
+                            onClick={() => event({ action: "Link Clicked", category: "Contact", label: "Contact Link Clicked", value: 'Twitter' })}
+                        >Twitter</a></li>
+                        <li><a
+                            href="https://www.linkedin.com/in/tesfadan/" className="underline" target="_blank"
+                            onClick={() => event({ action: "Link Clicked", category: "Contact", label: "Contact Link Clicked", value: 'Linkedin' })}
+                        >Linkedin</a></li>
                     </ul>
                 </div>
             </div>

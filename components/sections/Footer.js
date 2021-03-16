@@ -1,11 +1,14 @@
 import Link from 'next/link';
 import styled from 'styled-components';
+import { event } from '../../head/gtag';
 import colors from '../../styles/Colors';
 
 const Footer = ({ show }) => {
     const FooterLink = ({ href, service }) => <li>
         <Link href={href}>
-            <a rel="noreferrer" target="_blank">
+            <a rel="noreferrer" target="_blank"
+                onClick={() => event({ action: "Link Clicked", category: "Contact", label: "Footer Overlay Link Clicked", value: service })}
+            >
                 <img
                     src={`/assets/icons/${service}.svg`}
                     alt={`Connect with Tesfa Demissie on ${service}.`}
@@ -27,7 +30,9 @@ const Footer = ({ show }) => {
         <ul className="email">
             <li>
                 <Link href="mailto:tesfa@tesfadan.com" >
-                    <a rel="noreferrer" target="_blank">
+                    <a rel="noreferrer" target="_blank"
+                        onClick={() => event({ action: "Link Clicked", category: "Contact", label: "Footer Overlay Link Clicked", value: 'Email' })}
+                    >
                         <img src="/assets/icons/telegram.svg"
                             alt="Email Tesfa Demissie."
                             width="20" height="20" />

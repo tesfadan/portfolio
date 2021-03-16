@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { event } from '../../head/gtag'
 
 export default function Credit() {
     return (
@@ -6,7 +7,9 @@ export default function Credit() {
             <div className="grid">
                 <div className="content">
                     <p>Designed & Developed by Tesfa Demissie</p>
-                    <a rel="noreferrer" href="https://github.com/tesfadan/portfolio" className="underline" target="_blank">View Source Code</a>
+                    <a rel="noreferrer" href="https://github.com/tesfadan/portfolio" className="underline" target="_blank"
+                        onClick={() => event({ action: "Link Clicked", category: "Source Code", label: "Source Code Link Clicked", value: 'https://github.com/tesfadan/portfolio' })}
+                    >View Source Code</a>
                 </div>
             </div>
         </Container>
