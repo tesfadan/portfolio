@@ -12,7 +12,7 @@ export default function Playground() {
             <div className="grid">
                 <h2>Playground</h2>
                 <div className="content">
-                    {PlaygroundProjects.map((project, index) => showMore ? <PlaygroundCard {...project} key={`playground-${index}`} /> : index < 2 ? <PlaygroundCard {...project} key={`playground-${index}`} index={index} /> : null)}
+                    {PlaygroundProjects.map((project, index) => showMore ? <PlaygroundCard {...project} key={`playground-${index}`} /> : index < 4 ? <PlaygroundCard {...project} key={`playground-${index}`} index={index} /> : null)}
                 </div>
                 <div className="more">
                     <Button className="button" onClick={e => setShowMore(!showMore)}>{!showMore ? 'Show More' : 'Show Less'}</Button>

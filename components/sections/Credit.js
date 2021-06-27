@@ -7,7 +7,7 @@ export default function Credit() {
             <div className="grid">
                 <div className="content">
                     <p>Designed & Developed by Tesfa Demissie</p>
-                    <a rel="noreferrer" href="https://github.com/tesfadan/portfolio" className="underline" target="_blank"
+                    <a rel="noreferrer" href="https://github.com/tesfadan/portfolio" className="underline small" target="_blank"
                         onClick={() => event({ action: "Link Clicked", category: "Source Code", label: "Source Code Link Clicked", value: 'https://github.com/tesfadan/portfolio' })}
                     >View Source Code</a>
                 </div>
@@ -40,6 +40,9 @@ const Container = styled.div`
         font-size: 14px;
         width: max-content;
         align-self:center;
+    }
+    .underline{
+        line-height: 22px;
     }
 
     @media(max-width: 640px){
