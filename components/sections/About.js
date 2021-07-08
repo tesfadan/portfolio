@@ -6,7 +6,7 @@ export default function About() {
             <div className="content">
                 <h2>About</h2>
                     <p>
-                        I am an experienced frontend developer with a keen 
+                        I am a frontend developer with a keen 
                         interest in clean and modern UI & UX. I have 
                         worked on several projects, including web 
                         and mobile app development. My passion is 
