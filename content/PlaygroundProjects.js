@@ -1,7 +1,32 @@
 // Other noteworthy projects go here 
 
 const PlaygroundProjects = [
-
+    {
+        name: "Todo2Done",
+        description: `
+        A fun little project I worked on to learn Svelte.js. 
+        One of the main challenges I had was working with Svelte 
+        Store. Took some time but I was able to get comfortable 
+        with it and get it to work for this project.
+        `,
+        image: "color",
+        tags: "Svelte.js, CSS",
+        link: "https://todo2done.netlify.app/",
+        sourceCode: "https://github.com/tesfadan/todo2done"
+    },
+    {
+        name: "SNVKE",
+        description: `
+        I reimagined the classic Snake game and built it from 
+        scratch using vanilla javascript using HTML canvas
+        to draw the game elements and move ‘em based
+        on the user input.
+        `,
+        image: "color",
+        tags: "JS, HTML, CSS",
+        link: "https://snvke.netlify.app/",
+        sourceCode: "https://github.com/tesfadan/snvke"
+    },
     {
         name: "Modern Color",
         description: `
