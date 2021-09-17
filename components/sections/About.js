@@ -15,11 +15,12 @@ export default function About() {
                 </p>
 
                 <p>
-                    I knew from my first year at <a class="underline" href="" target="_blank">Red River College</a> that I wanted to
-                    be a developer working on JavaScript assignments. As a student who enjoyed
-                    solving technical problems, it was the perfect fit for me!
+                    I knew from my first year at <a class="underline" href="https://www.rrc.ca/creativearts/dmd/" target="_blank">Red River College</a> that
+                    I wanted to be a developer. As someone with an
+                    interest and knack for solving technical
+                    problems, it was the perfect fit!
                 </p>
-                <p>My major was <a class="underline" href="" target="_blank">Web Design and Development</a> and
+                <p>My major was <a class="underline" href="https://www.rrc.ca/creativearts/dmd/interaction-design-and-development/" target="_blank">Web Design and Development</a> and
                     I had tremendous opportunities to study under distinguished instructors as well
                     as gain experience through industry work placements.
                 </p>
@@ -27,7 +28,7 @@ export default function About() {
                     As an eager learner with diverse interests outside of development, I am always looking for new challenges and ways to grow professionally.
                 </p>
                 <p>
-                    Here are a few technologies I've used lately:
+                    Here are the tools I've been using lately:
                 </p>
                 <ul>
                     <li>HTML + CSS</li>
