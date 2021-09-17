@@ -30,7 +30,7 @@ export default function About() {
                     Here are a few technologies I've used lately:
                 </p>
                 <ul>
-                    <li>HTML & CSS</li>
+                    <li>HTML + CSS</li>
                     <li>JavaScript</li>
                     <li>React</li>
                     <li>React Native</li>
@@ -152,5 +152,11 @@ export const Container = styled.div`
     }
     @media(max-width: 480px){
         padding: 40px 0px;
+        align-items: flex-start;
+
+
+        .content{
+            margin-top: 64px;
+        }
     }
 `;
