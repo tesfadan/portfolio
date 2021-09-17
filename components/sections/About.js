@@ -5,30 +5,42 @@ export default function About() {
         <div className="grid">
             <div className="content">
                 <h2>About</h2>
-                    <p>
-                        I am a frontend developer with a keen 
-                        interest in clean and modern UI & UX. I have 
-                        worked on several projects, including web 
-                        and mobile app development. My passion is 
-                        for building beautiful interfaces that 
-                        provide an optimal user experience.
-                    </p>
+                <p>
+                    I am a frontend developer with a keen
+                    interest in clean and modern UI & UX. I have
+                    worked on several projects, including web
+                    and mobile app development. My passion is
+                    for building beautiful interfaces that
+                    provide an optimal user experience.
+                </p>
+
+                <p>
+                    I knew from my first year at <a class="underline" href="" target="_blank">Red River College</a> that I wanted to
+                    be a developer working on JavaScript assignments. As a student who enjoyed
+                    solving technical problems, it was the perfect fit for me!
+                </p>
+                <p>My major was <a class="underline" href="" target="_blank">Web Design and Development</a> and
+                    I had tremendous opportunities to study under distinguished instructors as well
+                    as gain experience through industry work placements.
+                </p>
+                <p>
+                    As an eager learner with diverse interests outside of development, I am always looking for new challenges and ways to grow professionally.
+                </p>
                 <p>
                     Here are a few technologies I've used lately:
-                    </p>
+                </p>
                 <ul>
-                    <li>React</li>
+                    <li>HTML & CSS</li>
                     <li>JavaScript</li>
-                    <li>HTML</li>
-                    <li>SCSS</li>
+                    <li>React</li>
+                    <li>React Native</li>
                     <li>Git</li>
-                    <li>Next</li>
                     <li>Ionic</li>
                     <li>Firebase</li>
                 </ul>
             </div>
         </div>
-    </Container>
+    </Container >
 }
 
 
@@ -42,6 +54,16 @@ export const Container = styled.div`
     font-size: 16px;
     z-index:10;
     background-image: linear-gradient(180deg, #34EBF705, #A500F316);
+
+    .underline{
+        font-weight: inherit;
+        text-decoration: underline;
+        ::after, ::before{
+            display: inline;
+            display: none;
+        }
+        color: #c5cdd8;
+    }
 
     h2{
         grid-column:2/8;
@@ -61,12 +83,14 @@ export const Container = styled.div`
     }
     .content{
         grid-column:3/9;
-        padding-right: 60px;
+        /* padding-right: 60px; */
     }
     
     li{
         color: inherit;
         border: 1px solid #3e98ff;
+        border-color: #3e98ff30;
+        background: #3e98ff16;
         box-sizing: border-box;
         border-radius: 3px;
         padding: 8px 16px;
@@ -81,6 +105,7 @@ export const Container = styled.div`
         display:flex;
         flex: 1 1 35%;
         flex-wrap: wrap;
+        width: 80%;
     }
 
 
