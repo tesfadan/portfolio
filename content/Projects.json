@@ -72,9 +72,10 @@
             "process": "<p>I designed the UI of Stoic widgets using Figma. I then moved to create the host app using React Native, Styled Components, and React Navigation. Once the host app was ready, I started creating iOS widgets using Swift and Widget Kit. I integrated the app Firebase and Microsoft App Center for updating home feed content and the app itself.</p>",
             "media": [
                 "<img loading='lazy' height='530' width='24' src='/assets/projects/stoic/homeScreen.png' alt='Stoic Widget on iOS homescreen' />",
-                "<img loading='lazy' height='530' width='24' src='/assets/projects/stoic/home.png' alt='Stoic Widgets app homescreen'/>",
+                "<img loading='lazy' height='530' width='24' src='/assets/projects/stoic/stoic-v3-home-light.png' alt='Stoic Widgets app home screen light mode'/>",
+                "<img loading='lazy' height='530' width='24' src='/assets/projects/stoic/stoic-v3-articles.png' alt='Stoic Widgets app articles screen'/>",
                 "<img loading='lazy' height='530' width='24' src='/assets/projects/stoic/quote.png' alt='Stoic Widgets app quote view'/>",
-                "<img loading='lazy' height='530' width='24' src='/assets/projects/stoic/darkMode.png' alt='Stoic Widgets app dark mode'/>"
+                "<img loading='lazy' height='530' width='24' src='/assets/projects/stoic/stoic-v3-home.png' alt='Stoic Widgets app dark mode'/>"
             ]
         }
     }
