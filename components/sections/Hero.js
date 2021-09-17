@@ -9,7 +9,12 @@ export default function Hero() {
                     <h1>Tesfa Demissie</h1>
                     <h2 className="jobTitle">Front End Developer</h2>
                     <p>
-                        Hi! I am Tesfa, a front-end developer with an eye for a clean and modern user interface. I love JavaScript, HTML, SCSS and most of all – React, which I use to create interactive and fast-loading web applications.
+                        I am a frontend developer with a keen
+                        interest in clean and modern UI & UX. I have
+                        worked on several projects, including web
+                        and mobile app development. My passion is
+                        for building beautiful interfaces that
+                        provide an optimal user experience.
                     </p>
                     <AnchorLink href="#portfolio">
                         View Work
