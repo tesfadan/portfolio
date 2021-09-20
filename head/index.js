@@ -32,7 +32,7 @@ export default function DefaultHeadTags() {
             <link rel="icon" href="/assets/logo.svg" />
             <link rel="manifest" href="/manifest.json" />
             <link rel="apple-touch-icon" href="/assets/icons/apple-icon.png" />
-            <meta name="theme-color" content="#317EFB" />
+            <meta name="theme-color" content="#021B22" />
 
             {/* Twitter metadata  */}
             <meta name="twitter:title" content="Tesfa Demissie | Front End Developer, based in Winnipeg, MB." />
