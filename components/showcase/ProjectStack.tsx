@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components'
+import { Project } from '../types';
 
-export default function ProjectStack({ project }) {
+export default function ProjectStack({ project }: { project: Project }) {
     return (
         <Container className="sectionItem projectStack">
             <h3>Tools & Tech</h3>

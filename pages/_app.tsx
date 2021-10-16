@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import Footer from '../components/sections/Footer';
 import Header from '../components/sections/Header';
-import DefaultHeadTags from "../head";
+import DefaultHeadTags from "../head/index";
 import GlobalStyle from "../styles/GlobalStyle";
 import ResetStyle from '../styles/Reset';
 import TypographyStyle from '../styles/Typography';

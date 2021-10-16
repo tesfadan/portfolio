@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components'
 import Link from "next/link"
+import { Project } from '../types';
 
-export default function MoreProjects({ Projects, thisProject }) {
+export default function MoreProjects({ Projects, thisProject }: { Projects: Project[], thisProject: string }) {
     return (
         <Container className="sectionItem more">
             <h3>More Projects</h3>

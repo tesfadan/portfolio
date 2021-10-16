@@ -2,8 +2,9 @@ import React from 'react';
 import { LinkButton } from '../UI/Button';
 import styled from 'styled-components'
 import { event } from '../../head/gtag';
+import { Project } from "../types"
 
-export default function Links({ project }) {
+export default function Links({ project }: { project: Project }) {
     return (
         <Container className="sectionItem links">
             <h3>Final Product</h3>

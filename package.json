@@ -21,6 +21,7 @@
         "webpack": "^4.46.0"
     },
     "devDependencies": {
+        "@types/gtag.js": "^0.0.7",
         "@types/react-anchor-link-smooth-scroll": "^1.0.2",
         "@types/styled-components": "^5.1.15",
         "babel-plugin-styled-components": "latest",
