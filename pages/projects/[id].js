@@ -8,6 +8,8 @@ import Links from "../../components/showcase/Links";
 import MoreProjects from "../../components/showcase/MoreProjects";
 import Display from "../../components/showcase/Display";
 import Head from 'next/head';
+import { GetStaticProps } from 'next'
+
 
 export const getStaticProps = async ({ params }) => {
     const studies = Projects.filter(project => project.url.toString() === params.id)

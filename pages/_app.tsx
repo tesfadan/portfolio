@@ -10,8 +10,9 @@ import { Menu } from '../components/sections/Menu';
 import Credit from '../components/sections/Credit';
 import { useRouter } from 'next/router';
 import * as gtag from "../head/gtag";
+import { AppProps } from 'next/app'
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     document.documentElement.lang = 'en';
   });
@@ -29,7 +30,7 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
   useEffect(() => {
-    const handleRouteChange = (url) => {
+    const handleRouteChange = (url: any) => {
       gtag.pageview(url);
     };
     router.events.on("routeChangeComplete", handleRouteChange);
@@ -38,14 +39,21 @@ function MyApp({ Component, pageProps }) {
     }
   }, [router.events]);
 
+  const SwitchMenu = () => {
+    setMenu(!menu)
+  }
 
   return <>
     <ResetStyle />
     <TypographyStyle />
     <GlobalStyle />
     <DefaultHeadTags />
-    <Header show={hideOnScroll || menu} switch={() => setMenu(!menu)} setMenu={setMenu} transparent={atTop} />
-    <Menu menu={menu} switch={() => setMenu(!menu)} />
+    <Header
+      transparent={atTop}
+      showMenu={hideOnScroll || menu}
+      SwitchMenu={SwitchMenu}
+    />
+    <Menu showMenu={menu} SwitchMenu={() => SwitchMenu()} />
     <Component {...pageProps} />
     <Footer show={hideOnScroll} />
     <Credit />

@@ -1,16 +1,19 @@
 import Link from "next/link";
-import React from 'react';
+import React, { Dispatch, SetStateAction } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import styled, { css } from 'styled-components';
 import MenuIcon from "../icons";
 import { LinkButton } from "../UI/Button";
 import { useRouter } from 'next/router'
 
-export default function Header({ transparent, show, ...props }) {
-    const { setMenu } = props;
+export default function Header({ transparent, showMenu, SwitchMenu }: {
+    transparent: boolean, showMenu: boolean,
+    SwitchMenu: () => void
+}) {
+
     const router = useRouter();
 
-    const NavLink = ({ href, title }) => <li className={`navLink`}>
+    const NavLink = ({ href, title }: { href: string, title: string }) => <li className={`navLink`}>
         {router.pathname == "/" ?
             <AnchorLink className="underline" href={href}>{title}</AnchorLink> :
             <Link href={`/${href}`}>
@@ -21,13 +24,13 @@ export default function Header({ transparent, show, ...props }) {
         }
     </li>
     return (
-        <Container transparent={transparent} style={show ? { top: 0, opacity: 1 } : { top: -20, opacity: 0 }} >
+        <Container transparent={transparent} style={showMenu ? { top: 0, opacity: 1 } : { top: -20, opacity: 0 }} >
             {router.pathname == "/" ?
-                <AnchorLink href="#home" rel="noreferrer" onClick={() => setMenu(false)}>
+                <AnchorLink href="#home" rel="noreferrer" onClick={SwitchMenu}>
                     <img src="/assets/logo.svg" width="50" height="32" alt="Home" />
                 </AnchorLink> :
-                <Link href={`/#home`} rel="noreferrer" onClick={() => setMenu(false)}>
-                    <a>
+                <Link href={`/#home`}>
+                    <a rel="noreferrer" onClick={SwitchMenu}>
                         <img src="/assets/logo.svg" width="50" height="32" alt="Home" />
                     </a>
                 </Link>
@@ -40,12 +43,12 @@ export default function Header({ transparent, show, ...props }) {
                     <NavLink href="#portfolio" title="Work" />
                 </ul>
             </nav >
-            <MenuIcon {...props} show={show} />
+            <MenuIcon showMenu={!showMenu} switchMenu={SwitchMenu} />
         </Container >
     );
 }
 
-const Container = styled.header`
+const Container = styled.header<{ transparent: boolean }>`
     display: flex;
     justify-content: space-between;
     align-items: center;

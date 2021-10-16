@@ -8,37 +8,36 @@ import Link from 'next/link';
 
 
 
-export const Menu = ({ ...props }) => {
-    const { menu } = props;
+export const Menu = ({ showMenu, SwitchMenu }: { showMenu: boolean, SwitchMenu: () => void }) => {
+    // const { menu } = props;
     const router = useRouter();
 
-    const NavLink = ({ href, title }) => <li className={`navLink ${title === "Resume" ? 'resumeBtn' : ''}`}>
+    const NavLink = ({ href, title }: { href: string, title: string }) => <li className={`navLink ${title === "Resume" ? 'resumeBtn' : ''}`}>
         {title === "Resume" ? <a className="underline big" target="_blank" href="/documents/Tesfa_Demissie_Resume.pdf">Resume</a> :
             router.pathname == "/" ?
-                <AnchorLink className={`underline big`} onClick={() => props.switch()} href={href}>{title}</AnchorLink> :
+                <AnchorLink className={`underline big`} onClick={SwitchMenu} href={href}>{title}</AnchorLink> :
                 <Link href={`/${href}`}>
-                    <a className="underline big" onClick={() => props.switch()}>
+                    <a className="underline big" onClick={SwitchMenu}>
                         {title}
                     </a>
                 </Link>}
     </li>
 
-    return <Container state={menu}>
+    return <Container state={showMenu}>
         <div className="grid" >
             <nav>
                 <ul>
                     <NavLink href="#portfolio" title="Work" />
-                    <li><Link href="/about" ><a className="underline big" onClick={() => props.switch()}>About</a></Link></li>
+                    <li><Link href="/about" ><a className="underline big" onClick={SwitchMenu}>About</a></Link></li>
                     <NavLink href="#contact" title="Contact" />
                     <NavLink href="/documents/Tesfa_Demissie_Resume.pdf" title="Resume" />
                 </ul>
             </nav>
-
         </div>
     </Container>
 }
 
-const Container = styled.div`
+const Container = styled.div<{ state: boolean }>`
         background:#000303;
         background-image: linear-gradient(-180deg, #1f4cc916, #34EBF705);
         min-height: 100vh;

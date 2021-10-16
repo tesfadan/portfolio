@@ -3,12 +3,12 @@ import colors from '../../styles/Colors';
 
 export default function PlaygroundCard({ ...props }) {
     const { name, description, tags, link, sourceCode, unMount, onTransitionEnd, index } = props;
-    const Tag = ({ value }) => <li className="label">{value}</li>;
+    const Tag = ({ value }: { value: string }) => <li className="label">{value}</li>;
     return (
         <Container onTransitionEnd={onTransitionEnd}>
             <div className="cardHeader">
                 <ul className="tags">
-                    {tags.split(",").map((tag, index) => <Tag value={tag} key={`${name}-tag-${tag}`} />)}
+                    {tags.split(",").map((tag: string, index: number) => <Tag value={tag} key={`${name}-tag-${tag}`} />)}
                 </ul>
                 <ul className="links">
                     {link != null ? <li>
@@ -25,7 +25,7 @@ export default function PlaygroundCard({ ...props }) {
                                 <img src="/assets/icons/github.svg" height="18" width="18" alt="View Source Code" />
                                 <span className="screenReaderOnly">
                                     View Source Code
-                            </span>
+                                </span>
                             </a>
                         </li> : null}
                 </ul>

@@ -5,7 +5,7 @@ import colors from '../../styles/Colors';
 
 export default function PortfolioCard({ ...props }) {
     const { name, description, image, tags, link, sourceCode, flip, url } = props;
-    const Tag = ({ value }) => <li className="label">{value}</li>;
+    const Tag = ({ value }: { value: string }) => <li className="label">{value}</li>;
 
     return (
         <Link href={`/projects/${url}`}>
@@ -19,7 +19,7 @@ export default function PortfolioCard({ ...props }) {
                 <div className="content reveal">
                     <ul className="tags">
                         {/* Only render the first three tags */}
-                        {tags.split(",").map((tag, index) => index > 2 ? null : <Tag value={tag} key={`${name}-tag-${tag}`} />)}
+                        {tags.split(",").map((tag: string, index: number) => index > 2 ? null : <Tag value={tag} key={`${name}-tag-${tag}`} />)}
                     </ul>
                     <div className="main">
                         <h3>{name}</h3>
@@ -29,7 +29,7 @@ export default function PortfolioCard({ ...props }) {
                         <Link href={`/projects/${url}`}>
                             <a rel="noreferrer" >
                                 View Project
-                        </a>
+                            </a>
                         </Link>
                         <img src="/assets/icons/arrow.svg" height="18" width="24" alt="Open Project" />
                     </ul>
@@ -39,7 +39,7 @@ export default function PortfolioCard({ ...props }) {
     );
 }
 
-export const Container = styled.div`
+export const Container = styled.div<{ flip: boolean }>`
     grid-column: 1/13;
     display: inherit;
     grid-template-columns: inherit;
