@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 import SwiperCore, { Navigation, A11y } from 'swiper';
 SwiperCore.use([Navigation, A11y]);
-export default function Display({ media }) {
+export default function Display({ media }: { media: string[] }) {
     return (
         <Container className="display">
             <Swiper
@@ -39,8 +39,6 @@ export const Container = styled.div`
         width: auto;
     }
     .swiper-container{
-        /* height:100%; */
-
     }
 
     .swiper-button-next,  .swiper-button-prev {

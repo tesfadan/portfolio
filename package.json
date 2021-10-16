@@ -9,9 +9,11 @@
     },
     "dependencies": {
         "@n8tb1t/use-scroll-position": "^2.0.3",
+        "@types/node": "^16.11.0",
+        "@types/react": "^17.0.30",
         "next": "10.0.7",
         "next-pwa": "^5.0.5",
-        "react": "17.0.1",
+        "react": "^17.0.2",
         "react-anchor-link-smooth-scroll": "^1.0.12",
         "react-dom": "17.0.1",
         "styled-components": "^5.2.1",
@@ -19,6 +21,10 @@
         "webpack": "^4.46.0"
     },
     "devDependencies": {
-        "babel-plugin-styled-components": "latest"
+        "@types/gtag.js": "^0.0.7",
+        "@types/react-anchor-link-smooth-scroll": "^1.0.2",
+        "@types/styled-components": "^5.1.15",
+        "babel-plugin-styled-components": "latest",
+        "typescript": "^4.4.4"
     }
 }

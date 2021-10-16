@@ -2,14 +2,18 @@ import React from 'react';
 import styled, { css } from 'styled-components'
 import colors from '../../styles/Colors';
 
-export default function MenuIcon({ ...props }) {
-    return <CustomMenuWrapper className="customMenuIcon" state={props.menu} onClick={() => props.switch()} style={props.show ? { top: 26, opacity: 1 } : { top: -20, opacity: 0 }}>
+export default function MenuIcon({ showMenu, switchMenu }: { showMenu: boolean, switchMenu: () => void, }) {
+    return <CustomMenuWrapper className="customMenuIcon" state={showMenu}
+        onClick={() => switchMenu()}
+
+    // style = { show? { top: 26, opacity: 1 } : { top: -20, opacity: 0 } }
+    >
         <span className="menuTop" />
         <span className="menuBottom" />
     </CustomMenuWrapper >
 }
 
-const CustomMenuWrapper = styled.span`
+const CustomMenuWrapper = styled.span<{ state: boolean }>`
         display: flex;
         width: 32px;
         flex-flow: column;

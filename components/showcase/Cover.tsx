@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components'
 
+type Props = { heading: string, subHeading: string, coverImage: string }
 
-export default function Cover({ heading, subHeading, coverImage }) {
+export default function Cover({ heading, subHeading, coverImage }: Props) {
     return (
         <Container className="cover">
             <div className="title">

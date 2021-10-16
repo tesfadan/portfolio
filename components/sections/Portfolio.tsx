@@ -1,6 +1,5 @@
 import styled from 'styled-components'
-// import Projects from '../../content/Projects';
-import Projects from '../../content/Projects';
+import Projects from '../../content/Projects.json';
 import PortfolioCard from '../UI/PortfolioCard';
 
 export default function Portfolio() {

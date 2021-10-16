@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-export const LinkButton = styled.a`
+export const LinkButton = styled.a<{ small?: boolean }>`
         display: block;
         width:max-content;
         border-radius:4px;
@@ -16,7 +16,7 @@ export const LinkButton = styled.a`
             border: 1px solid #A1CDFF40;
         }
 
-        ${props => props.small && css`
+        ${small => small && css`
             padding: 8px 14px;
         `}
 `;

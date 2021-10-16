@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import { event } from '../../head/gtag';
 import colors from '../../styles/Colors';
 
-const Footer = ({ show }) => {
-    const FooterLink = ({ href, service }) => <li>
+const Footer = ({ show }: { show: boolean }) => {
+    const FooterLink = ({ href, service }: { href: string, service: "twitter" | "github" | "linkedin" }) => <li>
         <Link href={href}>
             <a rel="noreferrer" target="_blank"
                 onClick={() => event({ action: "Link Clicked", category: "Contact", label: "Footer Overlay Link Clicked", value: service })}

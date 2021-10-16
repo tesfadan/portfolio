@@ -1,20 +1,25 @@
-import { useState, useEffect } from "react";
-import styled from 'styled-components'
-import { useRouter } from "next/router";
-import Projects from '../../content/Projects.json';
+import { GetStaticProps, GetStaticPropsContext, InferGetStaticPropsType } from 'next';
+import Head from 'next/head';
+import { ParsedUrlQuery } from "querystring";
+import styled from 'styled-components';
 import Cover from "../../components/showcase/Cover";
-import ProjectStack from "../../components/showcase/ProjectStack";
+import Display from "../../components/showcase/Display";
 import Links from "../../components/showcase/Links";
 import MoreProjects from "../../components/showcase/MoreProjects";
-import Display from "../../components/showcase/Display";
-import Head from 'next/head';
+import ProjectStack from "../../components/showcase/ProjectStack";
+import Projects from '../../content/Projects.json';
 
-export const getStaticProps = async ({ params }) => {
-    const studies = Projects.filter(project => project.url.toString() === params.id)
+interface Props {
+    host: string;
+    key: string
+}
 
+export const getStaticProps: GetStaticProps = async (context: GetStaticPropsContext<ParsedUrlQuery>) => {
+    const projectId = context?.params?.id;
+    const projects = Projects.filter(project => project.url.toString() === projectId)
     return {
         props: {
-            project: studies[0]
+            project: projects[0]
         }
     }
 }
@@ -28,7 +33,7 @@ export const getStaticPaths = async () => {
 }
 
 
-export default function Project({ project }) {
+export default function ProjectPage({ project }: InferGetStaticPropsType<typeof getStaticProps>) {
     // name: String,
     // description: String,
     // image: String,
