@@ -51,6 +51,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <Header
       transparent={atTop}
       showMenu={hideOnScroll || menu}
+      menuOn={menu}
       SwitchMenu={SwitchMenu}
     />
     <Menu showMenu={menu} SwitchMenu={() => SwitchMenu()} />

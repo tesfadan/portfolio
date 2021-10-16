@@ -6,7 +6,8 @@ import MenuIcon from "../icons";
 import { LinkButton } from "../UI/Button";
 import { useRouter } from 'next/router'
 
-export default function Header({ transparent, showMenu, SwitchMenu }: {
+export default function Header({ menuOn, transparent, showMenu, SwitchMenu }: {
+    menuOn: boolean,
     transparent: boolean, showMenu: boolean,
     SwitchMenu: () => void
 }) {
@@ -26,7 +27,7 @@ export default function Header({ transparent, showMenu, SwitchMenu }: {
     return (
         <Container transparent={transparent} style={showMenu ? { top: 0, opacity: 1 } : { top: -20, opacity: 0 }} >
             {router.pathname == "/" ?
-                <AnchorLink href="#home" rel="noreferrer" onClick={SwitchMenu}>
+                <AnchorLink href="#home" rel="noreferrer" onClick={menuOn ? SwitchMenu : () => { }}>
                     <img src="/assets/logo.svg" width="50" height="32" alt="Home" />
                 </AnchorLink> :
                 <Link href={`/#home`}>
