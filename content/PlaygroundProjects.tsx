@@ -53,7 +53,7 @@ const PlaygroundProjects = [
         used Github and Netlify.
         `,
         image: "color",
-        tags: "Next.js, Netlify",
+        tags: "TS, Next.js, Netlify",
         link: "https://tesfadan.com",
         sourceCode: "https://github.com/tesfadan/portfolio"
     },
