@@ -32,7 +32,7 @@ export default function About() {
                 </p>
                 <ul>
                     <li>HTML + CSS</li>
-                    <li>JavaScript</li>
+                    <li>Typescript</li>
                     <li>React</li>
                     <li>React Native</li>
                     <li>Git</li>
