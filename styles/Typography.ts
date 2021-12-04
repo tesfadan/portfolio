@@ -42,7 +42,7 @@ li {
     font-weight: 400;
 }
 
-h2 {
+h2, .heading2 {
     font-size: 32px;
     font-weight: 600;
     margin-bottom: 16px;
