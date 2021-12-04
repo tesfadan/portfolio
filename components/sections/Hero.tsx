@@ -88,6 +88,7 @@ const Container = styled.div`
         }
 
         h2, .heading2{
+            font-weight: 500;
             font-size: 24px;
             line-height: 36px;
         }
@@ -98,15 +99,12 @@ const Container = styled.div`
             grid-column:1/13;
         }
         h2, .heading2{
-            font-weight: 400;
+            font-weight: 500;
             font-size: 24px;
             line-height: 32px;
         }
         .heading2{
             margin-bottom: 16px;
-        }
-        a{
-            text-decoration: underline;
         }
     }
 `;
