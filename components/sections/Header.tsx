@@ -39,7 +39,7 @@ export default function Header({ menuOn, transparent, showMenu, SwitchMenu }: {
             <nav>
                 <ul>
                     <li><LinkButton target="_blank" className="button small" href="/documents/Tesfa_Demissie_Resume.pdf">Resume</LinkButton></li>
-                    <NavLink href="#contact" title="Contact" />
+                    {/* <NavLink href="#contact" title="Contact" /> */}
                     <li><Link href="/about"><a className="underline">About</a></Link></li>
                     <NavLink href="#portfolio" title="Projects" />
                 </ul>
