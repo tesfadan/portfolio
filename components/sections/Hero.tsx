@@ -143,6 +143,13 @@ const Container = styled.div`
         }
         p{
             /* color: #c5cdd8; */
+            margin-bottom: 24px;
+        }
+
+
+        p, a{
+            font-size: 24px;
+            line-height: 36px;
         }
     }
 `;
