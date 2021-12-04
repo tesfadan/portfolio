@@ -6,19 +6,12 @@ export default function Hero() {
         <Container id="home">
             <div className="grid">
                 <div className="content">
-                    <h1>Tesfa Demissie</h1>
-                    <h2 className="jobTitle">Front End Developer</h2>
-                    <p>
-                        I am a frontend developer with a keen
-                        interest in clean and modern UI & UX. I have
-                        worked on several projects, including web
-                        and mobile app development. My passion is
-                        for building beautiful interfaces that
-                        provide an optimal user experience.
+                    <p className="new-blurb">
+                    My name is <a target="_blank" href="https://twitter.com/tesfadan">Tesfa Demissie</a> and I’m a Product Designer at <a target="_blank" href="https://combinevb.com">Combine Ventures</a> working on exciting startups. I spend my time thinking, designing & coding.
                     </p>
-                    <AnchorLink href="#portfolio">
-                        View Work
-                    </AnchorLink>
+                    <p>
+                        Checkout my <AnchorLink href="#portfolio">side projects</AnchorLink> here.
+                    </p>
                 </div>
             </div>
         </Container>
@@ -36,7 +29,7 @@ const Container = styled.div`
     .content{
         position:relative;
         top: -16px;
-        grid-column: 3/11;
+        grid-column: 2/11;
         z-index:2;
     }
 
@@ -58,20 +51,35 @@ const Container = styled.div`
         letter-spacing: 0px;
         font-weight: 300;
     }
-    p{
-        margin-bottom: 56px;
+    p, a{
+        margin-bottom: 32px;
         font-weight: 400;
         color: #c7ced8;
         font-size: 16px;
         line-height: 28px;
-        max-width:487px;
+
+        font-style: normal;
+        font-weight: 500;
+        font-size: 46px;
+        line-height: 60px;
+        /* or 130% */
+        letter-spacing: -0.01em;
+        /* Copy */
+        color: #898D9A;
     }
 
     a{
+        color:#F2EDF2;
+    }
+
+    a:hover{
+        text-decoration: underline;
+    }
+
+    /* a{
         display: block;
         width:max-content;
         border-radius:4px;
-        /* padding: 16px 18px; */
         padding: 12px 24px;
         color:#ffffff;
         border: 1px solid #3e98ff;
@@ -87,7 +95,7 @@ const Container = styled.div`
             background: #3e98ff10;
             border: 1px solid #A1CDFF40;
         }
-    }
+    } */
     
     @media(max-width: 860px){
         h1{
@@ -110,6 +118,12 @@ const Container = styled.div`
         .content{
             grid-column:2/12;
         }
+
+        p,a{
+            font-size: 32px;
+    line-height: 44px;
+    letter-spacing: 0;
+        }
     }
 
     @media(max-width:480px){
@@ -128,7 +142,7 @@ const Container = styled.div`
             font-weight: 400;
         }
         p{
-            color: #c5cdd8;
+            /* color: #c5cdd8; */
         }
     }
 `;

@@ -27,7 +27,7 @@ export const Menu = ({ showMenu, SwitchMenu }: { showMenu: boolean, SwitchMenu: 
         <div className="grid" >
             <nav>
                 <ul>
-                    <NavLink href="#portfolio" title="Work" />
+                    <NavLink href="#portfolio" title="Projects" />
                     <li><Link href="/about" ><a className="underline big" onClick={SwitchMenu}>About</a></Link></li>
                     <NavLink href="#contact" title="Contact" />
                     <NavLink href="/documents/Tesfa_Demissie_Resume.pdf" title="Resume" />
