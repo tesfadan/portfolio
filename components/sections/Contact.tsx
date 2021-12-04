@@ -37,6 +37,7 @@ const Container = styled.div`
         font-size: 16px;
         bottom: 0px;
         background:#010e11;
+        background-color: #00000090;
         background-image: linear-gradient(180deg, #021BFF03, #1f4cc916);
 
 

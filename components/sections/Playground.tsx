@@ -24,6 +24,7 @@ export default function Playground() {
 
 const Container = styled.div`
     background: #02141a;
+    background-color: #00000090;
     color:#E2E5E9;
     display:flex;
     align-items: center;

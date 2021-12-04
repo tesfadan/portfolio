@@ -67,7 +67,8 @@ export const Container = styled.div<{ flip: boolean }>`
         align-items: center;
         position: relative;
         background: #24263560;
-        border:  1px solid #242635;
+        background: #ffffff10;
+        border:  1px solid #24263550;
 
         img{
             height: 360px;
