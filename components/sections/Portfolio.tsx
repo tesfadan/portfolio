@@ -6,7 +6,7 @@ export default function Portfolio() {
     return (
         <Container id="portfolio">
             <div className="grid">
-                <h2>Work</h2>
+                <h2>Projects</h2>
                 {Projects.map((project, index) =>
                     <PortfolioCard {...project} flip={index % 2 != 0} key={`portfolio-${index}`} />
                 )}
