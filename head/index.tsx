@@ -56,9 +56,6 @@ export default function DefaultHeadTags() {
             <meta property="og:image:alt" content="Tesfa Demissie | Front End Developer, based in Winnipeg, MB." />
             <link rel="preconnect" href="https://fonts.gstatic.com" />
             <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet" />
-            
-            {/* Override max-width bug */}
-            <style type="text/css">body `{'>'}` * { max-width: unset; margin: 0px auto !important; }</style>
 
         </Head>
     )
