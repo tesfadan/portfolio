@@ -19,7 +19,9 @@ const GlobalStyle = createGlobalStyle`
         }
         background-color:#02141a;
     }
-
+    #__next{
+        max-width: unset !important;
+    }
     .grid{
         display: grid;
         grid-template-columns: repeat(12, 1fr);
