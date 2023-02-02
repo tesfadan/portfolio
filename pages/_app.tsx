@@ -57,7 +57,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <Menu showMenu={menu} SwitchMenu={() => SwitchMenu()} />
     <Component {...pageProps} />
     <Footer show={hideOnScroll} />
-    <Credit />
+    {/* <Credit /> */}
   </>
 }
 

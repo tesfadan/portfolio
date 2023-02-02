@@ -22,7 +22,7 @@ const Footer = ({ show }: { show: boolean }) => {
 
     return <Container style={show ? { bottom: 0, opacity: 1 } : { bottom: -20, opacity: 0 }}>
         <ul className="socials">
-            <FooterLink href="https://twitter.com/tesfadan" service="twitter" />
+            {/* <FooterLink href="https://twitter.com/tesfadan" service="twitter" /> */}
             <FooterLink href="https://github.com/tesfadan" service="github" />
             <FooterLink href="https://linkedin.com/in/tesfadan/" service="linkedin" />
         </ul>
