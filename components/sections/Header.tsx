@@ -28,11 +28,11 @@ export default function Header({ menuOn, transparent, showMenu, SwitchMenu }: {
         <Container transparent={transparent} style={showMenu ? { top: 0, opacity: 1 } : { top: -20, opacity: 0 }} >
             {router.pathname == "/" ?
                 <AnchorLink href="#home" rel="noreferrer" onClick={menuOn ? SwitchMenu : () => { }}>
-                    <img src="/assets/logo.svg" width="50" height="32" alt="Home" />
+                    <img className="homeIcon" src="/assets/tesfa-sm.png" width="50" height="32" alt="Home" />
                 </AnchorLink> :
                 <Link href={`/#home`}>
                     <a rel="noreferrer" onClick={SwitchMenu}>
-                        <img src="/assets/logo.svg" width="50" height="32" alt="Home" />
+                        <img className="homeIcon" src="/assets/tesfa-sm.png" width="50" height="32" alt="Home" />
                     </a>
                 </Link>
             }
@@ -62,6 +62,12 @@ const Container = styled.header<{ transparent: boolean }>`
     backdrop-filter: blur(24px);
     background:#02141a98;
     border-bottom: 1px solid #02141a50;
+
+    .homeIcon{
+        border: 2px solid #FAF8F5;
+        border-radius: 72px;
+    }
+
     nav, ul, a{
         display: flex;
         align-items:center;

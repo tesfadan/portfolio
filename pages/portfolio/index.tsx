@@ -7,8 +7,9 @@ export default function PortfolioPage() {
         v1: "https://framer.com/share/Tesfa-Demissie-Portfolio--j7ycSoVIBT77QKZZGeIb/JBFKuBX0h?highlights=0"
       }
   
-      useEffect(() => {
+    useEffect(() => {
       window.location.replace(potfolio.v1);
+      console.log("forwarding")
     }, []);
 
 
