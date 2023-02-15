@@ -26,7 +26,7 @@ const GlobalStyle = createGlobalStyle`
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         /* column-gap: 20px; */
-        width:1200px;
+        width:1400px;
         margin: 0 auto;
 
         @media(max-width: 1260px){

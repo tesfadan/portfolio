@@ -5,7 +5,5 @@ import Portfolio from "../components/sections/Portfolio"
 export default function Home() {
   return <>
     <Hero />
-    {/* <Portfolio /> */}
-    {/* <Playground /> */}
   </>
 }
