@@ -18,7 +18,7 @@ export default function Header() {
 
   return (
     <Container className="section" darkMode={false}>
-    <div className="container">
+    <div className="grid">
         <div className="content">
             <a className='home'><img src='./assets/images/tesfa-home-icon.png' alt='Logo'/></a>
             <nav>
@@ -29,9 +29,9 @@ export default function Header() {
                     <li><a href=''>Resume</a></li>
                 </ul>
             </nav>
-            <div className="div" role="button" onClick={changeTheme}>
+            <button className="div" role="button" onClick={changeTheme}>
                 <Contrast color={colors.text} />
-            </div>
+            </button>
         </div>
     </div>
     </Container>
@@ -47,7 +47,6 @@ const Container = styled.header<{darkMode: boolean}>`
     .content{
         grid-column: 1/7;
         display: flex;
-        font-weight: 500;
         font-size: 20px;
         line-height: 180%;
         align-items: center;
@@ -71,6 +70,12 @@ const Container = styled.header<{darkMode: boolean}>`
     }
     ul{
         display: flex;
+            a{
+                text-decoration: unset;
+            &:hover{
+            text-decoration: underline;
+            }
+        }
     }
     li {
         padding: 0px 14px;

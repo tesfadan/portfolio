@@ -1,11 +1,12 @@
 import styled from "styled-components"
+import MiniGame from "../src/components/MiniGame"
 
 export default function Home() {
 
   
   return <>
       <Container className="section">
-        <div className="container">
+        <div className="grid">
             <div className="content">
               <h1>
                 Hello! I'm Tesfa Demissie, a Product Designer passionate about intuitive and visually stunning digital products.
@@ -18,6 +19,7 @@ export default function Home() {
               </a>
             </div>
         </div>
+        <MiniGame />
       </Container>
   </>
 }
@@ -26,4 +28,15 @@ const Container = styled.div`
     .content{
       grid-column: 1/7;
     }
+    p{
+      font-size: 28px;
+      margin-bottom: 32px;
+    }
+    a{
+      font-size: 24px;
+    }
+    .grid{
+      position: relative;
+    }
+
 `

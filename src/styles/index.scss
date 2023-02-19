@@ -8,22 +8,45 @@
     justify-content: center;
 }
 
-.container{
+.grid{
     display: grid;
     grid-template-columns:repeat(6, 1fr);
     align-items: center;
     width: 100%;
     max-width: 1200px;
     gap: 32px;
-    padding: 0px 4rem;
+    padding: 0px 96px;
+}
+
+a{
+    text-decoration: underline;
+    
+    &:hover{
+        text-decoration: unset;
+    }
 }
 
 body{
     color:#0E0D0D;
+    .card{
+        background: #F7F3F0;
+    }
 }
 
 body.dark{
     background: #1E1E1E;
     color: #FFFFFF;
-    border-color: red;
+
+    .card{
+        background: #272424;
+        box-shadow: unset;
+
+        .cover{
+            background: #484440;
+        }
+    }
+
+    .screen{
+        border-color: transparent;
+    }
 }
