@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react';
-import DefaultHeadTags from "../head/index";
+import DefaultHeadTags from "../src/head/index";
 import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 import { useRouter } from 'next/router';
-import * as gtag from "../head/gtag";
+import * as gtag from "../src/head/gtag";
 import { AppProps } from 'next/app'
-import "../styles/index.scss"
+import "../src/styles/index.scss"
+import Header from '../src/sections/Header';
+import { Provider } from '../src/context';
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
@@ -36,10 +38,14 @@ function MyApp({ Component, pageProps }: AppProps) {
   const SwitchMenu = () => {
     setMenu(!menu)
   }
+  
 
   return <>
-    <DefaultHeadTags />
-    <Component {...pageProps} />
+    <Provider>
+      <DefaultHeadTags />
+      <Header />
+      <Component {...pageProps} />
+    </Provider>
   </>
 }
 

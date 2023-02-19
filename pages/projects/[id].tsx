@@ -2,7 +2,7 @@ import { GetStaticProps, GetStaticPropsContext, InferGetStaticPropsType } from '
 import Head from 'next/head';
 import { ParsedUrlQuery } from "querystring";
 import styled from 'styled-components';
-import Projects from '../../content/Projects.json';
+import Projects from '../../src/content/Projects.json';
 
 interface Props {
     host: string;

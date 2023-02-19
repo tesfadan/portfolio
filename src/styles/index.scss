@@ -1,0 +1,29 @@
+@import "./reset.scss";
+@import "./typography.scss";
+
+// layout
+// container is grid
+.section{
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    display: grid;
+    grid-template-columns:repeat(6, 1fr);
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    gap: 32px;
+    padding: 0px 4rem;
+}
+
+body{
+    color:#0E0D0D;
+}
+
+body.dark{
+    background: #1E1E1E;
+    color: #FFFFFF;
+    border-color: red;
+}
