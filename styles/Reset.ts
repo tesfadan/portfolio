@@ -192,8 +192,6 @@ video {
 
 body {
     line-height: 1;
-    background-color:#02141a;
-    background-image: linear-gradient(180deg, #34EBF705, #021BFF03);
 }
 
 article,

@@ -14,19 +14,31 @@ const GlobalStyle = createGlobalStyle`
         /* Firefox 64 */
         scroll-behavior: smooth;
         ::selection {
-            background-color: #0070f3;
-            color: white;
+            /* background-color: #0070f3; */
+            /* color: white; */
         }
-        background-color:#02141a;
+        /* background-color:#02141a; */
+
+        font-family: 'General Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 180%;
+        /* or 43px */
     }
     #__next{
         max-width: unset !important;
     }
+
+    .section{
+        background: pink;
+    }
+    
     .grid{
         display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        /* column-gap: 20px; */
-        width:1400px;
+        grid-template-columns: repeat(6, 1fr);
+        column-gap: 32px;
+        max-width: 1008px;
         margin: 0 auto;
 
         @media(max-width: 1260px){
@@ -34,67 +46,12 @@ const GlobalStyle = createGlobalStyle`
         }
 
         @media(max-width:480px){
-                padding: 0px 20px;
+            padding: 0px 20px;
         }
     };
 
-    .label{
-        font-style: normal;
-        font-weight: 600;
-        font-size: 12px;
-        line-height: 24px;
-        text-transform: uppercase;
-        user-select: none;
-    }
-    .screenReaderOnly {
-        position: absolute;
-        left: -10000px;
-        top: auto;
-        width: 1px;
-        height: 1px;
-        overflow: hidden;
-    }
-
-    .underline{
-            transition: 0.1s ease-in-out;
-            position:relative;
-            &:after, &:before{
-                display: block;
-                content: " ";
-                width: 0%;
-                height: 2px;
-                border-radius: 12px;
-                position:absolute;
-                bottom:0px;
-            }
-
-            &.big{
-                &:after, &:before{
-                    height: 4px;
-                    bottom: -2px;
-                }
-            }
-
-            &:before{
-                background:#3e98ff;
-                z-index:2;
-                transition: 0.3s ease-in-out;
-            }
-
-            &:after{
-                background:#E2E5E9;
-                transition: 0.15s ease-out;
-            }
-
-            &:hover, &:focus{
-                color: #E2E5E9;
-                ::before{
-                    width: 100%;
-                }
-                ::after{
-                    width: 100%;
-                }
-            }
+    a{
+        color: #0E0D0D;
     }
 `
 

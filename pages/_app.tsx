@@ -3,7 +3,9 @@ import Footer from '../components/sections/Footer';
 import Header from '../components/sections/Header';
 import DefaultHeadTags from "../head/index";
 import GlobalStyle from "../styles/GlobalStyle";
-import ResetStyle from '../styles/Reset';
+// import ResetStyle from '../styles/Reset';
+import '../styles/reset.css';
+// import '../styles/index.scss';
 import TypographyStyle from '../styles/Typography';
 import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 import { Menu } from '../components/sections/Menu';
@@ -44,7 +46,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   }
 
   return <>
-    <ResetStyle />
+    {/* <ResetStyle /> */}
     <TypographyStyle />
     <GlobalStyle />
     <DefaultHeadTags />
@@ -56,7 +58,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     />
     <Menu showMenu={menu} SwitchMenu={() => SwitchMenu()} />
     <Component {...pageProps} />
-    <Footer show={hideOnScroll} />
+    {/* <Footer show={hideOnScroll} /> */}
     {/* <Credit /> */}
   </>
 }

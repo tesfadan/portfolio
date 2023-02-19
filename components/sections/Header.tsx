@@ -24,24 +24,25 @@ export default function Header({ menuOn, transparent, showMenu, SwitchMenu }: {
             </Link>
         }
     </li>
+
     return (
         <Container transparent={transparent} style={showMenu ? { top: 0, opacity: 1 } : { top: -20, opacity: 0 }} >
             {router.pathname == "/" ?
                 <AnchorLink href="#home" rel="noreferrer" onClick={menuOn ? SwitchMenu : () => { }}>
-                    <img className="homeIcon" src="/assets/tesfa-sm.png" width="50" height="32" alt="Home" />
+                    <img className="homeIcon" src="/assets/images/cool-glass-guy.png" width="72" height="72" alt="Home" />
                 </AnchorLink> :
                 <Link href={`/#home`}>
                     <a rel="noreferrer" onClick={SwitchMenu}>
-                        <img className="homeIcon" src="/assets/tesfa-sm.png" width="50" height="32" alt="Home" />
+                        <img className="homeIcon" src="/assets/images/cool-glass-guy.png" width="72" height="72" alt="Home" />
                     </a>
                 </Link>
             }
             <nav>
-                <ul>
-                    <li><LinkButton target="_blank" className="button small" href="/documents/Tesfa_Demissie_Resume.pdf">Resume</LinkButton></li>
-                    {/* <NavLink href="#contact" title="Contact" /> */}
-                    {/* <li><Link href="/about"><a className="underline">About</a></Link></li> */}
-                    {/* <NavLink href="#portfolio" title="Projects" /> */}
+                <ul role="list">
+                    <li><Link href="">About</Link></li>
+                    <li><Link href="">Portfolio</Link></li>
+                    <li><Link href="">Side Projects</Link></li>
+                    <li><Link href="">Resume</Link></li>
                 </ul>
             </nav >
             <MenuIcon showMenu={!showMenu} switchMenu={SwitchMenu} />
@@ -54,44 +55,19 @@ const Container = styled.header<{ transparent: boolean }>`
     justify-content: space-between;
     align-items: center;
     padding:46px 60px;
-    position:fixed;
+    /* position:fixed; */
     top: 0px;
     width: 100%;
     z-index: 100;
     transition: 0.2s ease-in;
     backdrop-filter: blur(24px);
-    background:#02141a98;
-    border-bottom: 1px solid #02141a50;
+    /* background: red; */
+    width: -webkit-fill-available;
 
     .homeIcon{
-        border: 2px solid #FAF8F5;
-        border-radius: 72px;
-    }
-
-    nav, ul, a{
-        display: flex;
-        align-items:center;
-    }
-    ul{
-        display: flex;
-        justify-self: flex-end;
-        flex-flow: row-reverse;
-    }
-    li{
-        margin-left: 32px;
-        font-weight: 500;
-        color:#dadfe6;
-    }
-    a{
-        color:#dadfe6;
-        font-size:16px;
-        font-weight:400;
-    }
-    img{
-        opacity:0.8;
-    }
-    .navLink{
-        transition: 0.1s ease-in;
+        border: 2px solid #0E0D0D;
+        border-radius: 16px;
+        object-fit: cover;
     }
 
     .customMenuIcon{
@@ -101,13 +77,13 @@ const Container = styled.header<{ transparent: boolean }>`
         z-index: 200;
     }
 
-    ${props => props.transparent && css`
+    /* ${props => props.transparent && css`
         transition: 0.25s ease-in;
         backdrop-filter: blur(0px);
         backdrop-filter: unset;
         background: unset;
         border-color: transparent;
-    `} 
+    `}  */
 
     @media(max-width: 640px){
         padding: 20px;
