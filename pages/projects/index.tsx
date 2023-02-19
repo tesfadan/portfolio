@@ -1,13 +1,10 @@
 import React from 'react';
-import Portfolio from '../../components/sections/Portfolio';
-import Playground from '../../components/sections/Playground';
 
 
-export default function Projects() {
+export default () => {
     return (
         <>
-            <Portfolio />
-            <Playground />
+            <h1>Projects</h1>
         </>
     );
 }

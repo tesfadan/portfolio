@@ -1,10 +1,9 @@
 import React from 'react';
-import About from '../../components/sections/About';
 
-export default function AboutPage() {
+export default () => {
     return (
         <>
-            <About />
+        <h1>About</h1>
         </>
     );
 }

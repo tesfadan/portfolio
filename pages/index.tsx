@@ -1,11 +1,7 @@
-import Hero from "../components/sections/Hero"
-import Playground from "../components/sections/Playground"
-import Portfolio from "../components/sections/Portfolio"
 
 export default function Home() {
   return <>
-    <Hero />
-    {/* <Portfolio /> */}
-    {/* <Playground /> */}
+    <h1>Hello</h1>
+    <p>World</p>
   </>
 }
