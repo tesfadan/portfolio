@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'GeneralSans';
+    src: url('../public/assets/fonts/GeneralSans-Variable.woff2') format('woff2'),
+         url('../public/assets/fonts/GeneralSans-Variable.woff') format('woff'),
+         url('../public/assets/fonts/GeneralSans-Variable.ttf') format('truetype');
+         font-weight: 200 400 500 700;
+         font-display: swap;
+         font-style: normal;
+}
+
+html{
+    font-family: "GeneralSans";
+}
