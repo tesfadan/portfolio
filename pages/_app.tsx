@@ -4,7 +4,7 @@ import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 import { useRouter } from 'next/router';
 import * as gtag from "../head/gtag";
 import { AppProps } from 'next/app'
-import "../styles/index.css"
+import "../styles/index.scss"
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
