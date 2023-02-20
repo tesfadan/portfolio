@@ -4,9 +4,8 @@ import styled from 'styled-components';
 import projects from '../../src/content/Projects.json';
 
 
-export default () => {
-    return (
-        <>
+const Projects = () => {
+    return  <>
             <Head>
             </Head>
             <Container className="section">
@@ -16,7 +15,7 @@ export default () => {
                         <p>Lorem ipsum dolor sit amet consectetur. Malesuada ultricies ipsum id volutpat venenatis eu. Tortor massa leo tristique amet cras sem viverra facilisi. Amet ultricies urna ridiculus mauris maecenas neque nunc hendrerit. Et gravida eli.</p>
                 </div>
                 {projects.map(project => 
-                    <div className="projectCard card">
+                    <div key={`project-${project.url}`} className="projectCard card">
                         <div className="top">
                             <div className="icon">
                                 <img src={`/assets/projects/${project.image}/icon.png`} alt="project"/>
@@ -32,8 +31,9 @@ export default () => {
             </div>
             </Container>
         </>
-    );
 }
+
+export default Projects;
 
 
 const Container = styled.div`

@@ -26,10 +26,10 @@ export default function Header() {
             </Link>
             <nav>
                 <ul>
-                    <li><Link href="/about"><a href=''>About</a></Link></li>
-                    <li><Link href="/portfolio"><a href=''>Portfolio</a></Link></li>
-                    <li><Link href="/projects"><a href=''>Side Projects</a></Link></li>
-                    <li><Link href="/"><a href=''>Resume</a></Link></li>
+                    <li><Link href="/about"><a>About</a></Link></li>
+                    <li><Link href="/portfolio"><a>Portfolio</a></Link></li>
+                    <li><Link href="/projects"><a>Side Projects</a></Link></li>
+                    <li><Link href="/"><a>Resume</a></Link></li>
                 </ul>
             </nav>
             <button className="div" role="button" onClick={changeTheme}>

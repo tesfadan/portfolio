@@ -3,9 +3,10 @@ import Head from "next/head";
 import styled from "styled-components"
 import Link from 'next/link';
 
-export default () => {
-    return (
-        <>
+const PortfolioPage = () => {
+    return  <>
+            <Head>
+            </Head>
             <Container className="section">
             <div className="grid">
                 <div className="content">
@@ -43,8 +44,9 @@ export default () => {
             </div>
             </Container>
         </>
-    );
 }
+
+export default PortfolioPage;
 
 const Container = styled.div`
     .content{

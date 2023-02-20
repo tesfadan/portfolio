@@ -8,8 +8,7 @@ export default function Error() {
             <div className="error">
                 <h1>404</h1>
                 <p>Oops... It looks like this page does not exist or has moved.</p>
-                <Link href="/" >
-                </Link>
+                <Link href="/" ><a>Home</a></Link>
             </div>
         </div>
     </Container>

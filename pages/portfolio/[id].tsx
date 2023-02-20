@@ -29,8 +29,7 @@ export const getStaticPaths = async () => {
 }
 
 
-export default ({ project }: InferGetStaticPropsType<typeof getStaticProps>) => {
-
+const ShowCasePage = ({ project }: InferGetStaticPropsType<typeof getStaticProps>) => {
     return <>
         <Head>
             <title> Tesfa Demissie | {project.name}</title>
@@ -91,14 +90,14 @@ export default ({ project }: InferGetStaticPropsType<typeof getStaticProps>) => 
             {/*  */}
             <div className="moreStudies">
                 <div className='divider' />
-                <p className='title'>More Case Studies</p>
+                <div className='title'>More Case Studies</div>
 
                 <div className="portfolioCard">
                         <div className="cover card">
                         </div>
                         <div className="details">
                             <p>Designing for Education: Creating a Scalable Design System for a Cutting-Edge EdTech Platform</p>
-                            <Link href=""><a>Case Study</a></Link>
+                            <Link href="/"><a>Case Study</a></Link>
                         </div>
                     </div>
 
@@ -107,7 +106,7 @@ export default ({ project }: InferGetStaticPropsType<typeof getStaticProps>) => 
                         </div>
                         <div className="details">
                             <p>Designing for Education: Creating a Scalable Design System for a Cutting-Edge EdTech Platform</p>
-                            <Link href=""><a>Case Study</a></Link>
+                            <Link href="/"><a>Case Study</a></Link>
                         </div>
                     </div>
             </div>
@@ -115,6 +114,8 @@ export default ({ project }: InferGetStaticPropsType<typeof getStaticProps>) => 
         </Container>
     </>
 }
+
+export default ShowCasePage;
 
 export const Container = styled.div`
     .intro{

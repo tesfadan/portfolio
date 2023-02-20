@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import styled from "styled-components"
+import styled from "styled-components";
+import Head from "next/head";
 
-export default () => {
+
+ const About = () => {
     const [content, setContent] = useState([
         {
             section: "Summary",
@@ -22,24 +24,28 @@ export default () => {
         }
     ])
 
-    return (
+    return <>
+        <Head>
+        </Head>
         <Container className="section">
             <div className="grid">
                 <aside>
                     <div className="nav">
                     <h1>About</h1>
                         <ul>
-                            {content.map(data => <li><AnchorLink href={`#${data.section}`}>{data.section}</AnchorLink></li>)}
+                            {content.map(data => <li key={`li-${data.section}`}><AnchorLink href={`#${data.section}`}>{data.section}</AnchorLink></li>)}
                         </ul>
                     </div>
                 </aside>
                 <div className="content">
-                        {content.map(data => <p id={data.section}>{data.content}</p>)}
+                        {content.map(data => <p  key={`p-${data.section}`} id={data.section}>{data.content}</p>)}
                 </div>
             </div>
         </Container>
-    );
+    </>
 }
+
+export default About;
 
 const Container = styled.div`
     .content{

@@ -1,11 +1,14 @@
-import Link from "next/link"
-import styled from "styled-components"
-import MiniGame from "../src/components/MiniGame"
+import Link from "next/link";
+import styled from "styled-components";
+import MiniGame from "../src/components/MiniGame";
+import Head from "next/head";
 
 export default function Home() {
 
   
   return <>
+      <Head>
+      </Head>
       <Container className="section">
         <div className="grid">
             <div className="content">
@@ -15,7 +18,7 @@ export default function Home() {
               <p>
                 My design philosophy is centred on understanding the user's needs and delivering solutions that can truly improve their lives. I strive to create products that are not only functional and user-friendly, but also beautiful.
               </p>
-              <Link href="/about"><a>Learn more </a></Link>
+              <Link href="/about"><a>Learn more</a></Link>
             </div>
         </div>
         <MiniGame />
