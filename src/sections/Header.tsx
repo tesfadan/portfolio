@@ -6,7 +6,7 @@ import { Context } from '../context';
 import getLocalTheme from '../helpers/getLocalTheme';
 import Color from '../theme/Color';
 
-export default function Header() {
+const Header = ()=> {
     const {darkMode, changeTheme} = useContext(Context);
     const colors = Color();
 
@@ -17,29 +17,29 @@ export default function Header() {
         };
     }, [darkMode]);
 
-  return (
-    <Container className="section" darkMode={false}>
-    <div className="grid">
-        <div className="content">
-            <Link href="/">
-                <a className='home'><img src='./assets/images/tesfa-home-icon.png' alt='Logo'/></a>
-            </Link>
-            <nav>
-                <ul>
-                    <li><Link href="/about"><a>About</a></Link></li>
-                    <li><Link href="/portfolio"><a>Portfolio</a></Link></li>
-                    <li><Link href="/projects"><a>Side Projects</a></Link></li>
-                    <li><Link href="/"><a>Resume</a></Link></li>
-                </ul>
-            </nav>
-            <button className="div" role="button" onClick={changeTheme}>
-                <Contrast color={colors.text} />
-            </button>
-        </div>
-    </div>
+  return  <Container className="section" darkMode={darkMode}>
+            <div className="grid">
+                <div className="content">
+                    <Link href="/">
+                        <a className='home'><img src='./assets/images/tesfa-home-icon.png' alt='Logo'/></a>
+                    </Link>
+                    <nav>
+                        <ul>
+                            <li><Link href="/about"><a>About</a></Link></li>
+                            <li><Link href="/portfolio"><a>Portfolio</a></Link></li>
+                            <li><Link href="/projects"><a>Side Projects</a></Link></li>
+                            <li><Link href="/"><a>Resume</a></Link></li>
+                        </ul>
+                    </nav>
+                    <button className="div" role="button" onClick={changeTheme}>
+                        <Contrast color={colors.text} />
+                    </button>
+                </div>
+            </div>
     </Container>
-  )
 }
+
+export default Header;
 
 
 const Container = styled.header<{darkMode: boolean}>`
