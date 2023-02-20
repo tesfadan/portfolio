@@ -1,3 +1,4 @@
+import Link from "next/link"
 import styled from "styled-components"
 import MiniGame from "../src/components/MiniGame"
 
@@ -14,9 +15,7 @@ export default function Home() {
               <p>
                 My design philosophy is centred on understanding the user's needs and delivering solutions that can truly improve their lives. I strive to create products that are not only functional and user-friendly, but also beautiful.
               </p>
-              <a>
-                Learn more
-              </a>
+              <Link href="/about"><a>Learn more </a></Link>
             </div>
         </div>
         <MiniGame />
@@ -35,8 +34,4 @@ const Container = styled.div`
     a{
       font-size: 24px;
     }
-    .grid{
-      position: relative;
-    }
-
 `

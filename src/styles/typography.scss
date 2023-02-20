@@ -3,7 +3,7 @@
     src: url('../../public/assets/fonts/GeneralSans-Variable.woff2') format('woff2'),
          url('../../public/assets/fonts/GeneralSans-Variable.woff') format('woff'),
          url('../../public/assets/fonts/GeneralSans-Variable.ttf') format('truetype');
-         font-weight: 200 400 500 700;
+         font-weight: 200 300 400 500 700;
          font-display: swap;
          font-style: normal;
 }
@@ -25,4 +25,16 @@ h1{
 a{
     font-weight: 500;
     font-size: 20px;
+}
+.title{
+    font-weight: 500;
+}
+
+body.dark{
+    p {
+        font-weight: 300;
+    }
+    h1, a, .title{
+        font-weight: 400;
+    }
 }

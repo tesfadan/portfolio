@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React, { useContext, useEffect } from 'react'
 import styled from 'styled-components'
 import { Contrast } from '../components/icons'
@@ -20,13 +21,15 @@ export default function Header() {
     <Container className="section" darkMode={false}>
     <div className="grid">
         <div className="content">
-            <a className='home'><img src='./assets/images/tesfa-home-icon.png' alt='Logo'/></a>
+            <Link href="/">
+                <a className='home'><img src='./assets/images/tesfa-home-icon.png' alt='Logo'/></a>
+            </Link>
             <nav>
                 <ul>
-                    <li><a href=''>About</a></li>
-                    <li><a href=''>Portfolio</a></li>
-                    <li><a href=''>Side Projects</a></li>
-                    <li><a href=''>Resume</a></li>
+                    <li><Link href="/about"><a href=''>About</a></Link></li>
+                    <li><Link href="/portfolio"><a href=''>Portfolio</a></Link></li>
+                    <li><Link href="/projects"><a href=''>Side Projects</a></Link></li>
+                    <li><Link href="/"><a href=''>Resume</a></Link></li>
                 </ul>
             </nav>
             <button className="div" role="button" onClick={changeTheme}>
@@ -43,6 +46,8 @@ const Container = styled.header<{darkMode: boolean}>`
     padding: 84px 0px 72px;
     position: sticky;
     top: 0px;
+    background: #FFFFFF;
+    z-index: 10;
 
     .content{
         grid-column: 1/7;
@@ -70,12 +75,6 @@ const Container = styled.header<{darkMode: boolean}>`
     }
     ul{
         display: flex;
-            a{
-                text-decoration: unset;
-            &:hover{
-            text-decoration: underline;
-            }
-        }
     }
     li {
         padding: 0px 14px;

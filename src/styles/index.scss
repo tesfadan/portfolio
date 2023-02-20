@@ -11,7 +11,7 @@
 .grid{
     display: grid;
     grid-template-columns:repeat(6, 1fr);
-    align-items: center;
+    // align-items: center;
     width: 100%;
     max-width: 1200px;
     gap: 32px;
@@ -20,9 +20,15 @@
 
 a{
     text-decoration: underline;
-    
     &:hover{
         text-decoration: unset;
+    }
+}
+
+nav a {
+    text-decoration: unset;
+    &:hover{
+    text-decoration: underline;
     }
 }
 
@@ -30,6 +36,9 @@ body{
     color:#0E0D0D;
     .card{
         background: #F7F3F0;
+        border: 2px solid;
+        box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.75);
+        border-radius: 8px;
     }
 }
 
@@ -40,7 +49,7 @@ body.dark{
     .card{
         background: #272424;
         box-shadow: unset;
-
+        border-color:transparent;
         .cover{
             background: #484440;
         }
@@ -49,4 +58,8 @@ body.dark{
     .screen{
         border-color: transparent;
     }
+    header{
+        background: #1E1E1E;
+    }
+
 }
