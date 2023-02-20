@@ -146,6 +146,8 @@ export const Container = styled.div`
         opacity: .15;
     }
 
+    
+
     .moreStudies{
             .title{
                 margin-bottom: 40px;

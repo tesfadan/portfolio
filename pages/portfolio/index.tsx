@@ -18,7 +18,7 @@ export default () => {
                         </div>
                         <div className="details">
                             <p>Designing for Education: Creating a Scalable Design System for a Cutting-Edge EdTech Platform</p>
-                            <Link href=""><a>Case Study</a></Link>
+                            <Link href="/portfolio/stoic"><a>Case Study</a></Link>
                         </div>
                     </div>
 

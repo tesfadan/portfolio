@@ -44,7 +44,7 @@ export default function Header() {
 
 const Container = styled.header<{darkMode: boolean}>`
     padding: 84px 0px 72px;
-    position: sticky;
+    /* position: sticky; */
     top: 0px;
     background: #FFFFFF;
     z-index: 10;
