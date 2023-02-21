@@ -1,8 +1,8 @@
 {
     "name": "Tesfa Demissie",
     "short_name": "tesfadan",
-    "theme_color": "#021B22",
-    "background_color": "#021B22",
+    "theme_color": "#F6F3F0",
+    "background_color": "#F6F3F0",
     "display": "standalone",
     "orientation": "portrait",
     "scope": "./",

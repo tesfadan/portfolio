@@ -32,11 +32,10 @@ export default function DefaultHeadTags() {
             <meta name="description" content="I am a Designer and Front End Developer with experience building websites and web applications with JavaScript, HTML, SCSS, and React." />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             {/* Theme and Icons  */}
-            <meta name="theme-color" content="#021B22" />
+            <meta name="theme-color" content="#F6F3F0" />
             <link rel="icon" href="/assets/logo.svg" />
             <link rel="manifest" href="/manifest.json" />
             <link rel="apple-touch-icon" href="/assets/icons/apple-icon.png" />
-            <meta name="theme-color" content="#021B22" />
 
             {/* Twitter metadata  */}
             <meta name="twitter:title" content={meta.title} />

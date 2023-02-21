@@ -5,6 +5,7 @@ import MenuIcon, { Contrast } from '../components/icons'
 import { Context } from '../context';
 import getLocalTheme from '../helpers/getLocalTheme';
 import Color from '../theme/Color';
+import Head from "next/head";
 
 const Header = ({showMenu, switchMenu} : {showMenu: boolean, switchMenu: ()=> void})=> {
     const {darkMode, changeTheme} = useContext(Context);
@@ -17,7 +18,11 @@ const Header = ({showMenu, switchMenu} : {showMenu: boolean, switchMenu: ()=> vo
         };
     }, [darkMode]);
 
-  return  <Container className={`section  ${showMenu ? 'openMenu' : ''}`} darkMode={darkMode}>
+  return <>
+        <Head>
+            <meta name="theme-color" content={darkMode ? "#1D1B1B": "#FFFFFF"} />
+        </Head>
+        <Container className={`section  ${showMenu ? 'openMenu' : ''}`} darkMode={darkMode}>
             <div className="grid">
                 <div className="content">
                     <Link href="/">
@@ -40,6 +45,7 @@ const Header = ({showMenu, switchMenu} : {showMenu: boolean, switchMenu: ()=> vo
                 </div>
             </div>
     </Container>
+    </> 
 }
 
 export default Header;
