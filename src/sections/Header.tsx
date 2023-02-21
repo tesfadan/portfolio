@@ -1,5 +1,3 @@
-"use client"
-
 import Link from 'next/link';
 import React, { useContext, useEffect } from 'react'
 import styled from 'styled-components'
@@ -27,8 +25,8 @@ const Header = ({showMenu, switchMenu} : {showMenu: boolean, switchMenu: ()=> vo
         <Container className={`section  ${showMenu ? 'openMenu' : ''}`} darkMode={darkMode}>
             <div className="grid">
                 <div className="content">
-                    <Link href="/"className='home'>
-                       <img src='./assets/images/tesfa-home-icon.png' alt='Logo'/>
+                    <Link href="/">
+                        <a className='home'><img src='./assets/images/tesfa-home-icon.png' alt='Logo'/></a>
                     </Link>
                     <nav>
                         <ul>
