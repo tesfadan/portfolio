@@ -15,7 +15,7 @@ export const getStaticProps: GetStaticProps = async (context: GetStaticPropsCont
     const projects = Projects.filter(project => project.url.toString() === projectId)
     return {
         props: {
-            project: projects[0]
+            portfolio: projects[0]
         }
     }
 }
@@ -29,10 +29,10 @@ export const getStaticPaths = async () => {
 }
 
 
-const ShowCasePage = ({ project }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const ShowCasePage = ({ portfolio }: InferGetStaticPropsType<typeof getStaticProps>) => {
     return <>
         <Head>
-            <title> Tesfa Demissie | {project.name}</title>
+            <title> Tesfa Demissie | {portfolio.name}</title>
         </Head>
         <Container className="section">
         <div className="grid">
