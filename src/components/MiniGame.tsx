@@ -10,7 +10,10 @@ export default () => {
     });
 
     function getRandomItem(arr: Array<{cover: string, content: string}>) {
-        const randomIndex = Math.floor(Math.random() * arr.length);
+        let randomIndex;
+        do {
+          randomIndex = Math.floor(Math.random() * arr.length);
+        } while (arr[randomIndex] === content);
         return arr[randomIndex];
       }
 
