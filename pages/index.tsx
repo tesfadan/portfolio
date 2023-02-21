@@ -18,7 +18,7 @@ export default function Home() {
               <p>
                 My design philosophy is centred on understanding the user's needs and delivering solutions that can truly improve their lives. I strive to create products that are not only functional and user-friendly, but also beautiful.
               </p>
-              <Link href="/about"><a>Learn more</a></Link>
+              <Link href="/about">Learn more</Link>
             </div>
         </div>
         <MiniGame />

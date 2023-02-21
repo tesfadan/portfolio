@@ -25,15 +25,15 @@ const Header = ({showMenu, switchMenu} : {showMenu: boolean, switchMenu: ()=> vo
         <Container className={`section  ${showMenu ? 'openMenu' : ''}`} darkMode={darkMode}>
             <div className="grid">
                 <div className="content">
-                    <Link href="/">
-                        <a className='home'><img src='./assets/images/tesfa-home-icon.png' alt='Logo'/></a>
+                    <Link href="/"className='home'>
+                       <img src='./assets/images/tesfa-home-icon.png' alt='Logo'/>
                     </Link>
                     <nav>
                         <ul>
-                            <li onClick={()=>switchMenu()}><Link href="/about"><a>About</a></Link></li>
-                            <li onClick={()=>switchMenu()}><Link href="/portfolio"><a>Portfolio</a></Link></li>
-                            <li onClick={()=>switchMenu()}><Link href="/projects"><a>Side Projects</a></Link></li>
-                            <li onClick={()=>switchMenu()}><Link href="/"><a>Resume</a></Link></li>
+                            <li onClick={()=>switchMenu()}><Link href="/about">About</Link></li>
+                            <li onClick={()=>switchMenu()}><Link href="/portfolio">Portfolio</Link></li>
+                            <li onClick={()=>switchMenu()}><Link href="/projects">Side Projects</Link></li>
+                            <li onClick={()=>switchMenu()}><Link href="/">Resume</Link></li>
                         </ul>
                     </nav>
                     <div className="buttons">
