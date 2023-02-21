@@ -2,27 +2,10 @@ import React, { useState } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import styled from "styled-components";
 import Head from "next/head";
+import content from '../../src/content/aboutContent';
 
 
  const About = () => {
-    const [content, setContent] = useState([
-        {
-            section: "Summary",
-            content: "Hello, I'm [Your Name], a passionate product designer with extensive experience in both UX and UI design. I thrive on the challenge of crafting engaging experiences that deliver real value to the end user. My background in design, paired with my strong technical skills, enables me to approach projects from a holistic perspective and deliver innovative solutions that meet business objectives."
-        },
-        {
-            section: "Background",
-            content: "Hello, I'm [Your Name], a passionate product designer with extensive experience in both UX and UI design. I thrive on the challenge of crafting engaging experiences that deliver real value to the end user. My background in design, paired with my strong technical skills, enables me to approach projects from a holistic perspective and deliver innovative solutions that meet business objectives."
-        },
-        {
-            section: "Education",
-            content: "Hello, I'm [Your Name], a passionate product designer with extensive experience in both UX and UI design. I thrive on the challenge of crafting engaging experiences that deliver real value to the end user. My background in design, paired with my strong technical skills, enables me to approach projects from a holistic perspective and deliver innovative solutions that meet business objectives."
-        },
-        {
-            section: "Experience",
-            content: "Hello, I'm [Your Name], a passionate product designer with extensive experience in both UX and UI design. I thrive on the challenge of crafting engaging experiences that deliver real value to the end user. My background in design, paired with my strong technical skills, enables me to approach projects from a holistic perspective and deliver innovative solutions that meet business objectives."
-        }
-    ])
 
     return <>
         <Head>
