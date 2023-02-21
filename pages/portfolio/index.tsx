@@ -72,4 +72,45 @@ const Container = styled.div`
             margin-bottom: 20px;
         }
     }
+
+    /* IPAD */
+    @media (max-width: 834px) {
+        .intro{
+            margin-bottom: 44px;
+        }
+        .portfolioCard{
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+            gap: 28px;
+            margin-bottom: 32px;
+        }
+            .cover{
+                grid-column: 1/3;
+                height:180px;
+            }
+            .details{
+                grid-column: 3/6;
+            }
+            .details p{
+                margin-bottom: 4px;
+            }
+    }
+
+    /* Mobile  */
+    @media (max-width: 640px) {
+        .intro{
+            margin-bottom: 32px;
+        }
+        .portfolioCard{
+            display: flex;
+            flex-flow: column;
+            gap: unset;
+            margin-bottom: 32px;
+        }
+        .cover{
+            margin-bottom: 16px;
+        }
+        .details p {
+            margin-bottom: 0px;
+        }
+    }
 `

@@ -38,3 +38,31 @@ body.dark{
         font-weight: 400;
     }
 }
+
+/* IPAD */
+@media (max-width: 834px) {
+    h1{
+        font-size: 38px;
+        margin-bottom: 18px;
+    }
+    p{
+        font-size: 20px;
+    }
+    a{
+        font-size: 20px;
+    }
+}
+
+/* LG MOBILE */
+@media (max-width: 640px) {
+    h1{
+        font-size: 24px;
+        margin-bottom: 16px;
+    }
+    p{
+        font-size: 16px;
+    }
+    a{
+        font-size: 16px;
+    }
+}

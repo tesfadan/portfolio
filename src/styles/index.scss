@@ -1,11 +1,16 @@
 @import "./reset.scss";
 @import "./typography.scss";
 
+div{
+    // transition: 0.25s ease;
+}
+
 // layout
 // container is grid
 .section{
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .grid{
@@ -14,8 +19,7 @@
     // align-items: center;
     width: 100%;
     max-width: 1200px;
-    gap: 32px;
-    row-gap: 0px;
+    column-gap: 32px;
     padding: 0px 96px;
 }
 
@@ -47,6 +51,10 @@ body.dark{
     background: #1E1E1E;
     color: #FFFFFF;
 
+    .openMenu{
+        background: #1E1E1E;
+    }
+
     .card{
         background: #272424;
         box-shadow: unset;
@@ -64,14 +72,53 @@ body.dark{
     }
 }
 
-
 body{
     display: unset !important;
 }
 
-@media (max-width: 1024px) {
-    body{
-        background: red;
+@media (max-width: 1020px) {
+    .grid{
+        padding: 0px 72px;
+    }
+    header.section{
+        padding: 56px 0px 56px;
     }
 }
 
+/* IPAD */
+@media (max-width: 834px) {
+    // Typography
+    h1{
+        // font-size: 38px;
+    }
+
+    // Layout
+    .grid{
+        padding: 0px 56px;
+        column-gap: 16px;
+    }
+
+    body .card{
+        box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.75);
+    }
+}
+
+/* LG MOBILE */
+@media (max-width: 640px) {
+    body .card{
+        box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.75);
+    }
+
+    header.section{
+        padding: 28px 0px 44px;
+    }
+    h1{
+        font-size: 24px;
+    }
+    .grid{
+        // max-width: 520px;
+        // max-width: 428px;
+        padding: 0px 16px;
+        column-gap: 4px;
+    }
+}

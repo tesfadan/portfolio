@@ -12,7 +12,7 @@ export default function MenuIcon({ showMenu, switchMenu }: { showMenu: boolean, 
     </CustomMenuWrapper >
 }
 
-const CustomMenuWrapper = styled.span<{ state: boolean }>`
+const CustomMenuWrapper = styled.div<{ state: boolean }>`
         display: flex;
         width: 32px;
         flex-flow: column;
@@ -22,12 +22,13 @@ const CustomMenuWrapper = styled.span<{ state: boolean }>`
         overflow:hidden;
         z-index: 109;
         cursor: pointer;
-        transition: 0.2s ease-in;
+        /* transition: 0.2s ease-in; */
 
         span{
             height: 3px;
             width: 32px;
-            background: #E2E5E9;
+            /* background: #E2E5E9; */
+            /* background: #f00; */
             transition:0.125s ease-in;
         }
 
@@ -37,11 +38,11 @@ const CustomMenuWrapper = styled.span<{ state: boolean }>`
             }
         `}
 
-        &:hover{
+        /* &:hover{
             .menuBottom{
                 transform: translateX(16px)
             }
-        }
+        } */
         .customMenuIcon{
             opacity: 0.9;
         }

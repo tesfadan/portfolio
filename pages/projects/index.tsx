@@ -73,4 +73,41 @@ const Container = styled.div`
             width: 100%;
         }
     }
+
+    /* IPAD */
+    @media (max-width: 834px) {
+        .intro{
+            margin-bottom: 56px;
+        }
+        .projectCard{
+            padding: 16px;
+        }
+        a{
+            font-size: 16px;
+        }
+        .top{
+            margin-bottom: 56px;
+        }
+        .icon{
+            height: 56px;
+            width: 56px;
+            border-radius: 12px;
+            border-width: 1px;
+        }
+        .title{
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+    }
+    /* MOBILE */
+    @media (max-width: 640px) {
+        .intro{
+            margin-bottom: 32px;
+        }
+
+        .projectCard{
+            grid-column: span 6;
+            margin-bottom: 24px;
+        }
+    }
 `

@@ -27,14 +27,45 @@ export default function Home() {
 }
 
 const Container = styled.div`
-    .content{
-      grid-column: 1/7;
+  flex-flow: column;
+
+  .content{
+    grid-column: 1/7;
+  }
+  p{
+    font-size: 28px;
+    margin-bottom: 32px;
+  }
+  a{
+    font-size: 24px;
+  }
+
+  /* IPAD */
+  @media (max-width: 834px) {
+    h1{
+      /* margin-bottom: 20px; */
     }
     p{
-      font-size: 28px;
-      margin-bottom: 32px;
-    }
-    a{
       font-size: 24px;
     }
+    a{
+      font-size: 20px;
+    }
+  }
+
+  /* LG MOBILE */
+  @media (max-width: 640px) {
+    min-height: 55vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    p{
+      font-size: 18px;
+      /* margin-bottom: 20px; */
+    }
+    a{
+      font-size: 16px;
+    }
+  }
 `

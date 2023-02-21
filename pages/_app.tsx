@@ -43,7 +43,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return <>
     <Provider>
       <DefaultHeadTags />
-      <Header />
+      <Header showMenu={menu} switchMenu={SwitchMenu} />
       <Component {...pageProps} />
     </Provider>
   </>

@@ -61,4 +61,61 @@ const Container = styled.div`
     p{
         margin-bottom: 24px;
     }
+
+    /* IPAD */
+    @media (max-width: 834px) {
+        .nav{
+            top: 44px;
+        }
+        p{
+            /* font-size: 20px; */
+        }
+        li{
+            margin-bottom: 20px;
+        }
+        li a{
+            font-size: 16px;
+        }
+        .content{
+            grid-column: 2/7;
+            margin-left: 56px;
+        }
+    }
+
+    /* LG MOBILE */
+    @media (max-width: 640px) {
+        h1{
+            font-size: 24px;
+        }
+        p{
+            /* font-size: 16px; */
+        }
+        .grid{
+            // max-width: 520px;
+            max-width: 428px;
+            padding: 0px 16px;
+            column-gap: 4px;
+        }
+        .nav{
+            position: relative;
+            top: unset;
+        }
+
+        aside, .content{
+            grid-column: 1/7;
+            margin-left: 0px;
+            ul{
+                display: flex;
+                flex-flow: row;
+                display: none;
+            }
+            li{
+                margin-right: 20px;
+            }
+        }
+        aside{
+            /* position: sticky; */
+            /* top: 0px; */
+        }
+    }
 `

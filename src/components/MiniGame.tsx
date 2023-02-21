@@ -3,15 +3,15 @@ import styled from 'styled-components'
 
 export default () => {
   return (
-    <Container>
-        <div className="screen card">
+    <Container className='section'>
+        <div className="grid">
+        <div className="gameScreen card">
             <div className="content">
-            <div className="cover">
-                <img src="" />
+                <img className="cover" src="" />
+                <div className="text">Currently Listening to <span>Bahta’s Highlife</span> by Admas</div>
+                </div>
+                <button>Preview</button>
             </div>
-            <div className="text">Currently Listening to <span>Bahta’s Highlife</span> by Admas</div>
-            </div>
-            <button>Preview</button>
         </div>
     </Container>
   )
@@ -19,17 +19,19 @@ export default () => {
 
 
 const Container = styled.div`
+    /* position: absolute; */
+    /* width: 1200px; */
+    /* bottom: 72px; */
+    /* padding: 0px 96px; */
     position: absolute;
-    width: 1200px;
-    bottom: 72px;
-    padding: 0px 96px;
+    bottom: 56px;
+    width: 100%;
 
-
-    .screen{
-        height: 96px;
-        border: 2px solid;
-        box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.75);
+    .gameScreen{
+        /* height: 96px; */
         border-radius: 20px;
+        grid-column: 1/7;
+
 
         display: flex;
         justify-content: space-between;
@@ -39,9 +41,14 @@ const Container = styled.div`
         padding: 16px;
         padding-right: 36px;
 
+
+
         .content{
             display: flex;
             align-items: center;
+        }
+        button{
+            margin-left: 24px;
         }
 
         span{
@@ -57,6 +64,42 @@ const Container = styled.div`
             background: #363232;
             border-radius: 12px;
             margin-right: 16px;
+
+            object-fit: cover;
+        }
+    }
+
+    /* IPAD */
+    @media (max-width: 834px) {
+        .gameScreen{
+            padding: 12px;
+            padding-right: 24px;
+            font-size: 16px;
+        }
+        .gameScreen .cover{
+            width: 48px;
+            height: 48px;
+            min-width: 48px;
+            min-height: 48px;
+        }
+    }
+
+    /* LG MOBILE */
+    @media (max-width: 640px) {
+        /* display: none; */
+        bottom: 36px;
+        .gameScreen{
+            padding: 8px;
+            padding-right: 8px;
+            font-size: 14px;
+            border-radius: 14px;
+        }
+        .gameScreen .cover{
+            margin-right: 8px;
+            border-radius: 6px;
+        }
+        button{
+            display: none;
         }
     }
 `
