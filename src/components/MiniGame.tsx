@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import miniGameContent from '../content/miniGameContent'
 import { Shuffle } from './icons'
+import ReactMarkdown from "react-markdown"
 
 export default () => {
     const [content, setContent] = useState({
@@ -32,7 +33,11 @@ export default () => {
         <div className="gameScreen card">
             <div className="content">
                 <img className="cover" src={content.cover} />
-                <div className="text">{content.content}</div>
+                <div className="text">
+                    {/* {content.content} */}
+                    {/* <ReactMarkdown>{miniGameContent[3].content}</ReactMarkdown> */}
+                    <ReactMarkdown>{content.content}</ReactMarkdown>
+                </div>
                 </div>
                 <button className='shuffleBtn' onClick={handleShuffle}>
                     <Shuffle /> 
@@ -72,6 +77,16 @@ const Container = styled.div`
         .content{
             display: flex;
             align-items: center;
+            .text{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            p{
+                font-size: inherit;
+                margin-bottom: 0px;
+                line-height: inherit;
+            }
         }
         button{
             margin-left: 24px;
