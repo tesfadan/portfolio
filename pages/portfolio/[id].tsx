@@ -150,26 +150,107 @@ export const Container = styled.div`
     
 
     .moreStudies{
-            .title{
-                margin-bottom: 40px;
+        .title{
+            margin-bottom: 40px;
+        }
+        /* remove */
+        .portfolioCard{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            align-items: center;
+            margin-bottom: 44px;
+        }
+        .cover{
+            width: 100%;
+            height: 272px;
+        }
+        .details{
+            width: 100%;
+            p{
+                margin-bottom: 20px;
             }
-            /* remove */
+        }
+    }
+    /* IPAD */
+    @media (max-width: 834px) {
+        .intro{
+            margin-bottom: 56px;
+        }
+        .block{
+            margin-bottom: 40px;
+            
+            &.twocol{
+                gap: 24px;
+            }
+        }
+        .image, .cover{
+            height: 400px;
+        }
+        .moreStudies{
+            .title{
+                margin-bottom: 28px;
+            }
+        }
+        .title{
+            font-size: 20px;
+        }
+        .divider{
+            margin: 24px 0px;
+        }
+
+        /* PORTFOLIO CARDS */
+        .moreStudies{
             .portfolioCard{
                 display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 32px;
-                align-items: center;
-                margin-bottom: 44px;
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+                gap: 28px;
+                margin-bottom: 32px;
             }
             .cover{
-                width: 100%;
-                height: 272px;
+                grid-column: 1/3;
+                height:260px;
             }
             .details{
-                width: 100%;
-                p{
-                    margin-bottom: 20px;
+                grid-column: 3/6;
+            }
+            .details p{
+                margin-bottom: 4px;
+            }
+        }
+    }
+
+    /* MOBILE */
+    @media (max-width: 640px) {
+        .intro{
+            margin-bottom: 32px;
+        }
+        .block{
+            margin-bottom: 32px;
+            &.twocol{
+                gap: 12px;
+                .image{
+                    height: 240px;
                 }
             }
+        }
+        .image, .cover{
+            height: 280px;
+        }
+
+        .moreStudies{
+            .portfolioCard{
+                display: flex;
+                flex-flow: column;
+                gap: unset;
+                margin-bottom: 32px;
+            }
+            .cover{
+                margin-bottom: 16px;
+            }
+            .details p {
+                margin-bottom: 0px;
+            }
+        }
     }
 `

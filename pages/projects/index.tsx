@@ -104,7 +104,6 @@ const Container = styled.div`
         .intro{
             margin-bottom: 32px;
         }
-
         .projectCard{
             grid-column: span 6;
             margin-bottom: 24px;

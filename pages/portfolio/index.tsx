@@ -13,7 +13,7 @@ const PortfolioPage = () => {
                     <div className="intro">
                         <h1>Portfolio</h1>
                         <p>Lorem ipsum dolor sit amet consectetur. Malesuada ultricies ipsum id volutpat venenatis eu. Tortor massa leo tristique amet cras sem viverra facilisi. Amet ultricies urna ridiculus mauris maecenas neque nunc hendrerit. Et gravida eli.</p>
-                    </div>
+                    </div>  
                     <div className="portfolioCard">
                         <div className="cover card">
                         </div>
@@ -78,21 +78,22 @@ const Container = styled.div`
         .intro{
             margin-bottom: 44px;
         }
+        
         .portfolioCard{
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
             gap: 28px;
             margin-bottom: 32px;
         }
-            .cover{
-                grid-column: 1/3;
-                height:180px;
-            }
-            .details{
-                grid-column: 3/6;
-            }
-            .details p{
-                margin-bottom: 4px;
-            }
+        .cover{
+            grid-column: 1/3;
+            height:260px;
+        }
+        .details{
+            grid-column: 3/6;
+        }
+        .details p{
+            margin-bottom: 4px;
+        }
     }
 
     /* Mobile  */

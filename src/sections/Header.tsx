@@ -162,7 +162,7 @@ const Container = styled.header<{darkMode: boolean}>`
 
         &.openMenu{
             height: 100vh;
-            position: absolute;
+            position: fixed;
             top: 0px;
             left: 0px;
             width: 100%;
