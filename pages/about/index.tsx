@@ -3,7 +3,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 import styled from "styled-components";
 import Head from "next/head";
 import content from '../../src/content/aboutContent';
-
+import ReactMarkdown from "react-markdown"
 
  const About = () => {
 
@@ -21,7 +21,14 @@ import content from '../../src/content/aboutContent';
                     </div>
                 </aside>
                 <div className="content">
-                        {content.map(data => <p  key={`p-${data.section}`} id={data.section}>{data.content}</p>)}
+                        {content.map(data => 
+                        <>
+                        <span className="block-section" id={data.section} />
+                        <ReactMarkdown key={`p-${data.section}`}>{data.content}</ReactMarkdown>
+                        {/* <p  key={`p-${data.section}`} id={data.section}>{data.content}</p> */}
+                        </>
+                        )}
+
                 </div>
             </div>
         </Container>
@@ -43,6 +50,13 @@ const Container = styled.div`
     }
     p{
         margin-bottom: 24px;
+    }
+
+    .block-section{
+    }
+
+    .content a{
+        font-size: inherit;
     }
 
     /* IPAD */

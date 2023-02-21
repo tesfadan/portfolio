@@ -21,6 +21,6 @@ export default [
         },
         {
             section: "Contact",
-            content: "If you’d like to get in contact, you can reach me at tesfa@tesfadan.com. I look forward to hearing from you!"
+            content: "If you’d like to get in contact, you can reach me at [tesfa@tesfadan.com](mailto:tesfa@tesfadan.com). I look forward to hearing from you!"
         }
 ]
