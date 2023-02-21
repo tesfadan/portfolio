@@ -45,11 +45,49 @@ body{
         box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.75);
         border-radius: 8px;
     }
+
+    .highlight{
+        animation: highlight 2000ms ease forwards;
+    }
+}
+
+@keyframes highlight {
+    0%{
+        background: transparent;
+    }
+    25%{
+        background: #F0ECE3;
+    }
+    80%{
+        background: #F0ECE3;
+    }
+    100%{
+        background: transparent;
+    }
+}
+
+@keyframes highlightDarkMode {
+    0%{
+        background: transparent;
+    }
+    25%{
+        background: #2E2C2A;
+    }
+    80%{
+        background: #2E2C2A;
+    }
+    100%{
+        background: transparent;
+    }
 }
 
 body.dark{
     background: #1E1E1E;
     color: #FFFFFF;
+    .highlight{
+        animation: highlightDarkMode 2000ms ease forwards;
+    }
+
 
     .openMenu{
         background: #1E1E1E;

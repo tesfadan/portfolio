@@ -6,17 +6,22 @@ import content from '../../src/content/aboutContent';
 import ReactMarkdown from "react-markdown"
 
  const About = () => {
+    const [highlight, setHighlight] = useState({
+        section: "",
+        content: ""
+    });
+
 
     return <>
         <Head>
         </Head>
-        <Container className="section">
+        <Container className="section" onBlur={()=>setHighlight({section:"", content:""})}>
             <div className="grid">
                 <aside>
                     <div className="nav">
                     <h1>About</h1>
                         <ul>
-                            {content.map(data => <li key={`li-${data.section}`}><AnchorLink href={`#${data.section}`}>{data.section}</AnchorLink></li>)}
+                            {content.map(data => <li key={`li-${data.section}`}><AnchorLink onClick={()=>setHighlight(data)} href={`#${data.section}`}>{data.section}</AnchorLink></li>)}
                         </ul>
                     </div>
                 </aside>
@@ -24,7 +29,7 @@ import ReactMarkdown from "react-markdown"
                         {content.map(data => 
                         <>
                         <span className="block-section" id={data.section} />
-                        <ReactMarkdown key={`p-${data.section}`}>{data.content}</ReactMarkdown>
+                        <ReactMarkdown className={highlight.section === data.section ? "highlight" : "" } key={`p-${data.section}`}>{data.content}</ReactMarkdown>
                         {/* <p  key={`p-${data.section}`} id={data.section}>{data.content}</p> */}
                         </>
                         )}
@@ -57,6 +62,22 @@ const Container = styled.div`
 
     .content a{
         font-size: inherit;
+    }
+
+    .highlight{
+        /* animation: highlightDarkMode 2000ms ease forwards; */
+        position: relative;
+        &::before{
+            display: block;
+            content: "";
+            background: inherit;
+            position: absolute;
+            left: -16px;
+            right: -16px;
+            top: -8px;
+            bottom: -8px;
+            z-index: -2;
+        }
     }
 
     /* IPAD */
