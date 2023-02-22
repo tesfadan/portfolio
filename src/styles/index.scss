@@ -1,0 +1,162 @@
+@import "./reset.scss";
+@import "./typography.scss";
+
+div{
+    // transition: 0.25s ease;
+}
+
+// layout
+// container is grid
+.section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns:repeat(6, 1fr);
+    // align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    column-gap: 32px;
+    padding: 0px 96px;
+}
+
+a{
+    text-decoration: underline;
+    &:hover{
+        text-decoration: unset;
+    }
+}
+
+nav a {
+    text-decoration: unset;
+    &:hover{
+    text-decoration: underline;
+    }
+}
+
+body{
+    color:#0E0D0D;
+    .card{
+        background: #F7F3F0;
+        border: 2px solid;
+        box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.75);
+        border-radius: 8px;
+    }
+
+    .highlight{
+        animation: highlight 2000ms ease forwards;
+    }
+}
+
+@keyframes highlight {
+    0%{
+        background: transparent;
+    }
+    25%{
+        background: #F0ECE3;
+    }
+    80%{
+        background: #F0ECE3;
+    }
+    100%{
+        background: transparent;
+    }
+}
+
+@keyframes highlightDarkMode {
+    0%{
+        background: transparent;
+    }
+    25%{
+        background: #2E2C2A;
+    }
+    80%{
+        background: #2E2C2A;
+    }
+    100%{
+        background: transparent;
+    }
+}
+
+body.dark{
+    background: #1E1E1E;
+    color: #FFFFFF;
+    .highlight{
+        animation: highlightDarkMode 2000ms ease forwards;
+    }
+
+
+    .openMenu{
+        background: #1E1E1E;
+    }
+
+    .card{
+        background: #272424;
+        box-shadow: unset;
+        border-color:transparent;
+        .cover{
+            background: #484440;
+        }
+    }
+
+    .screen{
+        border-color: transparent;
+    }
+    header{
+        background: #1E1E1E;
+    }
+}
+
+body{
+    display: unset !important;
+}
+
+@media (max-width: 1020px) {
+    .grid{
+        padding: 0px 72px;
+    }
+    header.section{
+        padding: 56px 0px 56px;
+    }
+}
+
+/* IPAD */
+@media (max-width: 834px) {
+    // Typography
+    h1{
+        // font-size: 38px;
+    }
+
+    // Layout
+    .grid{
+        padding: 0px 56px;
+        column-gap: 16px;
+    }
+
+    body .card{
+        box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.75);
+    }
+}
+
+/* LG MOBILE */
+@media (max-width: 640px) {
+    body .card{
+        box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.75);
+    }
+
+    header.section{
+        padding: 28px 0px 44px;
+    }
+    h1{
+        font-size: 24px;
+    }
+    .grid{
+        // max-width: 520px;
+        // max-width: 428px;
+        padding: 0px 16px;
+        column-gap: 4px;
+    }
+}
