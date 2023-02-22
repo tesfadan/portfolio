@@ -1,0 +1,54 @@
+[
+    {
+        "name": "Stoic Widgets — iOS app",
+        "description": "Practice Stoicism with reading resources and daily curated quotes from iconic Stoic figures and integrate Stoicism into your daily routine.",
+        "image": "stoic",
+        "url": "stoic",
+        "tags": "React Native,SCSS,Swift",
+        "links": {
+            "link": "https://apps.apple.com/ca/app/stoic-widgets/id1541534447",
+            "label": "Download"
+        },
+        "label": "iOS Widget",
+        "study": {
+            "heading": "Stoic Widgets",
+            "subHeading": "React Native App Design & Development",
+            "coverImage": "/assets/projects/stoic/stoiccover.png",
+            "about": "Stoic Widgets is an iOS 14 widget app that pushes stoic wisdom to your lock screen every day. Here, you will find quotes from Roman Emperor Marcus Aurelius, Stoic Philosopher Seneca, Epictetus, and others. These quotes are selected ahead of time to strike a balance between fun, humor and wisdom.",
+            "process": "<p>I designed the UI of Stoic widgets using Figma. I then moved to create the host app using React Native, Styled Components, and React Navigation. Once the host app was ready, I started creating iOS widgets using Swift and Widget Kit. I integrated the app Firebase and Microsoft App Center for updating home feed content and the app itself.</p>",
+            "media": [
+                "<img loading='lazy' height='530' width='24' src='/assets/projects/stoic/homeScreen.png' alt='Stoic Widget on iOS homescreen' />",
+                "<img loading='lazy' height='530' width='24' src='/assets/projects/stoic/stoic-v3-home-light.png' alt='Stoic Widgets app home screen light mode'/>",
+                "<img loading='lazy' height='530' width='24' src='/assets/projects/stoic/stoic-v3-articles.png' alt='Stoic Widgets app articles screen'/>",
+                "<img loading='lazy' height='530' width='24' src='/assets/projects/stoic/quote.png' alt='Stoic Widgets app quote view'/>",
+                "<img loading='lazy' height='530' width='24' src='/assets/projects/stoic/stoic-v3-home.png' alt='Stoic Widgets app dark mode'/>"
+            ]
+        }
+    },
+    {
+        "name": "Linkup — Web app",
+        "description": "A platform that centralizes your social media and content links, offering easy customization for a personalized space that aligns with your brand.",
+        "image": "linkup",
+        "url": "linkup",
+        "tags": "React,SCSS,Firebase",
+        "links": {
+            "link": "https://linkup.page/demo",
+            "label": "Demo"
+        },
+        "label": "Link Sharing Simplified!",
+        "study": {
+            "heading": "Linkup",
+            "subHeading": "Link in Bio, Simplified!",
+            "coverImage": "/assets/projects/linkup/linkupcover.png",
+            "about": "Linkup is a web application that allows users to create an online hub for multiple links to their content and social profiles, so their audience can easily find all of their content. The app allows for customization, giving users the ability to personalize their space so it matches their brand.",
+            "process": "<p>I began the project by designing and prototyping a fully responsive user interface in Adobe XD. I used React and additional modules such as Styled Components and React Router to develop the UI & UX. Firebase was used for the backend processes, including authorization, database, and storage.</p>",
+            "media": [
+                "<img loading='lazy' height='530' width='24' src='/assets/projects/linkup/linkup.gif' alt='Linkup working as a progressive web app'/>",
+                "<img loading='lazy' height='530' width='24' src='/assets/projects/linkup/preview.png' alt='linkup.page preview'/>",
+                "<img loading='lazy' height='530' width='24' src='/assets/projects/linkup/menu.png' alt='linkup.page menu'/>",
+                "<img loading='lazy' height='530' width='24' src='/assets/projects/linkup/home.png' alt='linkup.page home'/>",
+                "<img loading='lazy' height='530' width='24' src='/assets/projects/linkup/golden.png' alt='linkup.page golden theme'/>"
+            ]
+        }
+    }
+]

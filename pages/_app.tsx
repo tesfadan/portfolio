@@ -1,16 +1,12 @@
 import { useEffect, useState } from 'react';
-import Footer from '../components/sections/Footer';
-import Header from '../components/sections/Header';
-import DefaultHeadTags from "../head/index";
-import GlobalStyle from "../styles/GlobalStyle";
-import ResetStyle from '../styles/Reset';
-import TypographyStyle from '../styles/Typography';
+import DefaultHeadTags from "../src/head/index";
 import { useScrollPosition } from '@n8tb1t/use-scroll-position';
-import { Menu } from '../components/sections/Menu';
-import Credit from '../components/sections/Credit';
 import { useRouter } from 'next/router';
-import * as gtag from "../head/gtag";
+import * as gtag from "../src/head/gtag";
 import { AppProps } from 'next/app'
+import "../src/styles/index.scss"
+import Header from '../src/sections/Header';
+import { Provider } from '../src/context';
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
@@ -42,22 +38,14 @@ function MyApp({ Component, pageProps }: AppProps) {
   const SwitchMenu = () => {
     setMenu(!menu)
   }
+  
 
   return <>
-    <ResetStyle />
-    <TypographyStyle />
-    <GlobalStyle />
-    <DefaultHeadTags />
-    <Header
-      transparent={atTop}
-      showMenu={hideOnScroll || menu}
-      menuOn={menu}
-      SwitchMenu={SwitchMenu}
-    />
-    <Menu showMenu={menu} SwitchMenu={() => SwitchMenu()} />
-    <Component {...pageProps} />
-    <Footer show={hideOnScroll} />
-    {/* <Credit /> */}
+    <Provider>
+      <DefaultHeadTags />
+      <Header showMenu={menu} switchMenu={SwitchMenu} />
+      <Component {...pageProps} />
+    </Provider>
   </>
 }
 

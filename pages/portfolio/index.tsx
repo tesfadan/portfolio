@@ -1,38 +1,118 @@
-import React, { useEffect } from 'react';
-import About from '../../components/sections/About';
+import React from 'react';
 import Head from "next/head";
+import styled from "styled-components"
+import Link from 'next/link';
 
-export default function PortfolioPage() {
-    const potfolio = {
-        v1: "https://framer.com/share/Tesfa-Demissie-Portfolio--j7ycSoVIBT77QKZZGeIb/JBFKuBX0h?highlights=0"
-      }
-  
-    useEffect(() => {
-      window.location.replace(potfolio.v1);
-      console.log("forwarding")
-    }, []);
+const PortfolioPage = () => {
+    return  <>
+            <Head>
+            </Head>
+            <Container className="section">
+            <div className="grid">
+                <div className="content">
+                    <div className="intro">
+                        <h1>Portfolio</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur. Malesuada ultricies ipsum id volutpat venenatis eu. Tortor massa leo tristique amet cras sem viverra facilisi. Amet ultricies urna ridiculus mauris maecenas neque nunc hendrerit. Et gravida eli.</p>
+                    </div>  
+                    <div className="portfolioCard">
+                        <div className="cover card">
+                        </div>
+                        <div className="details">
+                            <p>Designing for Education: Creating a Scalable Design System for a Cutting-Edge EdTech Platform</p>
+                            <Link href="/portfolio/stoic">Case Study</Link>
+                        </div>
+                    </div>
 
+                    <div className="portfolioCard">
+                        <div className="cover card">
+                        </div>
+                        <div className="details">
+                            <p>Designing for Education: Creating a Scalable Design System for a Cutting-Edge EdTech Platform</p>
+                            <Link href="/portfolio/stoic">Case Study</Link>
 
-    const meta = {
-        title: "Tesfa Demissie: Product Designer & Frontend Developer - UI Design & Development Portfolio",
-        content: "As a product designer and frontend developer with expertise in UI design and frontend development, I am passionate about crafting intuitive and engaging user experiences. My portfolio showcases my ability to combine design and technical skills to bring creative solutions to life. I am eager to bring my skills to an innovative company where I can continue to grow and make a meaningful impact.",
-        imagePath: "/assets/images/tesfadan.com.png" 
+                        </div>
+                    </div>
+
+                    <div className="portfolioCard">
+                        <div className="cover card">
+                        </div>
+                        <div className="details">
+                            <p>Designing for Education: Creating a Scalable Design System for a Cutting-Edge EdTech Platform</p>
+                            <Link href="/portfolio/stoic">Case Study</Link>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </Container>
+        </>
+}
+
+export default PortfolioPage;
+
+const Container = styled.div`
+    .content{
+      grid-column: 1/7;
+    }
+    .intro{
+        margin-bottom: 72px;
+    }
+    .portfolioCard{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+        align-items: center;
+        margin-bottom: 44px;
+    }
+    .cover{
+        width: 100%;
+        height: 272px;
+    }
+    .details{
+        width: 100%;
+        p{
+            margin-bottom: 20px;
+        }
     }
 
-    return (
-        <>
-             <Head>
-                <title>{meta.title}</title>
-                <meta name="description" content={meta.content} />
-                <meta name="twitter:image" content={meta.imagePath} />
-                <meta name="twitter:title" content={meta.title} />
-                <meta name="twitter:description" content={meta.content} />
-                
-                 <meta property="og:site_name" content={meta.title} />
-                <meta property="og:description" content={meta.content} />
-                <meta property="og:image" content={meta.imagePath} />
-                <meta property="og:image:secure_url" content={meta.imagePath} />
-      </Head>
-        </>
-    );
-}
+    /* IPAD */
+    @media (max-width: 834px) {
+        .intro{
+            margin-bottom: 44px;
+        }
+        
+        .portfolioCard{
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+            gap: 28px;
+            margin-bottom: 32px;
+        }
+        .cover{
+            grid-column: 1/3;
+            height:260px;
+        }
+        .details{
+            grid-column: 3/6;
+        }
+        .details p{
+            margin-bottom: 4px;
+        }
+    }
+
+    /* Mobile  */
+    @media (max-width: 640px) {
+        .intro{
+            margin-bottom: 32px;
+        }
+        .portfolioCard{
+            display: flex;
+            flex-flow: column;
+            gap: unset;
+            margin-bottom: 32px;
+        }
+        .cover{
+            margin-bottom: 16px;
+        }
+        .details p {
+            margin-bottom: 0px;
+        }
+    }
+`

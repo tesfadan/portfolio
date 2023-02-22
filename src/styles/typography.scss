@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'GeneralSans';
+    src: url('../../public/assets/fonts/GeneralSans-Variable.woff2') format('woff2'),
+         url('../../public/assets/fonts/GeneralSans-Variable.woff') format('woff'),
+         url('../../public/assets/fonts/GeneralSans-Variable.ttf') format('truetype');
+         font-weight: 200 300 400 500 700;
+         font-display: swap;
+         font-style: normal;
+}
+
+html, p, a, .title{
+    font-family: "GeneralSans";
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 180%;
+}
+
+h1{
+    font-size: 44px;
+    font-weight: 500;
+    margin-bottom: 32px;
+    line-height: 160%;
+}
+
+a{
+    font-weight: 500;
+    font-size: 20px;
+}
+.title, strong{
+    font-weight: 500;
+}
+
+body.dark{
+    p {
+        font-weight: 300;
+    }
+    h1, a, .titl, strong{
+        font-weight: 400;
+    }
+}
+
+
+
+/* IPAD */
+@media (max-width: 834px) {
+    h1{
+        font-size: 38px;
+        margin-bottom: 18px;
+    }
+    p{
+        font-size: 20px;
+    }
+    a{
+        font-size: 20px;
+    }
+}
+
+/* LG MOBILE */
+@media (max-width: 640px) {
+    h1{
+        font-size: 24px;
+        margin-bottom: 16px;
+    }
+    p{
+        font-size: 16px;
+    }
+    a{
+        font-size: 16px;
+    }
+}

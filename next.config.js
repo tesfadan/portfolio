@@ -1,8 +1,10 @@
-const withPWA = require('next-pwa')
+const withPWA = require('next-pwa')({
+  dest: 'public'
+})
 
 module.exports = withPWA({
-    // other next config
-    pwa: {
-        dest: 'public'
-    }
+  // next.js config
+  experimental : {
+    appDir: true
+  }
 })
