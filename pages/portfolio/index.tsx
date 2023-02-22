@@ -74,25 +74,6 @@ const Container = styled.div`
         }
     }
 
-<<<<<<< HEAD
-    return (
-        <>
-             <Head>
-                <title>{meta.title}</title>
-                <meta name="description" content={meta.content} />
-                <meta name="twitter:image" content={meta.imagePath} />
-                <meta name="twitter:title" content={meta.title} />
-                <meta name="twitter:description" content={meta.content} />
-                
-                 <meta property="og:site_name" content={meta.title} />
-                <meta property="og:description" content={meta.content} />
-                <meta property="og:image" content={meta.imagePath} />
-                <meta property="og:image:secure_url" content={meta.imagePath} />
-      </Head>
-        </>
-    );
-}
-=======
     /* IPAD */
     @media (max-width: 834px) {
         .intro{
@@ -135,4 +116,3 @@ const Container = styled.div`
         }
     }
 `
->>>>>>> Paper
