@@ -12,7 +12,7 @@ const Projects = () => {
             <div className="grid">
                 <div className="intro">
                         <h1>Side Projects</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur. Malesuada ultricies ipsum id volutpat venenatis eu. Tortor massa leo tristique amet cras sem viverra facilisi. Amet ultricies urna ridiculus mauris maecenas neque nunc hendrerit. Et gravida eli.</p>
+                        <p>I enjoy combining my passion for product design and coding skills to work on side projects from concept to design to development. This process allows me to explore my creativity and problem-solving skills.</p>
                 </div>
                 {projects.map(project => 
                     <div key={`project-${project.url}`} className="projectCard card">

@@ -1,7 +1,7 @@
 [
     {
         "name": "Stoic Widgets — iOS app",
-        "description": "Designed & developed an intuitive iOS app delivering daily doses of stoic wisdom, with a focus on user engagement.",
+        "description": "Practice Stoicism with reading resources and daily curated quotes from iconic Stoic figures and integrate Stoicism into your daily routine.",
         "image": "stoic",
         "url": "stoic",
         "tags": "React Native,SCSS,Swift",
@@ -27,7 +27,7 @@
     },
     {
         "name": "Linkup — Web app",
-        "description": "Linkup is a web application that allows users to create an online hub for multiple links to their content and social profiles",
+        "description": "A platform that centralizes your social media and content links, offering easy customization for a personalized space that aligns with your brand.",
         "image": "linkup",
         "url": "linkup",
         "tags": "React,SCSS,Firebase",

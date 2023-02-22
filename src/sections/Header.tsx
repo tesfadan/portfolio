@@ -31,9 +31,9 @@ const Header = ({showMenu, switchMenu} : {showMenu: boolean, switchMenu: ()=> vo
                     <nav>
                         <ul>
                             <li onClick={()=>switchMenu()}><Link href="/about">About</Link></li>
-                            <li onClick={()=>switchMenu()}><Link href="/portfolio">Portfolio</Link></li>
+                            {/* <li onClick={()=>switchMenu()}><Link href="/portfolio">Portfolio</Link></li> */}
                             <li onClick={()=>switchMenu()}><Link href="/projects">Side Projects</Link></li>
-                            <li onClick={()=>switchMenu()}><Link href="/">Resume</Link></li>
+                            <li onClick={()=>switchMenu()}><Link target="_blank" href="/documents/Tesfa_Demissie_Resume.pdf">Resume</Link></li>
                         </ul>
                     </nav>
                     <div className="buttons">
