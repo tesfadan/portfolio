@@ -6,9 +6,14 @@ export default function Hero() {
     return (
         <Container id="home">
             <div className="grid">
-                <h1>Hello! I'm Tesfa Demissie, a Product Designer passionate about intuitive and visually stunning digital products.</h1>
-                <p>My design philosophy is centred on understanding the user's needs and delivering solutions that can truly improve their lives. I strive to create products that are not only functional and user-friendly, but also beautiful.</p>
-                <a href=''>Learn more</a>
+                <div className="content">
+                    <p className="new-blurb heading2">
+                    My name is <a className="heading2" target="_blank" href="https://twitter.com/tesfadan">Tesfa Demissie</a> and I’m a Product Designer at <a className="heading2" target="_blank" href="https://combinevb.com">Combine Ventures</a> working on exciting startups. I spend <br /> most of my time thinking, designing & coding.
+                    </p>
+                    <p className="heading2">
+                        Check out my <a target="_blank" href="/portfolio" className="heading2">design portfolio</a> here.
+                    </p>
+                </div>
             </div>
         </Container>
     );
