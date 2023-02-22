@@ -26,7 +26,7 @@ const Header = ({showMenu, switchMenu} : {showMenu: boolean, switchMenu: ()=> vo
             <div className="grid">
                 <div className="content">
                     <Link href="/">
-                        <div className='home'><img src='./assets/images/tesfa-home-icon.png' alt='Logo'/></div>
+                        <div onClick={()=> showMenu ? switchMenu() : null} className='home'><img src='./assets/images/tesfa-home-icon.png' alt='Logo'/></div>
                     </Link>
                     <nav>
                         <ul>
