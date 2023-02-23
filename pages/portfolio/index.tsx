@@ -1,13 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Head from "next/head";
 import styled from "styled-components"
 import Link from 'next/link';
 
 const PortfolioPage = () => {
+    const potfolio = {
+        v1: "https://framer.com/share/Tesfa-Demissie-Portfolio--j7ycSoVIBT77QKZZGeIb/JBFKuBX0h?highlights=0"
+      }
+
+      useEffect(() => {
+      window.location.replace(potfolio.v1);
+    }, []);
+
+
     return  <>
             <Head>
             </Head>
-            <Container className="section">
+            {/* <Container className="section">
             <div className="grid">
                 <div className="content">
                     <div className="intro">
@@ -43,7 +52,7 @@ const PortfolioPage = () => {
                     </div>
                 </div>
             </div>
-            </Container>
+            </Container> */}
         </>
 }
 
