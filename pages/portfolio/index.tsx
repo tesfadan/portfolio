@@ -1,58 +1,45 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Head from "next/head";
 import styled from "styled-components"
 import Link from 'next/link';
+import PortfolioData from '../../src/content/Portfolio.json';
+
 
 const PortfolioPage = () => {
-    const potfolio = {
-        v1: "https://framer.com/share/Tesfa-Demissie-Portfolio--j7ycSoVIBT77QKZZGeIb/JBFKuBX0h?highlights=0"
-      }
+    // const potfolio = {
+    //     v1: "https://framer.com/share/Tesfa-Demissie-Portfolio--j7ycSoVIBT77QKZZGeIb/JBFKuBX0h?highlights=0"
+    //   }
 
-      useEffect(() => {
-      window.location.replace(potfolio.v1);
-    }, []);
+    //   useEffect(() => {
+    //   window.location.replace(potfolio.v1);
+    // }, []);
+    const [portfolioItems] = useState(PortfolioData);
 
 
     return  <>
             <Head>
             </Head>
-            {/* <Container className="section">
+            <Container className="section">
             <div className="grid">
                 <div className="content">
                     <div className="intro">
                         <h1>Portfolio</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur. Malesuada ultricies ipsum id volutpat venenatis eu. Tortor massa leo tristique amet cras sem viverra facilisi. Amet ultricies urna ridiculus mauris maecenas neque nunc hendrerit. Et gravida eli.</p>
-                    </div>  
-                    <div className="portfolioCard">
-                        <div className="cover card">
-                        </div>
-                        <div className="details">
-                            <p>Designing for Education: Creating a Scalable Design System for a Cutting-Edge EdTech Platform</p>
-                            <Link href="/portfolio/stoic">Case Study</Link>
-                        </div>
-                    </div>
+                        <p>As a Product Designer, I strive to create user-centered designs that not only solve real-world problems but also inspire and excite the end user. Here are some examples of my product design work with case studies.</p>
+                    </div> 
 
-                    <div className="portfolioCard">
-                        <div className="cover card">
+                    {portfolioItems.map(portfolio => <>
+                        <div className="portfolioCard">
+                            <div className="cover card">
+                            </div>
+                            <div className="details">
+                                <p>{portfolio.title}</p>
+                                <Link href={`/portfolio/${portfolio.slug}`}>Case Study</Link>
+                            </div>
                         </div>
-                        <div className="details">
-                            <p>Designing for Education: Creating a Scalable Design System for a Cutting-Edge EdTech Platform</p>
-                            <Link href="/portfolio/stoic">Case Study</Link>
-
-                        </div>
-                    </div>
-
-                    <div className="portfolioCard">
-                        <div className="cover card">
-                        </div>
-                        <div className="details">
-                            <p>Designing for Education: Creating a Scalable Design System for a Cutting-Edge EdTech Platform</p>
-                            <Link href="/portfolio/stoic">Case Study</Link>
-                        </div>
-                    </div>
+                    </>)}
                 </div>
             </div>
-            </Container> */}
+            </Container>
         </>
 }
 

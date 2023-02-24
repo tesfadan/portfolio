@@ -1,0 +1,87 @@
+[
+    {
+        "title": "Designing an Effective Design System for an EdTech Platform",
+        "blurb": "I collaborated with other design team members to create a scalable design system for an EdTech platform, balancing user needs and developing principles, guidelines, and UI components to ensure platform consistency.",
+        "slug": "brightspotDesignSystem",
+        "coverImage": {
+            "url": "image-url",
+            "alt": "Image description"
+        },
+        "content": [
+            {
+                "blockType": "markdown",
+                "content": "## Challenge\n\nTo create a design system that addressed user needs while meeting development requirements, and that was also flexible and capable of adapting to future changes and updates."
+            },
+            {
+                "blockType": "image",
+                "url": "image-url-1",
+                "alt": "Image description"
+            },
+            {
+                "blockType": "markdown",
+                "content": "## Process\n\nI used research and competitor analysis to drive my design decisions and developed a visual language, design principles, and reusable UI components. I collaborated closely with the development team to ensure the design system was properly implemented, and further refined it through user feedback, testing, and iteration. I ultimately implemented the design system across the platform, including the app, investor pitch deck, learning management system, website, and marketing material."
+            },
+            {
+                "blockType": "image",
+                "url": "image-url-2",
+                "alt": "Image description"
+            },
+            {
+                "blockType": "markdown",
+                "content": "## Result\n\nThe design system enabled a consistent user experience across all touchpoints, making development more streamlined and new features/updates easier to implement, thanks to the reusable UI components and design guidelines. Through the visual language and design guidelines, the Brightspot brand was established, as well as successful fundraising, thanks to the improved pitch deck and marketing material effectively communicating the platform's value proposition."
+            },
+            {
+                "blockType": "image",
+                "url": "image-url-3",
+                "alt": "Image description"
+            },
+            {
+                "blockType": "markdown",
+                "content": "## Conclusion\n\nIn conclusion, the design system that I helped create in collaboration with other designers on my team for Brightspot was an effective measure that improved the user experience, streamlined development, and successfully communicated the company's value proposition, resulting in a successful fundraising round. This project is an example of my ability to develop comprehensive and effective design systems that are beneficial to business scalability."
+            }
+        ]
+    },
+    {
+        "title": "Ed-Tech Platform Design: Crafting an Intuitive and Engaging App Experience",
+        "blurb": "I played a key role in designing an intuitive and visually striking user experience for an ed-tech platform as part of a collaborative effort. Working with my team, we crafted reusable UI patterns, developed seamless in-app tool flows, and designed elegant UI cards that optimized the user journey. By focusing on both functionality and aesthetics, we created an engaging user experience that enhanced learning and kept users engaged.",
+        "slug": "edTechAppDesign",
+        "coverImage": {
+            "url": "",
+            "alt": ""
+        },
+        "content": [
+            {
+            "blockType": "markdown",
+            "content": "## Challenge\nOur challenge was to build an intuitive and engaging user experience for an ed-tech platform that provides powerful personal and development content, unlocking users' full potential. Specifically, I worked on designing the flow of in-app tools (Brightspot Actions) that were easy for users to navigate and lightweight for the development team to build, as well as developing interactive Figma components to simplify the content creation team's process of designing and constructing Brightspot plans. I also crafted visually stunning and accessible card designs for Plans, Communities, and Billboards with a modern, elegant aesthetic."
+            },
+            {
+                "blockType": "image",
+                "url": "image-url-1",
+                "alt": "Image description"
+            },
+            {
+            "blockType": "markdown",
+            "content": "## Process\nTo begin, we transformed wireframes into fully developed designs while maintaining the option to rethink if required. We conducted thorough research to create unique and innovative ideas for plan screens, and I personally led the design of in-app tools and interactive Figma components. We improved UI by incorporating design lead and product team feedback, and conducted design audits to enhance user experience on multiple devices. Throughout the process, I collaborated closely with my team and sought out feedback to ensure that my work was in line with our shared vision."
+            },
+            {
+                "blockType": "image",
+                "url": "image-url-1",
+                "alt": "Image description"
+            },
+            {
+            "blockType": "markdown",
+            "content": "## Result\nOur design was well-received and helped in driving the success of the platform. Brightspot successfully launched into a closed beta and received positive feedback from users. The platform raised $3 million in at $15 million valuation and closed deals with corporate partners to expand reach and bring in exclusive Brightspot content."
+            },
+            {
+                "blockType": "image",
+                "url": "image-url-1",
+                "alt": "Image description"
+            },
+            {
+            "blockType": "markdown",
+            "content": "## Conclusion\nThis project demonstrates my ability to design an intuitive user experience for a software product through design thinking, inter-departmental collaboration, and speedy turnarounds. By taking ownership of the in-app tools, interactive Figma components, and card designs, I was able to contribute to the success of the platform while also honing my own skills as a designer."
+            }
+        ]
+    }
+
+]

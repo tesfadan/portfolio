@@ -1,52 +1,90 @@
-import { GetStaticProps, GetStaticPropsContext, InferGetStaticPropsType } from 'next';
+import { GetStaticProps, GetStaticPropsContext, InferGetStaticPropsType, NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 import { ParsedUrlQuery } from "querystring";
+import { useState } from 'react';
+import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
 import styled from 'styled-components';
-import Projects from '../../src/content/Projects.json';
+import CaseStudiesData from '../../src/content/Portfolio.json';
 
-interface Props {
-    host: string;
-    key: string
+interface MarkDownBlock {
+    blockType: "markdown";
+    content: string;
 }
 
-export const getStaticProps: GetStaticProps = async (context: GetStaticPropsContext<ParsedUrlQuery>) => {
-    const projectId = context?.params?.id;
-    const projects = Projects.filter(project => project.url.toString() === projectId)
+type ImageBlock = {
+    blockType: "image";
+    url: string,
+    alt: string
+};
+
+interface CaseStudy {
+    title: string;
+    blurb: string;
+    slug: string,
+    coverImage: {
+        url: string,
+        alt: string
+    },
+    content: MarkDownBlock [] | ImageBlock[];
+  }
+  
+interface Props {
+    host: string;
+    key: string;
+    caseStudy: CaseStudy;
+}
+
+export const getStaticProps: GetStaticProps= async (context: GetStaticPropsContext<ParsedUrlQuery>) => {
+    const id = context?.params?.id;
+    const caseStudy = CaseStudiesData.filter(caseStudy => caseStudy.slug.toString() === id)[0]
     return {
         props: {
-            portfolio: projects[0]
+            caseStudy
         }
     }
 }
 
 export const getStaticPaths = async () => {
-    const paths = Projects.map(project => ({
-        params: { id: project.url }
+    const paths = CaseStudiesData.map(caseStudy => ({
+        params: { id: caseStudy.slug }
     }))
 
     return { paths, fallback: false }
 }
 
+const CaseStudyPage: NextPage<Props> = ({ caseStudy }) => {
+    const [portfolioItems] = useState(CaseStudiesData)
 
-const ShowCasePage = ({ portfolio }: InferGetStaticPropsType<typeof getStaticProps>) => {
+
     return <>
         <Head>
-            <title> Tesfa Demissie | {portfolio.name}</title>
+            <title> Tesfa Demissie | {caseStudy.title}</title>
         </Head>
         <Container className="section">
         <div className="grid">
             <div className="intro">
-                <h1>Case Study — Brightspot Design System</h1>
-                <p>Lorem ipsum dolor sit amet consectetur. Malesuada ultricies ipsum id volutpat venenatis eu. Tortor massa leo tristique amet cras sem viverra facilisi. Amet ultricies urna ridiculus mauris maecenas neque nunc hendrerit. Et gravida eli.</p>
+                <h1>{caseStudy.title}</h1>
+                <p>{caseStudy.blurb}</p>
             </div>
             <div className="content">
                 <div className="block">
                     <div className="cover card image">
-                        <img src=''/>
+                        <img src={caseStudy.coverImage.url} alt={caseStudy.coverImage.alt}/>
                     </div>
                 </div>
+                {caseStudy.content.map(block => block.blockType === "markdown" ? 
                 <div className="block">
+                    <ReactMarkdown>{block.content}</ReactMarkdown> 
+                </div>
+                : 
+                <div className="block">
+                    <div className="card image">
+                        <img src={block.url} alt={block.alt}/>
+                    </div>
+                </div>)}
+
+                {/* <div className="block">
                     <p className='title'>Challenge</p>
                     <p>Lorem ipsum dolor sit amet consectetur. Malesuada ultricies ipsum id volutpat venenatis eu. Tortor massa leo tristique amet cras sem viverra facilisi. Amet ultricies urna ridiculus mauris maecenas neque nunc hendrerit. Et gravida eli.</p>
                 </div>
@@ -79,12 +117,9 @@ const ShowCasePage = ({ portfolio }: InferGetStaticPropsType<typeof getStaticPro
                     </div>
                 </div>
                 <div className="block">
-                    {/* <p className='title'>Result</p> */}
                     <p>Lorem ipsum dolor sit amet consectetur. Malesuada ultricies ipsum id volutpat venenatis eu. Tortor massa leo tristique amet cras sem viverra facilisi. Amet ultricies urna ridiculus mauris maecenas neque nunc hendrerit. Et gravida eli.</p>
-                </div>
-                {/* <div className="block">
-                    <div className='divider' />
                 </div> */}
+
             </div>
 
             {/*  */}
@@ -92,30 +127,23 @@ const ShowCasePage = ({ portfolio }: InferGetStaticPropsType<typeof getStaticPro
                 <div className='divider' />
                 <div className='title'>More Case Studies</div>
 
-                <div className="portfolioCard">
-                        <div className="cover card">
+                {portfolioItems.map(portfolio => portfolio.slug !== caseStudy.slug ? <>
+                        <div className="portfolioCard">
+                            <div className="cover card">
+                            </div>
+                            <div className="details">
+                                <p>{portfolio.title}</p>
+                                <Link href={`/portfolio/${portfolio.slug}`}>Case Study</Link>
+                            </div>
                         </div>
-                        <div className="details">
-                            <p>Designing for Education: Creating a Scalable Design System for a Cutting-Edge EdTech Platform</p>
-                            <Link href="/">Case Study</Link>
-                        </div>
-                    </div>
-
-                    <div className="portfolioCard">
-                        <div className="cover card">
-                        </div>
-                        <div className="details">
-                            <p>Designing for Education: Creating a Scalable Design System for a Cutting-Edge EdTech Platform</p>
-                            <Link href="/">Case Study</Link>
-                        </div>
-                    </div>
+                </> : null)}
             </div>
         </div>
         </Container>
     </>
 }
 
-export default ShowCasePage;
+export default CaseStudyPage;
 
 export const Container = styled.div`
     .intro{
@@ -150,7 +178,7 @@ export const Container = styled.div`
     
 
     .moreStudies{
-        .title{
+        .title, h2{
             margin-bottom: 40px;
         }
         /* remove */
@@ -192,7 +220,7 @@ export const Container = styled.div`
                 margin-bottom: 28px;
             }
         }
-        .title{
+        .title, h2{
             font-size: 20px;
         }
         .divider{
