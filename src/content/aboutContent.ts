@@ -1,26 +1,22 @@
 export default [
         {
             section: "Summary",
-            content: "I'm Tesfa Demissie, a product designer with proficiency in front-end development. My strength lies in my ability to create aesthetically pleasing and user-friendly designs. I am passionate about developing intuitive user experiences that are truly meaningful."
+            content: "I'm Tesfa Demissie, a product designer with a solid foundation in design and a strong understanding of development. My design philosophy centres on the end user, and I strive to build user interfaces that solve their problems first and foremost with intuitive, aesthetically pleasing and user-friendly designs."
         },
         {
             section: "Skillset",
-            content: "I am a multi-faceted designer with an expertise in UI/UX Design, Prototyping, Front-end Development (React, React Native), Web Design & Development (Webflow, HTML, CSS, JS), Design Tools (Figma, Adobe XD, Illustrator, Photoshop, After Effects)."
+            content: "I'm a multi-faceted designer with skills in UI design, prototyping, front-end development & visual design. And well-versed in design tools such as Figma, Adobe XD, Photoshop, Illustrator & After Effects. And for front-end development, I have experience working with JavaScript, HTML, CSS, React and React Native."
         },
         {
             section: "Experience",
-            content: "My +5 years of professional work experience in digital media has equipped me with the necessary skills to be creative, adaptable and innovative. My knowledge of a range of mediums from video and motion graphics to product and graphic design gives me a distinctive insight into user experience and storytelling within design. For the past 18 months, I have been a part of an ambitious venture builder team, where I get to quench my creative thirst and be integral to the success of the startups we build. Working agilely and with a sense of ownership, I design, develop and create everything from design systems to wireframes, hi-fi designs, product demo videos and websites. It has been an incredible journey - one that has been full of challenges but always meaningful and rewarding."
+            content: "My +5 years of work experience with digital media across mediums and industries shapes how I perceive design problems and provides me with a unique insight to find fitting solutions. Currently, I work at Combine Venture Builders as a product designer, where I spend my days providing design services at every stage of a startup lifecycle. My contribution at Combine ranges from sketching wireframes and user flows, designing dev-ready user interfaces, and building functional & interactive prototypes. See my portfolio for more."
         },
-        // {
-        //     section: "Education",
-        //     content: "I have a diploma in Digital Media Design with a major in Web Design and Development from Red River College, Winnipeg, MB."
-        // },
         {
             section: "Interests",
-            content: "In my free time, I enjoy listening to music, audiobooks and podcasts, exploring different types of coffee, and having meaningful conversations."
+            content: "In my free time, I enjoy listening to music, reading books on philosophy and having meaningful conversations with my loved ones."
         },
         {
             section: "Contact",
-            content: "If you’d like to get in contact, you can reach me at [tesfa@tesfadan.com](mailto:tesfa@tesfadan.com). I look forward to hearing from you!"
+            content: "If you'd like to get in touch, reach out at [tesfa@tesfadan.com](mailto:tesfa@tesfadan.com). I look forward to hearing from you."
         }
 ]
