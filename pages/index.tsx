@@ -6,8 +6,8 @@ import { useState } from "react";
 
 export default function Home() {  
   const [content] = useState({
-    heading: "I'm Tesfa Demissie, a passionate Product Designer creating intuitive and visually stunning digital solutions that improve users' lives.",
-    blurb: "I believe in designing products that are both functional and visually appealing, always keeping the user's needs at the forefront of my mind."
+    heading: "Hello! I'm Tesfa Demissie, a Product Designer passionate about intuitive and visually stunning digital products.",
+    blurb: "My design philosophy centers on understanding users' needs and delivering solutions that improve their lives. I strive to create beautiful products, not just functional and user-friendly."
   })
 
   
@@ -19,7 +19,7 @@ export default function Home() {
             <div className="content">
               <h1>{content.heading}</h1>
               <p>{content.blurb}</p>
-              <Link href="https://framer.com/share/Tesfa-Demissie-Portfolio--j7ycSoVIBT77QKZZGeIb/JBFKuBX0h?highlights=0">View Portfolio</Link>
+              <Link href="/portfolio">View Portfolio</Link>
             </div>
         </div>
         <MiniGame />

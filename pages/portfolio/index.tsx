@@ -25,7 +25,7 @@ const PortfolioPage = () => {
                 <div className="content">
                     <div className="intro">
                         <h1>Portfolio</h1>
-                        <p>As a Product Designer, I strive to create user-centered designs that not only solve real-world problems but also inspire and excite the end user. Here are some examples of my product design work with case studies.</p>
+                        <p>As a product designer, I strive to develop design solutions that solve real-world problems and inspire and excite the end user. Here are some examples of my product design work with case studies.</p>
                     </div> 
 
                     {portfolioItems.map(portfolio => <>
