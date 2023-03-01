@@ -2,7 +2,7 @@
     {
         "title": "Building a Design System for an edTech Platform",
         "blurb": "Working with a small team of designers at Combine Venture Builders, I built a scalable design system for Brightspot, a brand-new edTech app.",
-        "slug": "brightspotDesignSystem",
+        "slug": "brightspot_design_system",
         "coverImage": {
             "url": "/assets/images/portfolio/ds-cover.png",
             "alt": "Image description"
@@ -44,7 +44,7 @@
     {
         "title": "Brightspot: Designing a Complex Personal and Professional Development App",
         "blurb": "I had a substantial role in designing Brightspot, a brand-new ed-tech platform working with a small team of designers at Combine Venture Builders. Brightspot is a development platform that enables organizations to deliver in-house content to their team and individuals to grow personally and professionally with original learning content from influential content creators and thought leaders.",
-        "slug": "edTechAppDesign",
+        "slug": "brightspot_app_design",
         "coverImage": {
             "url": "/assets/images/portfolio/bs-cover.png",
             "alt": "Image description"
