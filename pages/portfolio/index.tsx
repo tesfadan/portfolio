@@ -19,6 +19,8 @@ const PortfolioPage = () => {
 
     return  <>
             <Head>
+            <title>Portfolio | Tesfa Demissie, Product Designer</title>
+            <meta name="description" content="As a product designer, I strive to develop design solutions that solve real-world problems and inspire and excite the end user. Here are some examples of my product design work with case studies." />
             </Head>
             <Container className="section">
             <div className="grid">

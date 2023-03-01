@@ -7,6 +7,8 @@ import projects from '../../src/content/Projects.json';
 const Projects = () => {
     return  <>
             <Head>
+            <title>Side Projects | Tesfa Demissie, Product Designer</title>
+            <meta name="description" content="I enjoy combining my passion for product design and coding skills to work on side projects from concept to design to development. This process allows me to explore my creativity and problem-solving skills." />
             </Head>
             <Container className="section">
             <div className="grid">

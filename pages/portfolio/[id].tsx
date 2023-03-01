@@ -41,7 +41,14 @@ const CaseStudyPage: NextPage<Props> = ({ caseStudy }) => {
 
     return <>
         <Head>
-            <title> Tesfa Demissie | {caseStudy.title}</title>
+            <title> {caseStudy.title} | Tesfa Demissie, Product Designer </title>
+            <meta name="description" content={caseStudy.blurb} />
+            <meta property="og:image" content={caseStudy.coverImage.url} />
+            <meta property="og:image:secure_url" content={caseStudy.coverImage.url} />
+            <meta property="og:image:type" content="image/png" />
+            <meta property="og:image:width" content="2016" />
+            <meta property="og:image:height" content="1032" />
+            <meta property="og:image:alt" content={caseStudy.title} />
         </Head>
         <Container className="section">
         <div className="grid">

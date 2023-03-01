@@ -3,8 +3,8 @@ import { GA_TRACKING_ID } from "./gtag";
 
 export default function DefaultHeadTags() {
     const meta = {
-        title: "Tesfa Demissie | Product Designer based in Winnipeg MB",
-        description: "A passionate Product Designer creating intuitive and visually stunning digital solutions that improve users' lives. I believe in designing products that are both functional and visually appealing, always keeping the user's needs at the forefront of my mind."
+        title: "Tesfa Demissie | Product Designer",
+        description: "I'm Tesfa, a product designer with a solid foundation in design and a strong understanding of development. My design philosophy centres on the end user, and I strive to build user interfaces that solve their problems first and foremost with intuitive, aesthetically pleasing and user-friendly designs."
     }
 
 
@@ -56,7 +56,7 @@ export default function DefaultHeadTags() {
             <meta property="og:image:secure_url" content="/assets/images/tesfadan.com.png" />
             <meta property="og:image:type" content="image/png" />
             <meta property="og:image:width" content="1512" />
-            <meta property="og:image:height" content="977" />
+            <meta property="og:image:height" content="856" />
             <meta property="og:image:alt" content={meta.title} />
             <link rel="preconnect" href="https://fonts.gstatic.com" />
             {/* <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet" /> */}

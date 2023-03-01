@@ -16,6 +16,8 @@ import ReactMarkdown from "react-markdown"
 
     return <>
         <Head>
+            <title>About | Tesfa Demissie, Product Designer</title>
+            <meta name="description" content={content[0].section} />
         </Head>
         <Container className="section" onBlur={()=>setHighlight({section:"", content:""})}>
             <div className="grid">
@@ -32,7 +34,6 @@ import ReactMarkdown from "react-markdown"
                         <>
                         <span className="block-section" id={data.section} />
                         <ReactMarkdown className={highlight.section === data.section ? "highlight" : "" } key={`p-${data.section}`}>{data.content}</ReactMarkdown>
-                        {/* <p  key={`p-${data.section}`} id={data.section}>{data.content}</p> */}
                         </>
                         )}
 
