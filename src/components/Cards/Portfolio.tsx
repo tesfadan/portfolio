@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
 import styled from 'styled-components'
-import { CaseStudy, ImageBlock, MarkDownBlock } from '../../@types/CaseStudy'
 
 type PortfolioCard = {
     title: string,
@@ -36,7 +35,6 @@ const Container = styled.div`
 
     .cover{
         width: 100%;
-        /* height: 272px; */
         height: auto;
         overflow: hidden;
 
@@ -59,7 +57,6 @@ const Container = styled.div`
 
         .cover{
             grid-column: 1/3;
-            /* height:260px; */
         }
         .details{
             grid-column: 3/6;

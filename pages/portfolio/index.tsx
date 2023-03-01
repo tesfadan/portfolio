@@ -28,19 +28,9 @@ const PortfolioPage = () => {
                         <p>As a product designer, I strive to develop design solutions that solve real-world problems and inspire and excite the end user. Here are some examples of my product design work with case studies.</p>
                     </div> 
 
-                    {portfolioItems.map(portfolio => <>
+                    {portfolioItems.map(portfolio => 
                         <PortfolioCard portfolio={portfolio} />
-
-                        {/* <div className="portfolioCard">
-                            <div className="cover card">
-                                <img src={portfolio.coverImage.url} alt={portfolio.coverImage.alt}/>
-                            </div>
-                            <div className="details">
-                                <p>{portfolio.title}</p>
-                                <Link href={`/portfolio/${portfolio.slug}`}>Case Study</Link>
-                            </div>
-                        </div> */}
-                    </>)}
+                    )}
                 </div>
             </div>
             </Container>

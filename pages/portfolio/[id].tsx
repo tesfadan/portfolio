@@ -65,60 +65,14 @@ const CaseStudyPage: NextPage<Props> = ({ caseStudy }) => {
                         <img src={block.url} alt={block.alt}/>
                     </div>
                 </div>)}
-
-                {/* <div className="block">
-                    <p className='title'>Challenge</p>
-                    <p>Lorem ipsum dolor sit amet consectetur. Malesuada ultricies ipsum id volutpat venenatis eu. Tortor massa leo tristique amet cras sem viverra facilisi. Amet ultricies urna ridiculus mauris maecenas neque nunc hendrerit. Et gravida eli.</p>
-                </div>
-                <div className="block">
-                    <div className="card image">
-                        <img src=''/>
-                    </div>
-                </div>
-
-                <div className="block">
-                    <p className='title'>Process</p>
-                    <p>Lorem ipsum dolor sit amet consectetur. Malesuada ultricies ipsum id volutpat venenatis eu. Tortor massa leo tristique amet cras sem viverra facilisi. Amet ultricies urna ridiculus mauris maecenas neque nunc hendrerit. Et gravida eli.</p>
-                </div>
-
-                <div className="block twocol">
-                    <div className="card image">
-                        <img src=''/>
-                    </div>
-                    <div className="card image">
-                        <img src=''/>
-                    </div>
-                </div>
-                <div className="block">
-                    <p className='title'>Result</p>
-                    <p>Lorem ipsum dolor sit amet consectetur. Malesuada ultricies ipsum id volutpat venenatis eu. Tortor massa leo tristique amet cras sem viverra facilisi. Amet ultricies urna ridiculus mauris maecenas neque nunc hendrerit. Et gravida eli.</p>
-                </div>
-                <div className="block">
-                    <div className="card image">
-                        <img src=''/>
-                    </div>
-                </div>
-                <div className="block">
-                    <p>Lorem ipsum dolor sit amet consectetur. Malesuada ultricies ipsum id volutpat venenatis eu. Tortor massa leo tristique amet cras sem viverra facilisi. Amet ultricies urna ridiculus mauris maecenas neque nunc hendrerit. Et gravida eli.</p>
-                </div> */}
-
             </div>
 
-            {/*  */}
             <div className="moreStudies">
                 <div className='divider' />
                 <div className='title'>More Case Studies</div>
 
                 {portfolioItems.map(portfolio => portfolio.slug !== caseStudy.slug ? <>
                         <PortfolioCard portfolio={portfolio} />
-                        {/* <div className="portfolioCard">
-                            <div className="cover card">
-                            </div>
-                            <div className="details">
-                                <p>{portfolio.title}</p>
-                                <Link href={`/portfolio/${portfolio.slug}`}>Case Study</Link>
-                            </div>
-                        </div> */}
                 </> : null)}
             </div>
         </div>
@@ -140,7 +94,6 @@ export const Container = styled.div`
         overflow: hidden;
     }
     .image{
-        /* height: 516px; */
         object-fit: fill;
         width: 100%;
     }
@@ -169,24 +122,6 @@ export const Container = styled.div`
         .title, h2{
             margin-bottom: 40px;
         }
-        /* remove */
-        .portfolioCard{
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 32px;
-            align-items: center;
-            margin-bottom: 44px;
-        }
-        .cover{
-            width: 100%;
-            height: 272px;
-        }
-        .details{
-            width: 100%;
-            p{
-                margin-bottom: 20px;
-            }
-        }
     }
     /* IPAD */
     @media (max-width: 834px) {
@@ -214,26 +149,6 @@ export const Container = styled.div`
         .divider{
             margin: 24px 0px;
         }
-
-        /* PORTFOLIO CARDS */
-        .moreStudies{
-            .portfolioCard{
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
-                gap: 28px;
-                margin-bottom: 32px;
-            }
-            .cover{
-                grid-column: 1/3;
-                /* height:260px; */
-            }
-            .details{
-                grid-column: 3/6;
-            }
-            .details p{
-                margin-bottom: 4px;
-            }
-        }
     }
 
     /* MOBILE */
@@ -252,21 +167,6 @@ export const Container = styled.div`
         }
         .image, .cover{
             /* height: 280px; */
-        }
-
-        .moreStudies{
-            .portfolioCard{
-                display: flex;
-                flex-flow: column;
-                gap: unset;
-                margin-bottom: 32px;
-            }
-            .cover{
-                margin-bottom: 16px;
-            }
-            .details p {
-                margin-bottom: 0px;
-            }
         }
     }
 `
