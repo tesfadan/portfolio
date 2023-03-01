@@ -3,6 +3,7 @@ import Head from "next/head";
 import styled from "styled-components"
 import Link from 'next/link';
 import PortfolioData from '../../src/content/Portfolio.json';
+import PortfolioCard from '../../src/components/Cards/Portfolio';
 
 
 const PortfolioPage = () => {
@@ -28,14 +29,17 @@ const PortfolioPage = () => {
                     </div> 
 
                     {portfolioItems.map(portfolio => <>
-                        <div className="portfolioCard">
+                        <PortfolioCard portfolio={portfolio} />
+
+                        {/* <div className="portfolioCard">
                             <div className="cover card">
+                                <img src={portfolio.coverImage.url} alt={portfolio.coverImage.alt}/>
                             </div>
                             <div className="details">
                                 <p>{portfolio.title}</p>
                                 <Link href={`/portfolio/${portfolio.slug}`}>Case Study</Link>
                             </div>
-                        </div>
+                        </div> */}
                     </>)}
                 </div>
             </div>
@@ -52,6 +56,7 @@ const Container = styled.div`
     .intro{
         margin-bottom: 72px;
     }
+    
     .portfolioCard{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -61,7 +66,13 @@ const Container = styled.div`
     }
     .cover{
         width: 100%;
-        height: 272px;
+        /* height: 272px; */
+        height: auto;
+        overflow: hidden;
+
+        img{
+            object-fit: contain;
+        }
     }
     .details{
         width: 100%;
@@ -83,7 +94,7 @@ const Container = styled.div`
         }
         .cover{
             grid-column: 1/3;
-            height:260px;
+            /* height:260px; */
         }
         .details{
             grid-column: 3/6;

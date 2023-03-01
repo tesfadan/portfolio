@@ -5,29 +5,11 @@ import { ParsedUrlQuery } from "querystring";
 import { useState } from 'react';
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
 import styled from 'styled-components';
+import { CaseStudy } from '../../src/@types/CaseStudy';
+import PortfolioCard from '../../src/components/Cards/Portfolio';
 import CaseStudiesData from '../../src/content/Portfolio.json';
 
-interface MarkDownBlock {
-    blockType: "markdown";
-    content: string;
-}
 
-type ImageBlock = {
-    blockType: "image";
-    url: string,
-    alt: string
-};
-
-interface CaseStudy {
-    title: string;
-    blurb: string;
-    slug: string,
-    coverImage: {
-        url: string,
-        alt: string
-    },
-    content: MarkDownBlock [] | ImageBlock[];
-  }
   
 interface Props {
     host: string;
@@ -128,14 +110,15 @@ const CaseStudyPage: NextPage<Props> = ({ caseStudy }) => {
                 <div className='title'>More Case Studies</div>
 
                 {portfolioItems.map(portfolio => portfolio.slug !== caseStudy.slug ? <>
-                        <div className="portfolioCard">
+                        <PortfolioCard portfolio={portfolio} />
+                        {/* <div className="portfolioCard">
                             <div className="cover card">
                             </div>
                             <div className="details">
                                 <p>{portfolio.title}</p>
                                 <Link href={`/portfolio/${portfolio.slug}`}>Case Study</Link>
                             </div>
-                        </div>
+                        </div> */}
                 </> : null)}
             </div>
         </div>
@@ -152,8 +135,13 @@ export const Container = styled.div`
     .intro, .content, .moreStudies{
         grid-column: 1/7;
     }
+    .cover{
+        display: flex;
+        overflow: hidden;
+    }
     .image{
-        height: 516px;
+        /* height: 516px; */
+        object-fit: fill;
         width: 100%;
     }
     .showcaseIMG, p{
@@ -213,7 +201,7 @@ export const Container = styled.div`
             }
         }
         .image, .cover{
-            height: 400px;
+            /* height: 400px; */
         }
         .moreStudies{
             .title{
@@ -237,7 +225,7 @@ export const Container = styled.div`
             }
             .cover{
                 grid-column: 1/3;
-                height:260px;
+                /* height:260px; */
             }
             .details{
                 grid-column: 3/6;
@@ -263,7 +251,7 @@ export const Container = styled.div`
             }
         }
         .image, .cover{
-            height: 280px;
+            /* height: 280px; */
         }
 
         .moreStudies{

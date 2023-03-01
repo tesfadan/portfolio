@@ -10,34 +10,34 @@
         "content": [
             {
                 "blockType": "markdown",
-                "content": "## Challenge\n\nThe challenge for this project was to build a design system that was easy to maintain and implement, flexible for future updates and one that speeds up the design and development of Brightspot."
+                "content": "The challenge for this project was to build a design system that was easy to maintain and implement, flexible for future updates and one that speeds up the design and development of Brightspot."
+            },
+            {
+                "blockType": "markdown",
+                "content": "We started by using research and experimentation to drive the design decisions and develop the visual language for Brightspot. Once aligned on the visual language, we outlined a design principle and guideline to inform our design choices. One of the principles included that our user interface was conversational, playful & gamified. From there, all we had to do, was build patterns, flows, and components, that aligned with our principle & guideline."
             },
             {
                 "blockType": "image",
-                "url": "image-url-1",
+                "url": "/assets/images/portfolio/ds-process.png",
                 "alt": "Image description"
             },
             {
                 "blockType": "markdown",
-                "content": "## Process\n\nWe started by using research and experimentation to drive the design decisions and develop the visual language for Brightspot. Once aligned on the visual language, we outlined a design principle and guideline to inform our design choices. One of the principles included that our user interface was conversational, playful & gamified. From there, all we had to do, was build patterns, flows, and components, that aligned with our principle & guideline."
+                "content": "The result was a highly flexible design system that helped speed up the design and development process at Brightspot. It significantly increased the productivity of our design team & gave us more time to work on solutions, as opposed to building user interfaces from the ground up. It also enabled the engineering team to shorten their turnaround time on building features, as they had a library of UI components and patterns they could plug and play."
             },
             {
                 "blockType": "image",
-                "url": "image-url-2",
+                "url": "/assets/images/portfolio/ds-result.png",
+                "alt": "Image description"
+            },
+            {
+                "blockType": "image",
+                "url": "/assets/images/portfolio/ds-result-2.png",
                 "alt": "Image description"
             },
             {
                 "blockType": "markdown",
-                "content": "## Result\n\nThe result was a highly flexible design system that helped speed up the design and development process at Brightspot. It significantly increased the productivity of our design team & gave us more time to work on solutions, as opposed to building user interfaces from the ground up. It also enabled the engineering team to shorten their turnaround time on building features, as they had a library of UI components and patterns they could plug and play."
-            },
-            {
-                "blockType": "image",
-                "url": "image-url-3",
-                "alt": "Image description"
-            },
-            {
-                "blockType": "markdown",
-                "content": "## Conclusion\n\nThe development of the design guideline, reusable components library & standard pattern and flow enabled us to move faster and engage with partners with consistent visual language, allowing us to communicate Brightspot's value proposition."
+                "content": "The development of the design guideline, reusable components library & standard pattern and flow enabled us to move faster and engage with partners with consistent visual language, allowing us to communicate Brightspot's value proposition."
             }
         ]
     },
@@ -46,26 +46,21 @@
         "blurb": "I had a substantial role in designing Brightspot, a brand-new ed-tech platform working with a small team of designers at Combine Venture Builders. Brightspot is a development platform that enables organizations to deliver in-house content to their team and individuals to grow personally and professionally with original learning content from influential content creators and thought leaders.",
         "slug": "edTechAppDesign",
         "coverImage": {
-            "url": "",
-            "alt": ""
+            "url": "/assets/images/portfolio/bs-cover.png",
+            "alt": "Image description"
         },
         "content": [
             {
             "blockType": "markdown",
-            "content": "## Challenge\nBrightspot offers bite-sized learning without sacrificing quality, and our designs are required to enable that. And that's only possible if the interface & flow are intuitive and easy to navigate. We wanted to keep the users engaged & focused while on Brightspot with an interface design that compliments the content and does not overshadow it."
-            },
-            {
-                "blockType": "image",
-                "url": "image-url-1",
-                "alt": "Image description"
+            "content": "Brightspot offers bite-sized learning without sacrificing quality, and our designs are required to enable that. And that's only possible if the interface & flow are intuitive and easy to navigate. We wanted to keep the users engaged & focused while on Brightspot with an interface design that compliments the content and does not overshadow it."
             },
             {
             "blockType": "markdown",
-            "content": "## Process\nBrightspot was in the early exploration stages when I joined the Combine team that was building the app, which allowed me to contribute at all stages of the app. We started with wireframing layouts and exploring flows before jumping into high-fidelity designs. The early design exploration followed the research the team conducted. Following that, we created a few low-fidelity screens to help us identify the visual aesthetic aligned with our design guidelines and principles (see design system case study)."
+            "content": "I joined the Brightspot team in the early exploration phase, which allowed me to contribute at all stages of the app. We started with wireframing layouts and exploring flows before jumping into high-fidelity designs. The early design exploration followed the research the team conducted. Following that, we created a few low-fidelity screens to help us identify the visual aesthetic aligned with our design guidelines and principles (see design system case study)."
             },
             {
                 "blockType": "image",
-                "url": "image-url-1",
+                "url": "/assets/images/portfolio/bs-process.png",
                 "alt": "Image description"
             },
             {
@@ -73,22 +68,17 @@
                 "content": "At Brightspot, we worked in two-week sprints. We took on a couple of design projects per sprint, which allowed us to focus on specific screens, user interfaces, and flow designs. During those sprints, we transformed wireframes into high-fidelity development-ready designs. The design process, from the wireframe to the finished design, involved multiple review cycles with the Head of Design, Product Owner & Engineering team members. Those reviews provided valuable feedback that improved the user and developer experience."
             },
             {
+            "blockType": "markdown",
+            "content": "Our designs gave the engineering team clear directions when building the app. Launching to private beta in August 2022 and receiving positive feedback from users and stakeholders, Brightspot closed a fundraising round with a $15M valuation. I believe the cohesive brand and elegant designs of the app were one of the contributors to the success of Brightspot."
+            },
+            {
                 "blockType": "image",
-                "url": "image-url-1",
+                "url": "/assets/images/portfolio/bs-result.png",
                 "alt": "Image description"
             },
             {
             "blockType": "markdown",
-            "content": "## Result\nOur designs gave the engineering team clear directions when building the app. Launching to private beta in August 2022 and receiving positive feedback from users and stakeholders, Brightspot closed a fundraising round with a $15M valuation. I believe the cohesive brand and elegant designs of the app were one of the contributors to the success of Brightspot."
-            },
-            {
-                "blockType": "image",
-                "url": "image-url-1",
-                "alt": "Image description"
-            },
-            {
-            "blockType": "markdown",
-            "content": "## Conclusion\nCreating a brand new app from vision to launch with a small team dedicated to their craft and the success of the platform was a great experience. I'm so happy I got to work with such a team that allowed me to be creative, challenge the status quo and deliver impactful work."
+            "content": "Creating a brand-new app from vision to launch with a small team dedicated to their craft was a wonderful experience. I'm so glad I got to work with such a team that allowed me to be creative, challenge the status quo and deliver impactful work."
             }
         ]
     }
