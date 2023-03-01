@@ -49,6 +49,10 @@ const CaseStudyPage: NextPage<Props> = ({ caseStudy }) => {
             <meta property="og:image:width" content="2016" />
             <meta property="og:image:height" content="1032" />
             <meta property="og:image:alt" content={caseStudy.title} />
+
+            <meta name="twitter:title" content={caseStudy.title} />
+            <meta name="twitter:description" content={caseStudy.blurb} />
+            <meta property="og:image:secure_url" content={caseStudy.coverImage.url} />
         </Head>
         <Container className="section">
         <div className="grid">
