@@ -5,7 +5,7 @@
         "slug": "brightspot_design_system",
         "coverImage": {
             "url": "/assets/images/portfolio/ds-cover.png",
-            "alt": "Image description"
+            "alt": "Brightspot Design System"
         },
         "content": [
             {
@@ -19,7 +19,7 @@
             {
                 "blockType": "image",
                 "url": "/assets/images/portfolio/ds-process.png",
-                "alt": "Image description"
+                "alt": "Brightspot Design System Process"
             },
             {
                 "blockType": "markdown",
@@ -28,12 +28,12 @@
             {
                 "blockType": "image",
                 "url": "/assets/images/portfolio/ds-result.png",
-                "alt": "Image description"
+                "alt": "Brightspot Design System Result"
             },
             {
                 "blockType": "image",
                 "url": "/assets/images/portfolio/ds-result-2.png",
-                "alt": "Image description"
+                "alt": "Brightspot Design System Result Application"
             },
             {
                 "blockType": "markdown",
@@ -47,7 +47,7 @@
         "slug": "brightspot_app_design",
         "coverImage": {
             "url": "/assets/images/portfolio/bs-cover.png",
-            "alt": "Image description"
+            "alt": "Brightspot app design"
         },
         "content": [
             {
@@ -61,7 +61,7 @@
             {
                 "blockType": "image",
                 "url": "/assets/images/portfolio/bs-process.png",
-                "alt": "Image description"
+                "alt": "Brightspot app design process"
             },
             {
                 "blockType": "markdown",
@@ -74,7 +74,7 @@
             {
                 "blockType": "image",
                 "url": "/assets/images/portfolio/bs-result.png",
-                "alt": "Image description"
+                "alt": "Brightspot app design result"
             },
             {
             "blockType": "markdown",

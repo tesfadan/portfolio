@@ -34,14 +34,14 @@ export default () => {
         <div className="grid">
         <div className="gameScreen card">
             <div className="content">
-                <img className="cover" src={content.cover} />
+                <img className="cover" src={content.cover} alt={content.content} />
                 <div className="text">
                     {/* {content.content} */}
                     {/* <ReactMarkdown>{miniGameContent[3].content}</ReactMarkdown> */}
                     <ReactMarkdown>{content.content}</ReactMarkdown>
                 </div>
                 </div>
-                <button className='shuffleBtn' onClick={handleShuffle}>
+                <button className='shuffleBtn' onClick={handleShuffle} aria-label="Shuffle Mini Game Content">
                     <Shuffle /> 
                 </button>
             </div>

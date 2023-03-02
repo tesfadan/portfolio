@@ -2,7 +2,7 @@ import React from 'react';
 import styled, { css } from 'styled-components'
 
 export default function MenuIcon({ showMenu, switchMenu }: { showMenu: boolean, switchMenu: () => void, }) {
-    return <CustomMenuWrapper className="customMenuIcon" state={showMenu}
+    return <CustomMenuWrapper className="customMenuIcon" state={showMenu} role="button" aria-label="Mobile Menu Button"
         onClick={() => switchMenu()}
 
     // style = { show? { top: 26, opacity: 1 } : { top: -20, opacity: 0 } }

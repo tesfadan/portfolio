@@ -20,7 +20,7 @@ const Projects = () => {
                     <div key={`project-${project.url}`} className="projectCard card">
                         <div className="top">
                             <div className="icon">
-                                <img src={`/assets/projects/${project.image}/icon.png`} alt="project"/>
+                                <img src={`/assets/projects/${project.image}/icon.png`} alt={project.name}/>
                             </div>
                             <a target="_blank" href={project.links.link}>{project.links.label}</a>
                         </div>
