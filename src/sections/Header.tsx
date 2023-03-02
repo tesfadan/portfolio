@@ -37,7 +37,7 @@ const Header = ({showMenu, switchMenu} : {showMenu: boolean, switchMenu: ()=> vo
                         </ul>
                     </nav>
                     <div className="buttons">
-                        <button className="div" role="button" onClick={changeTheme}>
+                        <button className="div" role="button" onClick={changeTheme} aria-label="Change Theme">
                             <Contrast color={colors.text} />
                         </button>
                         <MenuIcon showMenu={showMenu} switchMenu={switchMenu}/>

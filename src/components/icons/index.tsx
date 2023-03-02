@@ -2,7 +2,7 @@ import React from 'react';
 import styled, { css } from 'styled-components'
 
 export default function MenuIcon({ showMenu, switchMenu }: { showMenu: boolean, switchMenu: () => void, }) {
-    return <CustomMenuWrapper className="customMenuIcon" state={showMenu}
+    return <CustomMenuWrapper className="customMenuIcon" state={showMenu} role="button" aria-label="Mobile Menu Button"
         onClick={() => switchMenu()}
 
     // style = { show? { top: 26, opacity: 1 } : { top: -20, opacity: 0 } }
@@ -21,14 +21,15 @@ export const Shuffle = () => <svg width="40" height="40" viewBox="0 0 40 40" fil
 const CustomMenuWrapper = styled.div<{ state: boolean }>`
         display: flex;
         width: 32px;
-        flex-flow: column;
-        justify-content: space-between;
+        flex-flow: column !important;
+        justify-content: space-around !important;
         height: 14px;
         margin: auto;
-        overflow:hidden;
+        overflow: hidden !important;
         z-index: 109;
         cursor: pointer;
         /* transition: 0.2s ease-in; */
+        -webkit-box-pack: justify !important;
 
         span{
             height: 3px;
@@ -49,9 +50,6 @@ const CustomMenuWrapper = styled.div<{ state: boolean }>`
                 transform: translateX(16px)
             }
         } */
-        .customMenuIcon{
-            opacity: 0.9;
-        }
 `
 
 export const Contrast = ({color}:{color: string})=> <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">

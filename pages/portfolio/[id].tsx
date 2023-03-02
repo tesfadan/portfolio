@@ -8,6 +8,7 @@ import styled from 'styled-components';
 import { CaseStudy } from '../../src/@types/CaseStudy';
 import PortfolioCard from '../../src/components/Cards/Portfolio';
 import CaseStudiesData from '../../src/content/Portfolio.json';
+import BlockRender from '../../src/helpers/BlockRender';
 
 
   
@@ -42,16 +43,22 @@ const CaseStudyPage: NextPage<Props> = ({ caseStudy }) => {
     return <>
         <Head>
             <title> {caseStudy.title} | Tesfa Demissie, Product Designer </title>
-            <meta name="description" content={caseStudy.blurb} />
+            <meta property="og:type" content="website" />
+            <meta property="og:title" content={caseStudy.title} />
+            <meta property="og:description" content={caseStudy.blurb} />
+            <meta property="og:image" content={caseStudy.coverImage.url}  />
+            <meta property="og:url" content="PERMALINK" />
+            <meta property="og:site_name" content={caseStudy.title} />
             <meta property="og:image" content={caseStudy.coverImage.url} />
             <meta property="og:image:secure_url" content={caseStudy.coverImage.url} />
             <meta property="og:image:type" content="image/png" />
             <meta property="og:image:width" content="2016" />
             <meta property="og:image:height" content="1032" />
-            <meta property="og:image:alt" content={caseStudy.title} />
+            <meta property="og:image:alt" content={caseStudy.coverImage.alt}  />
 
             <meta name="twitter:title" content={caseStudy.title} />
             <meta name="twitter:description" content={caseStudy.blurb} />
+            <meta name="twitter:image" content={caseStudy.coverImage.url} />
             <meta property="og:image:secure_url" content={caseStudy.coverImage.url} />
         </Head>
         <Container className="section">
@@ -66,16 +73,7 @@ const CaseStudyPage: NextPage<Props> = ({ caseStudy }) => {
                         <img src={caseStudy.coverImage.url} alt={caseStudy.coverImage.alt}/>
                     </div>
                 </div>
-                {caseStudy.content.map(block => block.blockType === "markdown" ? 
-                <div className="block">
-                    <ReactMarkdown>{block.content}</ReactMarkdown> 
-                </div>
-                : 
-                <div className="block">
-                    <div className="card image">
-                        <img src={block.url} alt={block.alt}/>
-                    </div>
-                </div>)}
+                {caseStudy.content.map(block => <BlockRender block={block} />)} 
             </div>
 
             <div className="moreStudies">
