@@ -81,6 +81,44 @@
             "content": "Creating a brand-new app from vision to launch with a small team dedicated to their craft was a wonderful experience. I'm so glad I got to work with such a team that allowed me to be creative, challenge the status quo and deliver impactful work."
             }
         ]
+    },
+    {
+        "title": "Creating Animated Product Demo Video for an ESG Accounting Platform",
+        "blurb": "As a product designer at Combine Venture Builders with an experience in motion graphics and animation, I was tasked to create a demo video showcasing features and use cases of Agora, an ESG accounting SaaS product we built with Agora Labs.",
+        "slug": "agora_product_demo",
+        "coverImage": {
+            "url": "/assets/images/portfolio/al-product-demo-cover2.gif",
+            "alt": "Agora Product Demo Video"
+        },
+        "content": [
+            {
+            "blockType": "markdown",
+            "content": "The primary goal was to create a product demo video that effectively communicated the features and benefits of Agoras' potential customers while being visually appealing and remaining informative and easy to follow."
+            },
+            {
+                "blockType": "image",
+                "url": "/assets/images/portfolio/al-product-demo-dashboard.gif",
+                "alt": "Agora Product Demo Dashboard Reveal"
+            },
+            {
+            "blockType": "markdown",
+            "content": "To start the project, we analyzed the current dashboard to identify areas that required improvement to enhance the user experience. The redesign was done in Figma and moved designs to Framer and After Effects for animation purposes."
+            },
+            {
+                "blockType": "image",
+                "url": "/assets/images/portfolio/al-product_demo_exploration.gif",
+                "alt": "Agora Product Demo Visual Exploration"
+            },
+            {
+                "blockType":"markdown",
+                "content":"The result is a high-quality product demo video that effectively communicates the benefits of Agora Labs' ESG accounting SaaS to potential customers. The video is engaging, visually appealing, and easy to follow, making it an effective tool for driving customer acquisition and increasing brand awareness."
+            },
+            {
+                "blockType": "video",
+                "url": "/assets/videos/agora_product_demo.mp4",
+                "poster": "/assets/videos/agora_product_demo_poster.jpg"
+            }
+        ]
     }
 
 ]

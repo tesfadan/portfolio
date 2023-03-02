@@ -8,6 +8,7 @@ import styled from 'styled-components';
 import { CaseStudy } from '../../src/@types/CaseStudy';
 import PortfolioCard from '../../src/components/Cards/Portfolio';
 import CaseStudiesData from '../../src/content/Portfolio.json';
+import BlockRender from '../../src/helpers/BlockRender';
 
 
   
@@ -66,16 +67,7 @@ const CaseStudyPage: NextPage<Props> = ({ caseStudy }) => {
                         <img src={caseStudy.coverImage.url} alt={caseStudy.coverImage.alt}/>
                     </div>
                 </div>
-                {caseStudy.content.map(block => block.blockType === "markdown" ? 
-                <div className="block">
-                    <ReactMarkdown>{block.content}</ReactMarkdown> 
-                </div>
-                : 
-                <div className="block">
-                    <div className="card image">
-                        <img src={block.url} alt={block.alt}/>
-                    </div>
-                </div>)}
+                {caseStudy.content.map(block => <BlockRender block={block} />)} 
             </div>
 
             <div className="moreStudies">

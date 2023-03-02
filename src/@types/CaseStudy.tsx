@@ -10,6 +10,12 @@ export type ImageBlock = {
     alt: string
 };
 
+export type VideoBlock = {
+    blockType: "video";
+    url: string,
+    poster: string
+};
+
 export interface CaseStudy {
     title: string,
     blurb: string,
@@ -18,5 +24,7 @@ export interface CaseStudy {
         url: string,
         alt: string
     },
-    content: MarkDownBlock [] | ImageBlock[]
+    content: MarkDownBlock [] | ImageBlock[] | VideoBlock[]
   }
+
+  export type Block = ImageBlock | MarkDownBlock | VideoBlock
