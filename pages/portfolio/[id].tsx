@@ -115,6 +115,11 @@ export const Container = styled.div`
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-gap: 32px;
+
+            .block{
+                height: 100%;
+                margin-bottom: unset !;
+            }
         }
     }
     .divider{
@@ -169,6 +174,7 @@ export const Container = styled.div`
             margin-bottom: 32px;
             &.twocol{
                 gap: 12px;
+                grid-template-columns: 1fr;
                 .image{
                     height: 240px;
                 }
