@@ -50,28 +50,5 @@
                 "<img loading='lazy' height='530' width='24' src='/assets/projects/linkup/golden.png' alt='linkup.page golden theme'/>"
             ]
         }
-    },
-    {
-        "title":"Creating a Highly Interactive Prototype to Showcase Brightspot's Features and Functionalities to Stakeholders and Investors",
-        "blurb":"I designed and built a highly interactive prototype demonstrating Brightspot's features and functionalities to stakeholders and potential investors. I used a combination of design and technical skills to develop a visually stunning prototype that accurately reflected Brightspot's vision and met the needs of its users.",
-        "slug":"brightspot_prototype",
-        "coverImage":{
-            "url":"",
-            "alt":""
-        },
-        "content":[
-            {
-                "blockType":"markdown",
-                "content":"The initial explorations focused on identifying fitting design solutions for transitioning between different screens and interactions within the app. I used Figma, Framer, and custom React code to develop a prototype that showcased the functionalities and how they worked in practice. The prototype was then presented to stakeholders and users to gather feedback."
-            },
-            {
-                "blockType":"markdown",
-                "content":"Incorporating feedback was an iterative process, where I worked closely with stakeholders and users to ensure that their feedback was incorporated into the design and build."
-            },
-            {
-                "blockType":"markdown",
-                "content":"The final result was a visually stunning prototype that showcased Brightspot's innovative features and potential. It was used in partnership talks and fundraising pitches, allowing potential partners and investors to see firsthand what the app could do and how it could benefit their organizations."
-            }
-        ]
     }
 ]
