@@ -118,7 +118,7 @@ export const Container = styled.div`
 
             .block{
                 height: 100%;
-                margin-bottom: unset !;
+                margin-bottom: unset !important;
             }
         }
     }
