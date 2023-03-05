@@ -119,6 +119,74 @@
                 "poster": "/assets/videos/agora_product_demo_poster.jpg"
             }
         ]
+    },
+    {
+        "title":"Building a Prototype to Showcase Brightspot to Partners and Investors",
+        "blurb":"I designed and built a highly interactive prototype demonstrating Brightspot's features and functionalities to stakeholders and potential investors. I used a combination of design and technical skills to develop a visually stunning prototype that accurately reflected Brightspot's vision and met the needs of its users.",
+        "slug":"brightspot_prototype",
+        "coverImage":{
+            "url": "/assets/images/portfolio/bs-prototype-cover.png",
+            "alt": "Brightspot app design"
+        },
+        "content":[
+            {
+                "blockType":"markdown",
+                "content":"The initial explorations focused on identifying fitting design solutions for transitioning between different screens and interactions within the app. I used Figma, Framer, and custom React code to develop a prototype that showcased the functionalities and how they worked in practice. The prototype was then presented to stakeholders and users to gather feedback."
+            },
+            {
+                "blockType":"markdown",
+                "content":"Incorporating feedback was an iterative process, where I worked closely with stakeholders and users to ensure that their feedback was incorporated into the design and build."
+            },
+            {
+                "blockType":"layout",
+                "content": [
+                    {
+                        "blockType": "video",
+                        "url": "/assets/videos/prototype_video_loading.mp4",
+                        "poster": "/assets/videos/",
+                        "controls":{
+                            "autoplay": true,
+                            "loop": true
+                        }
+                    },
+                    {
+                        "blockType": "video",
+                        "url": "/assets/videos/prototype_video_communities.mp4",
+                        "poster": "/assets/videos/",
+                        "controls":{
+                            "autoplay": true,
+                            "loop": true
+                        }
+                    }
+                ]
+            },
+            {
+                "blockType":"markdown",
+                "content":"The final result was a visually stunning prototype that showcased Brightspot's innovative features and potential. It was used in partnership talks and fundraising pitches, allowing potential partners and investors to see firsthand what the app could do and how it could benefit their organizations."
+            },
+            {
+                "blockType":"layout",
+                "content": [
+                    {
+                        "blockType": "video",
+                        "url": "/assets/videos/prototype_video_plan_flow.mp4",
+                        "poster": "/assets/videos/",
+                        "controls":{
+                            "autoplay": true,
+                            "loop": true
+                        }
+                    },
+                    {
+                        "blockType": "video",
+                        "url": "/assets/videos/bs_prototype_badges.mp4",
+                        "poster": "/assets/videos/",
+                        "controls":{
+                            "autoplay": true,
+                            "loop": true
+                        }
+                    }
+                ]
+            }
+        ]
     }
-
 ]
