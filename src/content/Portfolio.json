@@ -122,7 +122,7 @@
     },
     {
         "title":"Building a Prototype to Showcase Brightspot to Partners and Investors",
-        "blurb":"I designed and built a highly interactive prototype demonstrating Brightspot's features and functionalities to stakeholders and potential investors. I used a combination of design and technical skills to develop a visually stunning prototype that accurately reflected Brightspot's vision and met the needs of its users.",
+        "blurb":"I designed and built a highly interactive prototype using Framer that communicated Brightspot's vision to partners, investors and other stakeholders.",
         "slug":"brightspot_prototype",
         "coverImage":{
             "url": "/assets/images/portfolio/bs-prototype-cover.png",
