@@ -6,8 +6,8 @@ import { useState } from "react";
 
 export default function Home() {  
   const [content] = useState({
-    heading: "I'm Tesfa Demissie, a Product Designer who loves crafting sleek, user-friendly digital products.",
-    blurb: "Putting user needs first, I focus on crafting products that aren't just functional – they're visually appealing too. It's all about striking the perfect balance."
+    // heading: "I'm Tesfa Demissie, a Product Designer who loves crafting sleek, user-friendly digital products.",
+    blurb: "I'm Tesfa Demissie, a Product Designer who loves crafting sleek, user-friendly digital products. Putting user needs first, I focus on crafting products that aren't just functional – they're visually appealing too."
   })
 
   
