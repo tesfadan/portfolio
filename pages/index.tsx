@@ -7,7 +7,7 @@ import { useState } from "react";
 export default function Home() {  
   const [content] = useState({
     heading: "I'm Tesfa Demissie, a Product Designer who loves crafting sleek, user-friendly digital products.",
-    blurb: "Putting user needs first, I focus on crafting products that aren't just functional – they're visually appealing too. It's all about striking the perfect balance."
+    blurb: "I'm Tesfa Demissie, a Product Designer who loves crafting sleek, user-friendly digital products. Putting user needs first, I focus on crafting products that aren't just functional – they're visually appealing too."
   })
 
   
@@ -17,7 +17,7 @@ export default function Home() {
       <Container className="section">
         <div className="grid">
             <div className="content">
-              <h1>{content.heading}</h1>
+              {/* <h1>{content.heading}</h1> */}
               <p>{content.blurb}</p>
               <Link href="/portfolio">View Portfolio</Link>
             </div>
