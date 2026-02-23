@@ -66,9 +66,9 @@ export default function Home() {
           </div>
         )}
 
-        <h1 className="name">Tesfa Demissie</h1>
         <p className="summary">
-          I build digital experiences with strong taste and production-level execution.
+          I&apos;m Tesfa Demissie, a design engineer. I build digital products with strong taste and production-level
+          execution.
         </p>
 
         <p className="contact">

@@ -35,7 +35,7 @@ export default function DefaultHeadTags() {
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="description" content={meta.description} />
-      <link rel="icon" href="/assets/logo.svg" />
+      <link rel="icon" href="/assets/icons/icon.svg" type="image/svg+xml" />
       <link rel="manifest" href="/manifest.json" />
       <link rel="apple-touch-icon" href="/assets/icons/apple-icon.png" />
       <link rel="canonical" href={siteUrl} />
