@@ -1,26 +1,11 @@
-import Link from "next/link"
-import styled from 'styled-components'
+import Link from "next/link";
 
-
-export default function Error() {
-    return <Container className="section">
-        <div className="grid">
-            <div className="error">
-                <h1>404</h1>
-                <p>Oops... It looks like this page does not exist or has moved.</p>
-                <Link href="/">Home</Link>
-            </div>
-        </div>
-    </Container>
+export default function Custom404() {
+  return (
+    <main className="home">
+      <p className="summary">
+        Page not found. <Link href="/" className="not-found-link">Return home</Link>.
+      </p>
+    </main>
+  );
 }
-
-
-const Container = styled.div`
-    .error{
-        grid-column: 1/end;
-        display: flex;
-        flex-flow: column;
-        align-items: center;
-        text-align: center;
-    }
-`

@@ -1,32 +1,44 @@
-import Document, { DocumentContext } from 'next/document';
-import { ServerStyleSheet } from 'styled-components';
+import { Head, Html, Main, NextScript } from "next/document";
 
- class MyDocument extends Document {
-    static async getInitialProps(ctx: DocumentContext) {
-        const sheet = new ServerStyleSheet();
-        const originalRenderPage = ctx.renderPage;
+const THEME_STORAGE_KEY = "tesfa-theme";
+const LIGHT_THEME_COLOR = "#f7f6f3";
+const DARK_THEME_COLOR = "#101011";
 
-        try {
-            ctx.renderPage = () =>
-                originalRenderPage({
-                    enhanceApp: (App) => (props) =>
-                        sheet.collectStyles(<App {...props} />),
-                });
+const themeInitScript = `
+(function () {
+  var storageKey = '${THEME_STORAGE_KEY}';
+  var lightThemeColor = '${LIGHT_THEME_COLOR}';
+  var darkThemeColor = '${DARK_THEME_COLOR}';
+  var root = document.documentElement;
+  var selectedTheme = 'dark';
 
-            const initialProps = await Document.getInitialProps(ctx);
-            return {
-                ...initialProps,
-                styles: (
-                    <>
-                        {initialProps.styles}
-                        {sheet.getStyleElement()}
-                    </>
-                ),
-            };
-        } finally {
-            sheet.seal();
-        }
+  try {
+    var savedTheme = window.localStorage.getItem(storageKey);
+    if (savedTheme === 'light' || savedTheme === 'dark') {
+      selectedTheme = savedTheme;
     }
-}
+  } catch {}
 
-export default MyDocument;
+  root.setAttribute('data-theme', selectedTheme);
+
+  var metaThemeColor = document.querySelector('meta[name="theme-color"]');
+  if (metaThemeColor) {
+    metaThemeColor.setAttribute('content', selectedTheme === 'dark' ? darkThemeColor : lightThemeColor);
+  }
+})();
+`;
+
+export default function Document() {
+  return (
+    <Html lang="en">
+      <Head>
+        <meta name="theme-color" content={DARK_THEME_COLOR} />
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </Head>
+      <body>
+        <Main />
+        <NextScript />
+      </body>
+    </Html>
+  );
+}
