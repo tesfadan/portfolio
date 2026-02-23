@@ -2,6 +2,9 @@
   "name": "portfolio",
   "version": "3.0.0",
   "private": true,
+  "engines": {
+    "node": ">=22 <25"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -12,10 +15,7 @@
   "dependencies": {
     "next": "16.1.6",
     "react": "19.2.4",
-    "react-dom": "19.2.4",
-    "react-markdown": "10.1.0",
-    "sass": "1.97.3",
-    "styled-components": "6.3.11"
+    "react-dom": "19.2.4"
   },
   "devDependencies": {
     "@types/node": "25.3.0",

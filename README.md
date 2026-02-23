@@ -1,10 +1,11 @@
 # tesfadan.com
 
-Tesfa Demissie's portfolio site built with [Next.js](https://nextjs.org) and hosted on [Vercel](https://www.vercel.com)
+Tesfa Demissie's minimalist portfolio v2 built with [Next.js](https://nextjs.org) and hosted on [Vercel](https://www.vercel.com).
 
 ## Run locally
 
 ```bash
+nvm use
 yarn install
 yarn dev
 ```
@@ -23,6 +24,4 @@ Create a `.env.local` file (or copy from `.env.example`):
 
 - `NEXT_PUBLIC_SITE_URL` (example: `https://tesfadan.com`)
 - `NEXT_PUBLIC_GA_ID` (your GA4 measurement ID)
-
-
-![Screenshot of tesfadan.com](./public/assets/images/tesfadan.com.png)
+- `NEXT_PUBLIC_LINKEDIN_URL` (example: `https://www.linkedin.com/in/tesfadan/`)

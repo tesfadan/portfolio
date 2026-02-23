@@ -5,9 +5,8 @@ export default function DefaultHeadTags() {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://tesfadan.com";
   const socialImageUrl = `${siteUrl}/assets/images/tesfadan.com.png`;
   const meta = {
-    title: "Tesfa Demissie | Product Designer",
-    description:
-      "I'm Tesfa, a product designer with a solid foundation in design and a strong understanding of development. My design philosophy centres on the end user, and I strive to build user interfaces that solve their problems first and foremost with intuitive, aesthetically pleasing and user-friendly designs."
+    title: "Tesfa Demissie | Design Engineer",
+    description: "I build digital experiences with strong taste and production-level execution."
   };
 
   return (
@@ -34,13 +33,12 @@ export default function DefaultHeadTags() {
       )}
 
       <meta charSet="utf-8" />
-      <title>{meta.title}</title>
-      <meta name="description" content={meta.description} />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta name="theme-color" content="#F6F3F0" />
+      <meta name="description" content={meta.description} />
       <link rel="icon" href="/assets/logo.svg" />
       <link rel="manifest" href="/manifest.json" />
       <link rel="apple-touch-icon" href="/assets/icons/apple-icon.png" />
+      <link rel="canonical" href={siteUrl} />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={meta.title} />
@@ -54,13 +52,12 @@ export default function DefaultHeadTags() {
       <meta property="og:description" content={meta.description} />
       <meta property="og:image" content={socialImageUrl} />
       <meta property="og:url" content={siteUrl} />
-      <meta property="og:site_name" content={meta.title} />
+      <meta property="og:site_name" content="Tesfa Demissie" />
       <meta property="og:image:secure_url" content={socialImageUrl} />
       <meta property="og:image:type" content="image/png" />
       <meta property="og:image:width" content="1512" />
       <meta property="og:image:height" content="856" />
       <meta property="og:image:alt" content={meta.title} />
-      <link rel="preconnect" href="https://fonts.gstatic.com" />
     </Head>
   );
 }

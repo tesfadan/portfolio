@@ -1,66 +1,86 @@
-import Link from "next/link";
-import styled from "styled-components";
-import MiniGame from "../src/components/MiniGame";
+import Head from "next/head";
 
-export default function Home() {  
-  const content = {
-    blurb: "I'm Tesfa Demissie, a Product Designer who loves crafting sleek, user-friendly digital products. Putting user needs first, I focus on crafting products that aren't just functional – they're visually appealing too."
-  };
+const THEME_STORAGE_KEY = "tesfa-theme";
+const LIGHT_THEME_COLOR = "#f7f6f3";
+const DARK_THEME_COLOR = "#101011";
+const EMAIL_ADDRESS = "tesfa@tesfadan.com";
+const LINKEDIN_URL = process.env.NEXT_PUBLIC_LINKEDIN_URL ?? "https://www.linkedin.com/in/tesfadan/";
+const SHOW_THEME_CONTROL = false;
 
-  
-  return <>
-      <Container className="section">
-        <div className="grid">
-            <div className="content">
-              <p>{content.blurb}</p>
-              <Link href="/portfolio">View Portfolio</Link>
-            </div>
-        </div>
-        <MiniGame />
-      </Container>
-  </>
+type Theme = "light" | "dark";
+
+function getCurrentTheme(): Theme {
+  if (typeof document === "undefined") {
+    return "dark";
+  }
+
+  return document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
 }
 
-const Container = styled.div`
-  flex-flow: column;
-
-  .content{
-    grid-column: 1/7;
-  }
-  p{
-    font-size: 28px;
-    margin-bottom: 32px;
-  }
-  a{
-    font-size: 24px;
+function applyTheme(theme: Theme) {
+  if (typeof document === "undefined") {
+    return;
   }
 
-  /* IPAD */
-  @media (max-width: 834px) {
-    h1{
-      /* margin-bottom: 20px; */
-    }
-    p{
-      font-size: 24px;
-    }
-    a{
-      font-size: 20px;
-    }
+  document.documentElement.setAttribute("data-theme", theme);
+
+  try {
+    window.localStorage.setItem(THEME_STORAGE_KEY, theme);
+  } catch {
+    // Ignore write failures in private browsing modes.
   }
 
-  /* LG MOBILE */
-  @media (max-width: 640px) {
-    min-height: 55vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    p{
-      font-size: 18px;
-      /* margin-bottom: 20px; */
-    }
-    a{
-      font-size: 16px;
-    }
+  const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+  if (metaThemeColor) {
+    metaThemeColor.setAttribute("content", theme === "dark" ? DARK_THEME_COLOR : LIGHT_THEME_COLOR);
   }
-`
+}
+
+export default function Home() {
+  const toggleTheme = () => {
+    const nextTheme = getCurrentTheme() === "dark" ? "light" : "dark";
+    applyTheme(nextTheme);
+  };
+
+  return (
+    <>
+      <Head>
+        <title>Tesfa Demissie | Design Engineer</title>
+        <meta
+          name="description"
+          content="I build digital experiences with strong taste and production-level execution."
+        />
+      </Head>
+
+      <main className="home">
+        {SHOW_THEME_CONTROL && (
+          <div className="home__toolbar">
+            <button
+              type="button"
+              className="theme-toggle"
+              onClick={toggleTheme}
+              aria-label="Toggle light and dark theme"
+            >
+              Theme
+            </button>
+          </div>
+        )}
+
+        <h1 className="name">Tesfa Demissie</h1>
+        <p className="summary">
+          I build digital experiences with strong taste and production-level execution.
+        </p>
+
+        <p className="contact">
+          <a href={LINKEDIN_URL} target="_blank" rel="noreferrer noopener">
+            LinkedIn
+          </a>
+          <span className="contact-separator" aria-hidden="true">
+            ·
+          </span>
+          <a href={`mailto:${EMAIL_ADDRESS}`}>{EMAIL_ADDRESS}</a>
+        </p>
+      </main>
+    </>
+  );
+}
