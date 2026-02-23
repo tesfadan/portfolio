@@ -1,26 +1,29 @@
-import { GetStaticProps, GetStaticPropsContext, InferGetStaticPropsType, NextPage } from 'next';
+import { GetStaticProps, GetStaticPaths, InferGetStaticPropsType } from 'next';
 import Head from 'next/head';
-import Link from 'next/link';
-import { ParsedUrlQuery } from "querystring";
-import { useState } from 'react';
-import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
 import styled from 'styled-components';
 import { CaseStudy } from '../../src/@types/CaseStudy';
 import PortfolioCard from '../../src/components/Cards/Portfolio';
 import CaseStudiesData from '../../src/content/Portfolio.json';
 import BlockRender from '../../src/helpers/BlockRender';
 
+type CaseStudyRouteParams = {
+  id: string;
+};
 
-  
-interface Props {
-    host: string;
-    key: string;
-    caseStudy: CaseStudy;
+interface CaseStudyPageProps {
+  caseStudy: CaseStudy;
 }
 
-export const getStaticProps: GetStaticProps= async (context: GetStaticPropsContext<ParsedUrlQuery>) => {
-    const id = context?.params?.id;
-    const caseStudy = CaseStudiesData.filter(caseStudy => caseStudy.slug.toString() === id)[0]
+export const getStaticProps: GetStaticProps<CaseStudyPageProps, CaseStudyRouteParams> = async ({ params }) => {
+    const id = params?.id;
+    const caseStudy = CaseStudiesData.find((data) => data.slug === id) as CaseStudy | undefined;
+
+    if (!caseStudy) {
+        return {
+            notFound: true
+        };
+    }
+
     return {
         props: {
             caseStudy
@@ -28,7 +31,7 @@ export const getStaticProps: GetStaticProps= async (context: GetStaticPropsConte
     }
 }
 
-export const getStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths<CaseStudyRouteParams> = async () => {
     const paths = CaseStudiesData.map(caseStudy => ({
         params: { id: caseStudy.slug }
     }))
@@ -36,8 +39,10 @@ export const getStaticPaths = async () => {
     return { paths, fallback: false }
 }
 
-const CaseStudyPage: NextPage<Props> = ({ caseStudy }) => {
-    const [portfolioItems] = useState(CaseStudiesData)
+const CaseStudyPage = ({ caseStudy }: InferGetStaticPropsType<typeof getStaticProps>) => {
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://tesfadan.com";
+    const imageUrl = `${siteUrl}${caseStudy.coverImage.url}`;
+    const caseStudyUrl = `${siteUrl}/portfolio/${caseStudy.slug}`;
 
 
     return <>
@@ -46,20 +51,19 @@ const CaseStudyPage: NextPage<Props> = ({ caseStudy }) => {
             <meta property="og:type" content="website" />
             <meta property="og:title" content={caseStudy.title} />
             <meta property="og:description" content={caseStudy.blurb} />
-            <meta property="og:image" content={caseStudy.coverImage.url}  />
-            <meta property="og:url" content="PERMALINK" />
+            <meta property="og:image" content={imageUrl}  />
+            <meta property="og:url" content={caseStudyUrl} />
             <meta property="og:site_name" content={caseStudy.title} />
-            <meta property="og:image" content={caseStudy.coverImage.url} />
-            <meta property="og:image:secure_url" content={caseStudy.coverImage.url} />
+            <meta property="og:image:secure_url" content={imageUrl} />
             <meta property="og:image:type" content="image/png" />
             <meta property="og:image:width" content="2016" />
             <meta property="og:image:height" content="1032" />
             <meta property="og:image:alt" content={caseStudy.coverImage.alt}  />
 
+            <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:title" content={caseStudy.title} />
             <meta name="twitter:description" content={caseStudy.blurb} />
-            <meta name="twitter:image" content={caseStudy.coverImage.url} />
-            <meta property="og:image:secure_url" content={caseStudy.coverImage.url} />
+            <meta name="twitter:image" content={imageUrl} />
         </Head>
         <Container className="section">
         <div className="grid">
@@ -73,16 +77,16 @@ const CaseStudyPage: NextPage<Props> = ({ caseStudy }) => {
                         <img src={caseStudy.coverImage.url} alt={caseStudy.coverImage.alt}/>
                     </div>
                 </div>
-                {caseStudy.content.map(block => <BlockRender block={block} />)} 
+                {caseStudy.content.map((block, index) => <BlockRender key={`block-${caseStudy.slug}-${index}`} block={block} />)}
             </div>
 
             <div className="moreStudies">
                 <div className='divider' />
                 <div className='title'>More Case Studies</div>
 
-                {portfolioItems.map(portfolio => portfolio.slug !== caseStudy.slug ? <>
-                        <PortfolioCard portfolio={portfolio} />
-                </> : null)}
+                {CaseStudiesData.filter((portfolio) => portfolio.slug !== caseStudy.slug).map((portfolio) => (
+                    <PortfolioCard key={`related-${portfolio.slug}`} portfolio={portfolio} />
+                ))}
             </div>
         </div>
         </Container>

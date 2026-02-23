@@ -2,10 +2,8 @@ import React from 'react';
 import styled, { css } from 'styled-components'
 
 export default function MenuIcon({ showMenu, switchMenu }: { showMenu: boolean, switchMenu: () => void, }) {
-    return <CustomMenuWrapper className="customMenuIcon" state={showMenu} role="button" aria-label="Mobile Menu Button"
+    return <CustomMenuWrapper type="button" className="customMenuIcon" state={showMenu} aria-label="Mobile Menu Button"
         onClick={() => switchMenu()}
-
-    // style = { show? { top: 26, opacity: 1 } : { top: -20, opacity: 0 } }
     >
         <span className="menuTop" />
         <span className="menuBottom" />
@@ -13,12 +11,12 @@ export default function MenuIcon({ showMenu, switchMenu }: { showMenu: boolean, 
 }
 
 export const Shuffle = () => <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M31.25 23.75L35 27.5L31.25 31.25M31.25 8.75L35 12.5L31.25 16.25M5 27.5H11.6555C12.6843 27.5 13.6972 27.246 14.6044 26.7605C15.5115 26.2751 16.2847 25.5732 16.8555 24.7172L20 20" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M5 12.5H11.6555C12.6843 12.5 13.6972 12.754 14.6044 13.2395C15.5115 13.7249 16.2847 14.4268 16.8555 15.2828L23.1445 24.7172C23.7153 25.5732 24.4885 26.2751 25.3956 26.7605C26.3028 27.246 27.3157 27.5 28.3445 27.5H32.5M32.5 12.5H28.3445C27.3157 12.5 26.3028 12.754 25.3956 13.2395C24.4885 13.7249 23.7153 14.4268 23.1445 15.2828L22.5 16.25" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M31.25 23.75L35 27.5L31.25 31.25M31.25 8.75L35 12.5L31.25 16.25M5 27.5H11.6555C12.6843 27.5 13.6972 27.246 14.6044 26.7605C15.5115 26.2751 16.2847 25.5732 16.8555 24.7172L20 20" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M5 12.5H11.6555C12.6843 12.5 13.6972 12.754 14.6044 13.2395C15.5115 13.7249 16.2847 14.4268 16.8555 15.2828L23.1445 24.7172C23.7153 25.5732 24.4885 26.2751 25.3956 26.7605C26.3028 27.246 27.3157 27.5 28.3445 27.5H32.5M32.5 12.5H28.3445C27.3157 12.5 26.3028 12.754 25.3956 13.2395C24.4885 13.7249 23.7153 14.4268 23.1445 15.2828L22.5 16.25" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
 </svg>
 
 
-const CustomMenuWrapper = styled.div<{ state: boolean }>`
+const CustomMenuWrapper = styled.button<{ state: boolean }>`
         display: flex;
         width: 32px;
         flex-flow: column !important;
@@ -28,14 +26,11 @@ const CustomMenuWrapper = styled.div<{ state: boolean }>`
         overflow: hidden !important;
         z-index: 109;
         cursor: pointer;
-        /* transition: 0.2s ease-in; */
         -webkit-box-pack: justify !important;
 
         span{
             height: 3px;
             width: 32px;
-            /* background: #E2E5E9; */
-            /* background: #f00; */
             transition:0.125s ease-in;
         }
 
@@ -45,11 +40,6 @@ const CustomMenuWrapper = styled.div<{ state: boolean }>`
             }
         `}
 
-        /* &:hover{
-            .menuBottom{
-                transform: translateX(16px)
-            }
-        } */
 `
 
 export const Contrast = ({color}:{color: string})=> <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">

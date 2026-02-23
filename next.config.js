@@ -1,10 +1,11 @@
-const withPWA = require('next-pwa')({
-  dest: 'public'
-})
-
-module.exports = withPWA({
-  // next.js config
-  experimental : {
-    appDir: true
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  compiler: {
+    styledComponents: true
+  },
+  turbopack: {
+    root: __dirname
   }
-})
+};
+
+module.exports = nextConfig;

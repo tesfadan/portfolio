@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Head from "next/head";
 import styled from "styled-components"
-import Link from 'next/link';
 import PortfolioData from '../../src/content/Portfolio.json';
 import PortfolioCard from '../../src/components/Cards/Portfolio';
 
@@ -30,9 +29,9 @@ const PortfolioPage = () => {
                         <p>As a product designer, I strive to develop design solutions that solve real-world problems and inspire and excite the end user. Here are some examples of my product design work with case studies.</p>
                     </div> 
 
-                    {portfolioItems.map(portfolio => 
-                        <PortfolioCard portfolio={portfolio} />
-                    )}
+                    {portfolioItems.map((portfolio) => (
+                        <PortfolioCard key={`portfolio-${portfolio.slug}`} portfolio={portfolio} />
+                    ))}
                 </div>
             </div>
             </Container>

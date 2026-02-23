@@ -1,4 +1,4 @@
-export default [
+const aboutContent = [
     {
         section: "Summary",
         content: "I'm Tesfa Demissie, a product designer with a solid foundation in design and a strong understanding of development. My design philosophy centres on the end user, and I strive to build user interfaces that solve their problems first and foremost with intuitive, aesthetically pleasing and user-friendly designs."
@@ -19,4 +19,6 @@ export default [
         section: "Contact",
         content: "If you'd like to get in touch, reach out at [tesfa@tesfadan.com](mailto:tesfa@tesfadan.com). I look forward to hearing from you."
     }
-]
+];
+
+export default aboutContent;

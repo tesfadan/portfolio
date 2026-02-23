@@ -1,7 +1,4 @@
-"use client"
-
 import React, { useState } from 'react';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
 import styled from "styled-components";
 import Head from "next/head";
 import content from '../../src/content/aboutContent';
@@ -24,18 +21,24 @@ import ReactMarkdown from "react-markdown"
                 <aside>
                     <div className="nav">
                     <h1>About</h1>
-                        <ul>
-                            {content.map(data => <li key={`li-${data.section}`}><AnchorLink onClick={()=>setHighlight(data)} href={`#${data.section}`}>{data.section}</AnchorLink></li>)}
+                            <ul>
+                            {content.map((data) => (
+                                <li key={`li-${data.section}`}>
+                                    <a onClick={() => setHighlight(data)} href={`#${data.section}`}>{data.section}</a>
+                                </li>
+                            ))}
                         </ul>
                     </div>
                 </aside>
                 <div className="content">
-                        {content.map(data => 
-                        <>
-                        <span className="block-section" id={data.section} />
-                        <ReactMarkdown className={highlight.section === data.section ? "highlight" : "" } key={`p-${data.section}`}>{data.content}</ReactMarkdown>
-                        </>
-                        )}
+                        {content.map((data) => (
+                            <React.Fragment key={`section-${data.section}`}>
+                                <span className="block-section" id={data.section} />
+                                <div className={highlight.section === data.section ? "highlight" : ""}>
+                                    <ReactMarkdown>{data.content}</ReactMarkdown>
+                                </div>
+                            </React.Fragment>
+                        ))}
 
                 </div>
             </div>

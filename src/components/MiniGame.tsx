@@ -1,31 +1,27 @@
-"use client"
-
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import miniGameContent from '../content/miniGameContent'
 import { Shuffle } from './icons'
 import ReactMarkdown from "react-markdown"
 
-export default () => {
-    const [content, setContent] = useState({
-        cover: "",
-        content: ""
-    });
+type MiniGameItem = {
+    cover: string;
+    content: string;
+}
 
-    function getRandomItem(arr: Array<{cover: string, content: string}>) {
-        let randomIndex;
-        do {
-          randomIndex = Math.floor(Math.random() * arr.length);
-        } while (arr[randomIndex] === content);
-        return arr[randomIndex];
-      }
+function getRandomItem(arr: MiniGameItem[], currentItem?: MiniGameItem): MiniGameItem {
+    let randomIndex;
+    do {
+      randomIndex = Math.floor(Math.random() * arr.length);
+    } while (arr.length > 1 && currentItem && arr[randomIndex] === currentItem);
+    return arr[randomIndex];
+}
 
-    useEffect(()=>{
-        setContent(getRandomItem(miniGameContent))
-    }, [])
+export default function MiniGame() {
+    const [content, setContent] = useState(() => getRandomItem(miniGameContent));
 
     const handleShuffle = ()=>{
-        setContent(getRandomItem(miniGameContent))
+        setContent((currentContent) => getRandomItem(miniGameContent, currentContent))
     }
 
 
@@ -41,7 +37,7 @@ export default () => {
                     <ReactMarkdown>{content.content}</ReactMarkdown>
                 </div>
                 </div>
-                <button className='shuffleBtn' onClick={handleShuffle} aria-label="Shuffle Mini Game Content">
+                <button type="button" className='shuffleBtn' onClick={handleShuffle} aria-label="Shuffle Mini Game Content">
                     <Shuffle /> 
                 </button>
             </div>

@@ -3,13 +3,17 @@ import React, { useContext, useEffect } from 'react'
 import styled from 'styled-components'
 import MenuIcon, { Contrast } from '../components/icons'
 import { Context } from '../context';
-import getLocalTheme from '../helpers/getLocalTheme';
 import Color from '../theme/Color';
 import Head from "next/head";
 
 const Header = ({showMenu, switchMenu} : {showMenu: boolean, switchMenu: ()=> void})=> {
     const {darkMode, changeTheme} = useContext(Context);
     const colors = Color();
+    const closeMenuIfOpen = () => {
+        if (showMenu) {
+            switchMenu();
+        }
+    };
 
     useEffect(() => {
         document.body.classList.add(darkMode? 'dark' : 'light')
@@ -25,19 +29,21 @@ const Header = ({showMenu, switchMenu} : {showMenu: boolean, switchMenu: ()=> vo
         <Container className={`section  ${showMenu ? 'openMenu' : ''}`} darkMode={darkMode}>
             <div className="grid">
                 <div className="content">
-                    <Link href="/">
-                        <div onClick={()=> showMenu ? switchMenu() : null} className='home'><img src='./assets/images/tesfa-home-icon.png' alt='Logo'/></div>
+                    <Link href="/" onClick={closeMenuIfOpen} className='home'>
+                        <img src='/assets/images/tesfa-home-icon.png' alt='Logo'/>
                     </Link>
                     <nav>
                         <ul>
-                            <li onClick={()=>switchMenu()}><Link href="/about">About</Link></li>
-                            <li onClick={()=>switchMenu()}><Link href="/portfolio">Portfolio</Link></li>
-                            {/* <li onClick={()=>switchMenu()}><Link href="/projects">Side Projects</Link></li> */}
-                            <li onClick={()=>switchMenu()}><Link target="_blank" href="/documents/Tesfa_Demissie_Resume.pdf">Resume</Link></li>
+                            <li onClick={closeMenuIfOpen}><Link href="/about">About</Link></li>
+                            <li onClick={closeMenuIfOpen}><Link href="/portfolio">Portfolio</Link></li>
+                            {/* <li onClick={closeMenuIfOpen}><Link href="/projects">Side Projects</Link></li> */}
+                            <li onClick={closeMenuIfOpen}>
+                                <Link target="_blank" rel="noopener noreferrer" href="/documents/Tesfa_Demissie_Resume.pdf">Resume</Link>
+                            </li>
                         </ul>
                     </nav>
                     <div className="buttons">
-                        <button className="div" role="button" onClick={changeTheme} aria-label="Change Theme">
+                        <button type="button" className="div" onClick={changeTheme} aria-label="Change Theme">
                             <Contrast color={colors.text} />
                         </button>
                         <MenuIcon showMenu={showMenu} switchMenu={switchMenu}/>

@@ -22,7 +22,11 @@ const Projects = () => {
                             <div className="icon">
                                 <img src={`/assets/projects/${project.image}/icon.png`} alt={project.name}/>
                             </div>
-                            <a target="_blank" href={project.links.link}>{project.links.label}</a>
+                            {project.links.link ? (
+                                <a target="_blank" rel="noopener noreferrer" href={project.links.link}>{project.links.label}</a>
+                            ) : (
+                                <span className="linkUnavailable" aria-disabled="true">{project.links.label}</span>
+                            )}
                         </div>
                         <div className="details">
                             <p className='title'>{project.name}</p>
@@ -74,6 +78,11 @@ const Container = styled.div`
             object-fit: cover;
             width: 100%;
         }
+    }
+    .linkUnavailable{
+        text-decoration: none;
+        opacity: 0.6;
+        cursor: default;
     }
 
     /* IPAD */

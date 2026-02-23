@@ -1,27 +1,35 @@
-export var GA_TRACKING_ID = 'UA-96981965-1';
+export const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_ID ?? "";
 
-var environment = process.env.NODE_ENV
-var isDevelopment = environment === 'development'
-if (isDevelopment) {
-    GA_TRACKING_ID = 'DEV';
-} else {
-    GA_TRACKING_ID = 'UA-96981965-1';
-}
-console.log(environment)
-
-// https://developers.google.com/analytics/devguides/collection/gtagjs/pages
-export const pageview = (url: any) => {
-    window.gtag("config", GA_TRACKING_ID, {
-        page_path: url
-    });
+type AnalyticsEvent = {
+  action: string;
+  category: string;
+  label?: string;
+  value?: number;
 };
 
+const canTrack = () =>
+  typeof window !== "undefined" &&
+  typeof window.gtag === "function" &&
+  GA_TRACKING_ID.length > 0;
 
-// https://developers.google.com/analytics/devguides/collection/gtagjs/events
-export const event = ({ action, category, label, value }: Gtag.CustomParams) => {
-    window.gtag("event", action, {
-        event_category: category,
-        event_label: label,
-        value: value
-    });
+export const pageview = (url: string) => {
+  if (!canTrack()) {
+    return;
+  }
+
+  window.gtag("config", GA_TRACKING_ID, {
+    page_path: url
+  });
+};
+
+export const event = ({ action, category, label, value }: AnalyticsEvent) => {
+  if (!canTrack()) {
+    return;
+  }
+
+  window.gtag("event", action, {
+    event_category: category,
+    event_label: label,
+    value
+  });
 };
